@@ -1,0 +1,39 @@
+/* Componentes visuales para mazos de administración (tema "admin").
+   Se usan en la app (index.html) y en las tarjetas exportadas a Anki (tools/export_anki.py).
+   Las variables --bg, --card, --ink, --mute y --line vienen del diseño general. */
+
+.th-admin{--accent:#2b5c8a;--acc-bg:rgba(43,92,138,.10);--alt:#b5612a;--alt-bg:rgba(181,97,42,.10)}
+@media (prefers-color-scheme:dark){.th-admin{--accent:#7fb1e0;--acc-bg:rgba(127,177,224,.14);--alt:#e8a06d;--alt-bg:rgba(232,160,109,.14)}}
+.nightMode .th-admin,.night_mode .th-admin,.th-admin.nightMode{--accent:#7fb1e0;--acc-bg:rgba(127,177,224,.14);--alt:#e8a06d;--alt-bg:rgba(232,160,109,.14)}
+
+/* Fórmula o idea destacada y referencia de página */
+.th-admin .fm{margin:10px 0 2px;padding:10px 12px;border-left:3px solid var(--accent);background:var(--bg);border-radius:0 10px 10px 0;font-family:Fraunces,"AP Fraunces",serif;font-size:1rem}
+.th-admin .pg{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+
+/* Flujo o secuencia de pasos: flujo(["Planeación","Organización","Dirección","Control"]) */
+.fl{display:flex;flex-wrap:wrap;align-items:center;gap:5px;margin:10px 0 4px}
+.fl-p{padding:7px 10px;border-radius:10px;background:var(--acc-bg);color:var(--accent);font-weight:600;font-size:.88rem;line-height:1.25}
+.fl-p small{display:block;font-weight:500;font-size:.72rem;opacity:.85;margin-top:2px;color:var(--ink)}
+.fl-a{color:var(--mute);font-size:1rem}
+.fl.ciclo .fl-p:last-child::after{content:" ↺";color:var(--mute)}
+
+/* Grupos de conceptos: grupos([["Interpersonales","Representante · Líder · Enlace"],…]) */
+.gr{display:grid;gap:6px;margin:10px 0 4px}
+.gr-i{border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:7px 10px;background:var(--card)}
+.gr-i b{display:block;color:var(--accent);font-size:.9rem}
+.gr-i span{font-size:.86rem;color:var(--ink)}
+
+/* Comparación en tabla: tabla(["", "A", "B"], [["Criterio","…","…"],…]) */
+.cmp{width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:.84rem;line-height:1.3}
+.cmp th{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);padding:5px 6px;border-bottom:2px solid var(--accent);text-align:left;vertical-align:bottom}
+.cmp td{padding:6px;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp td:first-child{font-weight:600;color:var(--mute);font-size:.78rem}
+.cmp tr:nth-child(even) td{background:var(--acc-bg)}
+
+/* Matriz 2 × 2: matriz("Eje X", "Eje Y", [["Cuadrante 1","…"],…4]) */
+.mx{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:10px 0 4px}
+.mx-c{border-radius:10px;padding:8px 10px;background:var(--acc-bg);font-size:.84rem}
+.mx-c:nth-child(2),.mx-c:nth-child(3){background:var(--alt-bg)}
+.mx-c b{display:block;font-size:.88rem;color:var(--accent)}
+.mx-c:nth-child(2) b,.mx-c:nth-child(3) b{color:var(--alt)}
+.mx-ej{display:flex;justify-content:space-between;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin-top:2px}

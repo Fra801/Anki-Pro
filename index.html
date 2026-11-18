@@ -11,6 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="Anki Pro">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="estilos/contable.css">
+<link rel="stylesheet" href="estilos/admin.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -138,10 +139,12 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script src="mazos/ifrs_apG.js"></script>
 <script src="mazos/ifrs_apH.js"></script>
 <script src="mazos/ifrs_apI.js"></script>
+<script src="mazos/admin.js"></script>
+<script src="mazos/robbins_cap01.js"></script>
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
-const APP_VERSION="35 · 18/11/2026";
+const APP_VERSION="36 · 18/11/2026";
 const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{

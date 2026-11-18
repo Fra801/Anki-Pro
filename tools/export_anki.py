@@ -74,7 +74,7 @@ MODEL = genanki.Model(
 # Mazos con tema visual propio (por ejemplo "contable"): misma plantilla dentro de un contenedor
 # con la clase del tema, y el CSS de estilos/<tema>.css. Cada tema tiene su propio tipo de nota,
 # con un identificador fijo que no debe cambiarse.
-THEME_IDS = {"contable": 1731940101}
+THEME_IDS = {"contable": 1731940101, "admin": 1731940102}
 
 
 @functools.lru_cache(maxsize=None)
