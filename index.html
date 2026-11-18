@@ -314,7 +314,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p>${D().arts[cur.a]}</p></details>`:""}
+    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p><b>Artículo Nº ${cur.a}:</b> ${D().arts[cur.a]}</p></details>`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
@@ -367,7 +367,7 @@ function browse(){
   const d=D();
   const chips=`<div class="chips">${[0,...d.nums].map(a=>`<button class="chip ${browseArt===a?"on":""}" data-a="${a}">${a?"Art. "+a:"Todos"}</button>`).join("")}</div>`;
   const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">Art. ${c.a}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
-  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p>${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
+  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo Nº ${browseArt}:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
   V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{browseArt=+b.dataset.a;render();});
 }
 
