@@ -29,7 +29,19 @@ window.CONT = (function () {
       lineas.map(([c, d, h]) => `<tr class='${h && !d ? "cr" : ""}'><td>${c}</td><td class='m'>${d}</td><td class='m'>${h}</td></tr>`).join("") +
       (glosa ? `<tr class='gl'><td colspan='3'>${glosa}</td></tr>` : "") + "</table>";
   }
+  // Cuenta T: cuentaT("Efectivo", [["1/10","10.000"],["2/10","1.200"]], [["3/10","900"]], ["Saldo","10.300","D"])
+  function cuentaT(titulo, debe, haber, saldo) {
+    const col = xs => xs.map(([f, v]) => `<div class='tac-l'><span>${f}</span><span>${v}</span></div>`).join("");
+    const s = saldo ? `<div class='tac-l tac-s'><span>${saldo[0]}</span><span>${saldo[1]}</span></div>` : "";
+    return `<div class='tac'><div class='tac-h'>${titulo}</div><div class='tac-b'><div>${col(debe)}${saldo && saldo[2] !== "H" ? s : ""}</div><div>${col(haber)}${saldo && saldo[2] === "H" ? s : ""}</div></div><div class='tac-cap'><span>Debe</span><span>Haber</span></div></div>`;
+  }
+  // Reglas: reglas([["Activos","D","H","Deudor"],...]) — D = se registra en el Debe, H = en el Haber
+  function reglas(filas) {
+    const c = x => x === "D" ? "<span class='d'>Debe</span>" : "<span class='h'>Haber</span>";
+    return "<table class='rg'><tr><th>Cuenta</th><th>Aumenta</th><th>Disminuye</th><th>Saldo normal</th></tr>" +
+      filas.map(([n, a, d, s]) => `<tr><td>${n}</td><td>${c(a)}</td><td>${c(d)}</td><td>${s}</td></tr>`).join("") + "</table>";
+  }
   const fm = t => `<div class='fm'>${t}</div>`;
   const pg = p => `<br><span class='pg'>Libro, p. ${p}</span>`;
-  return { eq, EQ, fx, est, asiento, fm, pg };
+  return { eq, EQ, fx, est, asiento, cuentaT, reglas, fm, pg };
 })();

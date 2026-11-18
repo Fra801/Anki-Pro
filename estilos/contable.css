@@ -63,3 +63,22 @@
 
 /* Referencia de página del libro */
 .pg{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+
+/* Cuenta T */
+.tac{margin:10px auto 2px;max-width:320px;font-size:.88rem}
+.tac-h{text-align:center;font-weight:600;padding-bottom:4px;border-bottom:2px solid var(--ink)}
+.tac-b{display:grid;grid-template-columns:1fr 1fr}
+.tac-b>div{padding:4px 8px;min-height:24px}
+.tac-b>div:first-child{border-right:2px solid var(--ink)}
+.tac-l{display:flex;justify-content:space-between;gap:8px;padding:1px 0;font-variant-numeric:tabular-nums}
+.tac-l span:first-child{color:var(--mute);font-size:.78rem}
+.tac-s{border-top:1px solid var(--line);margin-top:3px;padding-top:3px;font-weight:600}
+.tac-cap{display:grid;grid-template-columns:1fr 1fr;font-size:.66rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);text-align:center;margin-top:2px}
+
+/* Reglas de Debe y Haber */
+.rg{width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:.86rem}
+.rg th{font-size:.66rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);padding:4px 6px;border-bottom:1px solid var(--line);text-align:center}
+.rg th:first-child{text-align:left}
+.rg td{padding:6px;border-bottom:1px dashed var(--line);text-align:center}
+.rg td:first-child{text-align:left;font-weight:600}
+.rg .d{color:var(--pn);font-weight:600}.rg .h{color:var(--pa);font-weight:600}
