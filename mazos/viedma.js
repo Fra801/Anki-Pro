@@ -34,7 +34,7 @@ build(add){
 add(1,"Regla","¿Cuál es el objeto del Código de Edificación de Viedma?","Regular la <strong>realización de obras de edificación</strong>.");
 add(1,"Dato","¿Qué cuatro tipos de obras de edificación regula el Código?","<ul><li>Construcción</li><li>Modificación</li><li>Refacción</li><li>Demolición</li></ul>(“y/o”: pueden darse juntas o separadas)");
 add(1,"Dato","Según el Art. 1, ¿qué dos variantes comprende la “modificación”?","<strong>Ampliación</strong> o <strong>alteración</strong>.");
-add(1,"Caso","Un propietario sólo quiere demoler un galpón, sin construir nada. ¿Alcanza el Código a esa obra?","Sí. La <strong>demolición</strong> es una de las obras de edificación que el Código regula (Art. 1).");
+add(1,"Caso","Un propietario sólo quiere demoler un galpón, sin construir nada. ¿Por qué esa obra queda alcanzada por el Código?","Porque la <strong>demolición</strong> es una de las obras de edificación que el Código regula.");
 // Art. 2
 add(2,"Regla","¿Cuál es el ámbito territorial de aplicación del Código?","El <strong>municipio de Viedma</strong>.");
 add(2,"Dato","¿Qué ley provincial base establece cómo se pone en vigencia el Código?","La <strong>Ley Nº 929</strong>.");
@@ -68,7 +68,7 @@ const DEF=[
 ];
 DEF.forEach(([t,d])=>add(4,"Definición",`Definí: <em>${t}</em>`,d));
 add(4,"Excepción","¿Qué locales quedan <em>excluidos</em> de la definición de “local habitable”?","<ul><li>Lavaderos</li><li>Cuartos de baño</li><li>Despensas</li><li>Pasajes</li><li>Vestíbulos</li><li>Depósitos</li><li>o similares</li></ul>");
-add(4,"Caso","Un estudio donde una persona trabaja todo el día, ¿es local habitable?","Sí: el <strong>trabajo</strong> y la <strong>permanencia continuada</strong> de personas encuadran en la definición.");
+add(4,"Caso","Un estudio donde una persona trabaja todo el día: ¿qué lo encuadra como local habitable?","El <strong>trabajo</strong> y la <strong>permanencia continuada</strong> de personas.");
 add(4,"Distinción","Muro vs. tabique: ¿cuál es la diferencia?","Ambos son cerramientos verticales; el <strong>muro soporta cargas</strong>, el <strong>tabique no es portante</strong>.");
 add(4,"Distinción","Alero vs. balcón: ¿cuál es la diferencia clave?","El alero es <strong>no accesible</strong> (sólo resguardo de vanos y muros); el balcón es <strong>accesible y transitable</strong>, con parapeto o baranda.");
 add(4,"Distinción","Acera vs. calzada: ¿qué separa a cada una y a quién está destinada?","Acera: entre L.M. y calzada, para <strong>peatones</strong>. Calzada: entre aceras enfrentadas, para <strong>vehículos</strong>.");
@@ -91,10 +91,10 @@ add(7,"Regla","¿Qué carácter deben tener las obras destinadas a habitación?"
 // Art. 8
 add(8,"Condición","¿Qué dos requisitos deben cumplir las obras de carácter transitorio?","1) <strong>Justificar su finalidad</strong>.<br>2) Contar con <strong>autorización expresa</strong> de la Municipalidad.");
 add(8,"Facultad","En una obra transitoria, ¿qué puede exigir la Municipalidad además de autorizarla?","Las <strong>condiciones mínimas de habitabilidad y saneamiento</strong> que considere necesarias.");
-add(8,"Caso","Un obrador temporario con autorización tácita (nadie objetó). ¿Cumple el Art. 8?","No. La autorización debe ser <strong>expresa</strong>, y además debe justificarse la finalidad.");
+add(8,"Caso","Un obrador temporario cuenta sólo con autorización tácita (nadie objetó). ¿Qué le falta según el Art. 8?","<strong>Autorización expresa</strong> de la Municipalidad, además de <strong>justificar su finalidad</strong>.");
 // Art. 9
 add(9,"Prohibición","¿Qué dos tipos de construcciones prohíbe el Art. 9?","Las de <strong>carácter precario</strong> y las hechas de <strong>adobe</strong>.");
-add(9,"Caso","¿Puede la Municipalidad autorizar una vivienda de adobe como obra transitoria del Art. 8?","No. El Art. 9 <strong>prohíbe en forma absoluta</strong> las construcciones de adobe (y las precarias); el Art. 8 no lo excepciona.");
+add(9,"Caso","¿Qué impide autorizar una vivienda de adobe como obra transitoria del Art. 8?","El Art. 9, que <strong>prohíbe en forma absoluta</strong> las construcciones de adobe y las precarias.");
 // Art. 10
 add(10,"Regla","¿Qué factores deben cumplir todas las edificaciones según el Art. 10?","Los <strong>factores de edificación y de ocupación</strong> previstos por el Código Urbanístico.");
 add(10,"Condición","¿Según qué criterio varían los factores de edificación y ocupación aplicables?","<strong>Según la zona</strong> de que se trate.");
@@ -104,7 +104,7 @@ add(11,"Excepción","Por encima de 2,70 m, ¿qué salientes se permiten sobre la
 add(11,"Dato","¿Cuánto pueden sobresalir esas salientes, medidas desde la L.M.?","Hasta <strong>1,00 m</strong>.");
 add(11,"Dato","¿A qué distancia del eje divisorio puede llegar como máximo la saliente?","Hasta <strong>0,15 m</strong> del eje divisorio (debe quedar a 0,15 m como mínimo).");
 add(11,"Regla","En caso de ochava, ¿cómo debe disponerse la saliente?","<strong>Paralela a la ochava</strong>.");
-add(11,"Caso","Un balcón a 2,50 m de altura que vuela 0,60 m sobre la vereda. ¿Es admisible?","No. Hasta los <strong>2,70 m</strong> no puede avanzarse sobre la L.M.");
+add(11,"Caso","Un balcón a 2,50 m de altura vuela 0,60 m sobre la vereda. ¿Qué regla incumple?","Hasta los <strong>2,70 m</strong> de altura no puede avanzarse sobre la L.M.");
 // Art. 12
 add(12,"Dato","¿Qué altura máxima pueden tener los cerramientos opacos en balcones?","<strong>0,90 m</strong>.");
 add(12,"Dato","¿Desde dónde se mide la altura de los cerramientos opacos de balcones?","Desde el <strong>solado del balcón</strong>.");
@@ -112,19 +112,19 @@ add(12,"Dato","¿Desde dónde se mide la altura de los cerramientos opacos de ba
 add(13,"Condición","¿Qué condición debe cumplir el balcón para admitir pantallas móviles?","Tener <strong>tres lados libres</strong>.");
 add(13,"Dato","¿Qué tipo de pantallas se permiten en esos balcones?","Pantallas <strong>móviles</strong>, <strong>traslúcidas, cribadas o similares</strong>, que produzcan cerramiento <strong>parcial</strong>.");
 add(13,"Dato","¿Qué porcentaje máximo del perímetro libre puede cubrir ese cerramiento?","Como máximo el <strong>50 % del perímetro libre</strong>.");
-add(13,"Caso","Balcón con dos lados libres: ¿se pueden colocar pantallas móviles traslúcidas según el Art. 13?","No por el Art. 13: exige <strong>tres lados libres</strong>.");
+add(13,"Caso","Balcón con dos lados libres: ¿qué requisito del Art. 13 le falta para colocar pantallas móviles traslúcidas?","Tener <strong>tres lados libres</strong>.");
 // Art. 14
 add(14,"Dato","¿A qué altura mínima deben mantenerse aleros o marquesinas en planta baja?","Por encima de los <strong>2,40 m</strong>, medidos desde el <strong>nivel de vereda</strong>.");
 add(14,"Dato","¿A qué distancia mínima del cordón debe quedar el borde exterior de aleros o marquesinas?","<strong>0,80 m</strong> como mínimo.");
 add(14,"Excepción","¿Qué se permite en un retiro de frente de 4,00 m y dónde?","<strong>Toldo / pérgola</strong>, ubicado en el <strong>espacio de estacionamiento</strong>.");
 add(14,"Dato","Sobre ejes medianeros, ¿qué altura máxima puede tener el muro divisorio dentro de la superficie de retiro?","<strong>0,60 m</strong>; por encima puede materializarse con <strong>rejas</strong>.");
 add(14,"Condición","¿Qué se requiere para hacer un cerco verde de medianeras?","<strong>Acuerdo de vecinos por escrito</strong>.");
-add(14,"Caso","Una marquesina a 2,60 m de altura cuyo borde queda a 0,50 m del cordón. ¿Cumple?","No. La altura sí (> 2,40 m), pero el borde debe distar <strong>al menos 0,80 m</strong> del cordón.");
+add(14,"Caso","Una marquesina a 2,60 m de altura cuyo borde queda a 0,50 m del cordón. ¿Qué medida incumple?","La distancia al cordón: el borde debe distar <strong>al menos 0,80 m</strong>. La altura cumple (más de 2,40 m).");
 // Art. 15
-add(15,"Facultad","¿Es obligatorio siempre cercar un lote baldío según el Art. 15?","No: la Municipalidad <strong>podrá exigirlo</strong>, en <strong>determinadas zonas</strong>, <strong>cuando lo considere conveniente</strong>.");
+add(15,"Facultad","¿Qué carácter tiene la exigencia de cercar lotes baldíos según el Art. 15?","<strong>Facultativo</strong>: la Municipalidad <strong>podrá exigirlo</strong>, en <strong>determinadas zonas</strong>, <strong>cuando lo considere conveniente</strong>.");
 add(15,"Dato","¿Con qué materiales deben ejecutarse cercos y muros divisorios?","Albañilería de <strong>ladrillos comunes</strong>, <strong>bloques huecos</strong> o <strong>piedra</strong>, o <strong>hormigón simple o armado</strong>.");
 add(15,"Dato","¿Qué alturas mínima y máxima deben tener cercos y muros divisorios?","Mínima <strong>2,00 m</strong> · máxima <strong>2,50 m</strong>.");
-add(15,"Caso","Exigido el cerco, el propietario hace un alambrado de 1,50 m. ¿Cumple?","No: ni el material (alambre no está entre los admitidos) ni la altura (mínimo 2,00 m).");
+add(15,"Caso","Exigido el cerco, el propietario hace un alambrado de 1,50 m. ¿Qué requisitos incumple?","El <strong>material</strong> (el alambre no está entre los admitidos) y la <strong>altura</strong> (mínimo 2,00 m).");
 // Art. 16
 add(16,"Regla","¿Qué exige el Art. 16 en toda nueva edificación?","Un <strong>adecuado tratamiento arquitectónico</strong> de las fachadas y de los muros divisorios visibles.");
 add(16,"Condición","¿Qué muros divisorios alcanza el deber de tratamiento arquitectónico?","Los que <strong>queden a la vista desde la vía pública</strong>.");
@@ -137,7 +137,7 @@ add(17,"Condición","¿En qué ámbito rige la obligación de revoque y pintado?
 add(18,"Regla","¿Sobre qué vías es obligatorio construir aceras?","Sobre las vías <strong>pavimentadas o enripiadas</strong>.");
 add(18,"Regla","¿Dónde se determinan las características generales de las aceras?","<strong>Reglamentariamente</strong>.");
 add(18,"Facultad","¿Qué puede exigir el Organismo de Aplicación en casos especiales respecto de las aceras?","Un <strong>tratamiento diferenciado</strong> en entornos o sectores particulares de la ciudad, <strong>según proyecto particularizado</strong>.");
-add(18,"Caso","Frente a una calle de tierra (ni pavimentada ni enripiada), ¿obliga el Art. 18 a construir acera?","No: la obligación del Art. 18 rige sobre vías <strong>pavimentadas o enripiadas</strong>.");
+add(18,"Caso","Frente a una calle de tierra (ni pavimentada ni enripiada), ¿por qué el Art. 18 no obliga a construir acera?","Porque esa obligación rige sobre vías <strong>pavimentadas o enripiadas</strong>.");
 // Art. 19
 add(19,"Regla","¿Con qué tipo de materiales deben construirse y terminarse las aceras?","Materiales <strong>antideslizantes</strong>.");
 add(19,"Dato","¿Cuál es el ancho mínimo de la acera según el Art. 19?","<strong>1,00 m</strong>.");
@@ -149,6 +149,6 @@ add(20,"Facultad","¿Quién puede exigir las franjas verdes y con qué carácter
 add(20,"Dato","¿Dónde se ubican las franjas verdes y qué ancho mínimo tienen?","<strong>Contiguas al cordón</strong>, de <strong>no menos de 1,00 m</strong>.");
 add(20,"Excepción","¿En qué casos se interrumpen las franjas verdes?","<ul><li>En las <strong>esquinas</strong></li><li>En <strong>paradas de ómnibus</strong></li><li>En <strong>accesos o guardacoches</strong></li></ul>");
 add(20,"Dato","¿Hasta qué distancia se interrumpe la franja verde en las esquinas y desde dónde se mide?","Hasta <strong>9,00 m</strong>, medidos desde la <strong>intersección de los cordones</strong>.");
-add(20,"Caso","Acera de exactamente 3,00 m. ¿Puede la Municipalidad exigir franja verde por el Art. 20?","No: se requiere un ancho <strong>superior</strong> a 3,00 m.");
+add(20,"Caso","Acera de exactamente 3,00 m: ¿por qué no habilita a exigir franja verde según el Art. 20?","Porque se requiere un ancho <strong>superior</strong> a 3,00 m.");
 }
 });

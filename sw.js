@@ -1,4 +1,4 @@
-const C = "anki-pro-v3";
+const C = "anki-pro-v4";
 self.addEventListener("install", e => {
   self.skipWaiting();
   e.waitUntil(caches.open(C).then(c => c.addAll(["./", "index.html", "manifest.webmanifest", "icon.svg", "mazos/viedma.js", "mazos/promociones.js"])).catch(() => {}));

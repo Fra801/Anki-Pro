@@ -40,7 +40,7 @@ add(3,"Excepción","¿Qué ascensos quedan exceptuados de la regla anual con vig
 // Art. 4
 add(4,"Condición","¿Entre qué personal se discierne el ascenso por Mérito Extraordinario?","Entre quienes intervinieren en <strong>actos destacados o meritorios</strong> en los que hubiere estado en <strong>peligro inminente su propia vida</strong>.");
 add(4,"Condición","¿Qué requisito de prueba exige el ascenso por Mérito Extraordinario?","Que las circunstancias estén <strong>fehacientemente documentadas</strong>, en todos los casos.");
-add(4,"Caso","Un agente realiza un procedimiento muy destacado, pero sin riesgo para su vida. ¿Corresponde ascenso por Mérito Extraordinario?","No. Se exige que haya estado en <strong>peligro inminente su propia vida</strong>.");
+add(4,"Caso","Un agente realiza un procedimiento muy destacado, pero sin riesgo para su vida. ¿Qué requisito le falta para el ascenso por Mérito Extraordinario?","Haber estado en <strong>peligro inminente su propia vida</strong>.");
 // Art. 5
 add(5,"Condición","¿Cuándo se acuerda el ascenso Post Mortem?","En las <strong>mismas situaciones del Art. 4</strong> (acto destacado con peligro inminente de vida) cuando hayan <strong>culminado con la pérdida de la vida</strong> del policía interviniente.");
 add(5,"Distinción","Mérito Extraordinario vs. Post Mortem: ¿qué los diferencia?","Ambos exigen acto destacado con peligro inminente de vida; el <strong>Post Mortem</strong> se da cuando el policía <strong>muere</strong> como resultado del acto.");
@@ -53,11 +53,11 @@ add(6,"Regla","Con las conclusiones de las Juntas, ¿quién resuelve el ascenso 
 add(6,"Dato","Ordená el trámite del ascenso extraordinario, de principio a fin.","1) Jefe inmediato promueve información sumaria / sumario.<br>2) Elevación por vía jerárquica a Dirección de Personal – Div. Calificaciones y Promociones.<br>3) Consideración de las Juntas de Calificaciones.<br>4) Resuelve el Jefe de Policía.");
 // Art. 7
 add(7,"Regla","¿Quién concede los ascensos extraordinarios?","El <strong>Poder Ejecutivo Provincial</strong> o el <strong>Jefe de Policía</strong>, según el <strong>grado del promovido</strong>, con las mismas formas que los ascensos ordinarios.");
-add(7,"Excepción","¿Pueden limitarse los ascensos extraordinarios por falta de vacantes?","No. <strong>No pueden limitarse por la inexistencia de vacantes</strong>.");
+add(7,"Excepción","¿Qué incidencia tiene la falta de vacantes en los ascensos extraordinarios?","Ninguna: estos ascensos <strong>no pueden limitarse por la inexistencia de vacantes</strong>.");
 // Art. 8 — Inhabilidades
 add(8,"Condición","¿Qué condición general inhabilita para el ascenso, además de los incisos del Art. 8?","<strong>No revistar en servicio efectivo</strong>.");
 add(8,"Dato","Inc. a): ¿cómo se computa la antigüedad mínima en el grado?","Desde la <strong>fecha de vigencia del último ascenso</strong> al <strong>31 de diciembre del año en curso</strong>, conforme la Ley del Personal Policial.");
-add(8,"Regla","Inc. a): ¿se computa el tiempo en Situación Pasiva para el ascenso?","<strong>No</strong>, como regla general.");
+add(8,"Regla","Inc. a): ¿qué regla general rige para el tiempo en Situación Pasiva?","<strong>No se computa</strong> para el ascenso (salvo las excepciones del inciso).");
 add(8,"Excepción","Inc. a): ¿en qué casos sí se computa el tiempo en Situación Pasiva?","<ul><li>Si estuvo <strong>procesado</strong> y luego obtuvo <strong>sobreseimiento definitivo o absolución</strong>.</li><li>Por <strong>razones de salud originadas o derivadas del servicio</strong>.</li></ul>");
 add(8,"Dato","Inc. b): ¿qué licencia por enfermedad o lesiones inhabilita y con qué topes?","La <strong>no motivada por actos del servicio</strong>, por más de <strong>60 días corridos</strong> o <strong>40 fraccionados</strong>.");
 add(8,"Dato","Inc. c): ¿qué situación de salud inhabilita y con qué topes?","La que <strong>no tiene origen en el servicio</strong> y provoca <strong>tareas no propias</strong> del grado, agrupamiento y escalafón, por más de <strong>90 días corridos</strong> o <strong>60 discontinuos</strong>.");
@@ -72,12 +72,12 @@ add(8,"Dato","Inc. h): ¿qué tipos de cursos policiales menciona?","De <strong>
 add(8,"Condición","Inc. i): ¿qué se requiere para quedar inhabilitado respecto de los exámenes de idoneidad o capacitación?","Haber sido <strong>llamado a rendir</strong>, <strong>resultar reprobado</strong> y <strong>obtener postergación para rendir por razones personales</strong>.");
 add(8,"Dato","Inc. j): ¿qué calificación promedio anual se exige y en qué grados?","<strong>“Excepcional” o “Muy Bueno”</strong> en los grados de <strong>Comisario, Oficial Principal o Sargento</strong>.");
 add(8,"Condición","Inc. k): ¿qué sumario inhabilita y a qué fecha se mira?","Sumario <strong>administrativo y/o judicial no resuelto</strong> a la <strong>fecha de finalización del período calificativo</strong>.");
-add(8,"Caso","Un agente tuvo 45 días corridos de licencia por enfermedad ajena al servicio. ¿Está inhabilitado?","No. El tope corrido es <strong>más de 60 días</strong>.");
-add(8,"Caso","Un agente tuvo 45 días fraccionados de licencia por enfermedad ajena al servicio. ¿Está inhabilitado?","Sí. Supera los <strong>40 días fraccionados</strong>.");
-add(8,"Caso","Un agente estuvo 90 días de licencia por una lesión sufrida en un procedimiento. ¿Lo inhabilita el inc. b)?","No. El inc. b) sólo cuenta enfermedades o lesiones <strong>no motivadas por actos del servicio</strong>.");
-add(8,"Caso","Siete días de suspensión de empleo: ¿inhabilita a un subalterno? ¿Y a un superior?","Subalterno: <strong>no</strong> (se exige <strong>más de</strong> 7).<br>Superior: <strong>sí</strong> (basta <strong>registrar</strong> 7).");
-add(8,"Caso","Un oficial superior tiene 25 días de arresto. ¿Está inhabilitado? ¿Y si fuera subalterno?","Superior: <strong>sí</strong> (más de 20).<br>Subalterno: <strong>no</strong> (se exige más de 30).");
-add(8,"Caso","Un Sargento obtuvo calificación promedio “Bueno”. ¿Puede ascender?","No. En el grado de Sargento se exige <strong>“Excepcional” o “Muy Bueno”</strong> (inc. j).");
+add(8,"Caso","Un agente tuvo 45 días corridos de licencia por enfermedad ajena al servicio. ¿Qué tope del inc. b) se aplica y qué consecuencia tiene?","Tope: <strong>más de 60 días corridos</strong>. Con 45 días <strong>no queda inhabilitado</strong>.");
+add(8,"Caso","Un agente tuvo 45 días fraccionados de licencia por enfermedad ajena al servicio. ¿Qué tope del inc. b) se aplica y qué consecuencia tiene?","Tope: <strong>más de 40 días fraccionados</strong>. Con 45 días <strong>queda inhabilitado</strong>.");
+add(8,"Caso","Un agente estuvo 90 días de licencia por una lesión sufrida en un procedimiento. ¿Por qué no encuadra en el inc. b)?","Porque el inc. b) sólo cuenta enfermedades o lesiones <strong>no motivadas por actos del servicio</strong>.");
+add(8,"Caso","Siete días de suspensión de empleo: ¿qué efecto tienen en un subalterno y en un superior?","Subalterno: <strong>no lo inhabilitan</strong> (se exige <strong>más de</strong> 7).<br>Superior: <strong>lo inhabilitan</strong> (basta <strong>registrar</strong> 7).");
+add(8,"Caso","Veinticinco días de arresto: ¿qué efecto tienen en un oficial superior y en un subalterno?","Superior: <strong>lo inhabilitan</strong> (más de 20).<br>Subalterno: <strong>no lo inhabilitan</strong> (se exige más de 30).");
+add(8,"Caso","Un Sargento obtuvo calificación promedio “Bueno”. ¿Qué calificación necesitaba para no quedar inhabilitado?","<strong>“Excepcional” o “Muy Bueno”</strong> (inc. j).");
 // Art. 9
 add(9,"Regla","¿Sobre qué período se toman las inhabilidades por licencias, sanciones, sumarios y salud?","Sobre el <strong>período calificativo</strong> del Reglamento del Régimen de Calificaciones Policiales.");
 add(9,"Regla","¿Sobre qué lapso se toman las restantes inhabilidades del Art. 8?","Sobre el lapso transcurrido <strong>desde el último ascenso</strong>.");
@@ -105,9 +105,9 @@ add(15,"Dato","¿Cómo se cubre el primer 50 % de las vacantes del grado inmedia
 add(15,"Dato","¿Cómo se cubre el 50 % restante de las vacantes?","Por <strong>selección de la Jefatura de Policía</strong> entre los declarados <strong>“Aptos para el Ascenso”</strong>.");
 // Art. 16
 add(16,"Prohibición","¿Qué situación posterior a ser declarado Apto impide el ascenso?","Que se le inicie <strong>sumario administrativo y/o judicial</strong> con <strong>auto de prisión preventiva o procesamiento</strong>.");
-add(16,"Regla","¿Se levanta el impedimento si obtiene la excarcelación o si no le corresponde pena corporal?","No. Igual <strong>no puede ascender</strong>. Tampoco si <strong>deja de revistar en servicio efectivo</strong>.");
+add(16,"Regla","¿Qué circunstancias no levantan el impedimento para ascender del Art. 16?","<ul><li>Haber obtenido la <strong>excarcelación</strong>.</li><li>Que por el hecho <strong>no corresponda pena corporal</strong>.</li></ul>También impide el ascenso <strong>dejar de revistar en servicio efectivo</strong>.");
 add(16,"Dato","Si le correspondía ascender, ¿por cuánto tiempo se le reserva la vacante y desde cuándo?","Por <strong>seis meses</strong> desde la <strong>existencia de la vacante</strong>.");
-add(16,"Excepción","¿Qué límite tiene la reserva de vacante?","No puede <strong>sobrepasar el 31 de diciembre</strong>.");
+add(16,"Excepción","¿Qué límite tiene la reserva de vacante?","El <strong>31 de diciembre</strong>: la reserva no puede sobrepasar esa fecha.");
 add(16,"Regla","Si vence la reserva sin superarse el impedimento, ¿qué ocurre?","Asciende el <strong>agente subsiguiente</strong> en la lista respectiva.");
 add(16,"Caso","La vacante existe desde el 1 de septiembre. ¿Hasta cuándo se reserva?","Hasta el <strong>31 de diciembre</strong>: los seis meses no pueden sobrepasar esa fecha.");
 // Art. 17 — Disposiciones complementarias
@@ -115,6 +115,6 @@ add(17,"Regla","¿Qué situaciones consideran anualmente las Juntas, con las nue
 // Art. 18
 add(18,"Condición","¿Cuándo pasa un agente a Retiro Obligatorio por ser “Apto para Permanecer en el Grado”?","Si lo declaran así <strong>3 períodos consecutivos</strong> o <strong>5 alternados</strong> en un mismo grado.");
 add(18,"Dato","¿Qué norma prevé ese Retiro Obligatorio?","<strong>Ley 2092/86 (Ley Previsional)</strong>, Título X, Capítulo III, <strong>Art. 63, inc. d)</strong>.");
-add(18,"Caso","Un agente fue “Apto para Permanecer en el Grado” en 4 períodos alternados del mismo grado. ¿Pasa a retiro obligatorio?","No todavía: se requieren <strong>5 alternados</strong> (o 3 consecutivos).");
+add(18,"Caso","Un agente fue “Apto para Permanecer en el Grado” en 4 períodos alternados del mismo grado. ¿Cuántos más necesita para pasar a retiro obligatorio?","<strong>Uno más</strong>: se requieren <strong>5 alternados</strong> (o 3 consecutivos).");
 }
 });
