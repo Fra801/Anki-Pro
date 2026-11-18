@@ -52,7 +52,7 @@ Para temas que no son normas (historia, geografía, biología, etc.) el mazo lle
 3. Agregar el archivo a la lista de `sw.js` y subir la versión de caché (`anki-pro-vN`).
 4. Sumar la fila a la tabla de mazos del `README.md`.
 5. Correr `node tools/check_mazos.js` y corregir hasta que no marque problemas.
-6. Regenerar los archivos para Anki: `python3 tools/export_anki.py` (requiere `pip install genanki`). Deja `anki/<id>.apkg`, que se descarga desde **Progreso → Llevar a Anki**. Hay que correrlo cada vez que se agregan o corrigen tarjetas.
+6. Regenerar los archivos para Anki: `python3 tools/export_anki.py` (requiere `pip install genanki`). Deja `anki/<id>.apkg`, que se descarga desde **Progreso → Llevar a Anki** (allí también se muestra el enlace para la opción «Enlace de descarga» de AnkiMobile/AnkiDroid: `https://raw.githubusercontent.com/Fra801/Anki-Pro/main/anki/<id>.apkg`). Hay que correrlo cada vez que se agregan o corrigen tarjetas.
 7. Abrir la app (por ejemplo con Playwright) y revisar una tarjeta con inciso y el desplegable.
 8. Commit y push a `main`.
 

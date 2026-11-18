@@ -122,6 +122,8 @@ DECKS.forEach(d=>{
   d.nums=temas?[...new Set(d.cards.map(c=>c.a))]:Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
 });
 const deckById=id=>DECKS.find(d=>d.id===id);
+// Enlace público del .apkg (sirve para la opción «Enlace de descarga» de Anki)
+const ankiUrl=d=>"https://raw.githubusercontent.com/Fra801/Anki-Pro/main/anki/"+d.id+".apkg";
 const grpLabel=(d,a)=>d.kind==="temas"?a:"Art. "+a;
 // Texto que se despliega: el artículo entero o, si la tarjeta apunta a uno o más incisos, sólo esos incisos.
 const INC_START=/^\s*([a-z]\)|\d+\s*[-)])/;
@@ -420,11 +422,18 @@ function settings(d){
   <div class="panel"><h3>Llevar a Anki</h3>
     <p class="muted" style="margin:0">Descargá este mazo para Anki (computadora, AnkiDroid o AnkiMobile): las tarjetas se ven con el mismo diseño, con el desplegable incluido. El progreso de cada app es independiente.</p>
     <div class="btns"><a class="ghost" style="text-decoration:none" href="anki/${d.id}.apkg" download="${d.id}.apkg">Descargar para Anki (.apkg)</a></div>
+    <p class="muted" style="margin:12px 0 4px">En AnkiMobile o AnkiDroid también podés usar <b>Enlace de descarga</b> y pegar este enlace:</p>
+    <div class="acct-row"><input id="ankiurl" readonly value="${ankiUrl(d)}" aria-label="Enlace de descarga para Anki" onclick="this.select()"><button class="ghost" id="ankicopy">Copiar</button></div>
     <p class="sync" style="margin-top:8px">Si lo importás otra vez cuando haya tarjetas nuevas o corregidas, Anki las actualiza y conserva lo que estudiaste allá.</p>
   </div>`+accountPanel()+`
   <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
 }
 function bindSettings(d){
+  const cp=document.getElementById("ankicopy");
+  if(cp)cp.onclick=async()=>{const inp=document.getElementById("ankiurl");
+    try{await navigator.clipboard.writeText(inp.value);cp.textContent="Copiado";}
+    catch(e){inp.focus();inp.select();try{document.execCommand("copy");cp.textContent="Copiado";}catch(_){cp.textContent="Seleccionado";}}
+    setTimeout(()=>{cp.textContent="Copiar";},2000);};
   const f=filt(d);
   document.getElementById("npd").onchange=e=>{S.opts.newPerDay=Math.max(1,Math.min(200,+e.target.value||20));save();};
   V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=d.nums[+b.dataset.f];const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});
