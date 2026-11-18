@@ -136,7 +136,10 @@ function artDetail(d,c){
   if(!parts.length)return `<b>Artículo ${c.a}º:</b> ${full}`;
   const lbl=keys.map(k=>/\d/.test(k)?k:k+")");
   const name=keys.length===1?`inciso ${lbl[0]}`:`incisos ${lbl.slice(0,-1).join(", ")} y ${lbl[lbl.length-1]}`;
-  const body=keys.length===1?parts[0].replace(INC_START,"").replace(/^\s+/,""):parts.join("\n");
+  // Frase inicial del artículo (todo lo que va antes del primer inciso), y después el inciso o los incisos.
+  const lines=full.split("\n"),first=lines.findIndex(l=>INC_START.test(l));
+  const intro=first>0?lines.slice(0,first).join("\n"):"";
+  const body=(intro?intro+"\n":"")+parts.join("\n");
   return `<b>Artículo ${c.a}º, ${name}:</b> ${body}`;
 }
 
