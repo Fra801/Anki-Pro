@@ -31,6 +31,8 @@ Sin iniciar sesión, el progreso igual queda guardado en el navegador del dispos
 
 ## Agregar un mazo
 
+Las reglas completas para armar las tarjetas (cómo deben ser las preguntas, las respuestas y el desplegable) están en [`CLAUDE.md`](CLAUDE.md). Para revisar los mazos: `node tools/check_mazos.js`.
+
 Cada mazo es un archivo en `mazos/`. Para sumar uno:
 
 1. Copiá `mazos/promociones.js` con otro nombre y cambiá `id`, `idp` (un prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub` y `head`.
