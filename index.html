@@ -10,6 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Anki Pro">
 <link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="estilos/contable.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,7 +51,8 @@ nav button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .a ul{margin:6px 0;padding-left:20px}
 details{margin-top:14px;font-size:.88rem;color:var(--mute)}
 details summary{cursor:pointer;font-weight:500}
-details p{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0 0;white-space:pre-line}
+details p,details .det{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0 0;white-space:pre-line}
+details .det .est,details .det .fx,details .det .eq,details .det .fm{white-space:normal}
 .bar{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(to top,var(--bg) 70%,transparent);padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 .bar .in{max-width:640px;margin:0 auto;display:grid;gap:8px}
 .show{grid-template-columns:1fr}
@@ -69,6 +71,14 @@ details p{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0
 .panel h3{margin:0 0 8px;font-size:1rem}
 .deck{cursor:pointer}
 .deck.sel{border-color:var(--accent)}
+.grp [data-g]{cursor:pointer}
+.chev{color:var(--mute);font-size:.9rem}
+.subs{margin-top:12px;border-top:1px solid var(--line)}
+.sub{padding:11px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.sub:last-child{border-bottom:0}
+.sub.sel .sub-t{color:var(--accent)}
+.sub-t{font-family:Fraunces,serif;font-size:1rem;font-weight:500}
+.sub .counts{flex-wrap:wrap;font-size:.8rem;gap:10px}
 .deck h3{font-family:Fraunces,serif;font-size:1.15rem}
 label{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;font-size:.92rem}
 input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
@@ -108,6 +118,8 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script src="mazos/rnsa.js"></script>
 <script src="mazos/ley5184.js"></script>
 <script src="mazos/historia_argentina.js"></script>
+<script src="mazos/_contable.js"></script>
+<script src="mazos/ifrs_cap01.js"></script>
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
@@ -334,6 +346,7 @@ function render(){
   acctBtn();
   document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===view));
   document.getElementById("ttl").textContent=view==="decks"?"Anki Pro":D().head;
+  document.body.className=(view!=="decks"&&D().theme)?"th-"+D().theme:"";
   B.innerHTML="";
   ({decks,study,stats,browse})[view]();
 }
@@ -354,7 +367,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div>${(D().kind!=="temas"||cur.expl)?`<details><summary>${D().kind==="temas"?"Explicación":"Ver texto del artículo"}</summary><p>${artDetail(D(),cur)}</p></details>`:""}`:""}
+    ${shown?`<div class="a">${cur.ans}</div>${(D().kind!=="temas"||cur.expl)?`<details><summary>${D().kind==="temas"?"Explicación":"Ver texto del artículo"}</summary><div class="det">${artDetail(D(),cur)}</div></details>`:""}`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
@@ -372,16 +385,40 @@ function grade(g){
 }
 window.extraNew=()=>{rollDay();const id=D().id;S.day.newDone[id]=Math.max(0,(S.day.newDone[id]||0)-10);save();render();};
 
+// Mazos sueltos y mazos con submazos (los que comparten "group", por ejemplo los capítulos de un libro)
+let openGroups={};
+function countsHtml(n,l,r){return `<span class="c-new">Nuevas <b>${n}</b></span><span class="c-lrn">Aprendiendo <b>${l}</b></span><span class="c-rev">Repaso <b>${r}</b></span>`;}
 function decks(){
-  const now=Date.now();
-  V.innerHTML=`<p class="muted" style="margin:0 0 10px">Elegí qué norma estudiar.</p>`+DECKS.map(d=>{
-    const q=queue(d);const seen=d.cards.filter(c=>st(c.id)).length;
+  const items=[],seenG={};
+  for(const d of DECKS){
+    if(!d.group){items.push({deck:d});continue;}
+    if(!seenG[d.groupId]){seenG[d.groupId]={group:d.group,groupId:d.groupId,groupSub:d.groupSub||"",decks:[]};items.push(seenG[d.groupId]);}
+    seenG[d.groupId].decks.push(d);
+  }
+  const card=d=>{const q=queue(d),seen=d.cards.filter(c=>st(c.id)).length;
     return `<div class="panel deck${d.id===S.opts.deck?" sel":""}" data-d="${d.id}">
       <h3 style="margin:0">${d.title}</h3><div class="muted">${d.sub} · ${d.cards.length} tarjetas</div>
-      <div class="counts" style="margin:10px 0 8px"><span class="c-new">Nuevas <b>${q.nw.length}</b></span><span class="c-lrn">Aprendiendo <b>${q.lrn.length}</b></span><span class="c-rev">Repaso <b>${q.due.length}</b></span></div>
+      <div class="counts" style="margin:10px 0 8px">${countsHtml(q.nw.length,q.lrn.length,q.due.length)}</div>
       <div style="display:flex;align-items:center;gap:10px"><span class="meter" style="max-width:none"><i style="width:${seen/d.cards.length*100}%"></i></span><span class="muted">${seen}/${d.cards.length}</span></div>
-    </div>`;}).join("");
-  V.querySelectorAll("[data-d]").forEach(el=>el.onclick=()=>{S.opts.deck=el.dataset.d;cur=null;shown=false;browseArt=0;save();view="study";render();});
+    </div>`;};
+  const group=g=>{
+    let n=0,l=0,r=0,tot=0,seen=0;
+    for(const d of g.decks){const q=queue(d);n+=q.nw.length;l+=q.lrn.length;r+=q.due.length;tot+=d.cards.length;seen+=d.cards.filter(c=>st(c.id)).length;}
+    if(openGroups[g.groupId]===undefined)openGroups[g.groupId]=g.decks.some(d=>d.id===S.opts.deck);
+    const open=openGroups[g.groupId];
+    const subs=g.decks.map(d=>{const q=queue(d),sn=d.cards.filter(c=>st(c.id)).length;
+      return `<div class="sub${d.id===S.opts.deck?" sel":""}" data-d="${d.id}"><div class="sub-t">${d.title}</div>
+        <div class="counts" style="margin:4px 0 0">${countsHtml(q.nw.length,q.lrn.length,q.due.length)}<span class="muted">${sn}/${d.cards.length}</span></div></div>`;}).join("");
+    return `<div class="panel deck grp${open?" open":""}">
+      <div data-g="${g.groupId}"><h3 style="margin:0;display:flex;justify-content:space-between;gap:8px"><span>${g.group}</span><span class="chev">${open?"▾":"▸"}</span></h3>
+      <div class="muted">${g.groupSub?g.groupSub+" · ":""}${g.decks.length} ${g.decks.length===1?"submazo":"submazos"} · ${tot} tarjetas</div>
+      <div class="counts" style="margin:10px 0 8px">${countsHtml(n,l,r)}</div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="meter" style="max-width:none"><i style="width:${tot?seen/tot*100:0}%"></i></span><span class="muted">${seen}/${tot}</span></div></div>
+      ${open?`<div class="subs">${subs}</div>`:""}
+    </div>`;};
+  V.innerHTML=`<p class="muted" style="margin:0 0 10px">Elegí qué estudiar.</p>`+items.map(it=>it.deck?card(it.deck):group(it)).join("");
+  V.querySelectorAll("[data-g]").forEach(el=>el.onclick=()=>{openGroups[el.dataset.g]=!openGroups[el.dataset.g];render();});
+  V.querySelectorAll("[data-d]").forEach(el=>el.onclick=e=>{e.stopPropagation();S.opts.deck=el.dataset.d;cur=null;shown=false;browseArt=0;save();view="study";render();});
 }
 
 function stats(){
@@ -423,17 +460,19 @@ function settings(d){
     <p class="muted" style="margin:0">Descargá este mazo para Anki (computadora, AnkiDroid o AnkiMobile): las tarjetas se ven con el mismo diseño, con el desplegable incluido. El progreso de cada app es independiente.</p>
     <div class="btns"><a class="ghost" style="text-decoration:none" href="anki/${d.id}.apkg" download="${d.id}.apkg">Descargar para Anki (.apkg)</a></div>
     <p class="muted" style="margin:12px 0 4px">En AnkiMobile o AnkiDroid también podés usar <b>Enlace de descarga</b> y pegar este enlace:</p>
-    <div class="acct-row"><input id="ankiurl" readonly value="${ankiUrl(d)}" aria-label="Enlace de descarga para Anki" onclick="this.select()"><button class="ghost" id="ankicopy">Copiar</button></div>
+    <div class="acct-row"><input id="ankiurl" readonly value="${ankiUrl(d)}" aria-label="Enlace de descarga para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl">Copiar</button></div>
+    ${d.groupId?`<p class="muted" style="margin:14px 0 4px">O todo <b>${d.group}</b> de una vez, con los submazos anidados:</p>
+    <div class="btns" style="margin-top:0"><a class="ghost" style="text-decoration:none" href="anki/${d.groupId}.apkg" download="${d.groupId}.apkg">Descargar completo (.apkg)</a></div>
+    <div class="acct-row"><input id="ankiurl2" readonly value="${ankiUrl({id:d.groupId})}" aria-label="Enlace del mazo completo para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl2">Copiar</button></div>`:""}
     <p class="sync" style="margin-top:8px">Si lo importás otra vez cuando haya tarjetas nuevas o corregidas, Anki las actualiza y conserva lo que estudiaste allá.</p>
   </div>`+accountPanel()+`
   <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
 }
 function bindSettings(d){
-  const cp=document.getElementById("ankicopy");
-  if(cp)cp.onclick=async()=>{const inp=document.getElementById("ankiurl");
+  V.querySelectorAll("[data-copy]").forEach(cp=>cp.onclick=async()=>{const inp=document.getElementById(cp.dataset.copy);
     try{await navigator.clipboard.writeText(inp.value);cp.textContent="Copiado";}
     catch(e){inp.focus();inp.select();try{document.execCommand("copy");cp.textContent="Copiado";}catch(_){cp.textContent="Seleccionado";}}
-    setTimeout(()=>{cp.textContent="Copiar";},2000);};
+    setTimeout(()=>{cp.textContent="Copiar";},2000);});
   const f=filt(d);
   document.getElementById("npd").onchange=e=>{S.opts.newPerDay=Math.max(1,Math.min(200,+e.target.value||20));save();};
   V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=d.nums[+b.dataset.f];const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});

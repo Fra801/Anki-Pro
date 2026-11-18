@@ -8,7 +8,7 @@ Deja los archivos en anki/<id>.apkg. Hay que volver a correrlo cada vez que se a
 o corrigen tarjetas. Los identificadores de las notas son estables: si el usuario importa
 de nuevo un .apkg actualizado, Anki actualiza el texto y conserva lo estudiado.
 """
-import json, os, re, subprocess, sys, zlib
+import functools, json, os, re, subprocess, sys, zlib
 import genanki
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,8 +50,8 @@ CSS = """
 .a ul{margin:6px 0;padding-left:20px}
 details{margin-top:14px;font-size:.88rem;color:var(--mute)}
 details summary{cursor:pointer;font-weight:500}
-details p{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0 0}
-details p b{color:var(--mute);font-weight:600}
+details .det{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0 0}
+details .det > b:first-child{color:var(--mute);font-weight:600}
 """
 
 FRONT = """<div class="ap"><div class="ap-head">{{Encabezado}}</div>
@@ -60,15 +60,34 @@ FRONT = """<div class="ap"><div class="ap-head">{{Encabezado}}</div>
 BACK = """<div class="ap"><div class="ap-head">{{Encabezado}}</div>
 <div class="ap-card"><p class="q">{{Pregunta}}</p>
 <div class="a" id="answer">{{Respuesta}}</div>
-{{#Detalle}}<details><summary>{{Rotulo}}</summary><p>{{Detalle}}</p></details>{{/Detalle}}
+{{#Detalle}}<details><summary>{{Rotulo}}</summary><div class="det">{{Detalle}}</div></details>{{/Detalle}}
 </div></div>"""
 
+FIELDS = [{"name": n} for n in ["Pregunta", "Respuesta", "Detalle", "Rotulo", "Encabezado", "Grupo", "Tipo", "ID"]]
 MODEL = genanki.Model(
     MODEL_ID, "Anki Pro",
-    fields=[{"name": n} for n in ["Pregunta", "Respuesta", "Detalle", "Rotulo", "Encabezado", "Grupo", "Tipo", "ID"]],
+    fields=FIELDS,
     templates=[{"name": "Tarjeta", "qfmt": FRONT, "afmt": BACK}],
     css=CSS, sort_field_index=0,
 )
+
+# Mazos con tema visual propio (por ejemplo "contable"): misma plantilla dentro de un contenedor
+# con la clase del tema, y el CSS de estilos/<tema>.css. Cada tema tiene su propio tipo de nota,
+# con un identificador fijo que no debe cambiarse.
+THEME_IDS = {"contable": 1731940101}
+
+
+@functools.lru_cache(maxsize=None)
+def theme_model(theme):
+    with open(os.path.join(ROOT, "estilos", theme + ".css"), encoding="utf-8") as f:
+        extra = f.read()
+    wrap = lambda t: t.replace('<div class="ap">', f'<div class="ap th-{theme}">')
+    return genanki.Model(
+        THEME_IDS[theme], f"Anki Pro · {theme.capitalize()}",
+        fields=FIELDS,
+        templates=[{"name": "Tarjeta", "qfmt": wrap(FRONT), "afmt": wrap(BACK)}],
+        css=CSS + "\n" + extra, sort_field_index=0,
+    )
 
 
 class Nota(genanki.Note):
@@ -90,10 +109,12 @@ def main():
         with open(os.path.join(FONTS, src), "rb") as fi, open(p, "wb") as fo:
             fo.write(fi.read())
         media.append(p)
+    groups = {}
     for d in data:
-        deck = genanki.Deck(zlib.crc32(("anki-pro:" + d["id"]).encode()) & 0x7FFFFFFF, "Anki Pro::" + d["title"])
+        name = "Anki Pro::" + (d["group"] + "::" if d["group"] else "") + d["title"]
+        deck = genanki.Deck(zlib.crc32(("anki-pro:" + d["id"]).encode()) & 0x7FFFFFFF, name)
         for c in d["cards"]:
-            deck.add_note(Nota(model=MODEL, fields=[
+            deck.add_note(Nota(model=theme_model(d["theme"]) if d["theme"] else MODEL, fields=[
                 c["pregunta"], c["respuesta"], c["detalle"], c["rotulo"], d["head"], c["grupo"], c["tipo"], c["id"],
             ], tags=[tag(c["grupo"]), tag(c["tipo"])]))
         pkg = genanki.Package(deck)
@@ -101,6 +122,15 @@ def main():
         dest = os.path.join(OUT, d["id"] + ".apkg")
         pkg.write_to_file(dest)
         print(f"{dest}: {len(d['cards'])} tarjetas")
+        if d["groupId"]:
+            groups.setdefault(d["groupId"], []).append(deck)
+    # Un archivo por mazo con submazos (por ejemplo, el libro completo), con los submazos anidados
+    for gid, decks in groups.items():
+        pkg = genanki.Package(decks)
+        pkg.media_files = media
+        dest = os.path.join(OUT, gid + ".apkg")
+        pkg.write_to_file(dest)
+        print(f"{dest}: {sum(len(x.notes) for x in decks)} tarjetas en {len(decks)} submazos")
     for p in media:
         os.remove(p)
 

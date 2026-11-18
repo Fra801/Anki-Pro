@@ -1,0 +1,65 @@
+/* Componentes visuales para mazos de contabilidad (tema "contable").
+   Se usan en la app (index.html) y en las tarjetas exportadas a Anki (tools/export_anki.py).
+   Las variables --bg, --card, --ink, --mute, --line y --accent vienen del diseño general. */
+
+.th-contable{
+  --accent:#1f6b57;            /* verde libro mayor */
+  --ac:#2f7d4f; --ac-bg:rgba(47,125,79,.12);   /* activos */
+  --pa:#b4442d; --pa-bg:rgba(180,68,45,.12);   /* pasivos */
+  --pn:#2a6496; --pn-bg:rgba(42,100,150,.12);  /* patrimonio */
+  --in:#7a5bb5; --in-bg:rgba(122,91,181,.12);  /* ingresos / gastos */
+  --up:#2f7d4f; --dn:#b4442d;
+}
+@media (prefers-color-scheme:dark){
+  .th-contable{--accent:#5fb89a;--ac:#6cc28c;--pa:#e07a62;--pn:#6aa8de;--in:#b39ae6;--up:#6cc28c;--dn:#e07a62}
+}
+.nightMode .th-contable,.night_mode .th-contable,.th-contable.nightMode{
+  --accent:#5fb89a;--ac:#6cc28c;--pa:#e07a62;--pn:#6aa8de;--in:#b39ae6;--up:#6cc28c;--dn:#e07a62;
+}
+.th-contable .num,.th-contable .fx-v,.th-contable .est-r span:last-child,.th-contable .as td.m{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+
+/* Ecuación contable en bloques */
+.eq{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:10px 0 4px}
+.eq-t{flex:1 1 auto;min-width:72px;text-align:center;padding:9px 8px;border-radius:10px;font-weight:600;font-size:.92rem;line-height:1.25}
+.eq-t small{display:block;font-weight:500;font-size:.72rem;opacity:.8;margin-top:2px}
+.eq-o{align-self:center;font-family:Fraunces,"AP Fraunces",serif;font-size:1.3rem;color:var(--mute);padding:0 2px}
+.ac{color:var(--ac);background:var(--ac-bg)}
+.pa{color:var(--pa);background:var(--pa-bg)}
+.pn{color:var(--pn);background:var(--pn-bg)}
+.in{color:var(--in);background:var(--in-bg)}
+
+/* Efectos de una transacción sobre la ecuación */
+.fx{margin:10px 0 2px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.fx-r{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;padding:8px 12px;border-top:1px solid var(--line);font-size:.93rem}
+.fx-r:first-child{border-top:0}
+.fx-k{font-size:.68rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:6px}
+.fx-v{font-weight:600}
+.fx-v.up{color:var(--up)}.fx-v.dn{color:var(--dn)}.fx-v.eq0{color:var(--mute)}
+.fx-n{padding:7px 12px;font-size:.8rem;color:var(--mute);background:var(--bg);border-top:1px solid var(--line)}
+
+/* Estado financiero en miniatura */
+.est{margin:10px 0 2px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--card);font-size:.9rem}
+.est-h{text-align:center;line-height:1.3;margin-bottom:8px}
+.est-h b{display:block;font-family:Fraunces,"AP Fraunces",serif;font-size:.98rem;color:var(--ink)}
+.est-h span{display:block;font-size:.76rem;color:var(--mute)}
+.est-s{font-size:.72rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);margin:8px 0 2px}
+.est-r{display:flex;justify-content:space-between;gap:12px;padding:2px 0}
+.est-r.ind span:first-child{padding-left:14px}
+.est-r.sub span:last-child{border-top:1px solid var(--ink);padding-top:1px}
+.est-r.tot{font-weight:600}
+.est-r.tot span:last-child{border-bottom:3px double var(--ink)}
+
+/* Asiento de diario: Debe / Haber */
+.as{width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:.9rem}
+.as th{font-size:.68rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mute);text-align:right;padding:4px 6px;border-bottom:1px solid var(--line)}
+.as th:first-child{text-align:left}
+.as td{padding:5px 6px;border-bottom:1px dashed var(--line)}
+.as td.m{text-align:right;white-space:nowrap}
+.as tr.cr td:first-child{padding-left:26px}
+.as tr.gl td{font-size:.8rem;color:var(--mute);font-style:italic;border-bottom:0}
+
+/* Fórmula destacada */
+.fm{margin:10px 0 2px;padding:10px 12px;border-left:3px solid var(--accent);background:var(--bg);border-radius:0 10px 10px 0;font-family:Fraunces,"AP Fraunces",serif;font-size:1rem}
+
+/* Referencia de página del libro */
+.pg{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:600;letter-spacing:.04em;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:1px 8px}

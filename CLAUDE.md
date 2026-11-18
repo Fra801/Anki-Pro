@@ -45,10 +45,33 @@ Para temas que no son normas (historia, geografía, biología, etc.) el mazo lle
 - La explicación da el contexto y el porqué en 2 a 4 oraciones, sin repetir la respuesta palabra por palabra. Datos verificados: si una fecha o un dato no es seguro, no se incluye.
 - Valen las mismas reglas de las tarjetas: una idea por tarjeta, preguntas abiertas que se entiendan solas, nada de sí o no, casos y distinciones donde ayuden (por ejemplo, ordenar hechos cronológicamente o comparar dos batallas del mismo nombre).
 
+## Libros con capítulos: submazos
+
+Un libro se arma como **un mazo principal con submazos**: un archivo por capítulo (`mazos/ifrs_cap01.js`, `ifrs_cap02.js`, …), todos con el mismo `group` (nombre visible del libro), `groupId` (identificador corto, por ejemplo `"ifrs"`) y `groupSub` (autores y edición). En la pantalla Mazos aparece el libro como un mazo desplegable con sus capítulos; en Anki quedan anidados (Anki Pro › libro › capítulo) y además se genera `anki/<groupId>.apkg` con el libro completo.
+
+- Cada capítulo es un mazo `kind: "temas"`; los **temas son los objetivos de aprendizaje** del capítulo («1 · Qué es la contabilidad», …), más un tema con la sección comparativa si el libro la tiene (en el libro IFRS: «IFRS vs. US GAAP»).
+- `title`: «01 · Nombre del capítulo» (con dos dígitos para que se ordenen); `idp` distinto por capítulo (`"f1:"`, `"f2:"`, …); `head`: «IFRS · Cap. 1 · Nombre».
+- **Idioma**: tarjetas en **español** (decisión del usuario para el libro IFRS), con la terminología NIIF en castellano: estado de situación financiera, estado de resultados, ganancias retenidas, capital social — acciones ordinarias, otro resultado integral, valor razonable, etc.
+- La explicación termina con la página del libro: `pg(17)` o `pg("16–17")`.
+- Se toma la teoría del capítulo, los ejemplos resueltos, el resumen de objetivos y la sección comparativa; no se copian los ejercicios del final, pero sí se usan sus ideas para casos.
+- Apéndices del libro: incluir sólo los que enseñan algo (teoría o cálculos), no los que son material de práctica (por ejemplo, estados financieros de empresas reales).
+
+## Tema visual «contable» y componentes
+
+Los mazos de contabilidad llevan `theme: "contable"`: la app aplica `estilos/contable.css` (acento verde y colores por elemento: activo verde, pasivo rojo, patrimonio azul, resultados violeta) y la exportación a Anki usa un tipo de nota propio con ese CSS. Para escribir las tarjetas se usan los ayudantes de `mazos/_contable.js` (`window.CONT`), que generan HTML con comillas simples:
+
+- `EQ` — la ecuación contable básica en bloques; `eq(["ac","Activos"],"=",["pa","Pasivos"],"+",["pn","Patrimonio"])` para otras ecuaciones (clases `ac`, `pa`, `pn`, `in`; el tercer elemento opcional es una aclaración chica).
+- `fx([["A","Efectivo","+€1.200"],["PN","Ingresos por servicios","+€1.200"]], "nota")` — efectos de una transacción (claves `A`, `P`, `PN`, `R`); el signo del importe pinta verde o rojo.
+- `est(empresa, estado, fecha o período, filas)` — estado financiero en miniatura; filas `["s","Título de sección"]`, `["","Partida","importe"]`, `["ind",…]` sangría, `["sub",…]` subtotal con línea, `["tot",…]` total con doble subrayado.
+- `asiento([["Efectivo","15.000",""],["Capital social","","15.000"]], "glosa")` — asiento con Debe y Haber (desde el capítulo 2).
+- `fm("Fórmula")` — fórmula destacada; `pg(p)` — referencia de página.
+
+Importes en formato argentino: `€15.000`, `€1.600`. Usar los componentes donde ayuden a ver la idea (efectos de transacciones, estados, ecuaciones, asientos, fórmulas); el resto de la respuesta sigue las reglas generales.
+
 ## Agregar el mazo a la app
 
 1. Crear `mazos/<nombre>.js` copiando la estructura de uno existente: `id` y `idp` (prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub`, `head`, `arts`, `build`.
-2. Agregar `<script src="mazos/<nombre>.js"></script>` en `index.html`, junto a los otros mazos.
+2. Agregar `<script src="mazos/<nombre>.js"></script>` en `index.html`, junto a los otros mazos (los de contabilidad, después de `mazos/_contable.js`).
 3. Agregar el archivo a la lista de `sw.js` y subir la versión de caché (`anki-pro-vN`).
 4. Sumar la fila a la tabla de mazos del `README.md`.
 5. Correr `node tools/check_mazos.js` y corregir hasta que no marque problemas.
