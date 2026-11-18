@@ -113,10 +113,32 @@ const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{
   d.cards=[];const n={};
-  d.build((a,k,q,ans)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id};d.cards.push(c);ALL.push(c);});
+  d.build((a,k,q,ans,inc)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id,inc:inc||""};d.cards.push(c);ALL.push(c);});
   d.nums=Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
 });
 const deckById=id=>DECKS.find(d=>d.id===id);
+// Texto que se despliega: el artículo entero o, si la tarjeta apunta a uno o más incisos, sólo esos incisos.
+const INC_START=/^\s*([a-z]\)|\d+\s*[-)])/;
+function incisoText(text,key){
+  const lines=text.split("\n");let out=[],on=false;
+  const mk=new RegExp("^\\s*"+key+"\\s*[-)]");
+  for(const l of lines){
+    if(INC_START.test(l))on=mk.test(l);
+    if(on)out.push(l);
+  }
+  return out.join("\n");
+}
+function artDetail(d,c){
+  const full=d.arts[c.a]||"";
+  if(!c.inc)return `<b>Artículo ${c.a}º:</b> ${full}`;
+  const keys=c.inc.split(",");
+  const parts=keys.map(k=>incisoText(full,k)).filter(Boolean);
+  if(!parts.length)return `<b>Artículo ${c.a}º:</b> ${full}`;
+  const lbl=keys.map(k=>/\d/.test(k)?k:k+")");
+  const name=keys.length===1?`inciso ${lbl[0]}`:`incisos ${lbl.slice(0,-1).join(", ")} y ${lbl[lbl.length-1]}`;
+  const body=keys.length===1?parts[0].replace(INC_START,"").replace(/^\s+/,""):parts.join("\n");
+  return `<b>Artículo ${c.a}º, ${name}:</b> ${body}`;
+}
 
 /* ===================== ESTADO / SRS (SM-2 tipo Anki) ===================== */
 const KEY="cevdm-srs-v1";
@@ -320,7 +342,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p><b>Artículo ${cur.a}º:</b> ${D().arts[cur.a]}</p></details>`:""}
+    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p>${artDetail(D(),cur)}</p></details>`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;

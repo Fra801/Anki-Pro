@@ -40,6 +40,8 @@ Cada mazo es un archivo en `mazos/`. Para sumar uno:
 add(8, "Dato", "Inc. e): ¿cuándo inhabilita la licencia por asuntos personales?", "Por más de <strong>10 días continuos</strong>.");
 ```
 
+Si la tarjeta apunta a un inciso, agregalo como quinto dato (por ejemplo `"b"`, o `"7,8"` para varios): al desplegar se muestra sólo ese inciso. No lo nombres en la pregunta ni en la respuesta.
+
 3. Agregá `<script src="mazos/nuevo.js"></script>` en `index.html` (junto a los otros mazos) y el archivo a la lista de `sw.js`.
 
 No cambies el `idp` ni el orden de las tarjetas de un mazo ya estudiado: los identificadores salen de ahí y se perdería el progreso. Las tarjetas nuevas conviene agregarlas al final del artículo.

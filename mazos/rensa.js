@@ -143,20 +143,20 @@ build(add){
 add(1,"Regla","¿A qué se aplican las disposiciones del RENSA?","A la <strong>instrucción y resolución</strong> de <strong>sumarios, informaciones sumarias y actuaciones sumarísimas</strong>.");
 add(1,"Regla","¿Qué finalidad tienen esas actuaciones?","Comprobar <strong>faltas disciplinarias o hechos atribuidos al personal policial</strong>, o casos en que éste <strong>sea parte</strong>.");
 // Art. 2
-add(2,"Condición","Inc. a): ¿qué tipo de falta obliga a instruir sumario?","La imputación o presunción de <strong>falta grave</strong>.");
-add(2,"Condición","Inc. b): ¿qué resolución penal obliga a instruir sumario?","El <strong>auto de procesamiento y/o prisión preventiva</strong> en sede penal contra personal policial.");
-add(2,"Condición","Inc. c): ¿qué hechos sobre bienes del Estado obligan a instruir sumario?","<strong>Pérdida, sustracción, daño, inutilización, degradación o uso indebido</strong> de cosas, bienes, valores o dinero del Estado, o bajo su custodia, depósito o afectados a la Institución.");
-add(2,"Condición","Inc. d): ¿qué actuación del personal obliga a instruir sumario?","La que pueda dar motivo a <strong>juicios de responsabilidad administrativa</strong>.");
-add(2,"Condición","Inc. e): ¿qué situación del personal en actividad obliga a instruir sumario?","<strong>Fallecimiento</strong>, o enfermedad, lesiones o padecimientos que impliquen <strong>impedimento por más de dos meses</strong> para su desempeño.");
-add(2,"Condición","Inc. f): ¿qué situación del personal retirado obliga a instruir sumario?","<strong>Fallecimiento</strong>, enfermedad, lesiones o padecimiento en circunstancias que hagan suponer <strong>relación con el cumplimiento de deberes policiales</strong>.");
-add(2,"Condición","Inc. g): ¿qué lesiones o impedimentos obligan a sumario aunque no lleguen a los dos meses del inc. e)?","Los que impliquen la <strong>adecuación de tareas</strong> del agente.");
-add(2,"Caso","Un agente en actividad sufre una lesión que lo inhabilita tres meses. ¿Qué actuación corresponde y por qué inciso?","<strong>Sumario</strong>, por el <strong>inc. e) del Art. 2</strong> (impedimento de más de dos meses).");
+add(2,"Condición","¿Qué tipo de falta obliga a instruir sumario?","La imputación o presunción de <strong>falta grave</strong>.","a");
+add(2,"Condición","¿Qué resolución penal obliga a instruir sumario?","El <strong>auto de procesamiento y/o prisión preventiva</strong> en sede penal contra personal policial.","b");
+add(2,"Condición","¿Qué hechos sobre bienes del Estado obligan a instruir sumario?","<strong>Pérdida, sustracción, daño, inutilización, degradación o uso indebido</strong> de cosas, bienes, valores o dinero del Estado, o bajo su custodia, depósito o afectados a la Institución.","c");
+add(2,"Condición","¿Qué actuación del personal obliga a instruir sumario?","La que pueda dar motivo a <strong>juicios de responsabilidad administrativa</strong>.","d");
+add(2,"Condición","¿Qué situación del personal en actividad obliga a instruir sumario?","<strong>Fallecimiento</strong>, o enfermedad, lesiones o padecimientos que impliquen <strong>impedimento por más de dos meses</strong> para su desempeño.","e");
+add(2,"Condición","¿Qué situación del personal retirado obliga a instruir sumario?","<strong>Fallecimiento</strong>, enfermedad, lesiones o padecimiento en circunstancias que hagan suponer <strong>relación con el cumplimiento de deberes policiales</strong>.","f");
+add(2,"Condición","¿Qué lesiones o impedimentos obligan a instruir sumario aunque no impidan el desempeño por más de dos meses?","Los que impliquen la <strong>adecuación de tareas</strong> del agente.","g");
+add(2,"Caso","Un agente en actividad sufre una lesión que lo inhabilita tres meses. ¿Qué actuación corresponde y por qué motivo?","<strong>Sumario</strong>, porque el impedimento <strong>supera los dos meses</strong>.","e");
 // Art. 3
 add(3,"Condición","¿Cuándo se instruyen actuaciones sumarísimas?","Cuando se impute o presuma la comisión de <strong>falta disciplinaria gravísima</strong>.");
 add(3,"Distinción","¿Qué actuación corresponde a cada tipo de falta: grave y gravísima?","Falta <strong>grave</strong>: <strong>sumario</strong> (Art. 2 a).<br>Falta <strong>gravísima</strong>: <strong>actuación sumarísima</strong> (Art. 3).");
 // Art. 4
-add(4,"Condición","Inc. a): ¿cuándo se confecciona información por falta disciplinaria?","Si se estima que la justa sanción <strong>superará los 30 días de arresto</strong>.");
-add(4,"Condición","Inc. b): ¿cuándo se confecciona información por motivos de salud?","Por enfermedad, lesiones o padecimientos que <strong>no demanden más de dos meses</strong> para el restablecimiento.");
+add(4,"Condición","¿Cuándo se confecciona información por falta disciplinaria?","Si se estima que la justa sanción <strong>superará los 30 días de arresto</strong>.","a");
+add(4,"Condición","¿Cuándo se confecciona información por motivos de salud?","Por enfermedad, lesiones o padecimientos que <strong>no demanden más de dos meses</strong> para el restablecimiento.","b");
 add(4,"Distinción","Enfermedad del personal en actividad: ¿cuándo corresponde información y cuándo sumario?","Hasta <strong>dos meses</strong> de restablecimiento: <strong>información</strong> (Art. 4 b).<br>Más de dos meses de impedimento: <strong>sumario</strong> (Art. 2 e).");
 // CAPÍTULO 2 — Iniciación de las actuaciones
 // Art. 5
@@ -230,12 +230,12 @@ add(27,"Regla","¿Con qué alcance puede asistir el defensor a la declaración d
 add(28,"Dato","¿En qué plazo puede recusarse al instructor y desde cuándo corre?","<strong>48 horas</strong> desde la <strong>notificación del causante</strong> o desde la <strong>designación y notificación del defensor</strong>.");
 add(28,"Regla","¿Cómo debe plantearse la recusación?","<strong>Por escrito</strong>, indicando los <strong>hechos</strong> que configuran alguna causal del Reglamento.");
 // Art. 29
-add(29,"Dato","Inc. a): ¿qué parentesco del instructor con las partes es causal de recusación?","Consanguinidad hasta el <strong>cuarto grado</strong> y afinidad hasta el <strong>segundo grado</strong>.");
-add(29,"Dato","Inc. b): ¿qué denuncia previa es causal de recusación?","Haber sido <strong>denunciado o acusado</strong> por delito o falta administrativa por el sumariado o el ofendido, <strong>antes del sumario</strong>.");
-add(29,"Dato","Inc. c): ¿qué causa pendiente es causal de recusación?","Que el instructor, su cónyuge o parientes (consanguíneos hasta 4º, afines hasta 2º) tengan <strong>causa judicial o administrativa pendiente</strong> con el ofendido o sumariado.");
-add(29,"Dato","Inc. d) y e): ¿qué relaciones personales son causal de recusación?","<strong>Amistad íntima</strong> manifestada con frecuencia de trato, y <strong>enemistad o resentimiento manifiesto</strong> demostrado por hechos graves conocidos.");
+add(29,"Dato","¿Qué parentesco del instructor con las partes es causal de recusación?","Consanguinidad hasta el <strong>cuarto grado</strong> y afinidad hasta el <strong>segundo grado</strong>.","a");
+add(29,"Dato","¿Qué denuncia previa es causal de recusación del instructor?","Haber sido <strong>denunciado o acusado</strong> por delito o falta administrativa por el sumariado o el ofendido, <strong>antes del sumario</strong>.","b");
+add(29,"Dato","¿Qué causa pendiente es causal de recusación del instructor?","Que el instructor, su cónyuge o parientes (consanguíneos hasta 4º, afines hasta 2º) tengan <strong>causa judicial o administrativa pendiente</strong> con el ofendido o sumariado.","c");
+add(29,"Dato","¿Qué relaciones personales del instructor son causal de recusación?","<strong>Amistad íntima</strong> manifestada con frecuencia de trato, y <strong>enemistad o resentimiento manifiesto</strong> demostrado por hechos graves conocidos.","d,e");
 add(29,"Regla","¿Qué carácter tiene la lista de causales de recusación del Art. 29?","<strong>Taxativo</strong>: “sólo se admitirán” esas causales.");
-add(29,"Caso","El instructor es primo hermano (4º grado de consanguinidad) del sumariado. ¿Qué consecuencia tiene?","Es <strong>causal de recusación</strong> (inc. a: consanguinidad hasta el cuarto grado).");
+add(29,"Caso","El instructor es primo hermano (4º grado de consanguinidad) del sumariado. ¿Qué consecuencia tiene?","Es <strong>causal de recusación</strong>: el parentesco por consanguinidad alcanza hasta el <strong>cuarto grado</strong>.","a");
 // Art. 30
 add(30,"Regla","¿A qué otra relación se extienden las causales del Art. 29?","A la del <strong>defensor respecto del instructor</strong>.");
 // Art. 31

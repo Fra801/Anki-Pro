@@ -166,12 +166,12 @@ add(5,"Regla","¿Conforme a qué norma se considera zonificada Viedma a los fine
 // Art. 6
 add(6,"Regla","¿Qué carácter tienen los reglamentos técnicos enumerados en el Art. 6?","<strong>Forman parte</strong> del Código de Edificación.");
 add(6,"Dato","¿Cuántos reglamentos técnicos enumera el Art. 6?","<strong>Once (11)</strong>.");
-add(6,"Dato","¿Qué cuatro reglamentos se toman del Código de Edificación de la Ciudad de Buenos Aires?","<ul><li>Fundaciones</li><li>Estructuras</li><li>Instalaciones Eléctricas</li><li>Ascensores y Transportadores</li></ul>");
-add(6,"Dato","¿Qué reglamento rige las estructuras de hormigón?","El <strong>PRAEH</strong>: Proyecto de Reglamento Argentino para Estructuras de Hormigón.");
-add(6,"Dato","¿Qué reglamento rige lo sanitario (agua y cloacas)?","El <strong>Reglamento de O.S.N.</strong> o las normas que especifique el <strong>Departamento Provincial de Aguas</strong>.");
-add(6,"Dato","¿Qué reglamentos rigen las instalaciones de gas y de energía?","<strong>Gas del Estado</strong> y <strong>Agua y Energía de la Nación</strong>.");
-add(6,"Dato","¿Qué normas del SEDUV integran el Código?","Normas mínimas de <strong>Habitabilidad</strong> y normas mínimas de <strong>Habitabilidad Higrotérmica</strong>.");
-add(6,"Dato","¿Qué normas aplican a hoteles, moteles, residenciales y hosterías?","Las Normas de Edificación de la <strong>Secretaría de Estado y Turismo de la Nación</strong>.");
+add(6,"Dato","¿Qué cuatro reglamentos se toman del Código de Edificación de la Ciudad de Buenos Aires?","<ul><li>Fundaciones</li><li>Estructuras</li><li>Instalaciones Eléctricas</li><li>Ascensores y Transportadores</li></ul>","1,2,4,8");
+add(6,"Dato","¿Qué reglamento rige las estructuras de hormigón?","El <strong>PRAEH</strong>: Proyecto de Reglamento Argentino para Estructuras de Hormigón.","3");
+add(6,"Dato","¿Qué reglamento rige lo sanitario (agua y cloacas)?","El <strong>Reglamento de O.S.N.</strong> o las normas que especifique el <strong>Departamento Provincial de Aguas</strong>.","5");
+add(6,"Dato","¿Qué reglamentos rigen las instalaciones de gas y de energía?","<strong>Gas del Estado</strong> y <strong>Agua y Energía de la Nación</strong>.","6,7");
+add(6,"Dato","¿Qué normas del SEDUV integran el Código?","Normas mínimas de <strong>Habitabilidad</strong> y normas mínimas de <strong>Habitabilidad Higrotérmica</strong>.","9,10");
+add(6,"Dato","¿Qué normas aplican a hoteles, moteles, residenciales y hosterías?","Las Normas de Edificación de la <strong>Secretaría de Estado y Turismo de la Nación</strong>.","11");
 // Art. 7
 add(7,"Regla","¿Qué carácter deben tener las obras destinadas a habitación?","<strong>Permanente</strong>.");
 // Art. 8
@@ -348,29 +348,29 @@ add(38,"Prohibición","¿Dónde está prohibido ubicar vanos de iluminación y/o
 add(39,"Regla","¿De qué depende la superficie de los vanos de iluminación y ventilación?","Del <strong>destino, superficie, forma y altura</strong> del local.");
 add(39,"Definición","¿Qué significan I, V y S en las fórmulas de iluminación y ventilación?","<strong>I</strong>: área de iluminación.<br><strong>V</strong>: área de ventilación.<br><strong>S</strong>: área del local.");
 // Art. 40
-add(40,"Dato","Condición 1, vano directo al exterior: ¿qué valores de I y V se exigen?","<strong>I = S/10</strong> · <strong>V = I/2</strong>.");
-add(40,"Dato","Condición 2, vano al exterior bajo parte cubierta: ¿qué valores de I y V se exigen?","<strong>I = S/6</strong> · <strong>V = I/2</strong>.");
-add(40,"Dato","Condición 3, iluminación cenital: ¿qué valores de I y V se exigen?","<strong>I = S/15</strong> · <strong>V = I/2</strong>, con <strong>V mínimo 0,25 m²</strong>.");
-add(40,"Regla","En las condiciones 1, 2 y 3, ¿qué relación guarda siempre V con I?","<strong>V es la mitad de I</strong>.");
-add(40,"Regla","Para escaleras con iluminación cenital, ¿qué se toma como S?","La <strong>suma del área de la caja de todos los pisos</strong>.");
-add(40,"Caso","Dormitorio de 12 m² con ventana directa al exterior: ¿qué I y V corresponden?","<strong>I = 1,20 m²</strong> · <strong>V = 0,60 m²</strong>.");
-add(40,"Caso","Local de 15 m² con ventana bajo una galería: ¿qué I y V corresponden?","<strong>I = 2,50 m²</strong> · <strong>V = 1,25 m²</strong>.");
-add(40,"Condición","Condición 4: ¿qué locales requieren ventilación mecánica además de la exigida?","Los <strong>locales de salubridad en lugares de espectáculos y diversión públicos</strong>.");
-add(40,"Dato","Condición 4: ¿qué renovación de aire debe asegurar la ventilación mecánica y con cuántos equipos?","<strong>10 veces el volumen del local por hora</strong>, con <strong>dos equipos</strong>: uno en uso y otro auxiliar.");
-add(40,"Regla","Condición 4: ¿cuándo deben funcionar los equipos y qué indicador llevan?","En forma obligatoria en <strong>horas de función</strong>, con una <strong>luz piloto</strong> que indique su funcionamiento.");
-add(40,"Dato","Condición 5: baño o cocina en planta baja que ventila a la vía pública, ¿a qué altura va la boca de salida?","Como mínimo a <strong>2,00 m sobre el nivel de vereda</strong>.");
-add(40,"Excepción","Condición 5: ¿qué edificaciones quedan exceptuadas de la altura de 2,00 m de la boca de ventilación?","Las <strong>retiradas de la L.M.</strong>");
-add(40,"Regla","Condición 6: en locales de comercio sobre pasajes, ¿cómo se considera el pasaje y qué ventilación extra se exige?","El pasaje se considera <strong>vía pública</strong>; además, <strong>ventilación auxiliar obligatoria</strong> (condiciones <strong>3 u 8</strong>) en el <strong>lado opuesto</strong> al vano sobre el pasaje.");
-add(40,"Dato","Condición 7, tubo independiente: ¿qué sección mínima debe tener?","<strong>S/400</strong>, y nunca menos de <strong>0,03 m²</strong>.");
-add(40,"Dato","Tubos de ventilación (condiciones 7 y 8): ¿qué inclinación máxima admiten?","Verticales o inclinados <strong>no más de 45°</strong>.");
-add(40,"Dato","Condición 7: ¿cómo debe ser la abertura que comunica el local con el tubo?","<strong>Regulable</strong> y de área <strong>no inferior al conducto</strong>.");
-add(40,"Dato","Tubos de ventilación (condiciones 7 y 8): ¿qué longitud máxima pueden tener los tramos horizontales?","<strong>¼ de la altura propia</strong> del conducto.");
-add(40,"Dato","Tubos de ventilación (condiciones 7 y 8): ¿cómo y a qué altura rematan en la azotea?","A los <strong>4 vientos con sombrerete</strong>, a <strong>1,50 m</strong> sobre cualquier solado o coronamiento de muro.");
-add(40,"Regla","Condición 8: ¿para qué sirve el tubo común?","Para <strong>unificar dos o más tubos independientes</strong>.");
-add(40,"Dato","Condición 8: ¿de qué material es el tubo común y qué no puede alojar?","De <strong>mampostería u hormigón</strong>; dentro no se ubican <strong>desagües ni cañerías</strong>.");
-add(40,"Dato","Condición 8: ¿qué sección mínima y qué relación de lados debe tener el tubo común?","Sección <strong>no inferior a 0,60 m²</strong>; relación de lados <strong>no mayor de 1/3</strong>.");
-add(40,"Dato","Condición 8: ¿cómo remata el conducto de cada local en el tubo común?","Con un <strong>recorrido vertical mínimo de 1,00 m</strong> y una <strong>diferencia de nivel de salida mínima de 0,50 m</strong>.");
-add(40,"Caso","Local de 8 m² ventilado por tubo independiente: ¿qué sección mínima corresponde?","<strong>0,03 m²</strong>: S/400 da 0,02 m², pero rige el <strong>mínimo de 0,03 m²</strong>.");
+add(40,"Dato","Vano directo al exterior: ¿qué valores de I y V se exigen?","<strong>I = S/10</strong> · <strong>V = I/2</strong>.","1");
+add(40,"Dato","Vano al exterior bajo parte cubierta: ¿qué valores de I y V se exigen?","<strong>I = S/6</strong> · <strong>V = I/2</strong>.","2");
+add(40,"Dato","Iluminación vertical o cenital: ¿qué valores de I y V se exigen?","<strong>I = S/15</strong> · <strong>V = I/2</strong>, con <strong>V mínimo 0,25 m²</strong>.","3");
+add(40,"Regla","En la iluminación directa, bajo parte cubierta y cenital, ¿qué relación guarda siempre V con I?","<strong>V es la mitad de I</strong>.","1,2,3");
+add(40,"Regla","Para escaleras con iluminación cenital, ¿qué se toma como S?","La <strong>suma del área de la caja de todos los pisos</strong>.","3");
+add(40,"Caso","Dormitorio de 12 m² con ventana directa al exterior: ¿qué I y V corresponden?","<strong>I = 1,20 m²</strong> · <strong>V = 0,60 m²</strong>.","1");
+add(40,"Caso","Local de 15 m² con ventana bajo una galería: ¿qué I y V corresponden?","<strong>I = 2,50 m²</strong> · <strong>V = 1,25 m²</strong>.","2");
+add(40,"Condición","¿Qué locales requieren ventilación mecánica además de la exigida?","Los <strong>locales de salubridad en lugares de espectáculos y diversión públicos</strong>.","4");
+add(40,"Dato","¿Qué renovación de aire debe asegurar esa ventilación mecánica y con cuántos equipos?","<strong>10 veces el volumen del local por hora</strong>, con <strong>dos equipos</strong>: uno en uso y otro auxiliar.","4");
+add(40,"Regla","¿Cuándo deben funcionar los equipos de ventilación mecánica y qué indicador llevan?","En forma obligatoria en <strong>horas de función</strong>, con una <strong>luz piloto</strong> que indique su funcionamiento.","4");
+add(40,"Dato","Baño o cocina en planta baja que ventila a la vía pública: ¿a qué altura va la boca de salida?","Como mínimo a <strong>2,00 m sobre el nivel de vereda</strong>.","5");
+add(40,"Excepción","¿Qué edificaciones quedan exceptuadas de la altura de 2,00 m de la boca de ventilación de baños y cocinas en planta baja?","Las <strong>retiradas de la L.M.</strong>","5");
+add(40,"Regla","En locales de comercio sobre pasajes, ¿cómo se considera el pasaje y qué ventilación extra se exige?","El pasaje se considera <strong>vía pública</strong>; además, <strong>ventilación auxiliar obligatoria</strong> (cenital o por tubo común) en el <strong>lado opuesto</strong> al vano sobre el pasaje.","6");
+add(40,"Dato","Tubo de ventilación independiente: ¿qué sección mínima debe tener?","<strong>S/400</strong>, y nunca menos de <strong>0,03 m²</strong>.","7");
+add(40,"Dato","Tubos de ventilación independientes y comunes: ¿qué inclinación máxima admiten?","Verticales o inclinados <strong>no más de 45°</strong>.","7,8");
+add(40,"Dato","Tubo independiente: ¿cómo debe ser la abertura que comunica el local con el tubo?","<strong>Regulable</strong> y de área <strong>no inferior al conducto</strong>.","7");
+add(40,"Dato","Tubos de ventilación independientes y comunes: ¿qué longitud máxima pueden tener los tramos horizontales?","<strong>¼ de la altura propia</strong> del conducto.","7,8");
+add(40,"Dato","Tubos de ventilación independientes y comunes: ¿cómo y a qué altura rematan en la azotea?","A los <strong>4 vientos con sombrerete</strong>, a <strong>1,50 m</strong> sobre cualquier solado o coronamiento de muro.","7,8");
+add(40,"Regla","¿Para qué sirve el tubo de ventilación común?","Para <strong>unificar dos o más tubos independientes</strong>.","8");
+add(40,"Dato","Tubo de ventilación común: ¿de qué material es y qué no puede alojar?","De <strong>mampostería u hormigón</strong>; dentro no se ubican <strong>desagües ni cañerías</strong>.","8");
+add(40,"Dato","Tubo de ventilación común: ¿qué sección mínima y qué relación de lados debe tener?","Sección <strong>no inferior a 0,60 m²</strong>; relación de lados <strong>no mayor de 1/3</strong>.","8");
+add(40,"Dato","¿Cómo remata el conducto de cada local en el tubo de ventilación común?","Con un <strong>recorrido vertical mínimo de 1,00 m</strong> y una <strong>diferencia de nivel de salida mínima de 0,50 m</strong>.","8");
+add(40,"Caso","Local de 8 m² ventilado por tubo independiente: ¿qué sección mínima corresponde?","<strong>0,03 m²</strong>: S/400 da 0,02 m², pero rige el <strong>mínimo de 0,03 m²</strong>.","7");
 // Art. 41
 add(41,"Regla","¿Qué carácter tienen las condiciones de iluminación y ventilación consignadas en la tabla?","Son <strong>optativas</strong>: puede tomarse <strong>cualquiera</strong> de las consignadas.");
 add(41,"Regla","¿Qué significa que el número de una condición esté entre paréntesis en la tabla?","Que el local debe cumplir <strong>además con cualquiera de las otras condiciones</strong> consignadas.");
@@ -403,20 +403,20 @@ add(45,"Regla","¿Qué aislación deben tener los muros exteriores?","<strong>Ai
 add(45,"Regla","¿Qué reglamentaciones deben cumplir los desagües?","Las del <strong>D.P.A.</strong> (Departamento Provincial de Aguas).");
 // Art. 46
 add(46,"Condición","¿Qué edificios deben asegurar la rápida evacuación según el Art. 46?","Los de <strong>más de dos unidades independientes</strong> y/o destinados a <strong>concentración de público</strong> (cubierto o descubierto).");
-add(46,"Dato","Puerta de unidad independiente a pasajes o corredores comunes: ¿qué ancho y altura mínimos tiene?","<strong>0,90 m libres</strong> hasta 50 personas o fracción; altura mínima <strong>2,00 m</strong>.");
-add(46,"Regla","Cuando hay escaleras, ¿hacia dónde deben abrir las puertas?","Sobre un <strong>descanso</strong>.");
-add(46,"Dato","Concentración de público: ¿cómo se calcula el ancho total de puertas de egreso y qué mínimo tiene?","<strong>0,01 m por persona</strong>, nunca menos de <strong>1,50 m</strong>.");
-add(46,"Dato","Pasajes o corredores que conectan con la vía pública: ¿qué ancho mínimo tienen?","Se calculan a 0,01 m por persona, con mínimo de <strong>1,20 m</strong>.");
-add(46,"Dato","¿Qué ancho libre mínimo tiene un pasaje comercial de uso público?","<strong>3,00 m</strong>.");
-add(46,"Dato","Escalera de egreso: ¿qué ancho libre mínimo tiene?","<strong>0,90 m</strong>.");
-add(46,"Dato","Escalera de egreso: ¿qué huella mínima y alzada máxima tiene?","Huella mínima <strong>0,26 m</strong>; alzada máxima <strong>0,18 m</strong>.");
-add(46,"Dato","Escalera de egreso: ¿qué altura máxima puede salvarse sin descanso?","<strong>3,00 m</strong>.");
-add(46,"Dato","Escalera de tramos curvos: ¿dónde se mide la huella mínima de 0,26 m?","En el <strong>centro de giro</strong> si el ancho es de hasta 0,90 m; a <strong>0,45 m del limón inferior</strong> si es mayor.");
-add(46,"Regla","En lugares de concentración de público, ¿cómo se calcula el ancho de las escaleras?","Igual que las puertas: <strong>0,01 m por persona</strong> (inc. 2).");
-add(46,"Dato","¿Qué distancia máxima entre circulaciones verticales rige según el destino?","Concentración de público, comercial, industrial o depósitos: <strong>45 m</strong>.<br>Residencial, instituciones o semejantes: <strong>30 m</strong>.");
-add(46,"Dato","Escaleras que no son egreso ni acceso obligado: ¿qué ancho, huella y alzada tienen?","Ancho <strong>0,70 m</strong>; huella mínima <strong>0,23 m</strong>; alzada máxima <strong>0,20 m</strong>.");
-add(46,"Caso","Salón para 200 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>2,00 m</strong> (200 × 0,01).");
-add(46,"Caso","Salón para 120 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>1,50 m</strong>: el cálculo da 1,20 m, pero rige el <strong>mínimo de 1,50 m</strong>.");
+add(46,"Dato","Puerta de unidad independiente a pasajes o corredores comunes: ¿qué ancho y altura mínimos tiene?","<strong>0,90 m libres</strong> hasta 50 personas o fracción; altura mínima <strong>2,00 m</strong>.","1");
+add(46,"Regla","Cuando hay escaleras, ¿hacia dónde deben abrir las puertas?","Sobre un <strong>descanso</strong>.","1");
+add(46,"Dato","Concentración de público: ¿cómo se calcula el ancho total de puertas de egreso y qué mínimo tiene?","<strong>0,01 m por persona</strong>, nunca menos de <strong>1,50 m</strong>.","2");
+add(46,"Dato","Pasajes o corredores que conectan con la vía pública: ¿qué ancho mínimo tienen?","Se calculan a 0,01 m por persona, con mínimo de <strong>1,20 m</strong>.","3");
+add(46,"Dato","¿Qué ancho libre mínimo tiene un pasaje comercial de uso público?","<strong>3,00 m</strong>.","4");
+add(46,"Dato","Escalera de egreso: ¿qué ancho libre mínimo tiene?","<strong>0,90 m</strong>.","5");
+add(46,"Dato","Escalera de egreso: ¿qué huella mínima y alzada máxima tiene?","Huella mínima <strong>0,26 m</strong>; alzada máxima <strong>0,18 m</strong>.","5");
+add(46,"Dato","Escalera de egreso: ¿qué altura máxima puede salvarse sin descanso?","<strong>3,00 m</strong>.","5");
+add(46,"Dato","Escalera de tramos curvos: ¿dónde se mide la huella mínima de 0,26 m?","En el <strong>centro de giro</strong> si el ancho es de hasta 0,90 m; a <strong>0,45 m del limón inferior</strong> si es mayor.","5");
+add(46,"Regla","En lugares de concentración de público, ¿cómo se calcula el ancho de las escaleras?","Igual que las puertas de egreso: <strong>0,01 m por persona</strong>.","6");
+add(46,"Dato","¿Qué distancia máxima entre circulaciones verticales rige según el destino?","Concentración de público, comercial, industrial o depósitos: <strong>45 m</strong>.<br>Residencial, instituciones o semejantes: <strong>30 m</strong>.","7");
+add(46,"Dato","Escaleras que no son egreso ni acceso obligado: ¿qué ancho, huella y alzada tienen?","Ancho <strong>0,70 m</strong>; huella mínima <strong>0,23 m</strong>; alzada máxima <strong>0,20 m</strong>.","8");
+add(46,"Caso","Salón para 200 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>2,00 m</strong> (200 × 0,01).","2");
+add(46,"Caso","Salón para 120 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>1,50 m</strong>: el cálculo da 1,20 m, pero rige el <strong>mínimo de 1,50 m</strong>.","2");
 // Art. 47
 add(47,"Regla","¿Qué protección deben tener todas las escaleras?","<strong>Barandas o pasamanos rígidos</strong>, al menos en <strong>uno de sus lados</strong>.");
 add(47,"Excepción","¿Cuándo deben colocarse barandas en ambos lados de la escalera?","Cuando su ancho <strong>supere 1,40 m</strong>.");
