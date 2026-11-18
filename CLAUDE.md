@@ -68,6 +68,10 @@ Los mazos de contabilidad llevan `theme: "contable"`: la app aplica `estilos/con
 
 Importes en formato argentino: `€15.000`, `€1.600`. Usar los componentes donde ayuden a ver la idea (efectos de transacciones, estados, ecuaciones, asientos, fórmulas); el resto de la respuesta sigue las reglas generales.
 
+## Tema visual «admin» (libro de Administración)
+
+Los mazos de administración (Robbins y Coulter) llevan `theme: "admin"`: la app aplica `estilos/admin.css` (acento azul) y la exportación a Anki usa su propio tipo de nota. Ayudantes de `mazos/admin.js` (`window.ADM`): `fm(texto)` fórmula destacada, `pg(p)` página, `flujo(pasos)` pasos en secuencia (cada paso texto o `[título, nota]`), `grupos([[título, detalle], …])`, `tabla(encabezados, filas)` y `matriz(ejeX, ejeY, [[t, d] × 4])` (orden: arriba-izq, arriba-der, abajo-izq, abajo-der). Submazos: `robbins_capNN.js` (idp `"rN:"`), módulos `robbins_modH.js`, `robbins_modT.js`, `robbins_modO.js`; temas = objetivos de aprendizaje («4.2 · …»). Página del libro = página del PDF − 36.
+
 ## Agregar el mazo a la app
 
 1. Crear `mazos/<nombre>.js` copiando la estructura de uno existente: `id` y `idp` (prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub`, `head`, `arts`, `build`.
