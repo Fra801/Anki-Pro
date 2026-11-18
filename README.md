@@ -8,6 +8,7 @@ Mazos incluidos:
 |---|---|---|
 | Código de Edificación de Viedma (2018) | 1 a 106 | 380 |
 | Reglamento del Régimen de Promociones Policiales (Anexo I, Decreto 1646/87) | 1 a 18 | 71 |
+| RENSA: Reglamento de Normas para los Sumarios Administrativos (Anexo I, Decreto 32/94) | 1 a 128 | 237 |
 
 Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 
