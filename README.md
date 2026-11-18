@@ -10,6 +10,7 @@ Mazos incluidos:
 | Reglamento del Régimen de Promociones Policiales (Anexo I, Decreto 1646/87) | 1 a 18 | 71 |
 | R.N.S.A.: Reglamento de Normas para los Sumarios Administrativos (Anexo I, Decreto 32/94) | 1 a 128 | 237 |
 | Ley Orgánica de la Policía de Río Negro (Ley 5184) | 1 a 70 | 203 |
+| Historia argentina (1806–1880) — mazo por temas, con explicación | 8 temas | 58 |
 
 Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 

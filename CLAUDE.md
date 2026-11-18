@@ -36,6 +36,15 @@ Lo arma la app sola (`artDetail` en `index.html`), no hay que escribirlo:
 
 Para que funcione, cada inciso tiene que empezar en una línea nueva dentro de `arts`.
 
+## Mazos por temas (historia u otra materia sin articulado)
+
+Para temas que no son normas (historia, geografía, biología, etc.) el mazo lleva `kind: "temas"` y no tiene `arts`. Ejemplo: `mazos/historia_argentina.js`.
+
+- Formato: `add("Tema", "Tipo", "Pregunta", "Respuesta", "Explicación")`. El primer dato es el nombre del tema (agrupa las tarjetas en Progreso, Tarjetas y Ajustes); el quinto es la **explicación**, obligatoria.
+- En vez de «Ver texto del artículo», el desplegable dice **«Explicación»** y muestra ese texto.
+- La explicación da el contexto y el porqué en 2 a 4 oraciones, sin repetir la respuesta palabra por palabra. Datos verificados: si una fecha o un dato no es seguro, no se incluye.
+- Valen las mismas reglas de las tarjetas: una idea por tarjeta, preguntas abiertas que se entiendan solas, nada de sí o no, casos y distinciones donde ayuden (por ejemplo, ordenar hechos cronológicamente o comparar dos batallas del mismo nombre).
+
 ## Agregar el mazo a la app
 
 1. Crear `mazos/<nombre>.js` copiando la estructura de uno existente: `id` y `idp` (prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub`, `head`, `arts`, `build`.

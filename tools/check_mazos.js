@@ -21,8 +21,24 @@ let total = 0, problems = 0;
 const ids = new Set();
 for (const d of window.DECKS) {
   const cards = [], per = {};
-  d.build((a, k, q, ans, inc) => { per[a] = (per[a] || 0) + 1; cards.push({ a, k, q, ans, inc, id: d.idp + a + "-" + per[a] }); });
+  const temas = d.kind === "temas";
+  d.build((a, k, q, ans, x) => { per[a] = (per[a] || 0) + 1; cards.push({ a, k, q, ans, inc: temas ? "" : x, expl: temas ? x : "", id: d.idp + a + "-" + per[a] }); });
   const warn = (c, msg) => { problems++; console.log(`  [${d.id}] Art. ${c.a} — ${msg}\n      ${strip(c.q)}`); };
+  const warnT = (c, msg) => { problems++; console.log(`  [${d.id}] ${c.a} — ${msg}\n      ${strip(c.q)}`); };
+  if (temas) {
+    console.log(`${d.title}: ${cards.length} tarjetas, ${Object.keys(per).length} temas`);
+    for (const c of cards) {
+      if (ids.has(c.id)) warnT(c, "identificador repetido (revisar idp)");
+      ids.add(c.id);
+      if (!c.expl || strip(c.expl).length < 20) warnT(c, "falta la explicación (quinto dato)");
+      if (/^\s*(sí|no)\s*([.,:;!]|$)|^\s*sí\s/i.test(strip(c.ans))) warnT(c, "respuesta de sí o no");
+      if (/^(¿)?\s*(es|son|está|están|puede|pueden|corresponde|cumple|hay|se admite)\b/i.test(strip(c.q))) warnT(c, "pregunta cerrada (se responde con sí o no)");
+      if (REF.test(strip(c.q))) warnT(c, "parece depender de otra tarjeta (esa/ese/dicho…)");
+      if (/"/.test(c.q + c.ans + c.expl)) warnT(c, "tiene comillas dobles; usar “ ”");
+    }
+    total += cards.length;
+    continue;
+  }
   console.log(`${d.title}: ${cards.length} tarjetas, ${Object.keys(d.arts).length} artículos`);
   for (const n of Object.keys(d.arts)) if (!per[n]) { problems++; console.log(`  [${d.id}] Art. ${n} — sin tarjetas`); }
   for (const c of cards) {

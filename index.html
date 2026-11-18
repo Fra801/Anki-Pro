@@ -107,6 +107,7 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script src="mazos/promociones.js"></script>
 <script src="mazos/rnsa.js"></script>
 <script src="mazos/ley5184.js"></script>
+<script src="mazos/historia_argentina.js"></script>
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
@@ -114,10 +115,14 @@ const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{
   d.cards=[];const n={};
-  d.build((a,k,q,ans,inc)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id,inc:inc||""};d.cards.push(c);ALL.push(c);});
-  d.nums=Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
+  // Mazos de normas: add(artículo, tipo, pregunta, respuesta, inciso).
+  // Mazos por temas (kind:"temas"): add(tema, tipo, pregunta, respuesta, explicación).
+  const temas=d.kind==="temas";
+  d.build((a,k,q,ans,x)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id,inc:temas?"":(x||""),expl:temas?(x||""):""};d.cards.push(c);ALL.push(c);});
+  d.nums=temas?[...new Set(d.cards.map(c=>c.a))]:Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
 });
 const deckById=id=>DECKS.find(d=>d.id===id);
+const grpLabel=(d,a)=>d.kind==="temas"?a:"Art. "+a;
 // Texto que se despliega: el artículo entero o, si la tarjeta apunta a uno o más incisos, sólo esos incisos.
 const INC_START=/^\s*([a-z]\)|\d+\s*[-)])/;
 function incisoText(text,key){
@@ -130,6 +135,7 @@ function incisoText(text,key){
   return out.join("\n");
 }
 function artDetail(d,c){
+  if(d.kind==="temas")return c.expl||"";
   const full=d.arts[c.a]||"";
   if(!c.inc)return `<b>Artículo ${c.a}º:</b> ${full}`;
   const keys=c.inc.split(",");
@@ -346,7 +352,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p>${artDetail(D(),cur)}</p></details>`:""}
+    ${shown?`<div class="a">${cur.ans}</div>${(D().kind!=="temas"||cur.expl)?`<details><summary>${D().kind==="temas"?"Explicación":"Ver texto del artículo"}</summary><p>${artDetail(D(),cur)}</p></details>`:""}`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
@@ -384,31 +390,31 @@ function stats(){
     const cs=d.cards.filter(c=>c.a===a);let sn=0,m=0;
     cs.forEach(c=>{const s=st(c.id);if(s){sn++;if(s.q==="rev"&&s.ivl>=21)m++;if(s.due<=now+DAY)dueT++;}});
     tot+=cs.length;seen+=sn;mature+=m;
-    rows.push(`<div class="row"><span style="width:64px">Art. ${a}</span><span class="muted" style="width:70px">${sn}/${cs.length}</span><span class="meter"><i style="width:${cs.length?sn/cs.length*100:0}%"></i></span></div>`);
+    rows.push(`<div class="row"><span style="${d.kind==="temas"?"flex:1;min-width:0":"width:64px"}">${grpLabel(d,a)}</span><span class="muted" style="width:70px">${sn}/${cs.length}</span><span class="meter"><i style="width:${cs.length?sn/cs.length*100:0}%"></i></span></div>`);
   }
   V.innerHTML=`<div class="panel"><h3>Resumen · ${d.title}</h3>
    <div class="row"><span>Tarjetas totales</span><b>${tot}</b></div>
    <div class="row"><span>Vistas al menos una vez</span><b>${seen}</b></div>
    <div class="row"><span>Maduras (intervalo ≥ 21 d)</span><b>${mature}</b></div>
    <div class="row" style="border:0"><span>Vencen en las próximas 24 h</span><b>${dueT}</b></div></div>
-   <div class="panel"><h3>Por artículo</h3>${rows.join("")}</div>`+settings(d);
+   <div class="panel"><h3>${d.kind==="temas"?"Por tema":"Por artículo"}</h3>${rows.join("")}</div>`+settings(d);
   bindAccount();bindSettings(d);
 }
 
 function browse(){
   const d=D();
-  const chips=`<div class="chips">${[0,...d.nums].map(a=>`<button class="chip ${browseArt===a?"on":""}" data-a="${a}">${a?"Art. "+a:"Todos"}</button>`).join("")}</div>`;
-  const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">Art. ${c.a}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
-  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo ${browseArt}º:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
-  V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{browseArt=+b.dataset.a;render();});
+  const chips=`<div class="chips">${[0,...d.nums].map((a,i)=>`<button class="chip ${browseArt===a?"on":""}" data-a="${i}">${a?grpLabel(d,a):"Todos"}</button>`).join("")}</div>`;
+  const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">${grpLabel(d,c.a)}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
+  V.innerHTML=`<div class="panel">${chips}${browseArt&&d.arts&&d.arts[browseArt]?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo ${browseArt}º:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
+  V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{const i=+b.dataset.a;browseArt=i?d.nums[i-1]:0;render();});
 }
 
 function settings(d){
   const f=filt(d);
   return `<div class="panel"><h3>Ajustes</h3>
     <label>Tarjetas nuevas por día (por mazo) <input type="number" id="npd" min="1" max="200" value="${S.opts.newPerDay}"></label>
-    <div class="muted" style="margin-top:6px">Estudiar sólo estos artículos de este mazo (ninguno = todos):</div>
-    <div class="chips">${d.nums.map(a=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${a}">Art. ${a}</button>`).join("")}</div>
+    <div class="muted" style="margin-top:6px">Estudiar sólo estos ${d.kind==="temas"?"temas":"artículos"} de este mazo (ninguno = todos):</div>
+    <div class="chips">${d.nums.map((a,i)=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${i}">${grpLabel(d,a)}</button>`).join("")}</div>
     <div class="btns"><button class="ghost danger" id="rstd">Reiniciar este mazo</button></div>
   </div>`+accountPanel()+`
   <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
@@ -416,7 +422,7 @@ function settings(d){
 function bindSettings(d){
   const f=filt(d);
   document.getElementById("npd").onchange=e=>{S.opts.newPerDay=Math.max(1,Math.min(200,+e.target.value||20));save();};
-  V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=+b.dataset.f;const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});
+  V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=d.nums[+b.dataset.f];const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});
   document.getElementById("rstd").onclick=()=>confirmBox(`¿Borrar el progreso de “${d.title}”? No se puede deshacer.`,()=>{d.cards.forEach(c=>delete S.cards[c.id]);if(S.day.newDone)delete S.day.newDone[d.id];cur=null;shown=false;save();render();});
 }
 function confirmBox(t,ok){const m=document.getElementById("modal");document.getElementById("mtext").textContent=t;m.classList.add("on");document.getElementById("mno").onclick=()=>m.classList.remove("on");document.getElementById("myes").onclick=()=>{m.classList.remove("on");ok();};}
