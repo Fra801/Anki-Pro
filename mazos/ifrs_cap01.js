@@ -1,6 +1,6 @@
 /* Contabilidad Financiera IFRS (Weygandt, Kimmel, Kieso · 3ª ed.) — Capítulo 1: Accounting in Action.
    Mazo por temas: cada tema es un objetivo de aprendizaje del capítulo.
-   add(tema, tipo, pregunta, respuesta, explicación). Componentes visuales: mazos/_contable.js */
+   add(tema, tipo, pregunta, respuesta, explicación). Componentes visuales: mazos/contable.js */
 (function () {
 const { EQ, eq, fx, est, fm, pg } = window.CONT;
 const T1 = "1 · Qué es la contabilidad", T2 = "2 · Usuarios de la información", T3 = "3 · Ética",

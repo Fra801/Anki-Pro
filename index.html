@@ -118,11 +118,12 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script src="mazos/rnsa.js"></script>
 <script src="mazos/ley5184.js"></script>
 <script src="mazos/historia_argentina.js"></script>
-<script src="mazos/_contable.js"></script>
+<script src="mazos/contable.js"></script>
 <script src="mazos/ifrs_cap01.js"></script>
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
+const APP_VERSION="16 · 18/11/2026";
 const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{
@@ -466,7 +467,7 @@ function settings(d){
     <div class="acct-row"><input id="ankiurl2" readonly value="${ankiUrl({id:d.groupId})}" aria-label="Enlace del mazo completo para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl2">Copiar</button></div>`:""}
     <p class="sync" style="margin-top:8px">Si lo importás otra vez cuando haya tarjetas nuevas o corregidas, Anki las actualiza y conserva lo que estudiaste allá.</p>
   </div>`+accountPanel()+`
-  <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
+  <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p><p class="sync" style="margin:10px 0 0">Versión de la app: ${APP_VERSION}</p></div>`;
 }
 function bindSettings(d){
   V.querySelectorAll("[data-copy]").forEach(cp=>cp.onclick=async()=>{const inp=document.getElementById(cp.dataset.copy);

@@ -58,7 +58,7 @@ Un libro se arma como **un mazo principal con submazos**: un archivo por capítu
 
 ## Tema visual «contable» y componentes
 
-Los mazos de contabilidad llevan `theme: "contable"`: la app aplica `estilos/contable.css` (acento verde y colores por elemento: activo verde, pasivo rojo, patrimonio azul, resultados violeta) y la exportación a Anki usa un tipo de nota propio con ese CSS. Para escribir las tarjetas se usan los ayudantes de `mazos/_contable.js` (`window.CONT`), que generan HTML con comillas simples:
+Los mazos de contabilidad llevan `theme: "contable"`: la app aplica `estilos/contable.css` (acento verde y colores por elemento: activo verde, pasivo rojo, patrimonio azul, resultados violeta) y la exportación a Anki usa un tipo de nota propio con ese CSS. Para escribir las tarjetas se usan los ayudantes de `mazos/contable.js` (`window.CONT`), que generan HTML con comillas simples:
 
 - `EQ` — la ecuación contable básica en bloques; `eq(["ac","Activos"],"=",["pa","Pasivos"],"+",["pn","Patrimonio"])` para otras ecuaciones (clases `ac`, `pa`, `pn`, `in`; el tercer elemento opcional es una aclaración chica).
 - `fx([["A","Efectivo","+€1.200"],["PN","Ingresos por servicios","+€1.200"]], "nota")` — efectos de una transacción (claves `A`, `P`, `PN`, `R`); el signo del importe pinta verde o rojo.
@@ -71,8 +71,8 @@ Importes en formato argentino: `€15.000`, `€1.600`. Usar los componentes don
 ## Agregar el mazo a la app
 
 1. Crear `mazos/<nombre>.js` copiando la estructura de uno existente: `id` y `idp` (prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub`, `head`, `arts`, `build`.
-2. Agregar `<script src="mazos/<nombre>.js"></script>` en `index.html`, junto a los otros mazos (los de contabilidad, después de `mazos/_contable.js`).
-3. Agregar el archivo a la lista de `sw.js` y subir la versión de caché (`anki-pro-vN`).
+2. Agregar `<script src="mazos/<nombre>.js"></script>` en `index.html`, junto a los otros mazos (los de contabilidad, después de `mazos/contable.js`).
+3. Agregar el archivo a la lista de `sw.js`, subir la versión de caché (`anki-pro-vN`) y la constante `APP_VERSION` de `index.html` (se ve en Progreso → Cómo funciona, y sirve para saber si el celular ya tiene la versión nueva). No nombrar archivos con guion bajo inicial: GitHub Pages los ignora si falta `.nojekyll`.
 4. Sumar la fila a la tabla de mazos del `README.md`.
 5. Correr `node tools/check_mazos.js` y corregir hasta que no marque problemas.
 6. Regenerar los archivos para Anki: `python3 tools/export_anki.py` (requiere `pip install genanki`). Deja `anki/<id>.apkg`, que se descarga desde **Progreso → Llevar a Anki** (allí también se muestra el enlace para la opción «Enlace de descarga» de AnkiMobile/AnkiDroid: `https://raw.githubusercontent.com/Fra801/Anki-Pro/main/anki/<id>.apkg`). Hay que correrlo cada vez que se agregan o corrigen tarjetas.
