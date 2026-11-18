@@ -13,7 +13,7 @@ Mazos incluidos:
 | Historia argentina (1806–1880) — mazo por temas, con explicación | 8 temas | 58 |
 | Contabilidad Financiera IFRS (Weygandt, Kimmel, Kieso, 3ª ed.) — con submazos por capítulo | Cap. 1 a 14 y apéndices E a I | 850 |
 | Administración (Robbins y Coulter, 13ª ed.) — con submazos por capítulo | Libro completo: cap. 1 a 18 y los tres módulos | 584 |
-| Applied Ballistics for Long Range Shooting (Bryan Litz, 3ª ed.) — con submazos por capítulo | Cap. 1 a 11 | 175 |
+| Applied Ballistics for Long Range Shooting (Bryan Litz, 3ª ed.) — con submazos por capítulo | Parte 1 completa (cap. 1 a 11 y resumen) | 182 |
 
 Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 
