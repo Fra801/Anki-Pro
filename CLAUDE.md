@@ -4,7 +4,7 @@ App de tarjetas con repetición espaciada para estudiar leyes, decretos y reglam
 
 ## Cómo pide un mazo nuevo el usuario
 
-Adjunta el PDF y dice algo como: «Agregá a Anki Pro esta ley. Artículos 1 a 30 (o "toda"). Nombre del mazo: …». Si no aclara artículos, se toma desde el Art. 1 del articulado hasta el final (sin los artículos del decreto aprobatorio ni el «Regístrese, comuníquese…»).
+Adjunta el PDF y dice algo como: «Agregá a Anki Pro esta ley. Artículos 1 a 30 (o "toda"). Nombre del mazo: …». Para el nombre visible del mazo y las siglas, usar las que da el usuario o la norma (por ejemplo, **R.N.S.A.** = Reglamento de Normas para los Sumarios Administrativos); no inventar siglas. Si no aclara artículos, se toma desde el Art. 1 del articulado hasta el final (sin los artículos del decreto aprobatorio ni el «Regístrese, comuníquese…»).
 
 ## Texto de los artículos (`arts`)
 

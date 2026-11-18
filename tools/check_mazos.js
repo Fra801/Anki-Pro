@@ -1,6 +1,6 @@
 // Revisa los mazos contra las reglas de CLAUDE.md.
 // Uso: node tools/check_mazos.js            (todos los mazos)
-//      node tools/check_mazos.js rensa      (sólo uno, por nombre de archivo)
+//      node tools/check_mazos.js rnsa       (sólo uno, por nombre de archivo)
 const fs = require("fs"), path = require("path");
 const dir = path.join(__dirname, "..", "mazos");
 const only = process.argv[2];

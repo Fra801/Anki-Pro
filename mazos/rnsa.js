@@ -1,12 +1,12 @@
-/* Mazo: RENSA — Reglamento de Normas para los Sumarios Administrativos
+/* Mazo: R.N.S.A. — Reglamento de Normas para los Sumarios Administrativos
    Policía de Río Negro · Decreto N° 32/94, Anexo I (Cap. XIII según Decreto 687/2018)
    Cada add(artículo, tipo, pregunta, respuesta) es un núcleo funcional. */
 (window.DECKS = window.DECKS || []).push({
-id: "rensa",
+id: "rensa",          // identificador interno: no cambiar (de él depende el progreso guardado)
 idp: "rn:",
-title: "RENSA · Sumarios Administrativos",
+title: "R.N.S.A. · Sumarios Administrativos",
 sub: "Decreto 32/94 · Anexo I · Artículos 1 a 128",
-head: "RENSA · Decreto 32/94",
+head: "R.N.S.A. · Decreto 32/94",
 arts: {
 1:"Las disposiciones de este Reglamento, se aplicarán a la instrucción y resolución de sumarios, informaciones sumarias y actuaciones sumarísima, tendientes a la comprobación de faltas disciplinarias o hechos atribuidos al personal policial o en casos que éstos sean partes.",
 2:"Deberá instruirse sumario:\na) Cuando se impute o presuma la comisión de falta grave.\nb) Al dictarse auto de procesamiento y/o prisión preventiva en sede penal contra personal policial.\nc) Al ocurrir la pérdida, sustracción, daño, inutilización, degradación o uso indebido de cosas, bienes, valores o dinero del Estado o que se encuentren bajo su custodia, depósito, a cargo o afectados al uso o desenvolvimiento de la Institución.\nd) Cuando deba investigarse la actuación o participación de personal policial en hechos que puedan dar motivo a la instrucción de juicios de responsabilidad administrativa.\ne) Por fallecimiento o cuando se invoque enfermedad, lesiones o padecimientos del personal en actividad que impliquen impedimento por más de dos meses para su desempeño.\nf) Por fallecimiento del personal retirado, enfermedad, lesiones o padecimiento en circunstancias que hagan suponer relación con el cumplimiento de deberes policiales.\ng) Cuando existan lesiones o impedimentos que sin reunir las características descriptas en el inciso e) del presente artículo, impliquen la adecuación de tareas del agente.",
@@ -140,8 +140,8 @@ arts: {
 build(add){
 // CAPÍTULO 1 — Ámbito de aplicación
 // Art. 1
-add(1,"Regla","¿A qué se aplican las disposiciones del RENSA?","A la <strong>instrucción y resolución</strong> de <strong>sumarios, informaciones sumarias y actuaciones sumarísimas</strong>.");
-add(1,"Regla","¿Qué finalidad tienen los sumarios, informaciones y actuaciones sumarísimas del RENSA?","Comprobar <strong>faltas disciplinarias o hechos atribuidos al personal policial</strong>, o casos en que éste <strong>sea parte</strong>.");
+add(1,"Regla","¿A qué se aplican las disposiciones del R.N.S.A.?","A la <strong>instrucción y resolución</strong> de <strong>sumarios, informaciones sumarias y actuaciones sumarísimas</strong>.");
+add(1,"Regla","¿Qué finalidad tienen los sumarios, informaciones y actuaciones sumarísimas del R.N.S.A.?","Comprobar <strong>faltas disciplinarias o hechos atribuidos al personal policial</strong>, o casos en que éste <strong>sea parte</strong>.");
 // Art. 2
 add(2,"Condición","¿Qué tipo de falta obliga a instruir sumario?","La imputación o presunción de <strong>falta grave</strong>.","a");
 add(2,"Condición","¿Qué resolución penal obliga a instruir sumario?","El <strong>auto de procesamiento y/o prisión preventiva</strong> en sede penal contra personal policial.","b");
@@ -495,7 +495,7 @@ add(119,"Condición","En actuaciones por la salud del agente, ¿cuándo también
 add(119,"Regla","¿Quiénes deben solicitar la retención de haberes y a quién?","El <strong>Oficial que ordenó las actuaciones</strong> o el <strong>instructor</strong>, a la <strong>Jefatura</strong>.");
 // CAPÍTULO 16 — De los términos
 // Art. 120
-add(120,"Regla","En el RENSA, ¿desde cuándo se cuentan los términos?","Desde la <strong>notificación</strong> o, en su caso, desde que la <strong>documentación está en poder</strong> de quien debe actuar.");
+add(120,"Regla","En el R.N.S.A., ¿desde cuándo se cuentan los términos?","Desde la <strong>notificación</strong> o, en su caso, desde que la <strong>documentación está en poder</strong> de quien debe actuar.");
 // Art. 121
 add(121,"Distinción","¿Cuándo se producen notificaciones y elevaciones según la localidad de las partes?","Misma localidad: <strong>el mismo día</strong>.<br>Distinta localidad: dentro de las <strong>72 horas</strong>.");
 // Art. 122
