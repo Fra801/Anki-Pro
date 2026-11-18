@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Anki Pro · Código de Edificación de Viedma</title>
+<title>Anki Pro</title>
 <meta name="theme-color" content="#b4552d">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -67,6 +67,9 @@ details p{background:var(--bg);border-radius:10px;padding:10px 12px;margin:8px 0
 .meter i{display:block;height:100%;background:var(--good)}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin-bottom:14px}
 .panel h3{margin:0 0 8px;font-size:1rem}
+.deck{cursor:pointer}
+.deck.sel{border-color:var(--accent)}
+.deck h3{font-family:Fraunces,serif;font-size:1.15rem}
 label{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;font-size:.92rem}
 input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
 .ghost{background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font:500 .88rem Inter;cursor:pointer}
@@ -86,177 +89,46 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <body>
 <div class="wrap">
   <header>
-    <h1>Código de Edificación · Viedma 2018</h1>
+    <h1 id="ttl">Anki Pro</h1>
     <button class="acct" id="acct">Iniciar sesión</button>
   </header>
   <nav>
-    <button data-v="study" class="on">Estudiar</button>
-    <button data-v="stats">Progreso</button>
+    <button data-v="decks" class="on">Mazos</button>
+    <button data-v="study">Estudiar</button>
     <button data-v="browse">Tarjetas</button>
-    <button data-v="opts">Ajustes</button>
+    <button data-v="stats">Progreso</button>
   </nav>
   <main id="view"></main>
 </div>
 <div class="bar" id="bar"></div>
 <div class="modal" id="modal"><div class="box"><p id="mtext"></p><div style="display:flex;gap:8px;justify-content:flex-end"><button class="ghost" id="mno">Cancelar</button><button class="ghost danger" id="myes">Confirmar</button></div></div></div>
 
+<script src="mazos/viedma.js"></script>
+<script src="mazos/promociones.js"></script>
 <script>
-/* ===================== TEXTO DE LOS ARTÍCULOS ===================== */
-const ART = {
-1:"Este Código tiene por objeto regular la realización de obras de edificación, fueran de construcción, modificación (ampliación o alteración), refacción y/o demolición.",
-2:"Su ámbito de aplicación se extiende al municipio de Viedma y será puesto en vigencia de acuerdo a lo establecido por la Ley Nº 929 y su Modificatoria Nº 1373, Nº 1440, Nº 1553 y Decreto Reglamentario Nº 492/82 o las que la modifiquen o sustituyan.",
-3:"Actuará como Organismo de Aplicación de este Código la Municipalidad de Viedma a través de sus oficinas competentes.\nCorresponderá al Organismo de Aplicación de este Código exigir el cumplimiento de los objetivos y normas sancionando las reglamentaciones que considere necesarias.",
-4:"A los fines de aplicación de este Código, entiéndase por:\nAcera: Espacio de la calle entre la línea Municipal y la calzada, destinado al tránsito de peatones.\nAlero: Plano horizontal no accesible destinado exclusivamente para resguardo de vanos y muros.\nBalcón: Elemento accesible y transitable, voladizo o no, generalmente prolongación del entrepiso y limitado por un parapeto o baranda.\nCalle: Banda vial de dominio público delimitada entre líneas municipales.\nConducto: Espacio dispuesto para contener tuberías, conducir o evacuar aire, gases, líquidos o sólidos.\nCalzada: Espacio de calle entre aceras enfrentadas, destinadas al tránsito de vehículos.\nEje divisorio: Delimitación entre parcelas de dominio privado.\nEntrepiso: Estructura resistente horizontal.\nEstructura: Armazón o esqueleto y todo elemento resistente de un edificio.\nLínea Municipal (L.M.): Delimitación entre dominio público municipal y el dominio privado.\nLocal: Cada una de las partes cubiertas cerradas en que se divide un edificio.\nLocal habitable: El destinado para propósitos normales de habitación, morada, trabajo, o permanencia continuada de personas con exclusión de lavaderos, cuartos de baño, despensas, pasajes, vestíbulos, depósitos o similares.\nMarquesinas: Alero que avanza sobre un acceso, generalmente ubicado sobre la vía pública.\nMuro: Cerramiento vertical apto para soportar cargas.\nPiso: Espacio comprendido entre el nivel de un solado y el nivel del techo siguiente sobrepuesto.\nSolado: Revestimiento del suelo natural o de un entrepiso.\nSótano: Piso situado bajo el nivel del suelo.\nTabique: Cerramiento vertical no portante.",
-5:"Se considera zonificada la localidad de Viedma conforme a las disposiciones del respectivo Código Urbanístico, a los fines de la aplicación de las normas de este Código.",
-6:"Los siguientes Reglamentos técnicos forman parte de este código:\n1 - Reglamento Técnico de Fundaciones (CE de la Ciudad de Buenos Aires).\n2 - Reglamento Técnico de Estructuras (CE de la Ciudad de Buenos Aires).\n3 - Proyecto de Reglamento Argentino para Estructuras de Hormigón (PRAEH).\n4 - Reglamento Técnico de Instalaciones Eléctricas (CE de la Ciudad de Buenos Aires).\n5 - Reglamento de O.S.N. o las normas que especifique el Departamento Provincial de Aguas.\n6 - Reglamento de Gas del Estado.\n7 - Reglamento de Agua y Energía de la Nación.\n8 - Reglamento Técnico de Ascensores y Transportadores (CE de la Ciudad de Buenos Aires).\n9 - Normas mínimas de Habitabilidad (SEDUV).\n10 - Normas mínimas de Habitabilidad Higrotérmica (SEDUV).\n11 - Normas de Edificación establecidas por la Secretaría de Estado y Turismo de la Nación (para la construcción de hoteles, moteles, residenciales y hosterías).",
-7:"Las obras que se construyan destinadas a habitación deberán ser de carácter permanente.",
-8:"Las obras de carácter transitorio deberán justificar su finalidad y contar con autorización expresa de la Municipalidad de Viedma – quien podrá exigir las condiciones mínimas de habitabilidad y saneamiento que considere necesarias.",
-9:"No se permitirán construcciones de carácter precario, así como tampoco las hechas de adobe.",
-10:"En todas las edificaciones deberán cumplimentarse según las zonas de que se trate, los factores de edificación y ocupación previstos por el Código Urbanístico correspondiente.",
-11:"La línea de edificación no podrá avanzar sobre la línea municipal hasta los 2,70m de altura. A partir de esa altura se permitirán salientes para balcones o locales de hasta 1,00m medidas desde la línea municipal y hasta 0,15m del eje divisorio de la propiedad. En caso de ochava la saliente será paralela a la misma.",
-12:"En los balcones se podrán ejecutar cerramientos opacos que no superen los 0,90m de altura, medidos desde el solado de los mismos.",
-13:"En los balcones que tengan tres lados libres, se permitirá la colocación de pantallas móviles traslúcidas, cribadas o similares que produzcan cerramiento parcial, siempre que este cerramiento cubra como máximo el 50% del perímetro libre.",
-14:"Los aleros o marquesinas en planta baja se mantendrán por encima de los 2,40m medidas desde el nivel de vereda y su borde exterior distará del cordón de la vereda como mínimo 0,80m. Se permitirá toldo/pérgola en retiro de frente de 4.00m, ubicado en espacio de estacionamiento.\nSobre los ejes medianeros, el muro divisorio que quedará dentro de la superficie de retiro no podrá superar los 0.60m de altura a partir de los donde se podrá materializar con rejas.\nEl cerco verde de medianeras, se permite con acuerdo de vecinos por escrito.",
-15:"En lotes baldíos en determinadas zonas, la Municipalidad podrá exigir la construcción de cercos y muros divisorios cuando lo considere conveniente.\nLos cercos y muros divisorios serán ejecutados en albañilería de ladrillos comunes, bloques huecos o piedra, o c/hormigón simple o armado y deberán tener una altura mínima de 2,00m. y una altura máxima de 2,50m.",
-16:"En toda nueva edificación se deberá dar un adecuado tratamiento arquitectónico a las fachadas y a los muros divisorios que queden a la vista desde la vía pública.",
-17:"Es obligatorio el revoque y pintado de las fachadas en la zona urbanizada, salvo que el estilo arquitectónico o la naturaleza del material de las fachadas se oponga a ello (como ser ladrillos a la vista, o piedras lajas). En este caso los materiales empleados deberán proteger al muro de fachada contra los agentes atmosféricos.",
-18:"Sobre las vías pavimentadas o enripiadas deberán construirse aceras con las características generales que se determinan reglamentariamente. El Organismo de Aplicación podrá exigir en casos especiales, el tratamiento diferenciado de las aceras en algunos entornos y/o sectores particulares de la ciudad, según proyecto particularizado.",
-19:"Es obligatoria la construcción y terminación de las aceras con materiales antideslizantes de un ancho mínimo de 1.00 m, quedando terminantemente prohibido los desniveles en sentido transversal. Es obligatorio construir en las esquinas recesos para discapacitados, de acuerdo a las normas vigentes al respecto.",
-20:"Cuando las aceras tengan un ancho superior a los 3,00m y el carácter de la vía o el sector lo aconsejen, la Municipalidad de Viedma podrá exigir que se dejen franjas verdes contiguas al cordón de la vereda de no menos de 1,00m. En estos casos se interrumpirán tanto en las esquinas (hasta 9,00m medidos desde la intersección de los cordones), como cuando correspondan con paradas de ómnibus o accesos o guardacoches."
-};
-
-/* ===================== TARJETAS (un núcleo funcional cada una) =====================
-   k: tipo de núcleo — Regla · Dato · Condición · Excepción · Facultad · Prohibición · Definición · Caso · Distinción */
-const C = [];
-const add=(a,k,q,ans)=>C.push({id:`${a}-${C.filter(c=>c.a===a).length+1}`,a,k,q,ans});
-
-// Art. 1
-add(1,"Regla","¿Cuál es el objeto del Código de Edificación de Viedma?","Regular la <strong>realización de obras de edificación</strong>.");
-add(1,"Dato","¿Qué cuatro tipos de obras de edificación regula el Código?","<ul><li>Construcción</li><li>Modificación</li><li>Refacción</li><li>Demolición</li></ul>(“y/o”: pueden darse juntas o separadas)");
-add(1,"Dato","Según el Art. 1, ¿qué dos variantes comprende la “modificación”?","<strong>Ampliación</strong> o <strong>alteración</strong>.");
-add(1,"Caso","Un propietario sólo quiere demoler un galpón, sin construir nada. ¿Alcanza el Código a esa obra?","Sí. La <strong>demolición</strong> es una de las obras de edificación que el Código regula (Art. 1).");
-// Art. 2
-add(2,"Regla","¿Cuál es el ámbito territorial de aplicación del Código?","El <strong>municipio de Viedma</strong>.");
-add(2,"Dato","¿Qué ley provincial base establece cómo se pone en vigencia el Código?","La <strong>Ley Nº 929</strong>.");
-add(2,"Dato","¿Qué modificatorias de la Ley 929 menciona el Art. 2?","Leyes <strong>Nº 1373, Nº 1440 y Nº 1553</strong>.");
-add(2,"Dato","¿Qué decreto reglamentario menciona el Art. 2?","El <strong>Decreto Reglamentario Nº 492/82</strong>.");
-add(2,"Regla","Si las normas de vigencia citadas en el Art. 2 fueran reemplazadas, ¿qué pasa con la remisión?","Se aplican <strong>las que las modifiquen o sustituyan</strong> (remisión dinámica).");
-// Art. 3
-add(3,"Regla","¿Quién es el Organismo de Aplicación del Código?","La <strong>Municipalidad de Viedma</strong>, a través de sus <strong>oficinas competentes</strong>.");
-add(3,"Facultad","¿Qué le corresponde exigir al Organismo de Aplicación?","El <strong>cumplimiento de los objetivos y normas</strong> del Código.");
-add(3,"Facultad","¿Mediante qué instrumento el Organismo de Aplicación hace cumplir el Código?","<strong>Sancionando las reglamentaciones</strong> que considere necesarias.");
-// Art. 4 — Definiciones
-const DEF=[
-["Acera","Espacio de la calle entre la <strong>Línea Municipal y la calzada</strong>, destinado al <strong>tránsito de peatones</strong>."],
-["Alero","Plano horizontal <strong>no accesible</strong> destinado <strong>exclusivamente</strong> para resguardo de vanos y muros."],
-["Balcón","Elemento <strong>accesible y transitable</strong>, voladizo o no, generalmente prolongación del entrepiso y limitado por un <strong>parapeto o baranda</strong>."],
-["Calle","Banda vial de <strong>dominio público</strong> delimitada <strong>entre líneas municipales</strong>."],
-["Conducto","Espacio dispuesto para <strong>contener tuberías</strong>, o <strong>conducir o evacuar</strong> aire, gases, líquidos o sólidos."],
-["Calzada","Espacio de calle <strong>entre aceras enfrentadas</strong>, destinado al <strong>tránsito de vehículos</strong>."],
-["Eje divisorio","Delimitación <strong>entre parcelas de dominio privado</strong>."],
-["Entrepiso","<strong>Estructura resistente horizontal</strong>."],
-["Estructura","Armazón o esqueleto y <strong>todo elemento resistente</strong> de un edificio."],
-["Línea Municipal (L.M.)","Delimitación entre el <strong>dominio público municipal</strong> y el <strong>dominio privado</strong>."],
-["Local","Cada una de las <strong>partes cubiertas cerradas</strong> en que se divide un edificio."],
-["Local habitable","El destinado a <strong>habitación, morada, trabajo o permanencia continuada de personas</strong> (con exclusiones)."],
-["Marquesina","<strong>Alero</strong> que avanza <strong>sobre un acceso</strong>, generalmente ubicado sobre la vía pública."],
-["Muro","Cerramiento vertical <strong>apto para soportar cargas</strong>."],
-["Piso","Espacio comprendido entre el nivel de un <strong>solado</strong> y el nivel del <strong>techo siguiente</strong> sobrepuesto."],
-["Solado","<strong>Revestimiento</strong> del suelo natural o de un entrepiso."],
-["Sótano","<strong>Piso</strong> situado <strong>bajo el nivel del suelo</strong>."],
-["Tabique","Cerramiento vertical <strong>no portante</strong>."]
-];
-DEF.forEach(([t,d])=>add(4,"Definición",`Definí: <em>${t}</em>`,d));
-add(4,"Excepción","¿Qué locales quedan <em>excluidos</em> de la definición de “local habitable”?","<ul><li>Lavaderos</li><li>Cuartos de baño</li><li>Despensas</li><li>Pasajes</li><li>Vestíbulos</li><li>Depósitos</li><li>o similares</li></ul>");
-add(4,"Caso","Un estudio donde una persona trabaja todo el día, ¿es local habitable?","Sí: el <strong>trabajo</strong> y la <strong>permanencia continuada</strong> de personas encuadran en la definición.");
-add(4,"Distinción","Muro vs. tabique: ¿cuál es la diferencia?","Ambos son cerramientos verticales; el <strong>muro soporta cargas</strong>, el <strong>tabique no es portante</strong>.");
-add(4,"Distinción","Alero vs. balcón: ¿cuál es la diferencia clave?","El alero es <strong>no accesible</strong> (sólo resguardo de vanos y muros); el balcón es <strong>accesible y transitable</strong>, con parapeto o baranda.");
-add(4,"Distinción","Acera vs. calzada: ¿qué separa a cada una y a quién está destinada?","Acera: entre L.M. y calzada, para <strong>peatones</strong>. Calzada: entre aceras enfrentadas, para <strong>vehículos</strong>.");
-add(4,"Distinción","Línea Municipal vs. eje divisorio: ¿qué separa cada una?","L.M.: dominio <strong>público municipal</strong> / dominio privado. Eje divisorio: entre <strong>parcelas privadas</strong>.");
-add(4,"Distinción","¿Qué relación hay entre marquesina y alero?","La marquesina <strong>es un tipo de alero</strong>: el que avanza sobre un acceso, generalmente sobre la vía pública.");
-add(4,"Distinción","¿Qué relación hay entre sótano y piso?","El sótano <strong>es un piso</strong>: el situado bajo el nivel del suelo.");
-// Art. 5
-add(5,"Regla","¿Conforme a qué norma se considera zonificada Viedma a los fines de este Código?","Conforme a las disposiciones del <strong>Código Urbanístico</strong> respectivo.");
-// Art. 6
-add(6,"Regla","¿Qué carácter tienen los reglamentos técnicos enumerados en el Art. 6?","<strong>Forman parte</strong> del Código de Edificación.");
-add(6,"Dato","¿Cuántos reglamentos técnicos enumera el Art. 6?","<strong>Once (11)</strong>.");
-add(6,"Dato","¿Qué cuatro reglamentos se toman del Código de Edificación de la Ciudad de Buenos Aires?","<ul><li>Fundaciones</li><li>Estructuras</li><li>Instalaciones Eléctricas</li><li>Ascensores y Transportadores</li></ul>");
-add(6,"Dato","¿Qué reglamento rige las estructuras de hormigón?","El <strong>PRAEH</strong>: Proyecto de Reglamento Argentino para Estructuras de Hormigón.");
-add(6,"Dato","¿Qué reglamento rige lo sanitario (agua y cloacas)?","El <strong>Reglamento de O.S.N.</strong> o las normas que especifique el <strong>Departamento Provincial de Aguas</strong>.");
-add(6,"Dato","¿Qué reglamentos rigen las instalaciones de gas y de energía?","<strong>Gas del Estado</strong> y <strong>Agua y Energía de la Nación</strong>.");
-add(6,"Dato","¿Qué normas del SEDUV integran el Código?","Normas mínimas de <strong>Habitabilidad</strong> y normas mínimas de <strong>Habitabilidad Higrotérmica</strong>.");
-add(6,"Dato","¿Qué normas aplican a hoteles, moteles, residenciales y hosterías?","Las Normas de Edificación de la <strong>Secretaría de Estado y Turismo de la Nación</strong>.");
-// Art. 7
-add(7,"Regla","¿Qué carácter deben tener las obras destinadas a habitación?","<strong>Permanente</strong>.");
-// Art. 8
-add(8,"Condición","¿Qué dos requisitos deben cumplir las obras de carácter transitorio?","1) <strong>Justificar su finalidad</strong>.<br>2) Contar con <strong>autorización expresa</strong> de la Municipalidad.");
-add(8,"Facultad","En una obra transitoria, ¿qué puede exigir la Municipalidad además de autorizarla?","Las <strong>condiciones mínimas de habitabilidad y saneamiento</strong> que considere necesarias.");
-add(8,"Caso","Un obrador temporario con autorización tácita (nadie objetó). ¿Cumple el Art. 8?","No. La autorización debe ser <strong>expresa</strong>, y además debe justificarse la finalidad.");
-// Art. 9
-add(9,"Prohibición","¿Qué dos tipos de construcciones prohíbe el Art. 9?","Las de <strong>carácter precario</strong> y las hechas de <strong>adobe</strong>.");
-add(9,"Caso","¿Puede la Municipalidad autorizar una vivienda de adobe como obra transitoria del Art. 8?","No. El Art. 9 <strong>prohíbe en forma absoluta</strong> las construcciones de adobe (y las precarias); el Art. 8 no lo excepciona.");
-// Art. 10
-add(10,"Regla","¿Qué factores deben cumplir todas las edificaciones según el Art. 10?","Los <strong>factores de edificación y de ocupación</strong> previstos por el Código Urbanístico.");
-add(10,"Condición","¿Según qué criterio varían los factores de edificación y ocupación aplicables?","<strong>Según la zona</strong> de que se trate.");
-// Art. 11
-add(11,"Prohibición","¿Hasta qué altura la línea de edificación no puede avanzar sobre la Línea Municipal?","Hasta los <strong>2,70 m</strong> de altura.");
-add(11,"Excepción","Por encima de 2,70 m, ¿qué salientes se permiten sobre la L.M.?","Salientes para <strong>balcones o locales</strong>.");
-add(11,"Dato","¿Cuánto pueden sobresalir esas salientes, medidas desde la L.M.?","Hasta <strong>1,00 m</strong>.");
-add(11,"Dato","¿A qué distancia del eje divisorio puede llegar como máximo la saliente?","Hasta <strong>0,15 m</strong> del eje divisorio (debe quedar a 0,15 m como mínimo).");
-add(11,"Regla","En caso de ochava, ¿cómo debe disponerse la saliente?","<strong>Paralela a la ochava</strong>.");
-add(11,"Caso","Un balcón a 2,50 m de altura que vuela 0,60 m sobre la vereda. ¿Es admisible?","No. Hasta los <strong>2,70 m</strong> no puede avanzarse sobre la L.M.");
-// Art. 12
-add(12,"Dato","¿Qué altura máxima pueden tener los cerramientos opacos en balcones?","<strong>0,90 m</strong>.");
-add(12,"Dato","¿Desde dónde se mide la altura de los cerramientos opacos de balcones?","Desde el <strong>solado del balcón</strong>.");
-// Art. 13
-add(13,"Condición","¿Qué condición debe cumplir el balcón para admitir pantallas móviles?","Tener <strong>tres lados libres</strong>.");
-add(13,"Dato","¿Qué tipo de pantallas se permiten en esos balcones?","Pantallas <strong>móviles</strong>, <strong>traslúcidas, cribadas o similares</strong>, que produzcan cerramiento <strong>parcial</strong>.");
-add(13,"Dato","¿Qué porcentaje máximo del perímetro libre puede cubrir ese cerramiento?","Como máximo el <strong>50 % del perímetro libre</strong>.");
-add(13,"Caso","Balcón con dos lados libres: ¿se pueden colocar pantallas móviles traslúcidas según el Art. 13?","No por el Art. 13: exige <strong>tres lados libres</strong>.");
-// Art. 14
-add(14,"Dato","¿A qué altura mínima deben mantenerse aleros o marquesinas en planta baja?","Por encima de los <strong>2,40 m</strong>, medidos desde el <strong>nivel de vereda</strong>.");
-add(14,"Dato","¿A qué distancia mínima del cordón debe quedar el borde exterior de aleros o marquesinas?","<strong>0,80 m</strong> como mínimo.");
-add(14,"Excepción","¿Qué se permite en un retiro de frente de 4,00 m y dónde?","<strong>Toldo / pérgola</strong>, ubicado en el <strong>espacio de estacionamiento</strong>.");
-add(14,"Dato","Sobre ejes medianeros, ¿qué altura máxima puede tener el muro divisorio dentro de la superficie de retiro?","<strong>0,60 m</strong>; por encima puede materializarse con <strong>rejas</strong>.");
-add(14,"Condición","¿Qué se requiere para hacer un cerco verde de medianeras?","<strong>Acuerdo de vecinos por escrito</strong>.");
-add(14,"Caso","Una marquesina a 2,60 m de altura cuyo borde queda a 0,50 m del cordón. ¿Cumple?","No. La altura sí (> 2,40 m), pero el borde debe distar <strong>al menos 0,80 m</strong> del cordón.");
-// Art. 15
-add(15,"Facultad","¿Es obligatorio siempre cercar un lote baldío según el Art. 15?","No: la Municipalidad <strong>podrá exigirlo</strong>, en <strong>determinadas zonas</strong>, <strong>cuando lo considere conveniente</strong>.");
-add(15,"Dato","¿Con qué materiales deben ejecutarse cercos y muros divisorios?","Albañilería de <strong>ladrillos comunes</strong>, <strong>bloques huecos</strong> o <strong>piedra</strong>, o <strong>hormigón simple o armado</strong>.");
-add(15,"Dato","¿Qué alturas mínima y máxima deben tener cercos y muros divisorios?","Mínima <strong>2,00 m</strong> · máxima <strong>2,50 m</strong>.");
-add(15,"Caso","Exigido el cerco, el propietario hace un alambrado de 1,50 m. ¿Cumple?","No: ni el material (alambre no está entre los admitidos) ni la altura (mínimo 2,00 m).");
-// Art. 16
-add(16,"Regla","¿Qué exige el Art. 16 en toda nueva edificación?","Un <strong>adecuado tratamiento arquitectónico</strong> de las fachadas y de los muros divisorios visibles.");
-add(16,"Condición","¿Qué muros divisorios alcanza el deber de tratamiento arquitectónico?","Los que <strong>queden a la vista desde la vía pública</strong>.");
-// Art. 17
-add(17,"Regla","¿Qué es obligatorio para las fachadas en la zona urbanizada?","Su <strong>revoque y pintado</strong>.");
-add(17,"Excepción","¿Cuándo no es obligatorio revocar y pintar la fachada?","Cuando el <strong>estilo arquitectónico</strong> o la <strong>naturaleza del material</strong> se oponga (ej.: <strong>ladrillo a la vista</strong>, <strong>piedra laja</strong>).");
-add(17,"Condición","Si se aplica la excepción del Art. 17, ¿qué deben garantizar los materiales?","<strong>Proteger el muro de fachada contra los agentes atmosféricos</strong>.");
-add(17,"Condición","¿En qué ámbito rige la obligación de revoque y pintado?","En la <strong>zona urbanizada</strong>.");
-// Art. 18
-add(18,"Regla","¿Sobre qué vías es obligatorio construir aceras?","Sobre las vías <strong>pavimentadas o enripiadas</strong>.");
-add(18,"Regla","¿Dónde se determinan las características generales de las aceras?","<strong>Reglamentariamente</strong>.");
-add(18,"Facultad","¿Qué puede exigir el Organismo de Aplicación en casos especiales respecto de las aceras?","Un <strong>tratamiento diferenciado</strong> en entornos o sectores particulares de la ciudad, <strong>según proyecto particularizado</strong>.");
-add(18,"Caso","Frente a una calle de tierra (ni pavimentada ni enripiada), ¿obliga el Art. 18 a construir acera?","No: la obligación del Art. 18 rige sobre vías <strong>pavimentadas o enripiadas</strong>.");
-// Art. 19
-add(19,"Regla","¿Con qué tipo de materiales deben construirse y terminarse las aceras?","Materiales <strong>antideslizantes</strong>.");
-add(19,"Dato","¿Cuál es el ancho mínimo de la acera según el Art. 19?","<strong>1,00 m</strong>.");
-add(19,"Prohibición","¿Qué desniveles están terminantemente prohibidos en las aceras?","Los desniveles en <strong>sentido transversal</strong>.");
-add(19,"Regla","¿Qué es obligatorio construir en las esquinas?","<strong>Recesos para discapacitados</strong> (rampas), según las normas vigentes.");
-// Art. 20
-add(20,"Condición","¿Qué dos condiciones habilitan a exigir franjas verdes en la acera?","1) Acera de ancho <strong>superior a 3,00 m</strong>.<br>2) Que el <strong>carácter de la vía o del sector lo aconseje</strong>.");
-add(20,"Facultad","¿Quién puede exigir las franjas verdes y con qué carácter?","La <strong>Municipalidad de Viedma</strong>; es <strong>facultativo</strong> (“podrá exigir”).");
-add(20,"Dato","¿Dónde se ubican las franjas verdes y qué ancho mínimo tienen?","<strong>Contiguas al cordón</strong>, de <strong>no menos de 1,00 m</strong>.");
-add(20,"Excepción","¿En qué casos se interrumpen las franjas verdes?","<ul><li>En las <strong>esquinas</strong></li><li>En <strong>paradas de ómnibus</strong></li><li>En <strong>accesos o guardacoches</strong></li></ul>");
-add(20,"Dato","¿Hasta qué distancia se interrumpe la franja verde en las esquinas y desde dónde se mide?","Hasta <strong>9,00 m</strong>, medidos desde la <strong>intersección de los cordones</strong>.");
-add(20,"Caso","Acera de exactamente 3,00 m. ¿Puede la Municipalidad exigir franja verde por el Art. 20?","No: se requiere un ancho <strong>superior</strong> a 3,00 m.");
+/* ===================== MAZOS =====================
+   Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
+const DECKS=window.DECKS||[];
+const ALL=[];
+DECKS.forEach(d=>{
+  d.cards=[];const n={};
+  d.build((a,k,q,ans)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id};d.cards.push(c);ALL.push(c);});
+  d.nums=Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
+});
+const deckById=id=>DECKS.find(d=>d.id===id);
 
 /* ===================== ESTADO / SRS (SM-2 tipo Anki) ===================== */
 const KEY="cevdm-srs-v1";
 const MIN=60e3, DAY=864e5;
-let S={cards:{},opts:{newPerDay:20,filter:[]},day:{date:"",newDone:0},t:0};
+let S=merge({});
 function loadLocal(){try{const r=localStorage.getItem(KEY);if(r)S=merge(JSON.parse(r));}catch(e){}}
-function merge(x){return {cards:x.cards||{},opts:Object.assign({newPerDay:20,filter:[]},x.opts||{}),day:x.day||{date:"",newDone:0},t:x.t||0};}
+function merge(x){
+  const o={cards:x.cards||{},opts:Object.assign({newPerDay:20,filter:{},deck:""},x.opts||{}),day:x.day||{date:"",newDone:{}},t:x.t||0};
+  if(Array.isArray(o.opts.filter))o.opts.filter={viedma:o.opts.filter};          // formato anterior (un solo mazo)
+  if(typeof o.day.newDone==="number")o.day.newDone={viedma:o.day.newDone};
+  if(!o.opts.deck||!deckById(o.opts.deck))o.opts.deck=(DECKS[0]||{}).id;
+  return o;
+}
 
 /* ---------- Cuenta de GitHub (gist privado) ---------- */
 const GK="anki-pro:gh", GIST_DESC="Anki Pro - progreso", GIST_FILE="anki-pro.json";
@@ -364,21 +236,24 @@ function bindAccount(){
   $("imp").onchange=e=>{if(e.target.files[0])importJson(e.target.files[0]);};
 }
 function today(){const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();}
-function rollDay(){if(S.day.date!==today()){S.day={date:today(),newDone:0};}}
+function rollDay(){if(S.day.date!==today()){S.day={date:today(),newDone:{}};}}
 function st(id){return S.cards[id];}
-function active(){const f=S.opts.filter;return C.filter(c=>!f.length||f.includes(c.a));}
+function D(){return deckById(S.opts.deck)||DECKS[0];}
+function filt(d){return S.opts.filter[d.id]||(S.opts.filter[d.id]=[]);}
+function active(d){d=d||D();const f=filt(d);return d.cards.filter(c=>!f.length||f.includes(c.a));}
 
-function queue(){
+function queue(d){
+  d=d||D();
   rollDay();const now=Date.now();
   const due=[],lrn=[],nw=[];
-  for(const c of active()){
+  for(const c of active(d)){
     const s=st(c.id);
     if(!s) nw.push(c);
     else if(s.due<=now){(s.q==="rev"?due:lrn).push(c);}
   }
   lrn.sort((a,b)=>st(a.id).due-st(b.id).due);
   due.sort((a,b)=>st(a.id).due-st(b.id).due);
-  const room=Math.max(0,S.opts.newPerDay-S.day.newDone);
+  const room=Math.max(0,S.opts.newPerDay-(S.day.newDone[d.id]||0));
   return {lrn,due,nw:nw.slice(0,room)};
 }
 function nextLearningSoon(){ // tarjetas en aprendizaje que vencen en los próximos 20 min
@@ -413,13 +288,14 @@ function fmt(ms){if(ms<60*MIN)return Math.round(ms/MIN)+" min";if(ms<DAY)return 
 
 /* ===================== VISTAS ===================== */
 const V=document.getElementById("view"),B=document.getElementById("bar");
-let view="study",cur=null,shown=false,browseArt=0;
+let view="decks",cur=null,shown=false,browseArt=0;
 
 function render(){
   acctBtn();
   document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.v===view));
+  document.getElementById("ttl").textContent=view==="decks"?"Anki Pro":D().head;
   B.innerHTML="";
-  ({study,stats,browse,opts})[view]();
+  ({decks,study,stats,browse})[view]();
 }
 function pick(){
   const q=queue();
@@ -438,7 +314,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p>${ART[cur.a]}</p></details>`:""}
+    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p>${D().arts[cur.a]}</p></details>`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
@@ -450,49 +326,66 @@ function study(){
   }
 }
 function grade(g){
-  if(!st(cur.id))S.day.newDone++;
+  if(!st(cur.id))S.day.newDone[cur.d]=(S.day.newDone[cur.d]||0)+1;
   S.cards[cur.id]=schedule(cur.id,g,false);
   save();cur=null;shown=false;render();
 }
-window.extraNew=()=>{rollDay();S.day.newDone=Math.max(0,S.day.newDone-10);save();render();};
+window.extraNew=()=>{rollDay();const id=D().id;S.day.newDone[id]=Math.max(0,(S.day.newDone[id]||0)-10);save();render();};
+
+function decks(){
+  const now=Date.now();
+  V.innerHTML=`<p class="muted" style="margin:0 0 10px">Elegí qué norma estudiar.</p>`+DECKS.map(d=>{
+    const q=queue(d);const seen=d.cards.filter(c=>st(c.id)).length;
+    return `<div class="panel deck${d.id===S.opts.deck?" sel":""}" data-d="${d.id}">
+      <h3 style="margin:0">${d.title}</h3><div class="muted">${d.sub} · ${d.cards.length} tarjetas</div>
+      <div class="counts" style="margin:10px 0 8px"><span class="c-new">Nuevas <b>${q.nw.length}</b></span><span class="c-lrn">Aprendiendo <b>${q.lrn.length}</b></span><span class="c-rev">Repaso <b>${q.due.length}</b></span></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="meter" style="max-width:none"><i style="width:${seen/d.cards.length*100}%"></i></span><span class="muted">${seen}/${d.cards.length}</span></div>
+    </div>`;}).join("");
+  V.querySelectorAll("[data-d]").forEach(el=>el.onclick=()=>{S.opts.deck=el.dataset.d;cur=null;shown=false;browseArt=0;save();view="study";render();});
+}
 
 function stats(){
   const now=Date.now();let tot=0,seen=0,mature=0,dueT=0;
   const rows=[];
-  for(let a=1;a<=20;a++){
-    const cs=C.filter(c=>c.a===a);let sn=0,m=0;
+  const d=D();
+  for(const a of d.nums){
+    const cs=d.cards.filter(c=>c.a===a);let sn=0,m=0;
     cs.forEach(c=>{const s=st(c.id);if(s){sn++;if(s.q==="rev"&&s.ivl>=21)m++;if(s.due<=now+DAY)dueT++;}});
     tot+=cs.length;seen+=sn;mature+=m;
     rows.push(`<div class="row"><span style="width:64px">Art. ${a}</span><span class="muted" style="width:70px">${sn}/${cs.length}</span><span class="meter"><i style="width:${cs.length?sn/cs.length*100:0}%"></i></span></div>`);
   }
-  V.innerHTML=accountPanel()+`<div class="panel"><h3>Resumen</h3>
+  V.innerHTML=`<div class="panel"><h3>Resumen · ${d.title}</h3>
    <div class="row"><span>Tarjetas totales</span><b>${tot}</b></div>
    <div class="row"><span>Vistas al menos una vez</span><b>${seen}</b></div>
    <div class="row"><span>Maduras (intervalo ≥ 21 d)</span><b>${mature}</b></div>
    <div class="row" style="border:0"><span>Vencen en las próximas 24 h</span><b>${dueT}</b></div></div>
-   <div class="panel"><h3>Por artículo</h3>${rows.join("")}</div>`;
-  bindAccount();
+   <div class="panel"><h3>Por artículo</h3>${rows.join("")}</div>`+settings(d);
+  bindAccount();bindSettings(d);
 }
 
 function browse(){
-  const chips=`<div class="chips">${[0,...Array.from({length:20},(_,i)=>i+1)].map(a=>`<button class="chip ${browseArt===a?"on":""}" data-a="${a}">${a?"Art. "+a:"Todos"}</button>`).join("")}</div>`;
-  const list=C.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">Art. ${c.a}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
-  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p>${ART[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
+  const d=D();
+  const chips=`<div class="chips">${[0,...d.nums].map(a=>`<button class="chip ${browseArt===a?"on":""}" data-a="${a}">${a?"Art. "+a:"Todos"}</button>`).join("")}</div>`;
+  const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">Art. ${c.a}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
+  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p>${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
   V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{browseArt=+b.dataset.a;render();});
 }
 
-function opts(){
-  const f=S.opts.filter;
-  V.innerHTML=`<div class="panel"><h3>Sesión</h3>
-    <label>Tarjetas nuevas por día <input type="number" id="npd" min="1" max="200" value="${S.opts.newPerDay}"></label>
-    <div class="muted" style="margin-top:6px">Estudiar sólo estos artículos (ninguno = todos):</div>
-    <div class="chips">${Array.from({length:20},(_,i)=>i+1).map(a=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${a}">Art. ${a}</button>`).join("")}</div>
-  </div>
-  <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión en <b>Progreso</b>, en tu cuenta de GitHub.</p></div>
-  <div class="panel"><h3>Datos</h3><button class="ghost danger" id="rst">Reiniciar todo el progreso</button></div>`;
+function settings(d){
+  const f=filt(d);
+  return `<div class="panel"><h3>Ajustes</h3>
+    <label>Tarjetas nuevas por día (por mazo) <input type="number" id="npd" min="1" max="200" value="${S.opts.newPerDay}"></label>
+    <div class="muted" style="margin-top:6px">Estudiar sólo estos artículos de este mazo (ninguno = todos):</div>
+    <div class="chips">${d.nums.map(a=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${a}">Art. ${a}</button>`).join("")}</div>
+    <div class="btns"><button class="ghost danger" id="rstd">Reiniciar este mazo</button></div>
+  </div>`+accountPanel()+`
+  <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
+}
+function bindSettings(d){
+  const f=filt(d);
   document.getElementById("npd").onchange=e=>{S.opts.newPerDay=Math.max(1,Math.min(200,+e.target.value||20));save();};
   V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=+b.dataset.f;const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});
-  document.getElementById("rst").onclick=()=>confirmBox("¿Borrar todo el progreso? No se puede deshacer.",()=>{S.cards={};S.day={date:today(),newDone:0};cur=null;shown=false;save();render();});
+  document.getElementById("rstd").onclick=()=>confirmBox(`¿Borrar el progreso de “${d.title}”? No se puede deshacer.`,()=>{d.cards.forEach(c=>delete S.cards[c.id]);if(S.day.newDone)delete S.day.newDone[d.id];cur=null;shown=false;save();render();});
 }
 function confirmBox(t,ok){const m=document.getElementById("modal");document.getElementById("mtext").textContent=t;m.classList.add("on");document.getElementById("mno").onclick=()=>m.classList.remove("on");document.getElementById("myes").onclick=()=>{m.classList.remove("on");ok();};}
 
@@ -504,7 +397,7 @@ document.addEventListener("keydown",e=>{
 });
 
 /* ===================== ARRANQUE ===================== */
-document.getElementById("acct").onclick=()=>{view="stats";render();};
+document.getElementById("acct").onclick=()=>{view="stats";render();setTimeout(()=>{const t=document.getElementById("gh-token")||document.getElementById("gh-out");if(t)t.scrollIntoView({behavior:"smooth",block:"center"});},50);};
 loadLocal();render();startupPull();
 document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible"){startupPull();if(view==="study"&&!shown){cur=null;render();}}});
 if("serviceWorker" in navigator&&location.protocol.indexOf("http")===0)navigator.serviceWorker.register("sw.js").catch(()=>{});

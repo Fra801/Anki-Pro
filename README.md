@@ -1,6 +1,13 @@
 # Anki Pro
 
-Tarjetas con repetición espaciada, al estilo Anki. El primer mazo cubre los **artículos 1 a 20 del Código de Edificación de Viedma (2018)**: 97 tarjetas, una por cada núcleo funcional de cada artículo (reglas, datos y medidas, condiciones, excepciones, facultades, prohibiciones, definiciones y casos prácticos).
+Tarjetas con repetición espaciada, al estilo Anki, para estudiar leyes, decretos y reglamentos. En **Mazos** elegís qué norma estudiar. Cada tarjeta apunta a un núcleo funcional de un artículo (reglas, datos y medidas, condiciones, excepciones, facultades, prohibiciones, definiciones, distinciones y casos prácticos).
+
+Mazos incluidos:
+
+| Mazo | Artículos | Tarjetas |
+|---|---|---|
+| Código de Edificación de Viedma (2018) | 1 a 20 | 97 |
+| Reglamento del Régimen de Promociones Policiales (Anexo I, Decreto 1646/87) | 1 a 18 | 71 |
 
 Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 
@@ -21,12 +28,17 @@ Sin iniciar sesión, el progreso igual queda guardado en el navegador del dispos
 - Estudiar solo algunos artículos.
 - Reiniciar el progreso.
 
-## Agregar tarjetas
+## Agregar un mazo
 
-Las tarjetas están en `index.html`, en la sección `TARJETAS`. Cada una es una línea:
+Cada mazo es un archivo en `mazos/`. Para sumar uno:
+
+1. Copiá `mazos/promociones.js` con otro nombre y cambiá `id`, `idp` (un prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub` y `head`.
+2. En `arts` va el texto de cada artículo; en `build` van las tarjetas, una por línea:
 
 ```js
-add(11, "Dato", "¿Cuánto pueden sobresalir esas salientes?", "Hasta <strong>1,00 m</strong>.");
+add(8, "Dato", "Inc. e): ¿cuándo inhabilita la licencia por asuntos personales?", "Por más de <strong>10 días continuos</strong>.");
 ```
 
-El primer dato es el número de artículo y el segundo el tipo de núcleo. El texto de cada artículo está en `ART`.
+3. Agregá `<script src="mazos/nuevo.js"></script>` en `index.html` (junto a los otros mazos) y el archivo a la lista de `sw.js`.
+
+No cambies el `idp` ni el orden de las tarjetas de un mazo ya estudiado: los identificadores salen de ahí y se perdería el progreso. Las tarjetas nuevas conviene agregarlas al final del artículo.

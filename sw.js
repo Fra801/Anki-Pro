@@ -1,7 +1,7 @@
-const C = "anki-pro-v1";
+const C = "anki-pro-v2";
 self.addEventListener("install", e => {
   self.skipWaiting();
-  e.waitUntil(caches.open(C).then(c => c.addAll(["./", "index.html", "manifest.webmanifest", "icon.svg"])).catch(() => {}));
+  e.waitUntil(caches.open(C).then(c => c.addAll(["./", "index.html", "manifest.webmanifest", "icon.svg", "mazos/viedma.js", "mazos/promociones.js"])).catch(() => {}));
 });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(k => Promise.all(k.filter(x => x !== C).map(x => caches.delete(x)))).then(() => self.clients.claim()));

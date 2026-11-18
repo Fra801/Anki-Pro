@@ -1,0 +1,120 @@
+/* Mazo: Reglamento del Régimen de Promociones Policiales — Anexo I, Decreto N° 1646/87 (Río Negro)
+   Cada add(artículo, tipo, pregunta, respuesta) es un núcleo funcional. */
+(window.DECKS = window.DECKS || []).push({
+id: "promociones",
+idp: "rp:",
+title: "Régimen de Promociones Policiales",
+sub: "Decreto 1646/87 · Anexo I · Artículos 1 a 18",
+head: "Promociones Policiales · Decreto 1646/87",
+arts: {
+1:"Para satisfacer las necesidades orgánicas de la Institución, se efectuarán ascensos del personal policial, superior y subalterno, de acuerdo a las disposiciones de la Ley 679 y su modificatoria 1542 (L.P.P.P.R.N.) y este Reglamento.",
+2:"Los ascensos se producirán anualmente con vigencia al 1 de Enero.\nHabiéndose producido vacantes en el transcurso del año, las mismas serán cubiertas con personal declarado Apto para ello y manteniendo en conjunto las proporciones debidas por selección, orden de mérito y antigüedad calificada, según corresponda para cada grado.",
+3:"Se exceptúan de las disposiciones del artículo precedente los Ascensos que se otorguen por \"Mérito Extraordinario\" y \"Post Mortem\".",
+4:"Los ascensos por \"Mérito Extraordinario\" serán discernidos entre el personal que interviniere en actos destacados o meritorios, en los que hubiere estado en peligro inminente su propia vida. En todos los casos estas circunstancias deberán encontrarse fehacientemente documentadas.",
+5:"Los ascensos \"Post Mortem\", serán acordados por idénticas situaciones al artículo 4° y que resultas del mismo hayan culminado con la pérdida de la vida del policía interviniente.",
+6:"A los fines de tramitar el otorgamiento de los ascensos mencionados en el artículo 3°, el Jefe inmediato del agente interviniente promoverá información sumaria y/o sumario administrativos según correspondiere, que será elevada por vía jerárquica a la Dirección de Personal - División Calificaciones y Promociones- para su consideración por las Juntas de Calificaciones respectivas. Con las conclusiones de las mismas, el expediente pasará al Jefe de Policía, quien resolverá sobre el particular.",
+7:"Los ascensos \"Extraordinarios\", serán concedidos por el Poder Ejecutivo Provincial o por el Jefe de Policía de la Provincia, de acuerdo al grado del promovido, según las formas que se determinan para los ascensos ordinarios. Estas promociones no podrán limitarse por la inexistencia de las vacantes.",
+8:"Se considerará Inhabilitado para el Ascenso el personal superior y subalterno que no reviste en servicio efectivo o que se encontrare en alguna de las siguientes situaciones:\na) Falta de antigüedad mínima en el grado, conforme lo dispone la Ley del Personal Policial de la Provincia de Río Negro, contando desde la fecha de vigencia del último ascenso al 31 de diciembre del año en curso. El tiempo transcurrido en Situación Pasiva no se computará para el ascenso, salvo el caso del personal que haya estado en esa situación por hallarse procesado y posteriormente obtuviera su Sobreseimiento definitivo o Absolución, o por razones de salud cuando ésta haya sido originada o derivada del cumplimiento del servicio.\nb) Usufructo de licencia por enfermedad o lesiones no motivadas por los actos del servicio por más de 60 (sesenta) días corridos o 40 (cuarenta) fraccionados.\nc) Situación de salud, que no reconozca origen en los actos del servicio y que provoque la asignación de tareas que no sean propias del grado, agrupamiento y escalafón a que pertenece el agente, durante más de 90 (noventa) días corridos o 60 (sesenta) discontinuos.\nd) Uso de licencia por atención de familiar enfermo por más de 30 (treinta) días continuos o discontinuos.\ne) Uso de licencia por asuntos personales por más de 10 (diez) días continuos.\nf) Reunir antecedentes disciplinarios en el periodo analizado, de acuerdo a la siguiente escala:\n   - Más de siete días de suspensión de empleo o más de treinta días de arresto, siendo personal subalterno de cualquiera de los agrupamientos.\n   - Más de veinte días de arresto, siendo personal superior de cualquiera de los agrupamientos o registrar siete días de suspensión de empleo.\ng) Hallarse bajo sumario judicial, mientras estuviera privado de su libertad o bajo prisión preventiva, siempre que el hecho no hubiera sido originado en el legítimo ejercicio de los deberes emergentes del artículo 30° de la Ley 679 (L.P.P.P.R.N).\nh) Haber sido reprobado o dado de baja por razones disciplinarias, falta de aplicación, exceso de inasistencias o por solicitud del causante, en cursos policiales de información, de perfeccionamiento y/o capacitación profesional por aplicación de la reglamentación de cada caso.\ni) Haber sido llamado a rendir exámenes tendientes a comprobar la idoneidad del personal, o capacitación para las funciones policiales o auxiliares de la misma que le correspondan por antigüedad en el grado, agrupamiento y escalafón y resultar reprobado y obtener postergación para rendir por razones personales.\nj) No haber merecido calificación promedio anual de \"Excepcional\" o \"Muy Bueno\" en los grados de Comisario, Oficial Principal o Sargento.\nk) Hallarse bajo sumario administrativo y/o judicial no resuelto a la fecha de finalización del periodo calificativo, conforme lo determina el Reglamento del Régimen de Calificaciones Policiales.",
+9:"Las especificaciones del artículo anterior sobre licencias, sanciones, sumarios judiciales y/o administrativos y situaciones de salud, se tomarán sobre el período calificativo que establece el Reglamento del Régimen de Calificaciones Policiales en el que se analiza el agente y las restantes sobre el lapso transcurrido desde el último ascenso.",
+10:"Las situaciones de Inhabilidad producidas por la aplicación de la Ley 679, sus modificatorias (L.P.P.P.R.N.) y este Reglamento, serán notificadas a los agentes en las listas de los otros postergados de su grado, agrupamiento y escalafón, con veinte días corridos de anticipación a la constitución de las Juntas de Calificación.",
+11:"Dentro de las 48 horas de notificado, el que se crea erróneamente inhabilitado podrá formular reclamo que elevará al Subjefe de Policía por vía jerárquica correspondiente para su resolución definitiva en el término de 72 horas. Luego, en su caso, se efectuarán las correcciones que procedan en las respectivas listas de personal postergado.",
+12:"Resueltos los recursos del artículo 22° del Reglamento de las Juntas de Calificaciones, el personal que integra el agrupamiento de los Aptos para el Ascenso, será ordenado por antigüedad por la Dirección de Personal – División Calificaciones y Promociones -.",
+13:"El orden por antigüedad calificada es el que tiene el personal declarado Apto para el Ascenso por aplicación de las disposiciones del Artículo 23° de la Ley 679 (L.P.P.P.R.N.).",
+14:"Para efectuar la propuesta de Ascenso del personal superior y promover al subalterno, la Jefatura de Policía, seleccionará en las proporciones que establece el artículo 99° de la Ley 679 (L.P.P.P.R.N.) para cada grado, los agentes que ocupen la lista de orden de mérito del grado. El personal que hubiera quedado en los primeros lugares de la lista de antigüedad calificado de esos mismos agentes, ocupará el restante números de vacantes existentes.",
+15:"Las propuestas de Ascensos del personal de Comisario y Oficiales Superiores se efectuarán de modo tal que, el 50% de las vacantes del grado inmediato superior se llene con los que ocupen los primeros lugares de la lista de orden de mérito confeccionada por la Junta de Calificaciones, y el restante 50% de las vacantes, por selección de la Jefatura de Policía entre los declarados \"Aptos para el Ascenso\".",
+16:"No podrá ser ascendido el personal que con posterioridad de haber sido declarado \"Apto para el Ascenso\", se le iniciara sumario administrativo y/o judicial, en el que se hubiere dictado auto de prisión preventiva - o procesamiento- aún cuando hubiera obtenido la excarcelación, o por el hecho de la causa, no correspondiere pena corporal o dejara de revistar en servicio efectivo. Si por aplicación del artículo 99° de la ley 679 (L.P.P.P.R.N.) o este reglamento le correspondiera ascender, se le reservará la vacante por seis meses a partir de la existencia de la misma, no pudiendo ese tiempo sobrepasar el 31 de Diciembre. Llegando al término sin superar la circunstancia que impide la promoción, se ascenderá al Agente subsiguiente en la lista respectiva.",
+17:"Anualmente las Juntas considerarán, con las nuevas fracciones de personal, la situación de los agrupados como Apto para el Ascenso y que no hubiesen sido promovidos y los declarado Apto para Permanecer en el Grado.",
+18:"Los agentes que por tres períodos consecutivos o cinco alternados en un mismo grado, fuesen declarados \"Aptos para Permanecer en el Grado\", pasarán a situación de Retiro Obligatorio conforme lo prevé el Título X, Capítulo III, Artículo 63°, Inciso d) de la Ley 2092/86 (Ley Previsional)."
+},
+build(add){
+// Art. 1 — Ámbito de aplicación
+add(1,"Regla","¿Con qué finalidad se efectúan los ascensos del personal policial?","Para <strong>satisfacer las necesidades orgánicas de la Institución</strong>.");
+add(1,"Dato","¿Qué personal policial alcanza el régimen de ascensos?","El personal <strong>superior y subalterno</strong>.");
+add(1,"Dato","¿De acuerdo a qué normas se efectúan los ascensos?","La <strong>Ley 679</strong> y su modificatoria <strong>1542</strong> (Ley del Personal Policial de Río Negro, L.P.P.P.R.N.) y <strong>este Reglamento</strong>.");
+// Art. 2
+add(2,"Regla","¿Con qué periodicidad se producen los ascensos y desde qué fecha rigen?","<strong>Anualmente</strong>, con vigencia al <strong>1 de enero</strong>.");
+add(2,"Regla","Si se producen vacantes durante el año, ¿con qué personal se cubren?","Con personal <strong>declarado Apto</strong> para ello.");
+add(2,"Condición","Al cubrir vacantes durante el año, ¿qué proporciones deben mantenerse en conjunto?","Las debidas por <strong>selección</strong>, <strong>orden de mérito</strong> y <strong>antigüedad calificada</strong>, según corresponda a cada grado.");
+// Art. 3 — Ascensos extraordinarios
+add(3,"Excepción","¿Qué ascensos quedan exceptuados de la regla anual con vigencia al 1 de enero?","Los ascensos por <strong>“Mérito Extraordinario”</strong> y <strong>“Post Mortem”</strong>.");
+// Art. 4
+add(4,"Condición","¿Entre qué personal se discierne el ascenso por Mérito Extraordinario?","Entre quienes intervinieren en <strong>actos destacados o meritorios</strong> en los que hubiere estado en <strong>peligro inminente su propia vida</strong>.");
+add(4,"Condición","¿Qué requisito de prueba exige el ascenso por Mérito Extraordinario?","Que las circunstancias estén <strong>fehacientemente documentadas</strong>, en todos los casos.");
+add(4,"Caso","Un agente realiza un procedimiento muy destacado, pero sin riesgo para su vida. ¿Corresponde ascenso por Mérito Extraordinario?","No. Se exige que haya estado en <strong>peligro inminente su propia vida</strong>.");
+// Art. 5
+add(5,"Condición","¿Cuándo se acuerda el ascenso Post Mortem?","En las <strong>mismas situaciones del Art. 4</strong> (acto destacado con peligro inminente de vida) cuando hayan <strong>culminado con la pérdida de la vida</strong> del policía interviniente.");
+add(5,"Distinción","Mérito Extraordinario vs. Post Mortem: ¿qué los diferencia?","Ambos exigen acto destacado con peligro inminente de vida; el <strong>Post Mortem</strong> se da cuando el policía <strong>muere</strong> como resultado del acto.");
+// Art. 6
+add(6,"Regla","¿Quién promueve el trámite de un ascenso extraordinario?","El <strong>Jefe inmediato</strong> del agente interviniente.");
+add(6,"Dato","¿Qué actuación promueve el Jefe inmediato para tramitar un ascenso extraordinario?","<strong>Información sumaria</strong> y/o <strong>sumario administrativo</strong>, según corresponda.");
+add(6,"Regla","¿Por qué vía y a qué organismo se eleva esa actuación?","Por <strong>vía jerárquica</strong> a la <strong>Dirección de Personal – División Calificaciones y Promociones</strong>.");
+add(6,"Regla","¿Quién considera el expediente de ascenso extraordinario antes de la resolución?","Las <strong>Juntas de Calificaciones</strong> respectivas.");
+add(6,"Regla","Con las conclusiones de las Juntas, ¿quién resuelve el ascenso extraordinario?","El <strong>Jefe de Policía</strong>.");
+add(6,"Dato","Ordená el trámite del ascenso extraordinario, de principio a fin.","1) Jefe inmediato promueve información sumaria / sumario.<br>2) Elevación por vía jerárquica a Dirección de Personal – Div. Calificaciones y Promociones.<br>3) Consideración de las Juntas de Calificaciones.<br>4) Resuelve el Jefe de Policía.");
+// Art. 7
+add(7,"Regla","¿Quién concede los ascensos extraordinarios?","El <strong>Poder Ejecutivo Provincial</strong> o el <strong>Jefe de Policía</strong>, según el <strong>grado del promovido</strong>, con las mismas formas que los ascensos ordinarios.");
+add(7,"Excepción","¿Pueden limitarse los ascensos extraordinarios por falta de vacantes?","No. <strong>No pueden limitarse por la inexistencia de vacantes</strong>.");
+// Art. 8 — Inhabilidades
+add(8,"Condición","¿Qué condición general inhabilita para el ascenso, además de los incisos del Art. 8?","<strong>No revistar en servicio efectivo</strong>.");
+add(8,"Dato","Inc. a): ¿cómo se computa la antigüedad mínima en el grado?","Desde la <strong>fecha de vigencia del último ascenso</strong> al <strong>31 de diciembre del año en curso</strong>, conforme la Ley del Personal Policial.");
+add(8,"Regla","Inc. a): ¿se computa el tiempo en Situación Pasiva para el ascenso?","<strong>No</strong>, como regla general.");
+add(8,"Excepción","Inc. a): ¿en qué casos sí se computa el tiempo en Situación Pasiva?","<ul><li>Si estuvo <strong>procesado</strong> y luego obtuvo <strong>sobreseimiento definitivo o absolución</strong>.</li><li>Por <strong>razones de salud originadas o derivadas del servicio</strong>.</li></ul>");
+add(8,"Dato","Inc. b): ¿qué licencia por enfermedad o lesiones inhabilita y con qué topes?","La <strong>no motivada por actos del servicio</strong>, por más de <strong>60 días corridos</strong> o <strong>40 fraccionados</strong>.");
+add(8,"Dato","Inc. c): ¿qué situación de salud inhabilita y con qué topes?","La que <strong>no tiene origen en el servicio</strong> y provoca <strong>tareas no propias</strong> del grado, agrupamiento y escalafón, por más de <strong>90 días corridos</strong> o <strong>60 discontinuos</strong>.");
+add(8,"Dato","Inc. d): ¿cuándo inhabilita la licencia por atención de familiar enfermo?","Por más de <strong>30 días</strong>, <strong>continuos o discontinuos</strong>.");
+add(8,"Dato","Inc. e): ¿cuándo inhabilita la licencia por asuntos personales?","Por más de <strong>10 días continuos</strong>.");
+add(8,"Dato","Inc. f): ¿qué antecedentes disciplinarios inhabilitan al personal subalterno?","Más de <strong>7 días de suspensión</strong> de empleo o más de <strong>30 días de arresto</strong>.");
+add(8,"Dato","Inc. f): ¿qué antecedentes disciplinarios inhabilitan al personal superior?","Más de <strong>20 días de arresto</strong> o <strong>registrar 7 días de suspensión</strong> de empleo.");
+add(8,"Condición","Inc. g): ¿cuándo inhabilita hallarse bajo sumario judicial?","Mientras esté <strong>privado de su libertad</strong> o bajo <strong>prisión preventiva</strong>.");
+add(8,"Excepción","Inc. g): ¿cuándo el sumario judicial con prisión preventiva no inhabilita?","Si el hecho se originó en el <strong>legítimo ejercicio de los deberes del Art. 30 de la Ley 679</strong>.");
+add(8,"Dato","Inc. h): ¿por qué causas inhabilita haber sido reprobado o dado de baja en un curso policial?","<ul><li>Razones <strong>disciplinarias</strong></li><li><strong>Falta de aplicación</strong></li><li><strong>Exceso de inasistencias</strong></li><li><strong>Solicitud del causante</strong></li></ul>");
+add(8,"Dato","Inc. h): ¿qué tipos de cursos policiales menciona?","De <strong>información</strong>, de <strong>perfeccionamiento</strong> y/o de <strong>capacitación profesional</strong>.");
+add(8,"Condición","Inc. i): ¿qué se requiere para quedar inhabilitado respecto de los exámenes de idoneidad o capacitación?","Haber sido <strong>llamado a rendir</strong>, <strong>resultar reprobado</strong> y <strong>obtener postergación para rendir por razones personales</strong>.");
+add(8,"Dato","Inc. j): ¿qué calificación promedio anual se exige y en qué grados?","<strong>“Excepcional” o “Muy Bueno”</strong> en los grados de <strong>Comisario, Oficial Principal o Sargento</strong>.");
+add(8,"Condición","Inc. k): ¿qué sumario inhabilita y a qué fecha se mira?","Sumario <strong>administrativo y/o judicial no resuelto</strong> a la <strong>fecha de finalización del período calificativo</strong>.");
+add(8,"Caso","Un agente tuvo 45 días corridos de licencia por enfermedad ajena al servicio. ¿Está inhabilitado?","No. El tope corrido es <strong>más de 60 días</strong>.");
+add(8,"Caso","Un agente tuvo 45 días fraccionados de licencia por enfermedad ajena al servicio. ¿Está inhabilitado?","Sí. Supera los <strong>40 días fraccionados</strong>.");
+add(8,"Caso","Un agente estuvo 90 días de licencia por una lesión sufrida en un procedimiento. ¿Lo inhabilita el inc. b)?","No. El inc. b) sólo cuenta enfermedades o lesiones <strong>no motivadas por actos del servicio</strong>.");
+add(8,"Caso","Siete días de suspensión de empleo: ¿inhabilita a un subalterno? ¿Y a un superior?","Subalterno: <strong>no</strong> (se exige <strong>más de</strong> 7).<br>Superior: <strong>sí</strong> (basta <strong>registrar</strong> 7).");
+add(8,"Caso","Un oficial superior tiene 25 días de arresto. ¿Está inhabilitado? ¿Y si fuera subalterno?","Superior: <strong>sí</strong> (más de 20).<br>Subalterno: <strong>no</strong> (se exige más de 30).");
+add(8,"Caso","Un Sargento obtuvo calificación promedio “Bueno”. ¿Puede ascender?","No. En el grado de Sargento se exige <strong>“Excepcional” o “Muy Bueno”</strong> (inc. j).");
+// Art. 9
+add(9,"Regla","¿Sobre qué período se toman las inhabilidades por licencias, sanciones, sumarios y salud?","Sobre el <strong>período calificativo</strong> del Reglamento del Régimen de Calificaciones Policiales.");
+add(9,"Regla","¿Sobre qué lapso se toman las restantes inhabilidades del Art. 8?","Sobre el lapso transcurrido <strong>desde el último ascenso</strong>.");
+// Art. 10
+add(10,"Regla","¿Cómo se notifican las situaciones de inhabilidad?","En las <strong>listas de postergados</strong> de su <strong>grado, agrupamiento y escalafón</strong>.");
+add(10,"Dato","¿Con cuánta anticipación se notifican las inhabilidades y respecto de qué acto?","<strong>20 días corridos</strong> antes de la <strong>constitución de las Juntas de Calificación</strong>.");
+// Art. 11
+add(11,"Dato","¿Qué plazo tiene para reclamar quien se crea erróneamente inhabilitado?","<strong>48 horas</strong> desde la notificación.");
+add(11,"Regla","¿Ante quién y por qué vía se eleva el reclamo por inhabilidad errónea?","Ante el <strong>Subjefe de Policía</strong>, por <strong>vía jerárquica</strong>.");
+add(11,"Dato","¿En qué plazo se resuelve el reclamo y con qué carácter?","En <strong>72 horas</strong>, con <strong>resolución definitiva</strong>.");
+add(11,"Regla","Resuelto el reclamo a favor del agente, ¿qué se hace?","Se efectúan las <strong>correcciones</strong> en las listas de <strong>personal postergado</strong>.");
+// Art. 12 — Promociones
+add(12,"Condición","¿Cuándo se ordena por antigüedad al personal Apto para el Ascenso?","Una vez <strong>resueltos los recursos del Art. 22 del Reglamento de las Juntas de Calificaciones</strong>.");
+add(12,"Regla","¿Quién ordena por antigüedad a los Aptos para el Ascenso?","La <strong>Dirección de Personal – División Calificaciones y Promociones</strong>.");
+// Art. 13
+add(13,"Regla","¿Qué es el orden por antigüedad calificada?","El que tiene el personal declarado <strong>Apto para el Ascenso</strong> por aplicación del <strong>Art. 23 de la Ley 679</strong>.");
+// Art. 14
+add(14,"Regla","¿Quién selecciona a los agentes para proponer el ascenso del personal superior y promover al subalterno?","La <strong>Jefatura de Policía</strong>.");
+add(14,"Regla","¿En qué proporciones y de qué lista selecciona la Jefatura?","En las proporciones del <strong>Art. 99 de la Ley 679</strong> para cada grado, entre los agentes de la <strong>lista de orden de mérito</strong> del grado.");
+add(14,"Regla","¿Cómo se cubren las vacantes restantes?","Con quienes queden en los <strong>primeros lugares de la lista de antigüedad calificada</strong> de esos mismos agentes.");
+add(14,"Distinción","Según el Art. 14, ¿qué se hace con el personal superior y qué con el subalterno?","Para el <strong>superior</strong> se efectúa la <strong>propuesta</strong> de ascenso; al <strong>subalterno</strong> se lo <strong>promueve</strong>.");
+// Art. 15
+add(15,"Condición","¿A qué personal se aplica el reparto 50 % / 50 % de vacantes?","A <strong>Comisarios y Oficiales Superiores</strong>.");
+add(15,"Dato","¿Cómo se cubre el primer 50 % de las vacantes del grado inmediato superior?","Con los <strong>primeros lugares de la lista de orden de mérito</strong> confeccionada por la <strong>Junta de Calificaciones</strong>.");
+add(15,"Dato","¿Cómo se cubre el 50 % restante de las vacantes?","Por <strong>selección de la Jefatura de Policía</strong> entre los declarados <strong>“Aptos para el Ascenso”</strong>.");
+// Art. 16
+add(16,"Prohibición","¿Qué situación posterior a ser declarado Apto impide el ascenso?","Que se le inicie <strong>sumario administrativo y/o judicial</strong> con <strong>auto de prisión preventiva o procesamiento</strong>.");
+add(16,"Regla","¿Se levanta el impedimento si obtiene la excarcelación o si no le corresponde pena corporal?","No. Igual <strong>no puede ascender</strong>. Tampoco si <strong>deja de revistar en servicio efectivo</strong>.");
+add(16,"Dato","Si le correspondía ascender, ¿por cuánto tiempo se le reserva la vacante y desde cuándo?","Por <strong>seis meses</strong> desde la <strong>existencia de la vacante</strong>.");
+add(16,"Excepción","¿Qué límite tiene la reserva de vacante?","No puede <strong>sobrepasar el 31 de diciembre</strong>.");
+add(16,"Regla","Si vence la reserva sin superarse el impedimento, ¿qué ocurre?","Asciende el <strong>agente subsiguiente</strong> en la lista respectiva.");
+add(16,"Caso","La vacante existe desde el 1 de septiembre. ¿Hasta cuándo se reserva?","Hasta el <strong>31 de diciembre</strong>: los seis meses no pueden sobrepasar esa fecha.");
+// Art. 17 — Disposiciones complementarias
+add(17,"Regla","¿Qué situaciones consideran anualmente las Juntas, con las nuevas fracciones de personal?","<ul><li>Los <strong>Aptos para el Ascenso no promovidos</strong>.</li><li>Los declarados <strong>Aptos para Permanecer en el Grado</strong>.</li></ul>");
+// Art. 18
+add(18,"Condición","¿Cuándo pasa un agente a Retiro Obligatorio por ser “Apto para Permanecer en el Grado”?","Si lo declaran así <strong>3 períodos consecutivos</strong> o <strong>5 alternados</strong> en un mismo grado.");
+add(18,"Dato","¿Qué norma prevé ese Retiro Obligatorio?","<strong>Ley 2092/86 (Ley Previsional)</strong>, Título X, Capítulo III, <strong>Art. 63, inc. d)</strong>.");
+add(18,"Caso","Un agente fue “Apto para Permanecer en el Grado” en 4 períodos alternados del mismo grado. ¿Pasa a retiro obligatorio?","No todavía: se requieren <strong>5 alternados</strong> (o 3 consecutivos).");
+}
+});
