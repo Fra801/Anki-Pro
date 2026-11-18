@@ -127,6 +127,7 @@ function merge(x){
   if(Array.isArray(o.opts.filter))o.opts.filter={viedma:o.opts.filter};          // formato anterior (un solo mazo)
   if(typeof o.day.newDone==="number")o.day.newDone={viedma:o.day.newDone};
   if(!o.opts.deck||!deckById(o.opts.deck))o.opts.deck=(DECKS[0]||{}).id;
+  if(!o.opts.seed)o.opts.seed=Math.floor(Math.random()*2147483646)+1; // semilla del orden aleatorio (se sincroniza)
   return o;
 }
 
@@ -238,6 +239,9 @@ function bindAccount(){
 function today(){const d=new Date();return d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate();}
 function rollDay(){if(S.day.date!==today()){S.day={date:today(),newDone:{}};}}
 function st(id){return S.cards[id];}
+// Orden aleatorio estable: cada tarjeta recibe un número a partir de la semilla guardada,
+// así el orden es el mismo en todos tus dispositivos y no se repite el del código.
+function rank(id){let h=S.opts.seed>>>0;for(let i=0;i<id.length;i++){h=Math.imul(h^id.charCodeAt(i),2654435761);h^=h>>>13;}h=Math.imul(h^(h>>>16),2246822507);return (h^(h>>>13))>>>0;}
 function D(){return deckById(S.opts.deck)||DECKS[0];}
 function filt(d){return S.opts.filter[d.id]||(S.opts.filter[d.id]=[]);}
 function active(d){d=d||D();const f=filt(d);return d.cards.filter(c=>!f.length||f.includes(c.a));}
@@ -252,7 +256,8 @@ function queue(d){
     else if(s.due<=now){(s.q==="rev"?due:lrn).push(c);}
   }
   lrn.sort((a,b)=>st(a.id).due-st(b.id).due);
-  due.sort((a,b)=>st(a.id).due-st(b.id).due);
+  due.sort((a,b)=>rank(a.id)-rank(b.id));
+  nw.sort((a,b)=>rank(a.id)-rank(b.id));
   const room=Math.max(0,S.opts.newPerDay-(S.day.newDone[d.id]||0));
   return {lrn,due,nw:nw.slice(0,room)};
 }
@@ -314,7 +319,7 @@ function study(){
   }
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
-    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p><b>Artículo Nº ${cur.a}:</b> ${D().arts[cur.a]}</p></details>`:""}
+    ${shown?`<div class="a">${cur.ans}</div><details><summary>Ver texto del artículo</summary><p><b>Artículo ${cur.a}º:</b> ${D().arts[cur.a]}</p></details>`:""}
   </div>`;
   if(!shown){
     B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
@@ -367,7 +372,7 @@ function browse(){
   const d=D();
   const chips=`<div class="chips">${[0,...d.nums].map(a=>`<button class="chip ${browseArt===a?"on":""}" data-a="${a}">${a?"Art. "+a:"Todos"}</button>`).join("")}</div>`;
   const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">Art. ${c.a}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
-  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo Nº ${browseArt}:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
+  V.innerHTML=`<div class="panel">${chips}${browseArt?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo ${browseArt}º:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
   V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{browseArt=+b.dataset.a;render();});
 }
 
