@@ -1,4 +1,4 @@
-const C = "anki-pro-v26";
+const C = "anki-pro-v27";
 self.addEventListener("install", e => {
   self.skipWaiting();
   e.waitUntil(caches.open(C).then(c => c.addAll(["./", "index.html", "manifest.webmanifest", "icon.svg", "mazos/viedma.js", "mazos/promociones.js", "mazos/rnsa.js", "mazos/ley5184.js", "mazos/historia_argentina.js", "mazos/contable.js", "mazos/ifrs_cap01.js", "mazos/ifrs_cap02.js", "mazos/ifrs_cap03.js", "mazos/ifrs_cap04.js", "mazos/ifrs_cap05.js", "mazos/ifrs_cap06.js", "mazos/ifrs_cap07.js", "mazos/ifrs_cap08.js", "mazos/ifrs_cap09.js", "mazos/ifrs_cap10.js", "mazos/ifrs_cap11.js", "estilos/contable.css"])).catch(() => {}));
