@@ -12,7 +12,7 @@ Mazos incluidos:
 | Ley Orgánica de la Policía de Río Negro (Ley 5184) | 1 a 70 | 203 |
 | Historia argentina (1806–1880) — mazo por temas, con explicación | 8 temas | 58 |
 | Contabilidad Financiera IFRS (Weygandt, Kimmel, Kieso, 3ª ed.) — con submazos por capítulo | Cap. 1 a 14 y apéndices E a I | 850 |
-| Administración (Robbins y Coulter, 13ª ed.) — con submazos por capítulo | Cap. 1 a 16, módulo de historia | 492 |
+| Administración (Robbins y Coulter, 13ª ed.) — con submazos por capítulo | Cap. 1 a 17, módulo de historia | 518 |
 
 Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 
