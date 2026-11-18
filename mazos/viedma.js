@@ -119,14 +119,14 @@ build(add){
 // Art. 1
 add(1,"Regla","¿Cuál es el objeto del Código de Edificación de Viedma?","Regular la <strong>realización de obras de edificación</strong>.");
 add(1,"Dato","¿Qué cuatro tipos de obras de edificación regula el Código?","<ul><li>Construcción</li><li>Modificación</li><li>Refacción</li><li>Demolición</li></ul>(“y/o”: pueden darse juntas o separadas)");
-add(1,"Dato","Según el Art. 1, ¿qué dos variantes comprende la “modificación”?","<strong>Ampliación</strong> o <strong>alteración</strong>.");
-add(1,"Caso","Un propietario sólo quiere demoler un galpón, sin construir nada. ¿Por qué esa obra queda alcanzada por el Código?","Porque la <strong>demolición</strong> es una de las obras de edificación que el Código regula.");
+add(1,"Dato","En el Código, ¿qué dos variantes comprende la “modificación” de una obra?","<strong>Ampliación</strong> o <strong>alteración</strong>.");
+add(1,"Caso","Un propietario sólo quiere demoler un galpón, sin construir nada. ¿Por qué la demolición queda alcanzada por el Código?","Porque la <strong>demolición</strong> es una de las obras de edificación que el Código regula.");
 // Art. 2
 add(2,"Regla","¿Cuál es el ámbito territorial de aplicación del Código?","El <strong>municipio de Viedma</strong>.");
 add(2,"Dato","¿Qué ley provincial base establece cómo se pone en vigencia el Código?","La <strong>Ley Nº 929</strong>.");
-add(2,"Dato","¿Qué modificatorias de la Ley 929 menciona el Art. 2?","Leyes <strong>Nº 1373, Nº 1440 y Nº 1553</strong>.");
-add(2,"Dato","¿Qué decreto reglamentario menciona el Art. 2?","El <strong>Decreto Reglamentario Nº 492/82</strong>.");
-add(2,"Regla","Si las normas de vigencia citadas en el Art. 2 fueran reemplazadas, ¿qué pasa con la remisión?","Se aplican <strong>las que las modifiquen o sustituyan</strong> (remisión dinámica).");
+add(2,"Dato","¿Qué leyes modificatorias de la Ley 929 se citan para la puesta en vigencia del Código?","Leyes <strong>Nº 1373, Nº 1440 y Nº 1553</strong>.");
+add(2,"Dato","¿Qué decreto reglamentario se cita para la puesta en vigencia del Código?","El <strong>Decreto Reglamentario Nº 492/82</strong>.");
+add(2,"Regla","Si las leyes y el decreto citados para la vigencia del Código fueran modificados o sustituidos, ¿qué normas se aplican?","Se aplican <strong>las que las modifiquen o sustituyan</strong> (remisión dinámica).");
 // Art. 3
 add(3,"Regla","¿Quién es el Organismo de Aplicación del Código?","La <strong>Municipalidad de Viedma</strong>, a través de sus <strong>oficinas competentes</strong>.");
 add(3,"Facultad","¿Qué le corresponde exigir al Organismo de Aplicación?","El <strong>cumplimiento de los objetivos y normas</strong> del Código.");
@@ -164,8 +164,8 @@ add(4,"Distinción","¿Qué relación hay entre sótano y piso?","El sótano <st
 // Art. 5
 add(5,"Regla","¿Conforme a qué norma se considera zonificada Viedma a los fines de este Código?","Conforme a las disposiciones del <strong>Código Urbanístico</strong> respectivo.");
 // Art. 6
-add(6,"Regla","¿Qué carácter tienen los reglamentos técnicos enumerados en el Art. 6?","<strong>Forman parte</strong> del Código de Edificación.");
-add(6,"Dato","¿Cuántos reglamentos técnicos enumera el Art. 6?","<strong>Once (11)</strong>.");
+add(6,"Regla","Los reglamentos técnicos de fundaciones, estructuras, instalaciones, etc., ¿qué carácter tienen respecto del Código?","<strong>Forman parte</strong> del Código de Edificación.");
+add(6,"Dato","¿Cuántos reglamentos técnicos forman parte del Código?","<strong>Once (11)</strong>.");
 add(6,"Dato","¿Qué cuatro reglamentos se toman del Código de Edificación de la Ciudad de Buenos Aires?","<ul><li>Fundaciones</li><li>Estructuras</li><li>Instalaciones Eléctricas</li><li>Ascensores y Transportadores</li></ul>","1,2,4,8");
 add(6,"Dato","¿Qué reglamento rige las estructuras de hormigón?","El <strong>PRAEH</strong>: Proyecto de Reglamento Argentino para Estructuras de Hormigón.","3");
 add(6,"Dato","¿Qué reglamento rige lo sanitario (agua y cloacas)?","El <strong>Reglamento de O.S.N.</strong> o las normas que especifique el <strong>Departamento Provincial de Aguas</strong>.","5");
@@ -177,28 +177,28 @@ add(7,"Regla","¿Qué carácter deben tener las obras destinadas a habitación?"
 // Art. 8
 add(8,"Condición","¿Qué dos requisitos deben cumplir las obras de carácter transitorio?","1) <strong>Justificar su finalidad</strong>.<br>2) Contar con <strong>autorización expresa</strong> de la Municipalidad.");
 add(8,"Facultad","En una obra transitoria, ¿qué puede exigir la Municipalidad además de autorizarla?","Las <strong>condiciones mínimas de habitabilidad y saneamiento</strong> que considere necesarias.");
-add(8,"Caso","Un obrador temporario cuenta sólo con autorización tácita (nadie objetó). ¿Qué le falta según el Art. 8?","<strong>Autorización expresa</strong> de la Municipalidad, además de <strong>justificar su finalidad</strong>.");
+add(8,"Caso","Un obrador temporario cuenta sólo con autorización tácita (nadie objetó). ¿Qué le falta para cumplir las exigencias de las obras transitorias?","<strong>Autorización expresa</strong> de la Municipalidad, además de <strong>justificar su finalidad</strong>.");
 // Art. 9
-add(9,"Prohibición","¿Qué dos tipos de construcciones prohíbe el Art. 9?","Las de <strong>carácter precario</strong> y las hechas de <strong>adobe</strong>.");
-add(9,"Caso","¿Qué impide autorizar una vivienda de adobe como obra transitoria del Art. 8?","El Art. 9, que <strong>prohíbe en forma absoluta</strong> las construcciones de adobe y las precarias.");
+add(9,"Prohibición","¿Qué dos tipos de construcciones prohíbe el Código?","Las de <strong>carácter precario</strong> y las hechas de <strong>adobe</strong>.");
+add(9,"Caso","¿Qué impide autorizar una vivienda de adobe como obra de carácter transitorio?","El Art. 9, que <strong>prohíbe en forma absoluta</strong> las construcciones de adobe y las precarias.");
 // Art. 10
-add(10,"Regla","¿Qué factores deben cumplir todas las edificaciones según el Art. 10?","Los <strong>factores de edificación y de ocupación</strong> previstos por el Código Urbanístico.");
+add(10,"Regla","En materia de ocupación, ¿qué factores deben cumplir todas las edificaciones y según qué norma?","Los <strong>factores de edificación y de ocupación</strong> previstos por el Código Urbanístico.");
 add(10,"Condición","¿Según qué criterio varían los factores de edificación y ocupación aplicables?","<strong>Según la zona</strong> de que se trate.");
 // Art. 11
 add(11,"Prohibición","¿Hasta qué altura la línea de edificación no puede avanzar sobre la Línea Municipal?","Hasta los <strong>2,70 m</strong> de altura.");
 add(11,"Excepción","Por encima de 2,70 m, ¿qué salientes se permiten sobre la L.M.?","Salientes para <strong>balcones o locales</strong>.");
-add(11,"Dato","¿Cuánto pueden sobresalir esas salientes, medidas desde la L.M.?","Hasta <strong>1,00 m</strong>.");
-add(11,"Dato","¿A qué distancia del eje divisorio puede llegar como máximo la saliente?","Hasta <strong>0,15 m</strong> del eje divisorio (debe quedar a 0,15 m como mínimo).");
-add(11,"Regla","En caso de ochava, ¿cómo debe disponerse la saliente?","<strong>Paralela a la ochava</strong>.");
+add(11,"Dato","Por encima de los 2,70 m, ¿cuánto pueden sobresalir las salientes para balcones o locales, medidas desde la L.M.?","Hasta <strong>1,00 m</strong>.");
+add(11,"Dato","Las salientes sobre la L.M. para balcones o locales, ¿hasta qué distancia del eje divisorio pueden llegar?","Hasta <strong>0,15 m</strong> del eje divisorio (debe quedar a 0,15 m como mínimo).");
+add(11,"Regla","En caso de ochava, ¿cómo debe disponerse la saliente de balcones o locales sobre la L.M.?","<strong>Paralela a la ochava</strong>.");
 add(11,"Caso","Un balcón a 2,50 m de altura vuela 0,60 m sobre la vereda. ¿Qué regla incumple?","Hasta los <strong>2,70 m</strong> de altura no puede avanzarse sobre la L.M.");
 // Art. 12
 add(12,"Dato","¿Qué altura máxima pueden tener los cerramientos opacos en balcones?","<strong>0,90 m</strong>.");
 add(12,"Dato","¿Desde dónde se mide la altura de los cerramientos opacos de balcones?","Desde el <strong>solado del balcón</strong>.");
 // Art. 13
 add(13,"Condición","¿Qué condición debe cumplir el balcón para admitir pantallas móviles?","Tener <strong>tres lados libres</strong>.");
-add(13,"Dato","¿Qué tipo de pantallas se permiten en esos balcones?","Pantallas <strong>móviles</strong>, <strong>traslúcidas, cribadas o similares</strong>, que produzcan cerramiento <strong>parcial</strong>.");
-add(13,"Dato","¿Qué porcentaje máximo del perímetro libre puede cubrir ese cerramiento?","Como máximo el <strong>50 % del perímetro libre</strong>.");
-add(13,"Caso","Balcón con dos lados libres: ¿qué requisito del Art. 13 le falta para colocar pantallas móviles traslúcidas?","Tener <strong>tres lados libres</strong>.");
+add(13,"Dato","¿Qué tipo de pantallas se permiten en balcones con tres lados libres?","Pantallas <strong>móviles</strong>, <strong>traslúcidas, cribadas o similares</strong>, que produzcan cerramiento <strong>parcial</strong>.");
+add(13,"Dato","En balcones con tres lados libres, ¿qué porcentaje máximo del perímetro libre pueden cerrar las pantallas móviles?","Como máximo el <strong>50 % del perímetro libre</strong>.");
+add(13,"Caso","Balcón con dos lados libres: ¿qué requisito le falta para colocar pantallas móviles traslúcidas?","Tener <strong>tres lados libres</strong>.");
 // Art. 14
 add(14,"Dato","¿A qué altura mínima deben mantenerse aleros o marquesinas en planta baja?","Por encima de los <strong>2,40 m</strong>, medidos desde el <strong>nivel de vereda</strong>.");
 add(14,"Dato","¿A qué distancia mínima del cordón debe quedar el borde exterior de aleros o marquesinas?","<strong>0,80 m</strong> como mínimo.");
@@ -207,35 +207,35 @@ add(14,"Dato","Sobre ejes medianeros, ¿qué altura máxima puede tener el muro 
 add(14,"Condición","¿Qué se requiere para hacer un cerco verde de medianeras?","<strong>Acuerdo de vecinos por escrito</strong>.");
 add(14,"Caso","Una marquesina a 2,60 m de altura cuyo borde queda a 0,50 m del cordón. ¿Qué medida incumple?","La distancia al cordón: el borde debe distar <strong>al menos 0,80 m</strong>. La altura cumple (más de 2,40 m).");
 // Art. 15
-add(15,"Facultad","¿Qué carácter tiene la exigencia de cercar lotes baldíos según el Art. 15?","<strong>Facultativo</strong>: la Municipalidad <strong>podrá exigirlo</strong>, en <strong>determinadas zonas</strong>, <strong>cuando lo considere conveniente</strong>.");
-add(15,"Dato","¿Con qué materiales deben ejecutarse cercos y muros divisorios?","Albañilería de <strong>ladrillos comunes</strong>, <strong>bloques huecos</strong> o <strong>piedra</strong>, o <strong>hormigón simple o armado</strong>.");
-add(15,"Dato","¿Qué alturas mínima y máxima deben tener cercos y muros divisorios?","Mínima <strong>2,00 m</strong> · máxima <strong>2,50 m</strong>.");
-add(15,"Caso","Exigido el cerco, el propietario hace un alambrado de 1,50 m. ¿Qué requisitos incumple?","El <strong>material</strong> (el alambre no está entre los admitidos) y la <strong>altura</strong> (mínimo 2,00 m).");
+add(15,"Facultad","¿Qué carácter tiene la exigencia municipal de cercar lotes baldíos?","<strong>Facultativo</strong>: la Municipalidad <strong>podrá exigirlo</strong>, en <strong>determinadas zonas</strong>, <strong>cuando lo considere conveniente</strong>.");
+add(15,"Dato","¿Con qué materiales deben ejecutarse los cercos y muros divisorios de lotes baldíos?","Albañilería de <strong>ladrillos comunes</strong>, <strong>bloques huecos</strong> o <strong>piedra</strong>, o <strong>hormigón simple o armado</strong>.");
+add(15,"Dato","¿Qué alturas mínima y máxima deben tener los cercos y muros divisorios de lotes baldíos?","Mínima <strong>2,00 m</strong> · máxima <strong>2,50 m</strong>.");
+add(15,"Caso","Exigido el cerco de un lote baldío, el propietario hace un alambrado de 1,50 m. ¿Qué requisitos incumple?","El <strong>material</strong> (el alambre no está entre los admitidos) y la <strong>altura</strong> (mínimo 2,00 m).");
 // Art. 16
-add(16,"Regla","¿Qué exige el Art. 16 en toda nueva edificación?","Un <strong>adecuado tratamiento arquitectónico</strong> de las fachadas y de los muros divisorios visibles.");
+add(16,"Regla","¿Qué se exige en toda nueva edificación respecto de sus fachadas?","Un <strong>adecuado tratamiento arquitectónico</strong> de las fachadas y de los muros divisorios visibles.");
 add(16,"Condición","¿Qué muros divisorios alcanza el deber de tratamiento arquitectónico?","Los que <strong>queden a la vista desde la vía pública</strong>.");
 // Art. 17
 add(17,"Regla","¿Qué es obligatorio para las fachadas en la zona urbanizada?","Su <strong>revoque y pintado</strong>.");
 add(17,"Excepción","¿Cuándo no es obligatorio revocar y pintar la fachada?","Cuando el <strong>estilo arquitectónico</strong> o la <strong>naturaleza del material</strong> se oponga (ej.: <strong>ladrillo a la vista</strong>, <strong>piedra laja</strong>).");
-add(17,"Condición","Si se aplica la excepción del Art. 17, ¿qué deben garantizar los materiales?","<strong>Proteger el muro de fachada contra los agentes atmosféricos</strong>.");
-add(17,"Condición","¿En qué ámbito rige la obligación de revoque y pintado?","En la <strong>zona urbanizada</strong>.");
+add(17,"Condición","Si una fachada no se revoca ni pinta por su estilo o material (ladrillo visto, piedra laja), ¿qué deben garantizar los materiales?","<strong>Proteger el muro de fachada contra los agentes atmosféricos</strong>.");
+add(17,"Condición","¿En qué ámbito rige la obligación de revocar y pintar las fachadas?","En la <strong>zona urbanizada</strong>.");
 // Art. 18
 add(18,"Regla","¿Sobre qué vías es obligatorio construir aceras?","Sobre las vías <strong>pavimentadas o enripiadas</strong>.");
 add(18,"Regla","¿Dónde se determinan las características generales de las aceras?","<strong>Reglamentariamente</strong>.");
 add(18,"Facultad","¿Qué puede exigir el Organismo de Aplicación en casos especiales respecto de las aceras?","Un <strong>tratamiento diferenciado</strong> en entornos o sectores particulares de la ciudad, <strong>según proyecto particularizado</strong>.");
-add(18,"Caso","Frente a una calle de tierra (ni pavimentada ni enripiada), ¿por qué el Art. 18 no obliga a construir acera?","Porque esa obligación rige sobre vías <strong>pavimentadas o enripiadas</strong>.");
+add(18,"Caso","Frente a una calle de tierra (ni pavimentada ni enripiada), ¿por qué no es obligatorio construir acera?","Porque esa obligación rige sobre vías <strong>pavimentadas o enripiadas</strong>.");
 // Art. 19
 add(19,"Regla","¿Con qué tipo de materiales deben construirse y terminarse las aceras?","Materiales <strong>antideslizantes</strong>.");
-add(19,"Dato","¿Cuál es el ancho mínimo de la acera según el Art. 19?","<strong>1,00 m</strong>.");
+add(19,"Dato","¿Cuál es el ancho mínimo de una acera?","<strong>1,00 m</strong>.");
 add(19,"Prohibición","¿Qué desniveles están terminantemente prohibidos en las aceras?","Los desniveles en <strong>sentido transversal</strong>.");
-add(19,"Regla","¿Qué es obligatorio construir en las esquinas?","<strong>Recesos para discapacitados</strong> (rampas), según las normas vigentes.");
+add(19,"Regla","¿Qué es obligatorio construir en las esquinas de las aceras?","<strong>Recesos para discapacitados</strong> (rampas), según las normas vigentes.");
 // Art. 20
 add(20,"Condición","¿Qué dos condiciones habilitan a exigir franjas verdes en la acera?","1) Acera de ancho <strong>superior a 3,00 m</strong>.<br>2) Que el <strong>carácter de la vía o del sector lo aconseje</strong>.");
 add(20,"Facultad","¿Quién puede exigir las franjas verdes y con qué carácter?","La <strong>Municipalidad de Viedma</strong>; es <strong>facultativo</strong> (“podrá exigir”).");
 add(20,"Dato","¿Dónde se ubican las franjas verdes y qué ancho mínimo tienen?","<strong>Contiguas al cordón</strong>, de <strong>no menos de 1,00 m</strong>.");
 add(20,"Excepción","¿En qué casos se interrumpen las franjas verdes?","<ul><li>En las <strong>esquinas</strong></li><li>En <strong>paradas de ómnibus</strong></li><li>En <strong>accesos o guardacoches</strong></li></ul>");
 add(20,"Dato","¿Hasta qué distancia se interrumpe la franja verde en las esquinas y desde dónde se mide?","Hasta <strong>9,00 m</strong>, medidos desde la <strong>intersección de los cordones</strong>.");
-add(20,"Caso","Acera de exactamente 3,00 m: ¿por qué no habilita a exigir franja verde según el Art. 20?","Porque se requiere un ancho <strong>superior</strong> a 3,00 m.");
+add(20,"Caso","Acera de exactamente 3,00 m: ¿por qué no habilita a exigir franja verde?","Porque se requiere un ancho <strong>superior</strong> a 3,00 m.");
 // Art. 21
 add(21,"Dato","¿Qué forma y medida deben tener las cazuelas para arbolado?","<strong>Cuadradas</strong>, de <strong>0,80 m de lado</strong>.");
 add(21,"Dato","¿A qué distancia del cordón se ubican las cazuelas?","A <strong>0,20 m</strong> del cordón.");
@@ -250,9 +250,9 @@ add(22,"Prohibición","¿Qué no puede afectar, en principio, a los cordones de 
 add(22,"Excepción","¿Quién puede autorizar recesos en los cordones y por qué motivo?","<strong>Sólo la Municipalidad</strong>, por <strong>razones de interés general</strong>.");
 add(22,"Prohibición","¿Qué no se admite entre veredas contiguas?","El <strong>escalón</strong>.");
 add(22,"Dato","¿Cómo se salva una diferencia de nivel en una vereda existente?","Con <strong>rampas del 2 % al 5 %</strong>.");
-add(22,"Distinción","Ordená las tres pendientes del Art. 22: transversal, entrada de vehículos y rampa entre veredas.","Transversal: <strong>0,2 %–0,5 %</strong>.<br>Entrada de vehículos: <strong>hasta 10 %</strong>.<br>Rampa por desnivel entre veredas: <strong>2 %–5 %</strong>.");
+add(22,"Distinción","Pendientes de aceras: ¿qué valores rigen para la pendiente transversal, la entrada de vehículos y la rampa entre veredas?","Transversal: <strong>0,2 %–0,5 %</strong>.<br>Entrada de vehículos: <strong>hasta 10 %</strong>.<br>Rampa por desnivel entre veredas: <strong>2 %–5 %</strong>.");
 // Art. 23
-add(23,"Facultad","¿Qué puede exigir la Municipalidad según el carácter de la vía, y con qué piso mínimo?","El cumplimiento de <strong>normas particulares</strong>, adjuntando <strong>como mínimo las de los artículos precedentes</strong> (aceras).");
+add(23,"Facultad","Respecto de las aceras, ¿qué puede exigir la Municipalidad según el carácter de la vía, y con qué piso mínimo?","El cumplimiento de <strong>normas particulares</strong>, adjuntando <strong>como mínimo las de los artículos precedentes</strong> (aceras).");
 // Art. 24
 add(24,"Dato","¿Según qué criterios se clasifican los patios?","Según sus <strong>dimensiones y función</strong>.");
 add(24,"Regla","¿A qué clases de locales sirve un patio de 1ª categoría?","A locales de <strong>1ª, 3ª y 5ª clase</strong>.");
@@ -268,13 +268,13 @@ add(24,"Facultad","¿Qué puede hacer el Organismo de Aplicación con el destino
 add(24,"Distinción","¿En qué clase se ubica la cocina de un restaurante y en cuál la de una vivienda?","Restaurante: <strong>3ª clase</strong>.<br>Vivienda: <strong>2ª clase</strong>.");
 add(24,"Caso","Un consultorio médico: ¿qué clase de local es y qué categoría de patio puede iluminarlo?","Local de <strong>1ª clase</strong>; patio de <strong>1ª categoría</strong>.");
 // Art. 25
-add(25,"Regla","¿Qué patios deben cumplir las normas de los artículos siguientes?","Los <strong>proyectados para iluminación y/o ventilación</strong> de locales.");
+add(25,"Regla","¿Qué patios deben cumplir las normas de dimensiones de patios del Código?","Los <strong>proyectados para iluminación y/o ventilación</strong> de locales.");
 // Art. 26
 add(26,"Dato","¿Qué círculo debe poder inscribirse en un patio de 1ª categoría?","Uno de diámetro <strong>D = 1/5 H</strong>.");
 add(26,"Definición","En el patio de 1ª categoría, ¿qué es H?","La distancia entre el <strong>piso del local a ventilar en el arranque del patio</strong> y el <strong>nivel del techo</strong>.");
 add(26,"Dato","¿Qué valor mínimo puede tener D en un patio de 1ª categoría?","<strong>3,00 m</strong>.");
 add(26,"Dato","¿Qué área mínima debe tener un patio de 1ª categoría?","<strong>12 m²</strong>.");
-add(26,"Dato","Con unidades funcionales enfrentadas, ¿qué lado mínimo tiene el patio común?","<strong>4 m</strong>.");
+add(26,"Dato","Patio de 1ª categoría común a unidades funcionales enfrentadas: ¿qué lado mínimo debe tener?","<strong>4 m</strong>.");
 add(26,"Caso","Patio de 1ª categoría con H = 20 m. ¿Qué diámetro D debe poder inscribirse?","<strong>4 m</strong> (20 ÷ 5).");
 add(26,"Caso","Patio de 1ª categoría con H = 10 m. ¿Qué diámetro D se exige?","<strong>3,00 m</strong>: el cálculo da 2 m, pero rige el <strong>mínimo de 3,00 m</strong>.");
 // Art. 27
@@ -285,7 +285,7 @@ add(27,"Distinción","Patio de 1ª vs. 2ª categoría: área y medida lineal mí
 add(28,"Regla","¿Cómo se miden los patios?","En la <strong>proyección horizontal del edificio</strong>.");
 add(28,"Dato","¿Qué elementos se excluyen al medir un patio?","<strong>Aleros, cornisas, escaleras, espesores de muros medianeros, voladizos</strong>, etc.");
 add(28,"Regla","¿Qué condición de acceso deben cumplir los patios?","Ser <strong>accesibles para su limpieza</strong>.");
-add(28,"Prohibición","¿Qué prohíbe el Art. 28 respecto de la cubierta de los patios?","Que sean <strong>techados</strong>.");
+add(28,"Prohibición","¿Qué prohíbe el Código respecto de la cubierta de los patios?","Que sean <strong>techados</strong>.");
 add(28,"Excepción","¿Con qué elemento puede cubrirse un patio?","Con <strong>toldos móviles</strong>.");
 // Art. 29
 add(29,"Dato","Vivienda permanente de un solo local habitable: ¿qué medidas mínimas tiene?","<strong>18 m²</strong> y <strong>3,00 m de lado</strong>.");
@@ -305,23 +305,23 @@ add(29,"Dato","Baño con ducha, inodoro, bidet y lavabo: ¿qué medidas mínimas
 add(29,"Dato","Baño con ducha, inodoro y lavabo: ¿qué medidas mínimas tiene?","<strong>1,50 m²</strong> y <strong>1,00 m de lado</strong>.");
 add(29,"Dato","Baño con ducha e inodoro: ¿qué medidas mínimas tiene?","<strong>1,20 m²</strong> y <strong>0,80 m de lado</strong>.");
 add(29,"Dato","Local sólo con ducha y local sólo con inodoro: ¿qué medidas mínimas tienen?","Sólo ducha: <strong>0,70 m²</strong>.<br>Sólo inodoro: <strong>0,90 m²</strong>.<br>Lado mínimo en ambos: <strong>0,80 m</strong>.");
-add(29,"Regla","¿Cómo se consideran las superficies mínimas del Art. 29?","<strong>Mínimas, libres y netas</strong>, excluyendo muros con revestimientos, armarios, botiquines, etc.");
+add(29,"Regla","¿Cómo se consideran las superficies mínimas de los locales (habitaciones, baños, cocinas)?","<strong>Mínimas, libres y netas</strong>, excluyendo muros con revestimientos, armarios, botiquines, etc.");
 add(29,"Caso","Un comedor colectivo para 50 personas: ¿qué superficie necesita por cálculo?","<strong>45 m²</strong> (50 × 0,90).");
 add(29,"Caso","Una vivienda tiene tres locales habitables. ¿Qué medidas mínimas corresponden a cada uno?","Uno de <strong>12 m² y 3 m de lado</strong>; los otros dos de <strong>8 m² y 2 m de lado</strong>.");
 // Art. 30
 add(30,"Dato","¿Qué servicios mínimos de salubridad debe tener todo predio edificado?","<ul><li>Un <strong>retrete con inodoro</strong></li><li>Una <strong>pileta de lavar</strong></li><li>Una <strong>ducha o bañera</strong> con desagües</li><li><strong>Digestor y pozo absorbente calzado</strong></li></ul>");
 add(30,"Dato","¿Cómo debe ser el retrete mínimo exigido?","De <strong>mampostería u hormigón</strong>, con <strong>solado impermeable</strong> y dotado de <strong>inodoro</strong>.");
-add(30,"Regla","Además del digestor y pozo absorbente, ¿qué exigencias deben cumplirse y de quién?","Las del reglamento particular o del <strong>Departamento Provincial de Aguas y/o ARSA</strong>.");
+add(30,"Regla","Servicio mínimo de salubridad de todo predio: además del digestor y pozo absorbente calzado, ¿qué exigencias deben cumplirse y de quién?","Las del reglamento particular o del <strong>Departamento Provincial de Aguas y/o ARSA</strong>.");
 // Art. 31
-add(31,"Regla","¿A qué edificios se aplica la escala de servicios sanitarios del Art. 31?","Edificios <strong>públicos, comerciales, industriales</strong> o locales destinados a esos fines, sin perjuicio de otras reglamentaciones.");
-add(31,"Dato","Menos de 5 personas: ¿qué servicios sanitarios se exigen?","<strong>1 inodoro</strong> y <strong>1 lavabo con canilla</strong>.");
-add(31,"Regla","A partir de más de 5 personas, ¿qué cambia en los servicios sanitarios?","Deben ser <strong>separados por sexo</strong>.");
-add(31,"Dato","Hombres: ¿qué artefactos corresponden hasta 20 personas?","<strong>1 inodoro y 1 mingitorio</strong> (igual hasta 10 que hasta 20).");
-add(31,"Dato","Hombres: ¿qué artefactos corresponden hasta 40 personas?","<strong>2 inodoros y 2 mingitorios</strong>.");
-add(31,"Dato","Hombres: ¿qué artefactos corresponden con más de 40 personas?","<strong>1 inodoro y 1 mingitorio por cada 30 hombres o fracción</strong>.");
-add(31,"Dato","Mujeres: ¿cuántos inodoros corresponden hasta 30 y con más de 30?","Hasta 30: <strong>2 inodoros</strong>.<br>Más de 30: <strong>1 inodoro más por cada 20 personas adicionales</strong>.");
-add(31,"Distinción","Lavabos hasta 60 personas: ¿qué proporción rige para hombres y cuál para mujeres?","Hombres: <strong>1 cada 20</strong>.<br>Mujeres: <strong>1 cada 10</strong>.");
-add(31,"Dato","Lavabos con más de 60 personas: ¿qué proporción rige?","<strong>1 cada 20 personas o fracción</strong>, para ambos sexos.");
+add(31,"Regla","¿A qué edificios se aplica la escala de inodoros, mingitorios y lavabos según la cantidad de personas?","Edificios <strong>públicos, comerciales, industriales</strong> o locales destinados a esos fines, sin perjuicio de otras reglamentaciones.");
+add(31,"Dato","Edificio público, comercial o industrial con menos de 5 personas: ¿qué servicios sanitarios se exigen?","<strong>1 inodoro</strong> y <strong>1 lavabo con canilla</strong>.");
+add(31,"Regla","Edificio público, comercial o industrial con más de 5 personas: ¿qué cambia en los servicios sanitarios?","Deben ser <strong>separados por sexo</strong>.");
+add(31,"Dato","Edificio público, comercial o industrial: ¿qué artefactos para hombres corresponden hasta 20 personas?","<strong>1 inodoro y 1 mingitorio</strong> (igual hasta 10 que hasta 20).");
+add(31,"Dato","Edificio público, comercial o industrial: ¿qué artefactos para hombres corresponden hasta 40 personas?","<strong>2 inodoros y 2 mingitorios</strong>.");
+add(31,"Dato","Edificio público, comercial o industrial: ¿qué artefactos para hombres corresponden con más de 40 personas?","<strong>1 inodoro y 1 mingitorio por cada 30 hombres o fracción</strong>.");
+add(31,"Dato","Edificio público, comercial o industrial: ¿cuántos inodoros para mujeres corresponden hasta 30 y con más de 30?","Hasta 30: <strong>2 inodoros</strong>.<br>Más de 30: <strong>1 inodoro más por cada 20 personas adicionales</strong>.");
+add(31,"Distinción","Edificio público, comercial o industrial con hasta 60 personas: ¿qué proporción de lavabos rige para hombres y cuál para mujeres?","Hombres: <strong>1 cada 20</strong>.<br>Mujeres: <strong>1 cada 10</strong>.");
+add(31,"Dato","Edificio público, comercial o industrial con más de 60 personas: ¿qué proporción de lavabos rige?","<strong>1 cada 20 personas o fracción</strong>, para ambos sexos.");
 // Art. 32
 add(32,"Regla","¿Dónde están fijadas las alturas mínimas de los locales?","En la <strong>planilla del Anexo I</strong>.");
 add(32,"Dato","Según el Anexo I, ¿qué altura mínima tienen dormitorio, estar, comedor y escritorio?","<strong>2,40 m</strong>.");
@@ -332,12 +332,12 @@ add(33,"Facultad","En edificios de uso público, ¿qué puede exigir el Organism
 // Art. 34
 add(34,"Regla","¿Qué puede tener todo local respecto de su altura, cumpliendo condiciones?","<strong>Entrepisos o niveles intermedios</strong> de altura menor a la establecida.");
 add(34,"Dato","¿Qué altura mínima de paso deben tener el entrepiso y la parte que cubre?","<strong>2,20 m en cada uno</strong>, libres de vigas, espesor de losa, etc.");
-add(34,"Dato","¿Qué superficie máxima puede cubrir el entrepiso?","<strong>La mitad del área</strong> del local.");
-add(34,"Condición","¿Qué relación espacial debe haber entre el entrepiso y el local?","<strong>Completa continuidad espacial</strong>; los locales sólo pueden <strong>cerrarse parcialmente</strong>.");
+add(34,"Dato","¿Qué superficie máxima puede cubrir un entrepiso dentro de un local?","<strong>La mitad del área</strong> del local.");
+add(34,"Condición","¿Qué relación espacial debe haber entre un entrepiso y el local donde está?","<strong>Completa continuidad espacial</strong>; los locales sólo pueden <strong>cerrarse parcialmente</strong>.");
 add(34,"Caso","Un local de 40 m² quiere un entrepiso de 25 m². ¿Qué superficie máxima admite?","<strong>20 m²</strong> (la mitad del local).");
 // Art. 35
 add(35,"Regla","En locales con desniveles de cielorraso o piso, ¿cómo se calcula la altura que debe igualar la mínima?","<strong>Altura media = volumen ÷ superficie</strong> del local.");
-add(35,"Dato","En esos locales, ¿qué altura mínima debe haber en el punto más bajo?","<strong>2,20 m</strong>.");
+add(35,"Dato","En locales con desniveles de cielorraso o piso, ¿qué altura mínima debe haber en el punto más bajo?","<strong>2,20 m</strong>.");
 // Art. 36
 add(36,"Regla","¿Con qué elementos se cierran los vanos de iluminación?","Puertas vidrieras, ventanas, banderolas, <strong>ladrillos de vidrio</strong> o cualquier <strong>elemento traslúcido</strong> que transmita luz efectivamente.");
 // Art. 37
@@ -355,9 +355,9 @@ add(40,"Regla","En la iluminación directa, bajo parte cubierta y cenital, ¿qu�
 add(40,"Regla","Para escaleras con iluminación cenital, ¿qué se toma como S?","La <strong>suma del área de la caja de todos los pisos</strong>.","3");
 add(40,"Caso","Dormitorio de 12 m² con ventana directa al exterior: ¿qué I y V corresponden?","<strong>I = 1,20 m²</strong> · <strong>V = 0,60 m²</strong>.","1");
 add(40,"Caso","Local de 15 m² con ventana bajo una galería: ¿qué I y V corresponden?","<strong>I = 2,50 m²</strong> · <strong>V = 1,25 m²</strong>.","2");
-add(40,"Condición","¿Qué locales requieren ventilación mecánica además de la exigida?","Los <strong>locales de salubridad en lugares de espectáculos y diversión públicos</strong>.","4");
-add(40,"Dato","¿Qué renovación de aire debe asegurar esa ventilación mecánica y con cuántos equipos?","<strong>10 veces el volumen del local por hora</strong>, con <strong>dos equipos</strong>: uno en uso y otro auxiliar.","4");
-add(40,"Regla","¿Cuándo deben funcionar los equipos de ventilación mecánica y qué indicador llevan?","En forma obligatoria en <strong>horas de función</strong>, con una <strong>luz piloto</strong> que indique su funcionamiento.","4");
+add(40,"Condición","¿Qué locales deben tener ventilación mecánica además de la ventilación exigida?","Los <strong>locales de salubridad en lugares de espectáculos y diversión públicos</strong>.","4");
+add(40,"Dato","Locales de salubridad en espectáculos públicos: ¿qué renovación de aire debe asegurar la ventilación mecánica y con cuántos equipos?","<strong>10 veces el volumen del local por hora</strong>, con <strong>dos equipos</strong>: uno en uso y otro auxiliar.","4");
+add(40,"Regla","Locales de salubridad en espectáculos públicos: ¿cuándo deben funcionar los equipos de ventilación mecánica y qué indicador llevan?","En forma obligatoria en <strong>horas de función</strong>, con una <strong>luz piloto</strong> que indique su funcionamiento.","4");
 add(40,"Dato","Baño o cocina en planta baja que ventila a la vía pública: ¿a qué altura va la boca de salida?","Como mínimo a <strong>2,00 m sobre el nivel de vereda</strong>.","5");
 add(40,"Excepción","¿Qué edificaciones quedan exceptuadas de la altura de 2,00 m de la boca de ventilación de baños y cocinas en planta baja?","Las <strong>retiradas de la L.M.</strong>","5");
 add(40,"Regla","En locales de comercio sobre pasajes, ¿cómo se considera el pasaje y qué ventilación extra se exige?","El pasaje se considera <strong>vía pública</strong>; además, <strong>ventilación auxiliar obligatoria</strong> (cenital o por tubo común) en el <strong>lado opuesto</strong> al vano sobre el pasaje.","6");
@@ -372,13 +372,13 @@ add(40,"Dato","Tubo de ventilación común: ¿qué sección mínima y qué relac
 add(40,"Dato","¿Cómo remata el conducto de cada local en el tubo de ventilación común?","Con un <strong>recorrido vertical mínimo de 1,00 m</strong> y una <strong>diferencia de nivel de salida mínima de 0,50 m</strong>.","8");
 add(40,"Caso","Local de 8 m² ventilado por tubo independiente: ¿qué sección mínima corresponde?","<strong>0,03 m²</strong>: S/400 da 0,02 m², pero rige el <strong>mínimo de 0,03 m²</strong>.","7");
 // Art. 41
-add(41,"Regla","¿Qué carácter tienen las condiciones de iluminación y ventilación consignadas en la tabla?","Son <strong>optativas</strong>: puede tomarse <strong>cualquiera</strong> de las consignadas.");
-add(41,"Regla","¿Qué significa que el número de una condición esté entre paréntesis en la tabla?","Que el local debe cumplir <strong>además con cualquiera de las otras condiciones</strong> consignadas.");
+add(41,"Regla","¿Qué carácter tienen las condiciones de iluminación y ventilación consignadas en la tabla del Anexo I?","Son <strong>optativas</strong>: puede tomarse <strong>cualquiera</strong> de las consignadas.");
+add(41,"Regla","En la tabla de iluminación y ventilación del Anexo I, ¿qué significa que el número de una condición esté entre paréntesis?","Que el local debe cumplir <strong>además con cualquiera de las otras condiciones</strong> consignadas.");
 // Art. 42
 add(42,"Regla","¿Cómo se determina el destino de cada local?","Por lo que <strong>lógicamente resulte de su ubicación y dimensiones</strong>, no por lo que se consigne arbitrariamente en los planos.");
 add(42,"Facultad","¿Qué proyectos puede rechazar el Organismo de Aplicación por el destino de los locales?","Plantas cuyos locales <strong>acusen intención de una división futura</strong>.");
 // Art. 43
-add(43,"Regla","¿Qué finalidad tienen las normas del Art. 43?","Preservar las <strong>condiciones acústicas</strong>, evitando la propagación de ruidos o vibraciones por <strong>vía sólida o aérea</strong>.");
+add(43,"Regla","¿Qué finalidad tienen las normas sobre tabiques, puertas y entrepisos entre unidades habitables?","Preservar las <strong>condiciones acústicas</strong>, evitando la propagación de ruidos o vibraciones por <strong>vía sólida o aérea</strong>.");
 add(43,"Dato","Tabique simple de ladrillos macizos entre unidades: ¿qué espesor y terminación lleva?","<strong>0,15 m</strong>, revocado a la cal o yeso <strong>en ambos paramentos</strong>.");
 add(43,"Dato","Tabique simple de bloques de hormigón hueco: ¿qué espesor lleva?","<strong>0,20 m</strong>, revocado en ambos paramentos.");
 add(43,"Dato","Doble tabique de ladrillos macizos: ¿qué espacio queda entre ellos y qué está prohibido?","<strong>0,075 m</strong>, sin <strong>ninguna conexión</strong> entre ambos (ladrillos, varillas, zunchos).");
@@ -387,14 +387,14 @@ add(43,"Dato","Tabique de hormigón armado macizo: ¿qué espesor y densidad se 
 add(43,"Dato","Tabique de bloques cerámicos huecos: ¿qué espesor lleva?","<strong>0,08 m</strong>, revocado en ambos paramentos.");
 add(43,"Condición","¿Qué requisito deben cumplir los sistemas prefabricados para usarse como divisorios entre unidades?","Contar con <strong>Certificado de Aptitud Técnica</strong> de la Secretaría de Desarrollo Urbano y Vivienda, <strong>actualizado</strong>.");
 add(43,"Regla","¿Cómo deben ser las puertas de acceso a unidades de vivienda?","<strong>Macizas</strong> y de <strong>contacto perfecto en sus cuatro lados</strong>.");
-add(43,"Excepción","¿Qué accesos quedan exceptuados de la puerta maciza?","Los que tengan <strong>doble puerta común</strong> (pasillos de acceso, zaguanes, hall de entrada).");
+add(43,"Excepción","¿Qué accesos a unidades de vivienda quedan exceptuados de tener puerta maciza?","Los que tengan <strong>doble puerta común</strong> (pasillos de acceso, zaguanes, hall de entrada).");
 add(43,"Dato","Entrepisos entre unidades habitables: ¿qué losa y contrapiso se exigen?","Losa de <strong>HºAº de 0,10 m</strong> (o equivalente acústico) con <strong>contrapiso de 0,07 m</strong>.");
 // Art. 44
-add(44,"Regla","Ante instalaciones que producen ruidos o vibraciones, ¿qué exige el Art. 44?","Tomar precauciones para que <strong>no se transmitan por vía sólida o aérea</strong> a otros ambientes del edificio o a otros edificios.");
-add(44,"Dato","¿Qué instalaciones menciona el Art. 44 como fuentes de ruido o vibración?","Ascensores, tuberías de bombas de fluidos, aparatos climáticos y/o sanitarios, <strong>canchas de pelota, bochas</strong> o similares (y “moteles”, según el texto).");
+add(44,"Regla","Ante instalaciones que producen ruidos o vibraciones, ¿qué precauciones exige el Código?","Tomar precauciones para que <strong>no se transmitan por vía sólida o aérea</strong> a otros ambientes del edificio o a otros edificios.");
+add(44,"Dato","¿Qué instalaciones menciona el Código como posibles fuentes de ruido o vibración?","Ascensores, tuberías de bombas de fluidos, aparatos climáticos y/o sanitarios, <strong>canchas de pelota, bochas</strong> o similares (y “moteles”, según el texto).");
 // Art. 45
 add(45,"Regla","¿Qué debe ejecutarse obligatoriamente sobre el terreno para colocar los pisos?","<strong>Contrapiso con aislación hidrófuga</strong>.");
-add(45,"Dato","¿Qué trabajos sobre el suelo vincula el Art. 45 con la ejecución del contrapiso?","<strong>Limpieza del suelo</strong>, <strong>eliminación de tierra negra o materia orgánica</strong> y <strong>consolidación</strong>.");
+add(45,"Dato","¿Qué trabajos sobre el suelo vincula el Código con la ejecución del contrapiso con aislación hidrófuga?","<strong>Limpieza del suelo</strong>, <strong>eliminación de tierra negra o materia orgánica</strong> y <strong>consolidación</strong>.");
 add(45,"Dato","Muros en contacto con el terreno: ¿qué aislación deben tener y dónde se ubica?","<strong>Doble capa aisladora (horizontal y vertical)</strong> hidrófuga, <strong>más arriba del nivel del solado</strong> y unida al contrapiso; cualquiera sea su espesor, internos o externos.");
 add(45,"Dato","Locales total o parcialmente bajo el nivel del terreno: ¿qué se construye del lado externo?","Un <strong>tabique de ladrillo de panderete</strong> (de <strong>hormigón</strong> si hay mucha profundidad), con <strong>revoque hidrófugo</strong> unido a la capa aisladora horizontal.");
 add(45,"Dato","Locales con instalaciones sanitarias: ¿hasta qué altura deben ser impermeables pisos y paredes?","Hasta <strong>1,50 m</strong>, en las proximidades de las bocas de salida de líquido.");
@@ -402,18 +402,18 @@ add(45,"Condición","¿Qué se requiere para arrimar canteros a muros separativo
 add(45,"Regla","¿Qué aislación deben tener los muros exteriores?","<strong>Aislación hidrófuga permanente</strong>.");
 add(45,"Regla","¿Qué reglamentaciones deben cumplir los desagües?","Las del <strong>D.P.A.</strong> (Departamento Provincial de Aguas).");
 // Art. 46
-add(46,"Condición","¿Qué edificios deben asegurar la rápida evacuación según el Art. 46?","Los de <strong>más de dos unidades independientes</strong> y/o destinados a <strong>concentración de público</strong> (cubierto o descubierto).");
+add(46,"Condición","¿Qué edificios deben asegurar su rápida evacuación mediante medios de egreso?","Los de <strong>más de dos unidades independientes</strong> y/o destinados a <strong>concentración de público</strong> (cubierto o descubierto).");
 add(46,"Dato","Puerta de unidad independiente a pasajes o corredores comunes: ¿qué ancho y altura mínimos tiene?","<strong>0,90 m libres</strong> hasta 50 personas o fracción; altura mínima <strong>2,00 m</strong>.","1");
-add(46,"Regla","Cuando hay escaleras, ¿hacia dónde deben abrir las puertas?","Sobre un <strong>descanso</strong>.","1");
+add(46,"Regla","Medios de egreso: cuando hay escaleras, ¿hacia dónde deben abrir las puertas de las unidades?","Sobre un <strong>descanso</strong>.","1");
 add(46,"Dato","Concentración de público: ¿cómo se calcula el ancho total de puertas de egreso y qué mínimo tiene?","<strong>0,01 m por persona</strong>, nunca menos de <strong>1,50 m</strong>.","2");
-add(46,"Dato","Pasajes o corredores que conectan con la vía pública: ¿qué ancho mínimo tienen?","Se calculan a 0,01 m por persona, con mínimo de <strong>1,20 m</strong>.","3");
+add(46,"Dato","Medios de egreso: ¿cómo se calcula el ancho de los pasajes o corredores que conectan con la vía pública y qué mínimo tienen?","Se calculan a 0,01 m por persona, con mínimo de <strong>1,20 m</strong>.","3");
 add(46,"Dato","¿Qué ancho libre mínimo tiene un pasaje comercial de uso público?","<strong>3,00 m</strong>.","4");
 add(46,"Dato","Escalera de egreso: ¿qué ancho libre mínimo tiene?","<strong>0,90 m</strong>.","5");
 add(46,"Dato","Escalera de egreso: ¿qué huella mínima y alzada máxima tiene?","Huella mínima <strong>0,26 m</strong>; alzada máxima <strong>0,18 m</strong>.","5");
 add(46,"Dato","Escalera de egreso: ¿qué altura máxima puede salvarse sin descanso?","<strong>3,00 m</strong>.","5");
 add(46,"Dato","Escalera de tramos curvos: ¿dónde se mide la huella mínima de 0,26 m?","En el <strong>centro de giro</strong> si el ancho es de hasta 0,90 m; a <strong>0,45 m del limón inferior</strong> si es mayor.","5");
 add(46,"Regla","En lugares de concentración de público, ¿cómo se calcula el ancho de las escaleras?","Igual que las puertas de egreso: <strong>0,01 m por persona</strong>.","6");
-add(46,"Dato","¿Qué distancia máxima entre circulaciones verticales rige según el destino?","Concentración de público, comercial, industrial o depósitos: <strong>45 m</strong>.<br>Residencial, instituciones o semejantes: <strong>30 m</strong>.","7");
+add(46,"Dato","Medios de egreso: ¿qué distancia máxima entre circulaciones verticales rige según el destino del edificio?","Concentración de público, comercial, industrial o depósitos: <strong>45 m</strong>.<br>Residencial, instituciones o semejantes: <strong>30 m</strong>.","7");
 add(46,"Dato","Escaleras que no son egreso ni acceso obligado: ¿qué ancho, huella y alzada tienen?","Ancho <strong>0,70 m</strong>; huella mínima <strong>0,23 m</strong>; alzada máxima <strong>0,20 m</strong>.","8");
 add(46,"Caso","Salón para 200 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>2,00 m</strong> (200 × 0,01).","2");
 add(46,"Caso","Salón para 120 personas: ¿qué ancho total de puertas de egreso necesita?","<strong>1,50 m</strong>: el cálculo da 1,20 m, pero rige el <strong>mínimo de 1,50 m</strong>.","2");
@@ -426,17 +426,17 @@ add(48,"Regla","¿Con qué materiales deben ejecutarse las escaleras reglamentar
 add(49,"Condición","¿Cuándo se consideran las rampas como medios de egreso?","Cuando por <strong>ubicación, construcción y ancho</strong> cumplen los artículos anteriores.");
 add(49,"Dato","¿Qué pendiente máxima y qué solado debe tener una rampa de egreso?","Pendiente máxima <strong>12 %</strong>; solado <strong>antideslizante</strong>.");
 // Art. 50
-add(50,"Prohibición","¿Qué puertas no se computan como aberturas de salida?","Las <strong>puertas vaivén</strong>.");
+add(50,"Prohibición","Medios de egreso: ¿qué puertas no se computan como aberturas de salida?","Las <strong>puertas vaivén</strong>.");
 add(50,"Excepción","¿En qué edificios y en qué proporción se computan las puertas giratorias como salida?","En edificios <strong>residenciales y de oficinas</strong>, hasta el <strong>50 % del ancho exigido</strong>.");
 add(50,"Dato","¿Qué diámetro mínimo tiene una puerta giratoria?","<strong>1,65 m</strong>.");
-add(50,"Regla","Si se usan puertas giratorias, ¿cómo se cubre el 50 % restante del ancho?","Obligatoriamente con <strong>puertas de abrir</strong>.");
+add(50,"Regla","Si se computan puertas giratorias como salida, ¿cómo se cubre el 50 % restante del ancho exigido?","Obligatoriamente con <strong>puertas de abrir</strong>.");
 // Art. 51
 add(51,"Regla","¿Qué reglamento fija las reglas básicas de seguridad estructural de toda edificación?","El <strong>Reglamento Técnico de Estructuras</strong>, sin perjuicio de otras reglas del arte.");
 add(51,"Regla","¿Qué reglamento rige las estructuras de hormigón armado?","El <strong>PRAEH</strong>.");
 // Art. 52
-add(52,"Regla","¿Qué libertad hay en la elección del procedimiento de cálculo?","Es <strong>libre</strong>.");
-add(52,"Condición","Si se usan fórmulas nuevas, ¿qué debe hacerse?","Hacer constar su <strong>procedencia y justificación</strong> y obtener la <strong>aprobación del Organismo de Aplicación</strong>.");
-add(52,"Dato","¿Qué exactitud mínima de cálculo se exige?","La de una <strong>regla de cálculo de 0,25 m</strong> o un procedimiento gráfico equivalente.");
+add(52,"Regla","¿Qué libertad hay en la elección del procedimiento de cálculo estructural?","Es <strong>libre</strong>.");
+add(52,"Condición","Si en el cálculo estructural se usan fórmulas nuevas, ¿qué debe hacerse?","Hacer constar su <strong>procedencia y justificación</strong> y obtener la <strong>aprobación del Organismo de Aplicación</strong>.");
+add(52,"Dato","¿Qué exactitud mínima se exige en el cálculo estructural?","La de una <strong>regla de cálculo de 0,25 m</strong> o un procedimiento gráfico equivalente.");
 // Art. 53
 add(53,"Regla","¿Dónde debe proyectarse y ejecutarse la estructura resistente?","<strong>Dentro de los límites del predio</strong>.");
 add(53,"Excepción","¿Qué elemento puede asentarse en ambos predios colindantes?","Un <strong>muro divisorio con su cimiento</strong>.");
@@ -452,7 +452,7 @@ add(56,"Dato","Cubierta sobre locales habitables: ¿qué cualidades debe tener e
 add(56,"Distinción","¿Qué cualidades debe tener la cubierta de locales no habitables?","<strong>Impermeable e incombustible</strong>.");
 // Art. 57
 add(57,"Dato","¿Qué desagüe pluvial se exige en techos y azoteas, y en qué proporción?","Un <strong>caño de 4” de diámetro interno</strong> por cada <strong>80 m²</strong> de superficie.");
-add(57,"Regla","¿Con qué puede conectarse ese caño pluvial y cómo?","Con la <strong>calle o la red pluvial</strong>, mediante caños a <strong>nivel de calzada</strong> y con pendiente para el escurrimiento.");
+add(57,"Regla","¿Con qué puede conectarse el caño de desagüe pluvial de techos y azoteas, y cómo?","Con la <strong>calle o la red pluvial</strong>, mediante caños a <strong>nivel de calzada</strong> y con pendiente para el escurrimiento.");
 // Art. 58
 add(58,"Prohibición","¿Sobre qué no pueden desaguar los techos con caída libre?","Sobre <strong>predios linderos</strong> ni sobre la <strong>vía pública (vereda)</strong>.");
 // Art. 59
@@ -464,14 +464,14 @@ add(61,"Condición","¿Qué requisito deben cumplir los sistemas constructivos n
 // Art. 62
 add(62,"Dato","¿Qué organismo fija las normas de las instalaciones sanitarias, eléctricas y de gas?","Sanitarias: <strong>Departamento Provincial de Aguas</strong>.<br>Eléctricas: <strong>Agua y Energía Eléctrica de la Nación</strong>.<br>Gas: <strong>Gas del Estado</strong>.");
 add(62,"Condición","¿Qué condiciones deben cumplir los locales para medidores eléctricos?","<strong>Fácil acceso</strong>, <strong>buena ventilación e impermeabilización</strong>, y <strong>sin comunicación con locales con instalaciones de gas</strong>.");
-add(62,"Dato","Baterías de medidores: ¿a qué alturas van la fila inferior y la superior?","Inferior: <strong>no menos de 0,90 m</strong> del solado.<br>Superior: <strong>no más de 1,80 m</strong>.");
-add(62,"Dato","¿Qué espacio libre debe quedar al frente de los medidores?","<strong>1,00 m de ancho libre</strong> como mínimo.");
+add(62,"Dato","Baterías de medidores eléctricos: ¿a qué alturas van la fila inferior y la superior?","Inferior: <strong>no menos de 0,90 m</strong> del solado.<br>Superior: <strong>no más de 1,80 m</strong>.");
+add(62,"Dato","¿Qué espacio libre debe quedar al frente de los medidores eléctricos?","<strong>1,00 m de ancho libre</strong> como mínimo.");
 // Art. 63
 add(63,"Dato","Locales para calderas y aparatos térmicos: ¿qué paso libre debe quedar alrededor de cada aparato?","<strong>0,60 m</strong> alrededor de todo su perímetro.");
 add(63,"Dato","Locales para calderas: ¿qué altura libre sobre la maquinaria y qué altura mínima de local se exigen?","<strong>1,00 m</strong> sobre la maquinaria; local de <strong>2,50 m</strong> como mínimo.");
 add(63,"Prohibición","¿Qué relación no pueden tener los locales de calderas con los medidores de gas?","<strong>No pueden tener conexión</strong> con los locales de medidores de gas <strong>ni contenerlos</strong>.");
 // Art. 64
-add(64,"Regla","¿Qué exige el Art. 64 para los conductos de aire acondicionado?","Que se <strong>aíslen convenientemente</strong> y <strong>no alojen otros conductos</strong>.");
+add(64,"Regla","¿Qué exige el Código para los conductos de aire acondicionado?","Que se <strong>aíslen convenientemente</strong> y <strong>no alojen otros conductos</strong>.");
 // Art. 65
 add(65,"Regla","¿Dónde deben construirse los pozos absorbentes y cámaras sépticas?","<strong>Totalmente dentro del predio</strong>.");
 add(65,"Dato","¿Qué retiro deben tener pozos y cámaras sépticas respecto de edificaciones y ejes divisorios?","<strong>1,50 m</strong> como mínimo.");
@@ -488,8 +488,8 @@ add(68,"Regla","¿Qué normas rigen la construcción de panteones, sepulturas o 
 // Art. 69
 add(69,"Facultad","¿Qué puede dictar la Municipalidad en el futuro sobre construcciones en cementerios?","<strong>Ordenanzas especiales</strong>, de acuerdo a su criterio.");
 // Art. 70
-add(70,"Regla","¿Qué edificios quedan sujetos a las normas de prevención contra incendios del Art. 70?","Los de <strong>uso comercial</strong> y las <strong>viviendas colectivas en altura</strong>.");
-add(70,"Dato","¿Qué normas de prevención contra incendios se aplican?","La <strong>Ley 19.587</strong> de Seguridad e Higiene en el Trabajo y su <strong>Decreto Reglamentario 4100/73</strong>.");
+add(70,"Regla","¿Qué edificios quedan sujetos a las normas especiales de prevención contra incendios?","Los de <strong>uso comercial</strong> y las <strong>viviendas colectivas en altura</strong>.");
+add(70,"Dato","¿Qué normas de prevención contra incendios rigen para edificios comerciales y viviendas colectivas en altura?","La <strong>Ley 19.587</strong> de Seguridad e Higiene en el Trabajo y su <strong>Decreto Reglamentario 4100/73</strong>.");
 // Art. 71
 add(71,"Condición","¿Cuándo es obligatoria la valla provisoria en la acera?","Ante trabajos <strong>peligrosos, incómodos</strong> o que sean <strong>obstáculo para el tránsito</strong>.");
 add(71,"Regla","¿Qué extensión y función debe tener la valla provisoria?","<strong>Toda la extensión del frente</strong>, construida para <strong>impedir la salida de material</strong> al exterior.");
@@ -512,15 +512,15 @@ add(76,"Facultad","¿Quién puede exigir el estudio de suelos y a cargo de quié
 // Art. 77
 add(77,"Regla","¿Cómo se solicita el permiso de edificación, modificación o demolición?","<strong>Por escrito</strong> a la Municipalidad, en los <strong>formularios</strong> que ella provee.");
 add(77,"Facultad","¿Cuándo debe presentarse el título de propiedad con el permiso?","Cuando el <strong>Organismo de Aplicación lo considere necesario</strong>.");
-add(77,"Dato","¿A qué ordenanza se ajusta la Municipalidad en materia de permisos (Art. 77)?","A la <strong>Ordenanza 2027/86</strong>.");
+add(77,"Dato","¿A qué ordenanza se ajusta la Municipalidad en materia de permisos de edificación?","A la <strong>Ordenanza 2027/86</strong>.");
 // Art. 78
 add(78,"Dato","¿Qué documentación se adjunta a la solicitud de permiso?","<strong>Memorias descriptivas</strong> de materiales y su aplicación, y <strong>cuatro copias de los planos</strong>.");
 add(78,"Regla","¿Qué normas de presentación deben respetar los planos y qué se les agrega?","Las del <strong>Consejo Profesional de Ingeniería, Agrimensura y Arquitectura de Río Negro</strong>; se agregan las <strong>especificaciones y ocupación del suelo del Código Urbano</strong>.");
 // Art. 79
 add(79,"Dato","¿Qué piezas deben indicarse en los planos?","<ul><li><strong>Planta general</strong> del edificio y terreno</li><li><strong>Secciones</strong> (mínimo dos)</li><li><strong>Vista de fachada/s</strong></li><li><strong>Croquis de ubicación</strong></li></ul>");
-add(79,"Dato","¿En qué escala se presentan planta, secciones y vistas?","<strong>1:100</strong>.");
-add(79,"Dato","¿Cuántas secciones como mínimo deben presentarse?","<strong>Dos</strong>.");
-add(79,"Regla","Además de los dibujos, ¿qué deben indicar los planos?","El <strong>destino de cada local</strong> y todas las <strong>medidas y especificaciones técnicas</strong> necesarias.");
+add(79,"Dato","¿En qué escala se presentan planta, secciones y vistas en los planos de obra?","<strong>1:100</strong>.");
+add(79,"Dato","¿Cuántas secciones como mínimo deben presentarse en los planos de obra?","<strong>Dos</strong>.");
+add(79,"Regla","En los planos de obra, además de los dibujos, ¿qué debe indicarse?","El <strong>destino de cada local</strong> y todas las <strong>medidas y especificaciones técnicas</strong> necesarias.");
 add(79,"Regla","¿Quiénes firman los planos y quién los visa?","Profesionales en <strong>Proyecto y Dirección Técnica</strong>; los visa el <strong>Consejo o Colegio Profesional</strong>.");
 add(79,"Condición","¿Cuándo es obligatoria la firma del constructor por ejecución de obra?","En los casos de la <strong>Ordenanza 4009/01</strong>.");
 // Art. 80
@@ -539,29 +539,29 @@ add(83,"Condición","¿Qué requisito deben cumplir los profesionales firmantes 
 add(84,"Regla","¿Qué ocurre con un plano que no se ajusta al Código?","Se <strong>devuelve al interesado</strong> para modificarlo o rehacerlo.");
 add(84,"Dato","¿En qué plazo debe presentarse de nuevo el plano devuelto?","En <strong>no más de 60 días</strong>.");
 // Art. 85
-add(85,"Condición","¿Qué debe ocurrir antes de entregar las copias aprobadas?","<strong>Abonar los derechos</strong> y que se <strong>apruebe toda la documentación</strong>.");
-add(85,"Dato","¿Cómo se entregan las copias aprobadas?","<strong>Selladas con el número de permiso</strong> de construcción.");
+add(85,"Condición","¿Qué debe ocurrir antes de entregar las copias aprobadas del permiso de construcción?","<strong>Abonar los derechos</strong> y que se <strong>apruebe toda la documentación</strong>.");
+add(85,"Dato","¿Cómo se entregan las copias aprobadas de la documentación de obra?","<strong>Selladas con el número de permiso</strong> de construcción.");
 // Art. 86
 add(86,"Prohibición","¿Qué está prohibido antes de contar con el permiso?","<strong>Iniciar cualquier obra</strong>.");
-add(86,"Regla","¿Qué debe estar en la obra y hasta cuándo?","Una <strong>copia de la documentación visada</strong> y las <strong>planillas de autorización</strong> municipales, a disposición de los inspectores <strong>hasta la terminación</strong>.");
+add(86,"Regla","¿Qué documentación debe estar en la obra y hasta cuándo?","Una <strong>copia de la documentación visada</strong> y las <strong>planillas de autorización</strong> municipales, a disposición de los inspectores <strong>hasta la terminación</strong>.");
 // Art. 87
 add(87,"Condición","¿Cuándo caduca un permiso de edificación?","Si la obra <strong>no se comenzó dentro de seis meses</strong> desde la <strong>fecha de pago de los derechos</strong>.");
 add(87,"Regla","Caducado el permiso, ¿qué debe hacerse?","<strong>Solicitarlo nuevamente</strong> y <strong>abonar por segunda vez</strong> los derechos.");
 // Art. 88
 add(88,"Prohibición","¿Qué cambios no pueden hacerse sin previo permiso?","<strong>Modificaciones que alteren los planos aprobados</strong> o <strong>ampliaciones</strong> que aumenten la superficie cubierta y el valor de la propiedad.");
-add(88,"Regla","¿Quiénes quedan alcanzados por el Art. 88 y cómo se pide el permiso?","El <strong>propietario o el constructor</strong>; se pide <strong>presentando la modificación</strong>.");
+add(88,"Regla","¿Quiénes no pueden modificar los planos aprobados sin permiso, y cómo se pide ese permiso?","El <strong>propietario o el constructor</strong>; se pide <strong>presentando la modificación</strong>.");
 // Art. 89
 add(89,"Condición","¿Qué situación lleva a archivar el expediente de una obra?","Obra <strong>suspendida seis meses</strong> sin <strong>notificar por escrito</strong> las razones a la Municipalidad.");
-add(89,"Regla","Antes de archivar, ¿qué hace la Municipalidad?","<strong>Inspecciona</strong> y deja <strong>constancia del estado</strong> de los trabajos.");
-add(89,"Regla","Archivado el expediente, ¿qué necesita el propietario para continuar?","Un <strong>nuevo permiso</strong>.");
+add(89,"Regla","Antes de archivar el expediente de una obra suspendida sin aviso, ¿qué hace la Municipalidad?","<strong>Inspecciona</strong> y deja <strong>constancia del estado</strong> de los trabajos.");
+add(89,"Regla","Archivado el expediente de una obra suspendida, ¿qué necesita el propietario para continuar?","Un <strong>nuevo permiso</strong>.");
 // Art. 90
-add(90,"Facultad","Si la suspensión se notifica por escrito, ¿qué puede hacer la Municipalidad?","<strong>Prorrogar la vigencia del permiso</strong>.");
-add(90,"Dato","¿Qué plazo puede tener esa prórroga?","El que fije la Municipalidad a su criterio, <strong>no inferior a seis meses</strong>.");
+add(90,"Facultad","Si la suspensión de una obra se notifica por escrito, ¿qué puede hacer la Municipalidad?","<strong>Prorrogar la vigencia del permiso</strong>.");
+add(90,"Dato","Obra suspendida con aviso por escrito: ¿qué plazo puede tener la prórroga del permiso?","El que fije la Municipalidad a su criterio, <strong>no inferior a seis meses</strong>.");
 add(90,"Distinción","Obra suspendida 6 meses: ¿qué diferencia hay entre notificar o no por escrito?","Sin notificar: se <strong>archiva el expediente</strong> y hace falta <strong>nuevo permiso</strong> (Art. 89).<br>Notificando: puede <strong>prorrogarse el permiso</strong>, por no menos de 6 meses (Art. 90).");
 // Art. 91
 add(91,"Regla","¿Quiénes firman la solicitud de cambio de conductor técnico?","El <strong>propietario</strong>, el <strong>nuevo conductor técnico</strong> y el <strong>conductor saliente</strong>.");
-add(91,"Regla","¿Con qué fin se presenta esa solicitud a la Municipalidad?","Para su <strong>conocimiento</strong>.");
-add(91,"Regla","Tras el cambio, ¿quién firma la documentación y quién la visa?","La firma el <strong>nuevo Director Técnico</strong> y la visa el <strong>Colegio o Consejo</strong>.");
+add(91,"Regla","¿Con qué fin se presenta a la Municipalidad la solicitud de cambio de conductor técnico?","Para su <strong>conocimiento</strong>.");
+add(91,"Regla","Tras el cambio de conductor técnico, ¿quién firma la documentación y quién la visa?","La firma el <strong>nuevo Director Técnico</strong> y la visa el <strong>Colegio o Consejo</strong>.");
 // Art. 92
 add(92,"Dato","¿Qué medidas mínimas tiene el letrero de obra y dónde se coloca?","<strong>0,40 m × 0,60 m</strong>, al <strong>frente de la obra en lugar visible</strong>.");
 add(92,"Dato","¿Qué normas regulan el texto del letrero de obra?","La <strong>Ley 442</strong> y su <strong>Decreto Reglamentario 120/74</strong>.");
@@ -575,28 +575,28 @@ add(95,"Regla","¿De qué responden los constructores ante la Municipalidad?","D
 add(96,"Facultad","¿Cuándo puede inspeccionar el Organismo de Aplicación y con qué fin?","<strong>En el momento que considere necesario</strong>, para <strong>verificar el cumplimiento</strong> de las normas.");
 // Art. 97
 add(97,"Dato","¿En qué plazo se pide la inspección de una obra terminada que exigió planos?","Dentro de los <strong>quince días</strong> de terminada.");
-add(97,"Regla","¿Cómo se solicita esa inspección final?","En <strong>formularios especiales</strong> firmados por el <strong>propietario y el conductor técnico</strong>.");
+add(97,"Regla","¿Cómo se solicita la inspección final de una obra terminada?","En <strong>formularios especiales</strong> firmados por el <strong>propietario y el conductor técnico</strong>.");
 // Art. 98
 add(98,"Dato","Obra sin permiso municipal: ¿qué multa corresponde y hasta cuándo?","De <strong>1/5 a 1/2 del sueldo mínimo municipal</strong>, hasta que <strong>regularicen el trámite</strong>.");
 add(98,"Regla","¿Quiénes son responsables por obras sin permiso?","El <strong>propietario y/o director técnico o constructor</strong>.");
 // Art. 99
-add(99,"Dato","Modificaciones o ampliaciones sin permiso (Art. 88): ¿qué multa corresponde?","Multa <strong>diaria</strong> de <strong>1/5 a un sueldo mínimo municipal</strong>, hasta regularizar.");
+add(99,"Dato","Modificaciones o ampliaciones de los planos aprobados hechas sin permiso: ¿qué multa corresponde?","Multa <strong>diaria</strong> de <strong>1/5 a un sueldo mínimo municipal</strong>, hasta regularizar.");
 // Art. 100
 add(100,"Dato","Constructor que autoriza habilitar la obra sin certificado de inspección final: ¿qué multa corresponde?","Multa <strong>diaria de ¼ de sueldo mínimo municipal</strong>.");
-add(100,"Distinción","Ordená las multas de los Arts. 98, 99 y 100.","Art. 98, sin permiso: <strong>1/5 a 1/2</strong> sueldo mínimo.<br>Art. 99, modificación sin permiso: <strong>diaria de 1/5 a 1</strong> sueldo.<br>Art. 100, habilitar sin final de obra: <strong>diaria de ¼</strong> sueldo.");
+add(100,"Distinción","Compará las multas por obra sin permiso, por modificación sin permiso y por habilitar sin inspección final.","Art. 98, sin permiso: <strong>1/5 a 1/2</strong> sueldo mínimo.<br>Art. 99, modificación sin permiso: <strong>diaria de 1/5 a 1</strong> sueldo.<br>Art. 100, habilitar sin final de obra: <strong>diaria de ¼</strong> sueldo.");
 // Art. 101
 add(101,"Facultad","¿Qué sanción puede disponer la Municipalidad sobre constructores y directores técnicos, y a quién la comunica?","La <strong>inhabilitación de su firma</strong>, comunicándola al <strong>Consejo Profesional de IAyA de Río Negro</strong>.");
 add(101,"Condición","¿En qué casos procede la inhabilitación de firma?","<ul><li><strong>Infracciones repetidas</strong> al Código</li><li>Continuar una obra <strong>desacatando la suspensión</strong> ordenada</li><li><strong>No vigilar</strong> la ejecución, directamente o por capataz o encargado</li></ul>");
 add(101,"Dato","¿Qué escala de suspensión de firma rige según la reincidencia?","1ª vez: <strong>3 meses</strong>.<br>2ª: <strong>6 meses</strong>.<br>3ª: <strong>1 año</strong>.<br>Nueva reincidencia: <strong>inhabilitación permanente</strong>.");
 // Art. 102
 add(102,"Dato","Obras en violación al Código: ¿qué multa corresponde y de qué depende?","De <strong>10 a 20 sueldos mínimos municipales</strong>, según la <strong>gravedad</strong>.");
-add(102,"Regla","Además de la multa, ¿qué ordena el Organismo de Aplicación?","La <strong>modificación y/o demolición</strong> de lo construido en infracción.");
-add(102,"Dato","¿Qué plazo máximo tiene la orden de modificar o demoler?","<strong>120 días corridos</strong>.");
-add(102,"Dato","Vencido ese plazo sin cumplir, ¿qué consecuencias hay?","Multa de <strong>40 sueldos mínimos</strong> y <strong>demolición por la Municipalidad a cargo de los responsables</strong>.");
-add(102,"Regla","¿Quiénes son responsables en el Art. 102?","El <strong>titular</strong> y el <strong>representante técnico</strong>.");
+add(102,"Regla","Obras en violación al Código: además de la multa, ¿qué ordena el Organismo de Aplicación?","La <strong>modificación y/o demolición</strong> de lo construido en infracción.");
+add(102,"Dato","¿Qué plazo máximo tiene la orden de modificar o demoler lo construido en infracción?","<strong>120 días corridos</strong>.");
+add(102,"Dato","Vencido el plazo para modificar o demoler lo construido en infracción, ¿qué consecuencias hay?","Multa de <strong>40 sueldos mínimos</strong> y <strong>demolición por la Municipalidad a cargo de los responsables</strong>.");
+add(102,"Regla","Obras en violación al Código (multa de 10 a 20 sueldos): ¿quiénes son los responsables?","El <strong>titular</strong> y el <strong>representante técnico</strong>.");
 // Art. 103
 add(103,"Condición","¿Cuándo puede la Municipalidad demoler sin más trámite?","Ante <strong>peligro inminente de derrumbe</strong> de una pared o edificio.");
-add(103,"Regla","En esa demolición de urgencia, ¿quién la ejecuta, a cargo de quién y con qué formalidad?","La ejecuta la Municipalidad <strong>por sus propios organismos</strong>, a cargo del <strong>propietario</strong>, con sólo <strong>levantar acta</strong> al momento de demoler.");
+add(103,"Regla","En una demolición por peligro inminente de derrumbe, ¿quién la ejecuta, a cargo de quién y con qué formalidad?","La ejecuta la Municipalidad <strong>por sus propios organismos</strong>, a cargo del <strong>propietario</strong>, con sólo <strong>levantar acta</strong> al momento de demoler.");
 // Art. 104
 add(104,"Regla","¿Qué disposiciones deroga el Código?","<strong>Todas las disposiciones municipales que se le opongan</strong>.");
 // Art. 105
@@ -604,6 +604,6 @@ add(105,"Facultad","¿Quién reglamenta el Código y qué puede incorporar?","La
 add(105,"Condición","Para incorporar normas por actualización, ¿a quién debe consultar la Municipalidad?","A la <strong>Subsecretaría de Vivienda y Desarrollo Urbano</strong> de Río Negro.");
 // Art. 106
 add(106,"Regla","¿Qué normas se aplican a los trámites iniciados antes de la vigencia del Código?","Las <strong>vigentes al momento de la presentación</strong>.");
-add(106,"Condición","¿Qué antigüedad máxima deben tener esos trámites para regirse por las normas anteriores?","<strong>No más de seis meses</strong> antes de la vigencia del Código.");
+add(106,"Condición","¿Qué antigüedad máxima deben tener los trámites iniciados antes del Código para regirse por las normas anteriores?","<strong>No más de seis meses</strong> antes de la vigencia del Código.");
 }
 });

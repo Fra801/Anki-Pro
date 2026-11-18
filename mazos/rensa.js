@@ -141,7 +141,7 @@ build(add){
 // CAPÍTULO 1 — Ámbito de aplicación
 // Art. 1
 add(1,"Regla","¿A qué se aplican las disposiciones del RENSA?","A la <strong>instrucción y resolución</strong> de <strong>sumarios, informaciones sumarias y actuaciones sumarísimas</strong>.");
-add(1,"Regla","¿Qué finalidad tienen esas actuaciones?","Comprobar <strong>faltas disciplinarias o hechos atribuidos al personal policial</strong>, o casos en que éste <strong>sea parte</strong>.");
+add(1,"Regla","¿Qué finalidad tienen los sumarios, informaciones y actuaciones sumarísimas del RENSA?","Comprobar <strong>faltas disciplinarias o hechos atribuidos al personal policial</strong>, o casos en que éste <strong>sea parte</strong>.");
 // Art. 2
 add(2,"Condición","¿Qué tipo de falta obliga a instruir sumario?","La imputación o presunción de <strong>falta grave</strong>.","a");
 add(2,"Condición","¿Qué resolución penal obliga a instruir sumario?","El <strong>auto de procesamiento y/o prisión preventiva</strong> en sede penal contra personal policial.","b");
@@ -168,16 +168,16 @@ add(6,"Regla","Denuncia escrita: ¿quiénes la firman y en qué fojas?","El <str
 add(7,"Regla","Denuncia verbal: ¿cómo se documenta?","Se labra un <strong>acta</strong> con la firma del <strong>denunciante y el funcionario actuante</strong>.");
 // Art. 8
 add(8,"Prohibición","¿Qué denuncias entre parientes no se admiten?","De <strong>descendientes contra ascendientes</strong> (consanguíneos o afines) y viceversa, de un <strong>cónyuge contra otro</strong> y de <strong>hermanos contra hermanos</strong>.");
-add(8,"Excepción","¿Qué denuncias entre esos parientes sí se admiten?","La de una falta cometida <strong>contra el propio denunciante</strong>, o contra una persona con quien tenga <strong>parentesco más próximo</strong> que con el denunciado.");
+add(8,"Excepción","¿Qué denuncias entre parientes cercanos (ascendientes, descendientes, cónyuges, hermanos) sí se admiten?","La de una falta cometida <strong>contra el propio denunciante</strong>, o contra una persona con quien tenga <strong>parentesco más próximo</strong> que con el denunciado.");
 add(8,"Caso","Un hijo denuncia a su padre por una falta cometida contra él mismo. ¿Qué regla se aplica?","Se <strong>admite</strong>: la prohibición del Art. 8 no alcanza a faltas cometidas <strong>contra el denunciante</strong>.");
 // Art. 9
 add(9,"Regla","¿Qué funcionarios disponen la iniciación de sumario o información a su personal subordinado?","Los Jefes de <strong>Unidad, Unidad Especial, Zona, Departamento, Asiento de Inspección, Dirección o Unidad Regional</strong>.");
-add(9,"Regla","¿A quién designa el Jefe como instructor?","A alguien del <strong>personal a sus órdenes</strong>, o se encarga <strong>personalmente</strong> de la función.");
-add(9,"Regla","¿Quién ordena la instrucción de actuaciones sumarísimas según el Art. 9?","El <strong>Jefe y Subjefe de Policía</strong>.");
+add(9,"Regla","¿A quién designa como instructor el Jefe que dispone un sumario o información?","A alguien del <strong>personal a sus órdenes</strong>, o se encarga <strong>personalmente</strong> de la función.");
+add(9,"Regla","Según las normas sobre iniciación de las actuaciones, ¿quién ordena la instrucción de actuaciones sumarísimas?","El <strong>Jefe y Subjefe de Policía</strong>.");
 // Art. 10
 add(10,"Regla","¿Cuándo y por qué vía se comunica la orden de sumario o información?","<strong>En el día</strong> y por <strong>vía radial</strong>.");
 add(10,"Dato","¿A quiénes se comunica la orden de sumario o información?","A la <strong>Jefatura de Policía (D.1)</strong>, a la <strong>Unidad Regional</strong> y a la <strong>Unidad o Dependencia</strong> del causante o del lugar de los hechos.");
-add(10,"Dato","¿Qué datos debe contener esa comunicación?","Los <strong>datos del causante</strong>, la <strong>causa</strong> que la origina y el <strong>nombre del instructor</strong>.");
+add(10,"Dato","¿Qué datos debe contener la comunicación radial de la orden de sumario o información?","Los <strong>datos del causante</strong>, la <strong>causa</strong> que la origina y el <strong>nombre del instructor</strong>.");
 add(10,"Regla","¿Cómo y cuándo se informan los cambios de instructor?","Por la <strong>misma vía radial</strong> y <strong>en el día</strong> de producidos.");
 // CAPÍTULO 3 — Del instructor
 // Art. 11
@@ -192,7 +192,7 @@ add(14,"Facultad","¿Quiénes pueden ordenar el reemplazo del instructor y en qu
 // CAPÍTULO 4 — De la defensa
 // Art. 15
 add(15,"Dato","¿Entre qué límites de jerarquía debe estar el defensor en sumarios?","Entre <strong>Oficial Inspector</strong> (mínimo) y la <strong>jerarquía del instructor</strong> (máximo).");
-add(15,"Regla","¿Dónde debe residir el defensor y quién puede serlo?","En el <strong>lugar donde presta servicio el causante</strong>; puede ser el <strong>encargado de su sección o grupo</strong>.");
+add(15,"Regla","En sumarios, ¿dónde debe residir el defensor y quién puede serlo?","En el <strong>lugar donde presta servicio el causante</strong>; puede ser el <strong>encargado de su sección o grupo</strong>.");
 add(15,"Dato","En actuaciones sumarísimas, ¿qué jerarquía mínima deben tener los oficiales defensores?","<strong>Oficial Principal</strong>.");
 // Art. 16
 add(16,"Prohibición","¿A qué personal no puede pertenecer el Oficial defensor?","A las <strong>Asesorías Letradas</strong> de la Jefatura o de la Unidad Regional.");
@@ -201,13 +201,13 @@ add(17,"Prohibición","¿En cuántos sumarios puede actuar un defensor al mismo 
 add(17,"Dato","¿Cuántos defensores se admiten por agente?","<strong>Uno</strong>.");
 // Art. 18
 add(18,"Regla","Un defensor propuesto por varios agentes con situaciones opuestas: ¿para quién vale la designación?","Para el <strong>primero que lo propuso</strong>; los demás deben nombrar otro.");
-add(18,"Excepción","Si no puede precisarse quién lo propuso primero, ¿quién decide?","El <strong>propio defensor designado</strong> (decisión privativa).");
+add(18,"Excepción","Defensor propuesto por varios agentes con situaciones opuestas: si no puede precisarse quién lo propuso primero, ¿quién decide?","El <strong>propio defensor designado</strong> (decisión privativa).");
 // Art. 19
 add(19,"Regla","¿Qué carácter tiene la defensa para el oficial designado?","<strong>Carga ineludible del servicio</strong>.");
 add(19,"Excepción","¿Quién puede excusar al defensor, por qué causas y con qué recurso?","El <strong>Jefe de Policía, Subjefe o Jefe de Unidad Regional</strong>, por <strong>causas debidamente justificadas</strong>; la decisión es <strong>inapelable</strong>.");
 // Art. 20
 add(20,"Regla","¿En qué momento debe excusarse el defensor que tiene un impedimento?","<strong>Sea cual fuere el estado</strong> de las actuaciones.");
-add(20,"Condición","Además de los impedimentos de los Arts. 15 a 18, ¿en qué casos debe excusarse el defensor?","<ul><li>Ser <strong>damnificado o testigo</strong></li><li><strong>Enfermedad</strong> justificada que le impida actuar</li><li><strong>Destino o comisión</strong> en lugar distinto al del causante</li><li>Haber sido <strong>instructor o secretario</strong> en ese sumario</li></ul>");
+add(20,"Condición","Además de los requisitos para su designación, ¿en qué casos específicos debe excusarse el defensor?","<ul><li>Ser <strong>damnificado o testigo</strong></li><li><strong>Enfermedad</strong> justificada que le impida actuar</li><li><strong>Destino o comisión</strong> en lugar distinto al del causante</li><li>Haber sido <strong>instructor o secretario</strong> en ese sumario</li></ul>");
 // Art. 21
 add(21,"Dato","¿Qué conductas del defensor constituyen falta disciplinaria grave?","<ul><li><strong>Incomparecencia</strong> sin causa justificada</li><li><strong>Incumplimiento de sus deberes</strong> como defensor</li><li><strong>Violar la reserva</strong> de lo conocido por medio del causante</li></ul>");
 // Art. 22
@@ -218,7 +218,7 @@ add(23,"Regla","¿Qué efecto tiene el reemplazo del defensor sobre el trámite 
 add(23,"Regla","¿Cuándo cesa el defensor reemplazado y qué debe hacer hasta entonces?","Con la <strong>notificación por escrito del instructor</strong>; hasta entonces <strong>sigue desempeñando el cargo</strong>.");
 // Art. 24
 add(24,"Regla","¿Cómo se compatibiliza la defensa con el servicio ordinario?","Se ejerce <strong>sin perjuicio del servicio ordinario</strong>; los superiores deben darle <strong>franquicias</strong>, bajo pena de <strong>falta grave</strong>.");
-add(24,"Dato","¿Qué obligaciones tiene el defensor según el Art. 24?","<ul><li><strong>Aceptar el cargo</strong></li><li><strong>Tomar revista y estudiar</strong> el sumario</li><li><strong>Producir la defensa</strong></li><li><strong>Notificarse</strong> de la resolución y <strong>recurrir</strong></li><li><strong>Asistir a las citaciones</strong> del instructor</li></ul>");
+add(24,"Dato","¿Qué obligaciones concretas tiene el oficial defensor en el sumario?","<ul><li><strong>Aceptar el cargo</strong></li><li><strong>Tomar revista y estudiar</strong> el sumario</li><li><strong>Producir la defensa</strong></li><li><strong>Notificarse</strong> de la resolución y <strong>recurrir</strong></li><li><strong>Asistir a las citaciones</strong> del instructor</li></ul>");
 // Art. 25
 add(25,"Regla","¿Qué prioridad tienen los deberes de la defensa frente al servicio ordinario?","Se consideran <strong>con preferencia</strong> a los demás deberes del servicio ordinario.");
 // Art. 26
@@ -228,39 +228,39 @@ add(27,"Regla","¿Con qué alcance puede asistir el defensor a la declaración d
 // CAPÍTULO 5 — De la recusación y excusación
 // Art. 28
 add(28,"Dato","¿En qué plazo puede recusarse al instructor y desde cuándo corre?","<strong>48 horas</strong> desde la <strong>notificación del causante</strong> o desde la <strong>designación y notificación del defensor</strong>.");
-add(28,"Regla","¿Cómo debe plantearse la recusación?","<strong>Por escrito</strong>, indicando los <strong>hechos</strong> que configuran alguna causal del Reglamento.");
+add(28,"Regla","¿Cómo debe plantearse la recusación del instructor?","<strong>Por escrito</strong>, indicando los <strong>hechos</strong> que configuran alguna causal del Reglamento.");
 // Art. 29
 add(29,"Dato","¿Qué parentesco del instructor con las partes es causal de recusación?","Consanguinidad hasta el <strong>cuarto grado</strong> y afinidad hasta el <strong>segundo grado</strong>.","a");
 add(29,"Dato","¿Qué denuncia previa es causal de recusación del instructor?","Haber sido <strong>denunciado o acusado</strong> por delito o falta administrativa por el sumariado o el ofendido, <strong>antes del sumario</strong>.","b");
 add(29,"Dato","¿Qué causa pendiente es causal de recusación del instructor?","Que el instructor, su cónyuge o parientes (consanguíneos hasta 4º, afines hasta 2º) tengan <strong>causa judicial o administrativa pendiente</strong> con el ofendido o sumariado.","c");
 add(29,"Dato","¿Qué relaciones personales del instructor son causal de recusación?","<strong>Amistad íntima</strong> manifestada con frecuencia de trato, y <strong>enemistad o resentimiento manifiesto</strong> demostrado por hechos graves conocidos.","d,e");
-add(29,"Regla","¿Qué carácter tiene la lista de causales de recusación del Art. 29?","<strong>Taxativo</strong>: “sólo se admitirán” esas causales.");
+add(29,"Regla","¿Qué carácter tiene la lista de causales de recusación del instructor?","<strong>Taxativo</strong>: “sólo se admitirán” esas causales.");
 add(29,"Caso","El instructor es primo hermano (4º grado de consanguinidad) del sumariado. ¿Qué consecuencia tiene?","Es <strong>causal de recusación</strong>: el parentesco por consanguinidad alcanza hasta el <strong>cuarto grado</strong>.","a");
 // Art. 30
-add(30,"Regla","¿A qué otra relación se extienden las causales del Art. 29?","A la del <strong>defensor respecto del instructor</strong>.");
+add(30,"Regla","Las causales de recusación del instructor, ¿a qué otra relación se extienden?","A la del <strong>defensor respecto del instructor</strong>.");
 // Art. 31
 add(31,"Regla","¿Por qué causales puede pedir excusación el instructor y cómo?","Por las del <strong>Art. 29</strong>, indicando <strong>en detalle los hechos</strong> en que se basa.");
 // Art. 32
-add(32,"Dato","¿En qué plazo resuelve el superior la recusación o excusación?","<strong>48 horas</strong>.");
-add(32,"Regla","¿Cómo puede resolver el superior la recusación o excusación?","<strong>No haciendo lugar</strong> o <strong>designando reemplazante</strong>.");
+add(32,"Dato","¿En qué plazo resuelve el superior la recusación o excusación del instructor?","<strong>48 horas</strong>.");
+add(32,"Regla","¿Cómo puede resolver el superior la recusación o excusación del instructor?","<strong>No haciendo lugar</strong> o <strong>designando reemplazante</strong>.");
 // Art. 33
-add(33,"Prohibición","¿Qué funcionarios no pueden ser recusados?","El <strong>Subjefe de Policía</strong>, los <strong>Jefes de Unidades Regionales</strong> y los <strong>Directores</strong>.");
-add(33,"Excepción","Esos funcionarios irrecusables, ¿qué pueden hacer si se da una causal del Art. 29?","<strong>Excusarse</strong> de actuar.");
+add(33,"Prohibición","¿Qué funcionarios no pueden ser recusados en un sumario?","El <strong>Subjefe de Policía</strong>, los <strong>Jefes de Unidades Regionales</strong> y los <strong>Directores</strong>.");
+add(33,"Excepción","El Subjefe de Policía, los Jefes de Unidades Regionales y los Directores no pueden ser recusados. ¿Qué pueden hacer si se da una causal de recusación?","<strong>Excusarse</strong> de actuar.");
 // CAPÍTULO 6 — De las notificaciones
 // Art. 34
-add(34,"Dato","¿En qué formas se efectúan las notificaciones?","<strong>Por escrito</strong>: diligencia agregada al sumario, <strong>cédula</strong> o <strong>radiograma</strong>.");
-add(34,"Dato","¿Qué debe consignarse en la notificación?","<strong>Día y hora</strong>, y la firma del <strong>interesado y del notificador</strong>.");
+add(34,"Dato","¿En qué formas se efectúan las notificaciones en el sumario?","<strong>Por escrito</strong>: diligencia agregada al sumario, <strong>cédula</strong> o <strong>radiograma</strong>.");
+add(34,"Dato","¿Qué debe consignarse en una notificación del sumario?","<strong>Día y hora</strong>, y la firma del <strong>interesado y del notificador</strong>.");
 // Art. 35
-add(35,"Regla","Si el notificado se niega o no puede firmar, ¿qué basta?","La <strong>constancia del notificador</strong> de haber cumplido la diligencia.");
+add(35,"Regla","Si el notificado se niega o no puede firmar la notificación, ¿qué basta?","La <strong>constancia del notificador</strong> de haber cumplido la diligencia.");
 // Art. 36
 add(36,"Regla","Si no se encuentra a la persona a notificar, ¿a quién se le hace saber el mensaje?","A alguien que <strong>resida en la casa</strong>, con preferencia a <strong>familiares</strong> y, entre ellos, a los <strong>más allegados</strong>.");
-add(36,"Regla","Si no hay nadie, nadie responde o se niegan a recibirla, ¿qué se hace?","Se <strong>fija copia en lugar visible</strong> y se deja <strong>constancia en el expediente</strong>.");
+add(36,"Regla","Notificación: si no hay nadie en la casa, nadie responde o se niegan a recibirla, ¿qué se hace?","Se <strong>fija copia en lugar visible</strong> y se deja <strong>constancia en el expediente</strong>.");
 // Art. 37
 add(37,"Dato","Jefe que debe notificar a un subordinado: ¿en qué plazo y con qué consecuencia si no cumple?","Dentro de las <strong>48 horas</strong> de recibida; el incumplimiento es <strong>falta disciplinaria grave</strong>.");
 // CAPÍTULO 7 — Diligencias del sumario
 // Art. 38
 add(38,"Dato","¿En qué plazo debe el instructor notificar al causante la existencia del sumario y desde cuándo?","<strong>24 horas</strong> desde que se <strong>hace cargo</strong> del sumario o desde que se <strong>individualiza al presunto responsable</strong>.");
-add(38,"Condición","¿A quiénes se les hace saber que deben designar un Oficial defensor?","A <strong>Suboficiales y Agentes</strong>.");
+add(38,"Condición","Al notificar al causante del sumario, ¿a quiénes se les hace saber que deben designar un Oficial defensor?","A <strong>Suboficiales y Agentes</strong>.");
 add(38,"Dato","¿En qué plazo debe designar defensor el Suboficial o Agente, y bajo qué apercibimiento?","<strong>48 horas</strong>, bajo apercibimiento de <strong>nombrarle uno de oficio</strong>.");
 // Art. 39
 add(39,"Dato","¿Qué antecedentes del causante solicita el instructor para agregar al sumario?","<ul><li><strong>Fojas de servicio</strong></li><li><strong>Embargos</strong></li><li><strong>Recomendaciones</strong></li><li><strong>Procesos judiciales</strong></li><li><strong>Penas disciplinarias</strong></li><li><strong>Calificación anual</strong> de los dos últimos períodos</li></ul>");
@@ -268,8 +268,8 @@ add(39,"Dato","¿Qué alcance tiene la calificación anual que se agrega al suma
 // Art. 40
 add(40,"Dato","Designado el defensor, ¿en qué plazo lo cita el instructor y para qué?","Dentro de las <strong>24 horas</strong>, para su <strong>notificación y aceptación del cargo</strong>.");
 // Art. 41
-add(41,"Condición","¿En qué casos el instructor suspende las actuaciones?","Si no se mantiene la <strong>diferencia de jerarquía</strong> (Arts. 10 y 11), si hay <strong>recusación</strong> o si el instructor <strong>se excusa</strong>.");
-add(41,"Regla","Suspendidas las actuaciones, ¿a disposición de quién y cuándo se ponen?","<strong>En el mismo día</strong>, de quien <strong>ordenó la investigación</strong> o del <strong>superior común</strong>.");
+add(41,"Condición","¿En qué casos el instructor del sumario suspende las actuaciones?","Si no se mantiene la <strong>diferencia de jerarquía</strong> (Arts. 10 y 11), si hay <strong>recusación</strong> o si el instructor <strong>se excusa</strong>.");
+add(41,"Regla","Si el instructor suspende las actuaciones (por recusación, excusación o falta de diferencia de jerarquía), ¿a disposición de quién y cuándo las pone?","<strong>En el mismo día</strong>, de quien <strong>ordenó la investigación</strong> o del <strong>superior común</strong>.");
 // CAPÍTULO 8 — Medidas de prueba
 // Art. 42
 add(42,"Regla","¿Cómo se documenta la inspección ocular?","En un <strong>acta</strong> con sus resultados, ilustrando detalles en un <strong>croquis</strong>.");
@@ -289,7 +289,7 @@ add(46,"Excepción","Si no es posible el informe químico o médico, ¿cómo se 
 add(47,"Regla","¿A quiénes debe recibir declaración el instructor?","A <strong>todas las personas que tengan conocimiento</strong> de los hechos investigados.");
 // Art. 48
 add(48,"Regla","¿Cómo se solicita el testimonio de Oficiales de mayor grado que el instructor?","<strong>Por nota</strong>.");
-add(48,"Condición","¿Cuándo se pide por nota, vía Unidad Policial, el testimonio de quien reside fuera del lugar?","Cuando, siendo policía, <strong>el servicio no le permite comparecer</strong> o el <strong>instructor no puede trasladarse</strong>.");
+add(48,"Condición","Testigo que reside fuera del lugar del sumario: ¿cuándo se le pide el testimonio por nota, vía Unidad Policial?","Cuando, siendo policía, <strong>el servicio no le permite comparecer</strong> o el <strong>instructor no puede trasladarse</strong>.");
 // Art. 49
 add(49,"Regla","¿Qué normas rigen el contenido, formalidades e inhabilidades de la declaración testimonial?","Las del <strong>Código de Procedimientos Penal</strong>, cuando el Reglamento no disponga otra cosa.");
 // Art. 50
@@ -306,56 +306,56 @@ add(53,"Facultad","¿Qué prueba puede presentar el causante durante la instrucc
 add(54,"Regla","¿Qué debe hacer el instructor para que el sumariado declare y bajo qué sanción?","<strong>Citarlo y emplazarlo</strong> a declarar sobre los hechos imputados, bajo pena de <strong>nulidad de todo lo actuado</strong>.");
 // Art. 55
 add(55,"Regla","¿Qué preguntas formula el instructor al causante?","<strong>Todas las que estime necesarias</strong> para determinar las transgresiones o faltas atribuidas.");
-add(55,"Regla","Tras interrogarlo, ¿qué se le hace saber al causante y cómo se documenta?","Que <strong>puede ofrecer pruebas o diligencias</strong>; se deja <strong>constancia en el acto</strong>.");
+add(55,"Regla","Tras interrogar al causante en su declaración, ¿qué se le hace saber y cómo se documenta?","Que <strong>puede ofrecer pruebas o diligencias</strong>; se deja <strong>constancia en el acto</strong>.");
 // Art. 56
-add(56,"Regla","Finalizada la declaración, ¿quién la lee y para qué?","El <strong>interesado</strong>, o el <strong>instructor</strong> si aquél lo prefiere, para las <strong>rectificaciones</strong>.");
+add(56,"Regla","Finalizada la declaración del causante, ¿quién la lee y para qué?","El <strong>interesado</strong>, o el <strong>instructor</strong> si aquél lo prefiere, para las <strong>rectificaciones</strong>.");
 // Art. 57
 add(57,"Regla","¿Qué efecto tiene que el causante se niegue a declarar?","<strong>Ninguna presunción en su contra</strong>.");
-add(57,"Regla","Si se niega a declarar, ¿qué se le pide y qué pasa si tampoco firma?","Que <strong>firme el acta</strong> de la negativa; si no firma, el instructor deja <strong>constancia</strong>.");
+add(57,"Regla","Si el causante se niega a declarar, ¿qué se le pide y qué pasa si tampoco firma?","Que <strong>firme el acta</strong> de la negativa; si no firma, el instructor deja <strong>constancia</strong>.");
 // Art. 58
 add(58,"Regla","¿Desde cuándo tiene el sumariado derecho a conocer los hechos que se le atribuyen?","Desde que se le <strong>notifica la existencia de la investigación</strong>.");
 // CAPÍTULO 9 — Descargo y ofrecimiento de prueba
 // Art. 59
-add(59,"Regla","Vencido el término de instrucción, ¿a quiénes emplaza el instructor y para qué?","Al <strong>causante y su defensor</strong>, para <strong>tomar vista</strong> del sumario y ejercer la defensa.");
+add(59,"Regla","Vencido el término de instrucción del sumario, ¿a quiénes emplaza el instructor y para qué?","Al <strong>causante y su defensor</strong>, para <strong>tomar vista</strong> del sumario y ejercer la defensa.");
 add(59,"Dato","Sumario: ¿en qué plazo deben comparecer a tomar vista y en qué plazo se ejerce la defensa?","Comparecer: <strong>48 horas</strong>.<br>Defensa: <strong>3 días</strong>.");
 // Art. 60
-add(60,"Regla","Si el imputado no comparece sin causa justificada, ¿qué ocurre al vencer el emplazamiento?","Se deja <strong>constancia de su incomparecencia</strong> y <strong>empieza a correr el término de defensa</strong>.");
-add(60,"Regla","Si vence el término sin que el imputado presente defensa, ¿qué consecuencia tiene?","Se tiene por <strong>decaído el derecho</strong> a hacerlo.");
-add(60,"Regla","Si quien no comparece es el defensor, ¿qué se hace?","Se requiere al causante que <strong>designe otro</strong> (Art. 38) y se promueven <strong>actuaciones aparte</strong> por la falta del Art. 21.");
+add(60,"Regla","Sumario: si el imputado no comparece a tomar vista sin causa justificada, ¿qué ocurre al vencer el emplazamiento?","Se deja <strong>constancia de su incomparecencia</strong> y <strong>empieza a correr el término de defensa</strong>.");
+add(60,"Regla","Sumario: si vence el término de defensa sin que el imputado la presente, ¿qué consecuencia tiene?","Se tiene por <strong>decaído el derecho</strong> a hacerlo.");
+add(60,"Regla","Sumario: si quien no comparece a tomar vista es el defensor, ¿qué se hace?","Se requiere al causante que <strong>designe otro</strong> (Art. 38) y se promueven <strong>actuaciones aparte</strong> por la falta del Art. 21.");
 // Art. 61
-add(61,"Regla","Durante la defensa, ¿qué consulta del expediente se permite y con qué límite?","<strong>Cuantas veces</strong> lo requieran causante o defensor, sin que las actuaciones <strong>salgan del control del instructor</strong>.");
+add(61,"Regla","Durante el término de defensa del sumario, ¿qué consulta del expediente se permite y con qué límite?","<strong>Cuantas veces</strong> lo requieran causante o defensor, sin que las actuaciones <strong>salgan del control del instructor</strong>.");
 // Art. 62
 add(62,"Regla","¿Cuándo debe ofrecerse la prueba de la defensa?","<strong>Toda la prueba</strong> se ofrece <strong>con el escrito de defensa</strong>.");
 // Art. 63
 add(63,"Facultad","¿Qué puede presentar el imputado para interrogar a los testigos?","Un <strong>pliego de interrogatorio</strong> con las preguntas.");
 // Art. 64
-add(64,"Regla","Con varios imputados, ¿cómo corre el término de vista?","<strong>Independientemente para cada uno</strong>, desde su notificación.");
+add(64,"Regla","Sumario con varios imputados: ¿cómo corre el término de vista?","<strong>Independientemente para cada uno</strong>, desde su notificación.");
 // Art. 65
 add(65,"Regla","¿Qué debe hacer el instructor con la prueba ofrecida por el imputado?","<strong>Diligenciarla en todos los casos</strong>.");
 add(65,"Excepción","¿Cuándo puede el instructor no producir la prueba ofrecida y qué debe hacer?","Cuando es <strong>improcedente</strong>; debe <strong>fundamentar</strong> por qué no la cumple.");
 // Art. 66
-add(66,"Dato","¿Qué prueba se considera improcedente?","<ul><li><strong>Superabundante</strong> sobre hechos ya probados</li><li>A realizar en <strong>lugar distante</strong>, con personas <strong>ajenas a la Institución y no identificadas</strong></li><li>Ofrecida con <strong>intención dilatoria</strong></li><li><strong>Notoriamente imposible</strong> de producir</li></ul>");
+add(66,"Dato","¿Qué prueba ofrecida por el imputado se considera improcedente?","<ul><li><strong>Superabundante</strong> sobre hechos ya probados</li><li>A realizar en <strong>lugar distante</strong>, con personas <strong>ajenas a la Institución y no identificadas</strong></li><li>Ofrecida con <strong>intención dilatoria</strong></li><li><strong>Notoriamente imposible</strong> de producir</li></ul>");
 // CAPÍTULO 10 — Conclusión de la instrucción
 // Art. 67
-add(67,"Dato","Sumarios por los incs. a), c) y d) del Art. 2: ¿en qué plazo debe concluir la instrucción?","<strong>60 días corridos</strong>.");
-add(67,"Regla","¿Cómo pide prórroga el instructor y qué hace mientras tanto?","Por <strong>radiograma</strong>, indicando las causas; <strong>continúa las diligencias</strong> hasta conocer la decisión.");
-add(67,"Facultad","¿Quiénes pueden prorrogar la instrucción y por cuánto?","El <strong>Jefe de Policía, el Subjefe o el Jefe de la Unidad Regional</strong>, por <strong>otros 60 días</strong>.");
-add(67,"Regla","¿Qué consecuencia tiene que no se otorgue la prórroga?","El <strong>reemplazo automático del instructor</strong>, sin perjuicio de otras medidas.");
-add(67,"Regla","Sumarios por los incs. e), f) y g) del Art. 2: ¿desde cuándo corren los 60 días?","Una vez <strong>concluidas las juntas médicas</strong>.");
-add(67,"Regla","Sumarios por el inc. b) del Art. 2 (procesamiento penal): ¿desde cuándo corren los 60 días?","Desde que se <strong>glosa al sumario la sentencia penal</strong>.");
-add(67,"Distinción","Ordená el inicio del plazo de 60 días según la causal del Art. 2.","Incs. a), c), d): <strong>plazo normal de instrucción</strong>.<br>Incs. e), f), g): desde que <strong>concluyen las juntas médicas</strong>.<br>Inc. b): desde que se <strong>agrega la sentencia penal</strong>.");
+add(67,"Dato","Sumarios por falta grave, por bienes del Estado o por responsabilidad administrativa: ¿en qué plazo debe concluir la instrucción?","<strong>60 días corridos</strong>.");
+add(67,"Regla","¿Cómo pide el instructor la prórroga de la instrucción del sumario y qué hace mientras tanto?","Por <strong>radiograma</strong>, indicando las causas; <strong>continúa las diligencias</strong> hasta conocer la decisión.");
+add(67,"Facultad","¿Quiénes pueden prorrogar la instrucción del sumario y por cuánto?","El <strong>Jefe de Policía, el Subjefe o el Jefe de la Unidad Regional</strong>, por <strong>otros 60 días</strong>.");
+add(67,"Regla","¿Qué consecuencia tiene que no se otorgue la prórroga de la instrucción del sumario?","El <strong>reemplazo automático del instructor</strong>, sin perjuicio de otras medidas.");
+add(67,"Regla","Sumarios por salud, lesiones o fallecimiento (con Junta Médica): ¿desde cuándo corren los 60 días de instrucción?","Una vez <strong>concluidas las juntas médicas</strong>.");
+add(67,"Regla","Sumarios por procesamiento o prisión preventiva en sede penal: ¿desde cuándo corren los 60 días de instrucción?","Desde que se <strong>glosa al sumario la sentencia penal</strong>.");
+add(67,"Distinción","¿Desde cuándo corren los 60 días de instrucción según la causa del sumario?","Falta grave, bienes del Estado o responsabilidad administrativa: <strong>plazo normal de instrucción</strong>.<br>Salud, lesiones o fallecimiento: desde que <strong>concluyen las juntas médicas</strong>.<br>Procesamiento penal: desde que se <strong>agrega la sentencia penal</strong>.");
 // Art. 68
-add(68,"Regla","Producidas las pruebas, ¿qué hace el instructor?","Expone el resultado en un <strong>informe</strong> y lo <strong>eleva con las actuaciones a su superior</strong>.");
+add(68,"Regla","Producidas las pruebas del sumario, ¿qué hace el instructor?","Expone el resultado en un <strong>informe</strong> y lo <strong>eleva con las actuaciones a su superior</strong>.");
 // Art. 69
 add(69,"Dato","¿Qué debe contener el informe del instructor?","a) <strong>Relación sucinta de las pruebas</strong>, indicando la <strong>foja</strong> de cada pieza.<br>b) Los <strong>cargos</strong> contra el imputado, <strong>encuadrados</strong> en la reglamentación.");
 // Art. 70
-add(70,"Dato","Recibidas las actuaciones, ¿qué plazo tiene el superior para decidir si amplía la prueba?","<strong>5 días</strong>.");
-add(70,"Regla","Si el superior amplía la prueba, ¿qué límite tiene el plazo que fija al instructor?","Como máximo, el del <strong>Art. 67</strong> (60 días).");
+add(70,"Dato","Recibido el sumario con el informe del instructor, ¿qué plazo tiene el superior para decidir si amplía la prueba?","<strong>5 días</strong>.");
+add(70,"Regla","Si el superior amplía la prueba del sumario, ¿qué límite tiene el plazo que fija al instructor?","Como máximo, el del <strong>Art. 67</strong> (60 días).");
 // Art. 71
-add(71,"Regla","Sin ampliación de prueba, ¿a quién y por qué vía eleva el superior las actuaciones?","Al <strong>Jefe de Policía</strong>, por <strong>vía jerárquica</strong>.");
-add(71,"Dato","¿Qué contiene el informe que acompaña esa elevación?","La <strong>apreciación de las constancias</strong>, el <strong>encuadre del hecho</strong> y la <strong>resolución que a su juicio corresponda</strong>.");
+add(71,"Regla","Si no se amplía la prueba del sumario, ¿a quién y por qué vía eleva el superior las actuaciones?","Al <strong>Jefe de Policía</strong>, por <strong>vía jerárquica</strong>.");
+add(71,"Dato","¿Qué contiene el informe del superior que acompaña la elevación del sumario al Jefe de Policía?","La <strong>apreciación de las constancias</strong>, el <strong>encuadre del hecho</strong> y la <strong>resolución que a su juicio corresponda</strong>.");
 // Art. 72
-add(72,"Regla","Producida la ampliación de la investigación, ¿qué debe hacerse?","Correr <strong>nueva vista</strong> al causante y su defensor, en el modo y plazo del <strong>Art. 59</strong>.");
+add(72,"Regla","Producida una ampliación de la investigación del sumario, ¿qué debe hacerse?","Correr <strong>nueva vista</strong> al causante y su defensor, en el modo y plazo del <strong>Art. 59</strong>.");
 // CAPÍTULO 11 — De la resolución del sumario
 // Art. 73
 add(73,"Dato","¿De qué cuatro formas pueden concluir el sumario y la información?","<ul><li><strong>Sobreseimiento</strong></li><li><strong>Sanción disciplinaria</strong></li><li><strong>Declaración</strong> del hecho, accidente, enfermedad o fallecimiento, relacionado o no con el servicio</li><li>Declaración sobre la <strong>aptitud física o mental</strong> y la permanencia en la Institución</li></ul>");
@@ -382,13 +382,13 @@ add(81,"Dato","Si el instructor de la información puede resolver, ¿en qué pla
 // Art. 82
 add(82,"Regla","Si la información debe elevarse al superior que resuelve, ¿qué debe indicar?","Las <strong>conclusiones</strong> y la <strong>decisión que se estime procedente</strong>.");
 // Art. 83
-add(83,"Regla","Si al finalizar la información se comprueba una causal del Art. 2, ¿qué se hace con lo actuado?","Se dispone el <strong>sumario</strong> y lo actuado se agrega <strong>como cabeza</strong> de aquél.");
+add(83,"Regla","Si al finalizar una información sumaria se comprueba una causal que exige sumario, ¿qué se hace con lo actuado?","Se dispone el <strong>sumario</strong> y lo actuado se agrega <strong>como cabeza</strong> de aquél.");
 // Art. 84
 add(84,"Regla","¿Quiénes resuelven las informaciones por motivos de salud?","El <strong>Subjefe de Policía</strong> y el <strong>Jefe de la Unidad Regional</strong>.");
-add(84,"Dato","¿En qué plazo se resuelven esas informaciones y desde cuándo corre?","<strong>10 días</strong> (Art. 81), desde que el expediente <strong>llega a despacho</strong>.");
+add(84,"Dato","¿En qué plazo se resuelven las informaciones por motivos de salud y desde cuándo corre?","<strong>10 días</strong> (Art. 81), desde que el expediente <strong>llega a despacho</strong>.");
 // CAPÍTULO 13 — De las actuaciones sumarísimas (texto según Decreto 687/2018)
 // Art. 85
-add(85,"Regla","Ante una falta gravísima (Art. 3), ¿quién dispone las actuaciones sumarísimas?","El <strong>Comando Superior</strong>.");
+add(85,"Regla","Ante una falta gravísima, ¿quién dispone las actuaciones sumarísimas y designa al instructor?","El <strong>Comando Superior</strong>.");
 add(85,"Dato","¿Quién es el instructor en las actuaciones sumarísimas?","Un <strong>abogado del Agrupamiento Profesional, Escalafón Jurídico</strong>.");
 add(85,"Regla","¿Según qué norma designa secretario el instructor de la actuación sumarísima?","Según el <strong>Art. 13</strong> (Oficial, en lo posible de grado igual o superior a las partes).");
 // Art. 86
@@ -397,7 +397,7 @@ add(86,"Facultad","¿Quién designa a los miembros del Tribunal de Disciplina y 
 // Art. 87
 add(87,"Dato","Actuación sumarísima: ¿en qué plazo notifica el instructor al imputado?","Dentro de las <strong>48 horas</strong> de hacerse cargo.");
 add(87,"Regla","¿Qué debe constituir el imputado en la actuación sumarísima?","<strong>Domicilio legal</strong>.");
-add(87,"Regla","¿Qué defensa puede designar el imputado y qué pasa si no lo hace en término?","Un <strong>defensor particular a su costa</strong>; vencido el plazo, se le designa un <strong>letrado de oficio</strong> de la Institución.");
+add(87,"Regla","Actuación sumarísima: ¿qué defensa puede designar el imputado y qué pasa si no lo hace en término?","Un <strong>defensor particular a su costa</strong>; vencido el plazo, se le designa un <strong>letrado de oficio</strong> de la Institución.");
 add(87,"Distinción","Defensor en sumario vs. en actuación sumarísima: ¿quién lo es?","Sumario: un <strong>Oficial</strong> de la Policía (Art. 15).<br>Sumarísima: <strong>abogado particular</strong> a costa del imputado o <strong>letrado de oficio</strong> de la Institución (Art. 87).");
 // Art. 88
 add(88,"Regla","Actuación sumarísima: ¿qué plazos de instrucción rigen?","Los del <strong>Art. 67</strong> (60 días, prorrogables).");
@@ -407,77 +407,77 @@ add(89,"Regla","¿Qué normas rigen la recusación y excusación del instructor 
 add(89,"Facultad","¿En qué supuestos pueden excusarse el instructor y los miembros del Tribunal de Disciplina?","En los del <strong>Art. 29</strong>.");
 // Art. 90
 add(90,"Dato","Actuación sumarísima: ¿en qué plazo comparecen a tomar vista y en qué plazo se presenta la defensa?","Vista: <strong>5 días</strong>.<br>Defensa por escrito: <strong>10 días</strong>.");
-add(90,"Facultad","Al tomar vista en la sumarísima, ¿qué más puede pedir la defensa?","Las <strong>medidas probatorias</strong> que estime corresponder.");
-add(90,"Regla","Si el representante legal no comparece sin causa justificada, ¿qué se hace?","Se <strong>notifica al imputado</strong>, se designa <strong>letrado de oficio</strong> de la Institución y se corre <strong>nuevo traslado</strong>.");
+add(90,"Facultad","Actuación sumarísima: al tomar vista, ¿qué más puede pedir la defensa?","Las <strong>medidas probatorias</strong> que estime corresponder.");
+add(90,"Regla","Actuación sumarísima: si el representante legal no comparece a tomar vista sin causa justificada, ¿qué se hace?","Se <strong>notifica al imputado</strong>, se designa <strong>letrado de oficio</strong> de la Institución y se corre <strong>nuevo traslado</strong>.");
 add(90,"Distinción","Vista y defensa: sumario vs. actuación sumarísima.","Sumario: vista <strong>48 h</strong>, defensa <strong>3 días</strong> (Art. 59).<br>Sumarísima: vista <strong>5 días</strong>, defensa <strong>10 días</strong> (Art. 90).");
 // Art. 91
-add(91,"Regla","¿Qué debe hacer la Instrucción con las medidas probatorias pedidas por el acusado?","<strong>Analizarlas en todos los casos</strong>.");
+add(91,"Regla","Actuación sumarísima: ¿qué debe hacer la Instrucción con las medidas probatorias pedidas por el acusado?","<strong>Analizarlas en todos los casos</strong>.");
 add(91,"Excepción","¿Cuándo puede negarse la prueba en la sumarísima y qué debe hacer el instructor?","Si es <strong>improcedente, sobreabundante o dilatoria</strong>; debe <strong>fundamentar la negativa</strong> y <strong>notificar</strong> a las partes.");
 // Art. 92
 add(92,"Regla","Concluida la instrucción sumarísima, ¿qué emite el instructor y a quién eleva?","Un <strong>juicio concreto</strong> con valoración de los hechos; eleva al <strong>Tribunal de Disciplina</strong>.");
-add(92,"Regla","¿Qué controla el Tribunal de Disciplina y con intervención de quién?","Que se hayan cumplido los <strong>requisitos administrativos formales</strong>, con intervención de la <strong>Asesoría Letrada General</strong>.");
-add(92,"Dato","¿Con cuánta antelación se notifica la audiencia de juicio al imputado y defensor?","<strong>5 días</strong>.");
+add(92,"Regla","Actuación sumarísima: ¿qué controla el Tribunal de Disciplina al recibir las actuaciones y con intervención de quién?","Que se hayan cumplido los <strong>requisitos administrativos formales</strong>, con intervención de la <strong>Asesoría Letrada General</strong>.");
+add(92,"Dato","Actuación sumarísima: ¿con cuánta antelación se notifica la audiencia de juicio al imputado y defensor?","<strong>5 días</strong>.");
 // Art. 93
-add(93,"Regla","En el debate, ¿cómo presenta el causante su descargo y qué más debe hacer?","<strong>Verbalmente o por escrito</strong>, e <strong>individualizar las diligencias</strong> que comprueben sus dichos.");
-add(93,"Regla","¿Qué efecto tiene que el causante no responda las explicaciones que pide el Tribunal?","<strong>Ninguna presunción en su contra</strong>.");
+add(93,"Regla","En el debate ante el Tribunal de Disciplina, ¿cómo presenta el causante su descargo y qué más debe hacer?","<strong>Verbalmente o por escrito</strong>, e <strong>individualizar las diligencias</strong> que comprueben sus dichos.");
+add(93,"Regla","¿Qué efecto tiene que el causante no responda las explicaciones que pide el Tribunal de Disciplina?","<strong>Ninguna presunción en su contra</strong>.");
 // Art. 94
-add(94,"Facultad","¿Qué puede ordenar el Tribunal y por cuánto puede suspender el debate?","<strong>Diligencias para mejor proveer</strong>; suspensión de hasta <strong>10 días hábiles</strong>.");
+add(94,"Facultad","¿Qué puede ordenar el Tribunal de Disciplina y por cuánto puede suspender el debate?","<strong>Diligencias para mejor proveer</strong>; suspensión de hasta <strong>10 días hábiles</strong>.");
 // Art. 95
 add(95,"Regla","¿Cómo adopta sus conclusiones el Tribunal de Disciplina?","Por <strong>unanimidad o mayoría de votos</strong>, según la valoración de cada integrante.");
-add(95,"Dato","¿Qué debe constar en el acta del Tribunal?","<strong>Resultado de la votación</strong>, <strong>hechos probados</strong>, <strong>encuadre jurídico</strong> y <strong>resolución</strong>.");
-add(95,"Dato","¿Qué norma confiere las facultades disciplinarias que aplica el Tribunal?","El <strong>Art. 54 de la Ley 5184</strong>.");
-add(95,"Excepción","Si corresponde una medida expulsiva a Personal Superior, ¿qué hace el Tribunal?","<strong>Eleva la propuesta</strong> al <strong>Ministerio de Seguridad y Justicia o al Poder Ejecutivo</strong>, por intermedio del <strong>Comando Superior</strong>.");
+add(95,"Dato","¿Qué debe constar en el acta del Tribunal de Disciplina?","<strong>Resultado de la votación</strong>, <strong>hechos probados</strong>, <strong>encuadre jurídico</strong> y <strong>resolución</strong>.");
+add(95,"Dato","¿Qué norma confiere las facultades disciplinarias que aplica el Tribunal de Disciplina?","El <strong>Art. 54 de la Ley 5184</strong>.");
+add(95,"Excepción","Si el Tribunal de Disciplina considera que corresponde una medida expulsiva a Personal Superior, ¿qué hace?","<strong>Eleva la propuesta</strong> al <strong>Ministerio de Seguridad y Justicia o al Poder Ejecutivo</strong>, por intermedio del <strong>Comando Superior</strong>.");
 // Art. 96
 add(96,"Dato","¿Ante quién y en qué plazo se apela la resolución del Tribunal de Disciplina?","Ante el <strong>Jefe de Policía</strong>, en <strong>10 días</strong> desde la notificación.");
-add(96,"Regla","¿Qué efecto tiene la resolución del Jefe de Policía en la sumarísima?","<strong>Agota la vía administrativa</strong>.");
-add(96,"Excepción","¿Cuándo puede recurrirse igual ante el organismo superior?","En los supuestos del <strong>Art. 104</strong> (expulsión o inhabilidad para el ascenso).");
+add(96,"Regla","Actuación sumarísima: ¿qué efecto tiene la resolución del Jefe de Policía que resuelve la apelación?","<strong>Agota la vía administrativa</strong>.");
+add(96,"Excepción","Actuación sumarísima: aunque la resolución del Jefe de Policía agote la vía, ¿cuándo puede recurrirse ante el organismo superior?","En los supuestos del <strong>Art. 104</strong> (expulsión o inhabilidad para el ascenso).");
 add(96,"Regla","Sanciones aplicadas por el Ministerio de Seguridad y Justicia: ¿ante quién se recurren y qué agota la vía?","Ante el <strong>Poder Ejecutivo</strong> (supuestos del Art. 104); el <strong>Decreto</strong> agota la vía administrativa.");
 // CAPÍTULO 14 — De los recursos
 // Art. 97
 add(97,"Dato","¿En qué plazo y ante quién se interpone el recurso de reconsideración?","<strong>3 días</strong> desde la notificación, ante la <strong>autoridad que tomó la decisión</strong>.");
 add(97,"Regla","¿Quiénes pueden interponer la reconsideración y contra qué?","El <strong>interesado o su defensor</strong>, contra una <strong>sanción disciplinaria</strong> o la resolución de sumario, información o sumarísima.");
 // Art. 98
-add(98,"Dato","¿Qué requisitos de forma tiene el recurso?","<strong>Por escrito</strong>, <strong>debidamente fundado</strong> y con la petición en <strong>términos claros y concretos</strong>.");
+add(98,"Dato","¿Qué requisitos de forma tiene el recurso de reconsideración?","<strong>Por escrito</strong>, <strong>debidamente fundado</strong> y con la petición en <strong>términos claros y concretos</strong>.");
 // Art. 99
 add(99,"Regla","Si la decisión recurrida se dictó por Decreto del Poder Ejecutivo, ¿qué efecto tiene la resolución de la reconsideración?","<strong>Agota la vía administrativa</strong>.");
 // Art. 100
 add(100,"Regla","¿Qué efecto tiene la resolución de la reconsideración contra una decisión del Jefe de Policía?","<strong>Agota la instancia administrativa</strong>, salvo el supuesto del <strong>Art. 104</strong>.");
 // Art. 101
-add(101,"Regla","¿Qué resoluciones son apelables según el Art. 101?","<strong>Todas</strong>, salvo los supuestos de los <strong>Arts. 99 y 100</strong>.");
+add(101,"Regla","Como regla, ¿qué resoluciones son apelables?","<strong>Todas</strong>, salvo las que agotan la vía: reconsideración de decisiones dictadas por <strong>Decreto del Poder Ejecutivo</strong> o por el <strong>Jefe de Policía</strong>.");
 // Art. 102
-add(102,"Condición","¿Qué se requiere para que proceda la apelación, además de los requisitos formales?","Haber interpuesto <strong>reconsideración</strong> y que haya sido <strong>resuelta desfavorablemente</strong>.");
+add(102,"Condición","¿Qué se requiere para que proceda la apelación, además de los requisitos formales del recurso?","Haber interpuesto <strong>reconsideración</strong> y que haya sido <strong>resuelta desfavorablemente</strong>.");
 // Art. 103
 add(103,"Regla","¿Qué efecto tiene la resolución del recurso de apelación?","<strong>Concluye la instancia administrativa</strong>.");
-add(103,"Excepción","En el supuesto del Art. 104, ¿hasta dónde pueden seguir interponiéndose recursos?","Sucesivamente por <strong>vía jerárquica</strong> hasta el <strong>Jefe de Policía</strong>.");
+add(103,"Excepción","Si la resolución implica expulsión o inhabilidad para el ascenso, ¿hasta dónde pueden seguir interponiéndose recursos tras la apelación?","Sucesivamente por <strong>vía jerárquica</strong> hasta el <strong>Jefe de Policía</strong>.");
 // Art. 104
 add(104,"Condición","¿Qué resoluciones del Comando Superior son recurribles ante el Poder Ejecutivo?","Las que <strong>por sí mismas</strong> impliquen la <strong>expulsión</strong> del agente o su inclusión en <strong>causal de inhabilidad para el ascenso</strong>.");
 // Art. 105
 add(105,"Regla","Recurso ante el Poder Ejecutivo: ¿qué debe hacer el recurrente?","Limitarse a la <strong>mera interposición</strong> del recurso.");
-add(105,"Dato","¿Qué hace la Jefatura con ese recurso, por qué vía y en qué plazo?","Lo <strong>eleva al Poder Ejecutivo</strong> con los antecedentes, vía <strong>Ministerio de Gobierno</strong>, en <strong>10 días</strong>.");
+add(105,"Dato","Recurso ante el Poder Ejecutivo: ¿qué hace la Jefatura con él, por qué vía y en qué plazo?","Lo <strong>eleva al Poder Ejecutivo</strong> con los antecedentes, vía <strong>Ministerio de Gobierno</strong>, en <strong>10 días</strong>.");
 // Art. 106
-add(106,"Dato","Recibido el recurso, ¿en qué plazo da vista el Ministerio y cuánto tiene el interesado para expresar agravios?","Vista dentro de <strong>5 días</strong>; agravios en <strong>igual término (5 días)</strong>.");
-add(106,"Regla","Si el interesado no contesta el traslado en término, ¿qué consecuencia tiene?","Se considera <strong>desistido el recurso</strong> y <strong>consentida la resolución</strong>.");
+add(106,"Dato","Recurso ante el Poder Ejecutivo: recibido por el Ministerio, ¿en qué plazo da vista y cuánto tiene el interesado para expresar agravios?","Vista dentro de <strong>5 días</strong>; agravios en <strong>igual término (5 días)</strong>.");
+add(106,"Regla","Recurso ante el Poder Ejecutivo: si el interesado no contesta el traslado en término, ¿qué consecuencia tiene?","Se considera <strong>desistido el recurso</strong> y <strong>consentida la resolución</strong>.");
 // Art. 107
-add(107,"Facultad","Si la prueba no alcanza para decidir, ¿qué puede ordenar el Ministerio y en qué plazo?","La <strong>presentación de prueba</strong>, a pedido de parte o de oficio, en los <strong>10 días</strong> posteriores al escrito de agravios.");
+add(107,"Facultad","Recurso ante el Poder Ejecutivo: si la prueba no alcanza para decidir, ¿qué puede ordenar el Ministerio y en qué plazo?","La <strong>presentación de prueba</strong>, a pedido de parte o de oficio, en los <strong>10 días</strong> posteriores al escrito de agravios.");
 // Art. 108
-add(108,"Dato","Si se produjo prueba, ¿qué vista se da al interesado y qué informe se pide después?","Nueva vista por <strong>3 días</strong> para la defensa; luego <strong>informe a la Jefatura</strong> en otros <strong>3 días</strong>.");
+add(108,"Dato","Recurso ante el Poder Ejecutivo: si se produjo prueba, ¿qué vista se da al interesado y qué informe se pide después?","Nueva vista por <strong>3 días</strong> para la defensa; luego <strong>informe a la Jefatura</strong> en otros <strong>3 días</strong>.");
 // Art. 109
-add(109,"Dato","Terminadas esas diligencias, ¿a quién pasa el expediente y en qué plazo dictamina?","A <strong>Fiscalía de Estado</strong>, que dictamina en <strong>5 días</strong>.");
+add(109,"Dato","Recurso ante el Poder Ejecutivo: tras la prueba y el informe de Jefatura, ¿a quién pasa el expediente y en qué plazo dictamina?","A <strong>Fiscalía de Estado</strong>, que dictamina en <strong>5 días</strong>.");
 // Art. 110
-add(110,"Regla","¿Cuándo se entiende que el expediente está en estado de resolver?","Producido el <strong>dictamen del Fiscal de Estado</strong> o <strong>vencido el plazo</strong> para emitirlo.");
-add(110,"Regla","¿Quién dicta la decisión definitiva, por qué acto y qué vía queda abierta?","El <strong>Poder Ejecutivo</strong>, por <strong>Decreto</strong>; queda abierta la vía <strong>contencioso-administrativa</strong>.");
+add(110,"Regla","Recurso ante el Poder Ejecutivo: ¿cuándo se entiende que el expediente está en estado de resolver?","Producido el <strong>dictamen del Fiscal de Estado</strong> o <strong>vencido el plazo</strong> para emitirlo.");
+add(110,"Regla","Recurso ante el Poder Ejecutivo: ¿quién dicta la decisión definitiva, por qué acto y qué vía queda abierta?","El <strong>Poder Ejecutivo</strong>, por <strong>Decreto</strong>; queda abierta la vía <strong>contencioso-administrativa</strong>.");
 // Art. 111
-add(111,"Regla","¿Qué otra situación también deja preparada la vía contencioso-administrativa?","La <strong>denegación tácita</strong> del derecho por parte del Poder Ejecutivo.");
+add(111,"Regla","Además del Decreto definitivo, ¿qué otra situación deja preparada la vía contencioso-administrativa?","La <strong>denegación tácita</strong> del derecho por parte del Poder Ejecutivo.");
 // Art. 112
-add(112,"Dato","¿Cuándo existe denegación tácita o retraso?","Cuando pasan <strong>30 días</strong> desde que el expediente está en estado de resolver, <strong>sin resolución</strong>.");
+add(112,"Dato","¿Cuándo existe denegación tácita o retraso del Poder Ejecutivo al resolver un recurso?","Cuando pasan <strong>30 días</strong> desde que el expediente está en estado de resolver, <strong>sin resolución</strong>.");
 // Art. 113
 add(113,"Dato","Recurso directo de apelación por circunstancias del Art. 65 de la Ley 679: ¿en qué plazo procede?","En los <strong>10 días</strong> posteriores a ocurrida la circunstancia.");
 add(113,"Dato","Recurso directo por falta de resolución de una reconsideración o apelación: ¿en qué plazo procede?","Dentro de los <strong>5 días</strong> de vencidos los términos para resolver.");
-add(113,"Condición","¿Ante quién procede el recurso directo de apelación y en qué tercer supuesto?","Ante el <strong>Superior</strong>; también cuando, reconsiderada la medida, <strong>no satisface la pretensión</strong> del causante.");
+add(113,"Condición","¿Ante quién procede el recurso directo de apelación y qué supuesto tiene relacionado con la reconsideración?","Ante el <strong>Superior</strong>; también cuando, reconsiderada la medida, <strong>no satisface la pretensión</strong> del causante.");
 // Art. 114
 add(114,"Dato","¿Qué efectos tiene la resolución favorable de un recurso?","<ul><li><strong>Interrumpe el cumplimiento</strong> de la medida</li><li>Se <strong>registra en el legajo</strong></li><li>Si es posible, se <strong>resarcen los efectos</strong> ya ejecutados</li></ul>");
 // Art. 115
-add(115,"Regla","¿Qué decisiones son apelables según el Art. 115?","Sólo aquellas para las que se <strong>contempló expresamente recurso</strong>.");
+add(115,"Regla","Según la regla de recurribilidad expresa, ¿qué decisiones son apelables?","Sólo aquellas para las que se <strong>contempló expresamente recurso</strong>.");
 add(115,"Regla","¿Qué efecto tienen las resoluciones no recurribles?","<strong>Cierran el recurso jerárquico</strong>.");
 // Art. 116
 add(116,"Dato","Sin término expreso, ¿en qué plazo se interponen los recursos?","<strong>3 días</strong>.");
@@ -491,11 +491,11 @@ add(118,"Regla","¿Quién resuelve la suspensión preventiva y en qué actuacion
 add(118,"Regla","¿Por qué vía puede pedirse y notificarse, y cuánto dura la suspensión preventiva?","Por <strong>vía radial</strong>; dura <strong>mientras dure la investigación</strong> administrativa.");
 // Art. 119
 add(119,"Condición","Actuaciones por abandono del servicio: ¿qué medida debe pedirse y hasta cuándo?","La <strong>retención inmediata de haberes</strong>, mientras el causante <strong>no se restituya</strong> al servicio.");
-add(119,"Condición","En actuaciones por salud, ¿cuándo también debe pedirse la retención de haberes?","Si el agente <strong>no se aviene a prestar servicio</strong> pese a haber sido <strong>declarado apto</strong>.");
+add(119,"Condición","En actuaciones por la salud del agente, ¿cuándo también debe pedirse la retención de haberes?","Si el agente <strong>no se aviene a prestar servicio</strong> pese a haber sido <strong>declarado apto</strong>.");
 add(119,"Regla","¿Quiénes deben solicitar la retención de haberes y a quién?","El <strong>Oficial que ordenó las actuaciones</strong> o el <strong>instructor</strong>, a la <strong>Jefatura</strong>.");
 // CAPÍTULO 16 — De los términos
 // Art. 120
-add(120,"Regla","¿Desde cuándo se cuentan los términos?","Desde la <strong>notificación</strong> o, en su caso, desde que la <strong>documentación está en poder</strong> de quien debe actuar.");
+add(120,"Regla","En el RENSA, ¿desde cuándo se cuentan los términos?","Desde la <strong>notificación</strong> o, en su caso, desde que la <strong>documentación está en poder</strong> de quien debe actuar.");
 // Art. 121
 add(121,"Distinción","¿Cuándo se producen notificaciones y elevaciones según la localidad de las partes?","Misma localidad: <strong>el mismo día</strong>.<br>Distinta localidad: dentro de las <strong>72 horas</strong>.");
 // Art. 122
@@ -507,7 +507,7 @@ add(123,"Excepción","Si no se consignó la hora de notificación, ¿desde cuán
 // CAPÍTULO 17 — Generalidades
 // Art. 124
 add(124,"Regla","¿Qué carácter tienen las constancias sumariales y quiénes pueden conocerlas?","Carácter <strong>reservado</strong>; sólo las <strong>partes</strong>, en el momento <strong>autorizado para tomar vista</strong>.");
-add(124,"Regla","Si los superiores del instructor solicitan las actuaciones, ¿qué efecto tiene?","Se entiende que <strong>se abocan a la investigación</strong> y el instructor queda <strong>desligado</strong>; se notifica al causante.");
+add(124,"Regla","Si los superiores del instructor solicitan las actuaciones del sumario, ¿qué efecto tiene?","Se entiende que <strong>se abocan a la investigación</strong> y el instructor queda <strong>desligado</strong>; se notifica al causante.");
 // Art. 125
 add(125,"Regla","¿Quiénes son responsables de omisiones o negligencias en un sumario?","<strong>Todos los que intervienen</strong> en su diligenciamiento o examen.");
 add(125,"Regla","¿Qué debe hacer todo superior ante deficiencias del sumario?","Disponer que se <strong>subsanen</strong>.");
@@ -516,7 +516,7 @@ add(126,"Regla","¿Quién dictamina antes de que resuelvan el Jefe de Policía, 
 add(126,"Dato","¿Qué plazo tiene el Asesor Letrado para dictaminar y qué efecto tiene sobre el plazo para resolver?","<strong>3 días</strong>; durante ese tiempo se <strong>interrumpe</strong> el plazo para resolver.");
 add(126,"Dato","¿Sobre qué opina el Asesor Letrado en su dictamen?","Sobre el <strong>mérito de las diligencias</strong> y <strong>aconseja la determinación</strong> a adoptar.");
 // Art. 127
-add(127,"Regla","Si al finalizar se comprueba prima facie un delito, ¿qué debe hacerse?","Dar <strong>intervención al Juez</strong> y adoptar las medidas del <strong>Código de Procedimientos en lo Penal</strong>.");
+add(127,"Regla","Si al finalizar un sumario o información se comprueba prima facie un delito, ¿qué debe hacerse?","Dar <strong>intervención al Juez</strong> y adoptar las medidas del <strong>Código de Procedimientos en lo Penal</strong>.");
 // Art. 128
 add(128,"Regla","¿Con qué efecto se conceden los recursos administrativos?","Con <strong>efecto devolutivo</strong>.");
 add(128,"Excepción","¿Cuándo puede no aplicarse el efecto devolutivo?","Cuando exista <strong>disposición expresa en contrario debidamente fundada</strong>.");

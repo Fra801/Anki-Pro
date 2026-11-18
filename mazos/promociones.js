@@ -47,7 +47,7 @@ add(5,"Distinción","Mérito Extraordinario vs. Post Mortem: ¿qué los diferenc
 // Art. 6
 add(6,"Regla","¿Quién promueve el trámite de un ascenso extraordinario?","El <strong>Jefe inmediato</strong> del agente interviniente.");
 add(6,"Dato","¿Qué actuación promueve el Jefe inmediato para tramitar un ascenso extraordinario?","<strong>Información sumaria</strong> y/o <strong>sumario administrativo</strong>, según corresponda.");
-add(6,"Regla","¿Por qué vía y a qué organismo se eleva esa actuación?","Por <strong>vía jerárquica</strong> a la <strong>Dirección de Personal – División Calificaciones y Promociones</strong>.");
+add(6,"Regla","Ascenso extraordinario: ¿por qué vía y a qué organismo se eleva la información sumaria o sumario que promueve el Jefe inmediato?","Por <strong>vía jerárquica</strong> a la <strong>Dirección de Personal – División Calificaciones y Promociones</strong>.");
 add(6,"Regla","¿Quién considera el expediente de ascenso extraordinario antes de la resolución?","Las <strong>Juntas de Calificaciones</strong> respectivas.");
 add(6,"Regla","Con las conclusiones de las Juntas, ¿quién resuelve el ascenso extraordinario?","El <strong>Jefe de Policía</strong>.");
 add(6,"Dato","Ordená el trámite del ascenso extraordinario, de principio a fin.","1) Jefe inmediato promueve información sumaria / sumario.<br>2) Elevación por vía jerárquica a Dirección de Personal – Div. Calificaciones y Promociones.<br>3) Consideración de las Juntas de Calificaciones.<br>4) Resuelve el Jefe de Policía.");
@@ -55,7 +55,7 @@ add(6,"Dato","Ordená el trámite del ascenso extraordinario, de principio a fin
 add(7,"Regla","¿Quién concede los ascensos extraordinarios?","El <strong>Poder Ejecutivo Provincial</strong> o el <strong>Jefe de Policía</strong>, según el <strong>grado del promovido</strong>, con las mismas formas que los ascensos ordinarios.");
 add(7,"Excepción","¿Qué incidencia tiene la falta de vacantes en los ascensos extraordinarios?","Ninguna: estos ascensos <strong>no pueden limitarse por la inexistencia de vacantes</strong>.");
 // Art. 8 — Inhabilidades
-add(8,"Condición","¿Qué condición general, además de las situaciones enumeradas, inhabilita para el ascenso?","<strong>No revistar en servicio efectivo</strong>.");
+add(8,"Condición","Además de las situaciones enumeradas (licencias, sanciones, sumarios, etc.), ¿qué condición general inhabilita para el ascenso?","<strong>No revistar en servicio efectivo</strong>.");
 add(8,"Dato","¿Cómo se computa la antigüedad mínima en el grado para el ascenso?","Desde la <strong>fecha de vigencia del último ascenso</strong> al <strong>31 de diciembre del año en curso</strong>, conforme la Ley del Personal Policial.","a");
 add(8,"Regla","¿Qué regla general rige para el tiempo en Situación Pasiva a los fines del ascenso?","<strong>No se computa</strong> para el ascenso, salvo excepciones.","a");
 add(8,"Excepción","¿En qué casos sí se computa el tiempo en Situación Pasiva para el ascenso?","<ul><li>Si estuvo <strong>procesado</strong> y luego obtuvo <strong>sobreseimiento definitivo o absolución</strong>.</li><li>Por <strong>razones de salud originadas o derivadas del servicio</strong>.</li></ul>","a");
@@ -79,16 +79,16 @@ add(8,"Caso","Siete días de suspensión de empleo: ¿qué efecto tienen en un s
 add(8,"Caso","Veinticinco días de arresto: ¿qué efecto tienen en un oficial superior y en un subalterno?","Superior: <strong>lo inhabilitan</strong> (más de 20).<br>Subalterno: <strong>no lo inhabilitan</strong> (se exige más de 30).","f");
 add(8,"Caso","Un Sargento obtuvo calificación promedio “Bueno”. ¿Qué calificación necesitaba para no quedar inhabilitado?","<strong>“Excepcional” o “Muy Bueno”</strong>.","j");
 // Art. 9
-add(9,"Regla","¿Sobre qué período se toman las inhabilidades por licencias, sanciones, sumarios y salud?","Sobre el <strong>período calificativo</strong> del Reglamento del Régimen de Calificaciones Policiales.");
-add(9,"Regla","¿Sobre qué lapso se toman las restantes inhabilidades del Art. 8?","Sobre el lapso transcurrido <strong>desde el último ascenso</strong>.");
+add(9,"Regla","Inhabilidades para el ascenso por licencias, sanciones, sumarios y salud: ¿sobre qué período se analizan?","Sobre el <strong>período calificativo</strong> del Reglamento del Régimen de Calificaciones Policiales.");
+add(9,"Regla","Las inhabilidades para el ascenso distintas de licencias, sanciones, sumarios y salud: ¿sobre qué lapso se analizan?","Sobre el lapso transcurrido <strong>desde el último ascenso</strong>.");
 // Art. 10
-add(10,"Regla","¿Cómo se notifican las situaciones de inhabilidad?","En las <strong>listas de postergados</strong> de su <strong>grado, agrupamiento y escalafón</strong>.");
-add(10,"Dato","¿Con cuánta anticipación se notifican las inhabilidades y respecto de qué acto?","<strong>20 días corridos</strong> antes de la <strong>constitución de las Juntas de Calificación</strong>.");
+add(10,"Regla","¿Cómo se notifican a los agentes las situaciones de inhabilidad para el ascenso?","En las <strong>listas de postergados</strong> de su <strong>grado, agrupamiento y escalafón</strong>.");
+add(10,"Dato","¿Con cuánta anticipación se notifican las inhabilidades para el ascenso y respecto de qué acto?","<strong>20 días corridos</strong> antes de la <strong>constitución de las Juntas de Calificación</strong>.");
 // Art. 11
-add(11,"Dato","¿Qué plazo tiene para reclamar quien se crea erróneamente inhabilitado?","<strong>48 horas</strong> desde la notificación.");
+add(11,"Dato","¿Qué plazo tiene para reclamar quien se crea erróneamente inhabilitado para el ascenso?","<strong>48 horas</strong> desde la notificación.");
 add(11,"Regla","¿Ante quién y por qué vía se eleva el reclamo por inhabilidad errónea?","Ante el <strong>Subjefe de Policía</strong>, por <strong>vía jerárquica</strong>.");
-add(11,"Dato","¿En qué plazo se resuelve el reclamo y con qué carácter?","En <strong>72 horas</strong>, con <strong>resolución definitiva</strong>.");
-add(11,"Regla","Resuelto el reclamo a favor del agente, ¿qué se hace?","Se efectúan las <strong>correcciones</strong> en las listas de <strong>personal postergado</strong>.");
+add(11,"Dato","¿En qué plazo se resuelve el reclamo por inhabilidad errónea para el ascenso y con qué carácter?","En <strong>72 horas</strong>, con <strong>resolución definitiva</strong>.");
+add(11,"Regla","Resuelto a favor del agente el reclamo por inhabilidad errónea, ¿qué se hace?","Se efectúan las <strong>correcciones</strong> en las listas de <strong>personal postergado</strong>.");
 // Art. 12 — Promociones
 add(12,"Condición","¿Cuándo se ordena por antigüedad al personal Apto para el Ascenso?","Una vez <strong>resueltos los recursos del Art. 22 del Reglamento de las Juntas de Calificaciones</strong>.");
 add(12,"Regla","¿Quién ordena por antigüedad a los Aptos para el Ascenso?","La <strong>Dirección de Personal – División Calificaciones y Promociones</strong>.");
@@ -96,25 +96,25 @@ add(12,"Regla","¿Quién ordena por antigüedad a los Aptos para el Ascenso?","L
 add(13,"Regla","¿Qué es el orden por antigüedad calificada?","El que tiene el personal declarado <strong>Apto para el Ascenso</strong> por aplicación del <strong>Art. 23 de la Ley 679</strong>.");
 // Art. 14
 add(14,"Regla","¿Quién selecciona a los agentes para proponer el ascenso del personal superior y promover al subalterno?","La <strong>Jefatura de Policía</strong>.");
-add(14,"Regla","¿En qué proporciones y de qué lista selecciona la Jefatura?","En las proporciones del <strong>Art. 99 de la Ley 679</strong> para cada grado, entre los agentes de la <strong>lista de orden de mérito</strong> del grado.");
-add(14,"Regla","¿Cómo se cubren las vacantes restantes?","Con quienes queden en los <strong>primeros lugares de la lista de antigüedad calificada</strong> de esos mismos agentes.");
-add(14,"Distinción","Según el Art. 14, ¿qué se hace con el personal superior y qué con el subalterno?","Para el <strong>superior</strong> se efectúa la <strong>propuesta</strong> de ascenso; al <strong>subalterno</strong> se lo <strong>promueve</strong>.");
+add(14,"Regla","Para los ascensos, ¿en qué proporciones y de qué lista selecciona la Jefatura de Policía a los agentes?","En las proporciones del <strong>Art. 99 de la Ley 679</strong> para cada grado, entre los agentes de la <strong>lista de orden de mérito</strong> del grado.");
+add(14,"Regla","Cubiertas las vacantes con la lista de orden de mérito, ¿cómo se cubren las vacantes restantes?","Con quienes queden en los <strong>primeros lugares de la lista de antigüedad calificada</strong> de esos mismos agentes.");
+add(14,"Distinción","En la selección para ascensos, ¿qué se hace con el personal superior y qué con el subalterno?","Para el <strong>superior</strong> se efectúa la <strong>propuesta</strong> de ascenso; al <strong>subalterno</strong> se lo <strong>promueve</strong>.");
 // Art. 15
 add(15,"Condición","¿A qué personal se aplica el reparto 50 % / 50 % de vacantes?","A <strong>Comisarios y Oficiales Superiores</strong>.");
-add(15,"Dato","¿Cómo se cubre el primer 50 % de las vacantes del grado inmediato superior?","Con los <strong>primeros lugares de la lista de orden de mérito</strong> confeccionada por la <strong>Junta de Calificaciones</strong>.");
-add(15,"Dato","¿Cómo se cubre el 50 % restante de las vacantes?","Por <strong>selección de la Jefatura de Policía</strong> entre los declarados <strong>“Aptos para el Ascenso”</strong>.");
+add(15,"Dato","Comisarios y Oficiales Superiores: ¿cómo se cubre el primer 50 % de las vacantes del grado inmediato superior?","Con los <strong>primeros lugares de la lista de orden de mérito</strong> confeccionada por la <strong>Junta de Calificaciones</strong>.");
+add(15,"Dato","Comisarios y Oficiales Superiores: ¿cómo se cubre el otro 50 % de las vacantes?","Por <strong>selección de la Jefatura de Policía</strong> entre los declarados <strong>“Aptos para el Ascenso”</strong>.");
 // Art. 16
 add(16,"Prohibición","¿Qué situación posterior a ser declarado Apto impide el ascenso?","Que se le inicie <strong>sumario administrativo y/o judicial</strong> con <strong>auto de prisión preventiva o procesamiento</strong>.");
-add(16,"Regla","¿Qué circunstancias no levantan el impedimento para ascender del Art. 16?","<ul><li>Haber obtenido la <strong>excarcelación</strong>.</li><li>Que por el hecho <strong>no corresponda pena corporal</strong>.</li></ul>También impide el ascenso <strong>dejar de revistar en servicio efectivo</strong>.");
-add(16,"Dato","Si le correspondía ascender, ¿por cuánto tiempo se le reserva la vacante y desde cuándo?","Por <strong>seis meses</strong> desde la <strong>existencia de la vacante</strong>.");
-add(16,"Excepción","¿Qué límite tiene la reserva de vacante?","El <strong>31 de diciembre</strong>: la reserva no puede sobrepasar esa fecha.");
-add(16,"Regla","Si vence la reserva sin superarse el impedimento, ¿qué ocurre?","Asciende el <strong>agente subsiguiente</strong> en la lista respectiva.");
-add(16,"Caso","La vacante existe desde el 1 de septiembre. ¿Hasta cuándo se reserva?","Hasta el <strong>31 de diciembre</strong>: los seis meses no pueden sobrepasar esa fecha.");
+add(16,"Regla","Personal Apto al que luego se le dicta prisión preventiva o procesamiento en un sumario: ¿qué circunstancias no le levantan el impedimento para ascender?","<ul><li>Haber obtenido la <strong>excarcelación</strong>.</li><li>Que por el hecho <strong>no corresponda pena corporal</strong>.</li></ul>También impide el ascenso <strong>dejar de revistar en servicio efectivo</strong>.");
+add(16,"Dato","Si al personal impedido por un sumario con prisión preventiva o procesamiento le correspondía ascender, ¿por cuánto tiempo se le reserva la vacante y desde cuándo?","Por <strong>seis meses</strong> desde la <strong>existencia de la vacante</strong>.");
+add(16,"Excepción","¿Qué fecha límite tiene la reserva de vacante del personal impedido de ascender por un sumario?","El <strong>31 de diciembre</strong>: la reserva no puede sobrepasar esa fecha.");
+add(16,"Regla","Si vence la reserva de vacante sin que se supere el impedimento para ascender, ¿qué ocurre?","Asciende el <strong>agente subsiguiente</strong> en la lista respectiva.");
+add(16,"Caso","Agente impedido de ascender con reserva de vacante: si la vacante existe desde el 1 de septiembre, ¿hasta cuándo se reserva?","Hasta el <strong>31 de diciembre</strong>: los seis meses no pueden sobrepasar esa fecha.");
 // Art. 17 — Disposiciones complementarias
-add(17,"Regla","¿Qué situaciones consideran anualmente las Juntas, con las nuevas fracciones de personal?","<ul><li>Los <strong>Aptos para el Ascenso no promovidos</strong>.</li><li>Los declarados <strong>Aptos para Permanecer en el Grado</strong>.</li></ul>");
+add(17,"Regla","¿Qué situaciones consideran anualmente las Juntas de Calificaciones, con las nuevas fracciones de personal?","<ul><li>Los <strong>Aptos para el Ascenso no promovidos</strong>.</li><li>Los declarados <strong>Aptos para Permanecer en el Grado</strong>.</li></ul>");
 // Art. 18
 add(18,"Condición","¿Cuándo pasa un agente a Retiro Obligatorio por ser “Apto para Permanecer en el Grado”?","Si lo declaran así <strong>3 períodos consecutivos</strong> o <strong>5 alternados</strong> en un mismo grado.");
-add(18,"Dato","¿Qué norma prevé ese Retiro Obligatorio?","<strong>Ley 2092/86 (Ley Previsional)</strong>, Título X, Capítulo III, <strong>Art. 63, inc. d)</strong>.");
+add(18,"Dato","¿Qué norma prevé el Retiro Obligatorio de quien es declarado reiteradamente “Apto para Permanecer en el Grado”?","<strong>Ley 2092/86 (Ley Previsional)</strong>, Título X, Capítulo III, <strong>Art. 63, inc. d)</strong>.");
 add(18,"Caso","Un agente fue “Apto para Permanecer en el Grado” en 4 períodos alternados del mismo grado. ¿Cuántos más necesita para pasar a retiro obligatorio?","<strong>Uno más</strong>: se requieren <strong>5 alternados</strong> (o 3 consecutivos).");
 }
 });
