@@ -52,10 +52,15 @@ Para temas que no son normas (historia, geografía, biología, etc.) el mazo lle
 3. Agregar el archivo a la lista de `sw.js` y subir la versión de caché (`anki-pro-vN`).
 4. Sumar la fila a la tabla de mazos del `README.md`.
 5. Correr `node tools/check_mazos.js` y corregir hasta que no marque problemas.
-6. Abrir la app (por ejemplo con Playwright) y revisar una tarjeta con inciso y el desplegable.
-7. Commit y push a `main`.
+6. Regenerar los archivos para Anki: `python3 tools/export_anki.py` (requiere `pip install genanki`). Deja `anki/<id>.apkg`, que se descarga desde **Progreso → Llevar a Anki**. Hay que correrlo cada vez que se agregan o corrigen tarjetas.
+7. Abrir la app (por ejemplo con Playwright) y revisar una tarjeta con inciso y el desplegable.
+8. Commit y push a `main`.
 
 **No cambiar el `idp` ni el orden de las tarjetas de un mazo ya estudiado**: los identificadores salen del artículo y del orden dentro de él, y se perdería el progreso. Las tarjetas nuevas van al final de su artículo. Se puede reescribir el texto de una tarjeta sin perder el progreso.
+
+## Exportación a Anki
+
+`tools/dump_cards.js` vuelca las tarjetas usando la misma función del desplegable de la app (`artDetail`), y `tools/export_anki.py` arma un `.apkg` por mazo con una plantilla que copia el diseño de Anki Pro: fuentes Fraunces e Inter (incluidas en `tools/anki_fuentes/`, licencia OFL), colores en modo claro y oscuro, tarjeta con bordes redondeados y desplegable. Si se cambia el estilo de la tarjeta en `index.html`, hay que cambiarlo también en el CSS de `export_anki.py`. No cambiar `MODEL_ID` ni el campo `ID` de las notas: de ellos depende que Anki actualice las notas en vez de duplicarlas.
 
 ## Mensaje final al usuario
 

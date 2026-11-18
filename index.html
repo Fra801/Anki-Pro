@@ -416,6 +416,11 @@ function settings(d){
     <div class="muted" style="margin-top:6px">Estudiar sólo estos ${d.kind==="temas"?"temas":"artículos"} de este mazo (ninguno = todos):</div>
     <div class="chips">${d.nums.map((a,i)=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${i}">${grpLabel(d,a)}</button>`).join("")}</div>
     <div class="btns"><button class="ghost danger" id="rstd">Reiniciar este mazo</button></div>
+  </div>
+  <div class="panel"><h3>Llevar a Anki</h3>
+    <p class="muted" style="margin:0">Descargá este mazo para Anki (computadora, AnkiDroid o AnkiMobile): las tarjetas se ven con el mismo diseño, con el desplegable incluido. El progreso de cada app es independiente.</p>
+    <div class="btns"><a class="ghost" style="text-decoration:none" href="anki/${d.id}.apkg" download="${d.id}.apkg">Descargar para Anki (.apkg)</a></div>
+    <p class="sync" style="margin-top:8px">Si lo importás otra vez cuando haya tarjetas nuevas o corregidas, Anki las actualiza y conserva lo que estudiaste allá.</p>
   </div>`+accountPanel()+`
   <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p></div>`;
 }

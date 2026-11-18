@@ -19,6 +19,10 @@ Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Toc�
 La app es una página estática. Con GitHub Pages queda en `https://fra801.github.io/Anki-Pro/`.
 Desde el celular, abrí esa dirección y elegí **Agregar a pantalla de inicio**.
 
+## Llevar los mazos a Anki
+
+En **Progreso → Llevar a Anki** se descarga el mazo como `.apkg` para Anki (computadora, AnkiDroid o AnkiMobile), con el mismo diseño de tarjeta y el desplegable. El progreso de cada app es independiente. Los archivos se generan con `python3 tools/export_anki.py`.
+
 ## Guardar el progreso con tu cuenta
 
 En **Progreso → Cuenta y copia de seguridad** pegás un token de GitHub con el permiso `gist`. La app crea un gist privado llamado `anki-pro.json` y lo mantiene sincronizado entre dispositivos. El token se guarda solo en el navegador. También podés descargar y cargar una copia en un archivo.
