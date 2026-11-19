@@ -6,6 +6,7 @@ const T1 = "16.1 · Penetración y perforación de metales", T2 = "16.2 · Penet
 (window.DECKS = window.DECKS || []).push({
 id: "ctd16", idp: "c16:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "16 · Teorías de penetración",
 sub: "Capítulo 16 · Libro, pp. 377–420",
 head: "Balística terminal · Cap. 16 · Teorías de penetración",

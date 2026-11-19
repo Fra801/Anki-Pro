@@ -6,6 +6,7 @@ const T1 = "14 · No linealidades y ciclo límite", T2 = "14.1 · Fuerzas y mome
 (window.DECKS = window.DECKS || []).push({
 id: "ctd14", idp: "c14:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección II · Balística exterior", partId: "ctdII",
 title: "14 · Aerobalística no lineal",
 sub: "Capítulo 14 · Libro, pp. 363–369",
 head: "Balística exterior · Cap. 14 · Aerobalística no lineal",

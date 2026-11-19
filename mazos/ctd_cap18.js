@@ -6,6 +6,7 @@ const T1 = "18.1 · Hugoniots de choque", T2 = "18.2 · Ondas de rarefacción", 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd18", idp: "c18:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "18 · Física de choque",
 sub: "Capítulo 18 · Libro, pp. 479–560",
 head: "Balística terminal · Cap. 18 · Física de choque",

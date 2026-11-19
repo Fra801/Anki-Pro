@@ -6,6 +6,7 @@ const T1 = "15 · Misiones y teorías de penetración", T2 = "15 · Penetración
 (window.DECKS = window.DECKS || []).push({
 id: "ctd15", idp: "c15:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "15 · Conceptos introductorios",
 sub: "Capítulo 15 · Libro, pp. 373–375",
 head: "Balística terminal · Cap. 15 · Conceptos introductorios",

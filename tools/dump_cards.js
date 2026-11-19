@@ -30,6 +30,6 @@ for (const d of window.DECKS) {
       detalle: detail.replace(/\n/g, "<br>"),
     });
   });
-  out.push({ id: d.id, title: d.title, head: d.head || d.title, kind: d.kind || "normas", group: d.group || "", groupId: d.groupId || "", theme: d.theme || "", cards });
+  out.push({ id: d.id, title: d.title, head: d.head || d.title, kind: d.kind || "normas", group: d.group || "", groupId: d.groupId || "", part: d.part || "", partId: d.partId || "", theme: d.theme || "", cards });
 }
 process.stdout.write(JSON.stringify(out));

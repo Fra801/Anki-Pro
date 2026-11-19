@@ -111,7 +111,7 @@ def main():
         media.append(p)
     groups = {}
     for d in data:
-        name = "Anki Pro::" + (d["group"] + "::" if d["group"] else "") + d["title"]
+        name = "Anki Pro::" + (d["group"] + "::" if d["group"] else "") + (d.get("part", "") + "::" if d.get("part") else "") + d["title"]
         deck = genanki.Deck(zlib.crc32(("anki-pro:" + d["id"]).encode()) & 0x7FFFFFFF, name)
         for c in d["cards"]:
             deck.add_note(Nota(model=theme_model(d["theme"]) if d["theme"] else MODEL, fields=[
@@ -124,6 +124,8 @@ def main():
         print(f"{dest}: {len(d['cards'])} tarjetas")
         if d["groupId"]:
             groups.setdefault(d["groupId"], []).append(deck)
+        if d.get("partId"):
+            groups.setdefault(d["partId"], []).append(deck)
     # Un archivo por mazo con submazos (por ejemplo, el libro completo), con los submazos anidados
     for gid, decks in groups.items():
         pkg = genanki.Package(decks)

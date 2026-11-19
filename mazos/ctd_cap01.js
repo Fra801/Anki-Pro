@@ -6,6 +6,7 @@ const T1 = "1 · Introducción", T2 = "1.1 · Disciplinas balísticas", T3 = "1.
 (window.DECKS = window.DECKS || []).push({
 id: "ctd01", idp: "c1:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección I · Balística interior", partId: "ctdI",
 title: "01 · Conceptos introductorios",
 sub: "Capítulo 1 · Libro, pp. 3–5",
 head: "Balística interior · Cap. 1 · Conceptos introductorios",

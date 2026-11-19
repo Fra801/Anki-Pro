@@ -6,6 +6,7 @@ const T1 = "4.1 · Tensión y deformación", T2 = "4.2 · Criterios de falla", T
 (window.DECKS = window.DECKS || []).push({
 id: "ctd04", idp: "c4:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección I · Balística interior", partId: "ctdI",
 title: "04 · Práctica de diseño de municiones",
 sub: "Capítulo 4 · Libro, pp. 109–160",
 head: "Balística interior · Cap. 4 · Práctica de diseño de municiones",

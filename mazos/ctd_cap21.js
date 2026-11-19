@@ -6,6 +6,7 @@ const T1 = "21 · Incapacitación y conceptos erróneos", T2 = "21 · Tipos de p
 (window.DECKS = window.DECKS || []).push({
 id: "ctd21", idp: "c21:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "21 · Balística de heridas",
 sub: "Capítulo 21 · Libro, pp. 599–609",
 head: "Balística terminal · Cap. 21 · Balística de heridas",

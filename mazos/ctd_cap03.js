@@ -6,6 +6,7 @@ const T1 = "3.1 · Objetivo del cálculo", T2 = "3.2 · Gradiente de Lagrange", 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd03", idp: "c3:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección I · Balística interior", partId: "ctdI",
 title: "03 · Balística analítica y computacional",
 sub: "Capítulo 3 · Libro, pp. 67–108",
 head: "Balística interior · Cap. 3 · Balística analítica y computacional",

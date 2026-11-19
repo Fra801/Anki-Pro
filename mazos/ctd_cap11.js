@@ -6,6 +6,7 @@ const T1 = "11.1 · Desequilibrio estático y dinámico";
 (window.DECKS = window.DECKS || []).push({
 id: "ctd11", idp: "c11:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección II · Balística exterior", partId: "ctdII",
 title: "11 · Asimetrías de masa",
 sub: "Capítulo 11 · Libro, pp. 341–344",
 head: "Balística exterior · Cap. 11 · Asimetrías de masa",

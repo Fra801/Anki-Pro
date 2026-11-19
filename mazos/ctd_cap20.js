@@ -6,6 +6,7 @@ const T1 = "20 · Funcionamiento y conceptos básicos", T2 = "20.1 · Formación
 (window.DECKS = window.DECKS || []).push({
 id: "ctd20", idp: "c20:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "20 · Cargas huecas",
 sub: "Capítulo 20 · Libro, pp. 577–598",
 head: "Balística terminal · Cap. 20 · Cargas huecas",

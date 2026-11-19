@@ -6,6 +6,7 @@ const T1 = "17.1–17.6 · Blindaje naval y proyectiles estudiados", T2 = "17.7 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd17", idp: "c17:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "17 · Penetración de blindaje naval de acero cromo-níquel",
 sub: "Capítulo 17 · Libro, pp. 421–478",
 head: "Balística terminal · Cap. 17 · Penetración de blindaje naval de acero cromo-níquel",

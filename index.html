@@ -79,6 +79,12 @@ details .det .est,details .det .fx,details .det .eq,details .det .fm{white-space
 .sub:last-child{border-bottom:0}
 .sub.sel .sub-t{color:var(--accent)}
 .sub-t{font-family:Fraunces,serif;font-size:1rem;font-weight:500}
+.part{border-bottom:1px solid var(--line)}
+.part:last-child{border-bottom:0}
+.part-h{padding:11px 4px;cursor:pointer}
+.part-h .counts{flex-wrap:wrap;font-size:.8rem;gap:10px}
+.part-subs{margin:0 0 6px 14px;border-left:2px solid var(--line);padding-left:10px}
+.part-subs .sub:last-child{border-bottom:0}
 .sub .counts{flex-wrap:wrap;font-size:.8rem;gap:10px}
 .deck h3{font-family:Fraunces,serif;font-size:1.15rem}
 label{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;font-size:.92rem}
@@ -206,7 +212,7 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
-const APP_VERSION="95 · 19/11/2026";
+const APP_VERSION="96 · 19/11/2026";
 const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{
@@ -470,7 +476,7 @@ function grade(g){
 window.extraNew=()=>{rollDay();const id=D().id;S.day.newDone[id]=Math.max(0,(S.day.newDone[id]||0)-10);save();render();};
 
 // Mazos sueltos y mazos con submazos (los que comparten "group", por ejemplo los capítulos de un libro)
-let openGroups={};
+let openGroups={},openParts={};
 function countsHtml(n,l,r){return `<span class="c-new">Nuevas <b>${n}</b></span><span class="c-lrn">Aprendiendo <b>${l}</b></span><span class="c-rev">Repaso <b>${r}</b></span>`;}
 function decks(){
   const items=[],seenG={};
@@ -490,18 +496,32 @@ function decks(){
     for(const d of g.decks){const q=queue(d);n+=q.nw.length;l+=q.lrn.length;r+=q.due.length;tot+=d.cards.length;seen+=d.cards.filter(c=>st(c.id)).length;}
     if(openGroups[g.groupId]===undefined)openGroups[g.groupId]=g.decks.some(d=>d.id===S.opts.deck);
     const open=openGroups[g.groupId];
-    const subs=g.decks.map(d=>{const q=queue(d),sn=d.cards.filter(c=>st(c.id)).length;
+    const subRow=d=>{const q=queue(d),sn=d.cards.filter(c=>st(c.id)).length;
       return `<div class="sub${d.id===S.opts.deck?" sel":""}" data-d="${d.id}"><div class="sub-t">${d.title}</div>
-        <div class="counts" style="margin:4px 0 0">${countsHtml(q.nw.length,q.lrn.length,q.due.length)}<span class="muted">${sn}/${d.cards.length}</span></div></div>`;}).join("");
+        <div class="counts" style="margin:4px 0 0">${countsHtml(q.nw.length,q.lrn.length,q.due.length)}<span class="muted">${sn}/${d.cards.length}</span></div></div>`;};
+    // Si los submazos declaran "part" (por ejemplo, las secciones de un libro), se agrupan en un nivel intermedio desplegable
+    let subs;
+    if(g.decks.some(d=>d.part)){
+      const parts=[],seenP={};
+      for(const d of g.decks){const pid=d.partId||d.part||"_";if(!seenP[pid]){seenP[pid]={id:pid,name:d.part||"Otros",decks:[]};parts.push(seenP[pid]);}seenP[pid].decks.push(d);}
+      subs=parts.map(p=>{let pn=0,pl=0,pr=0,pt=0,ps=0;
+        for(const d of p.decks){const q=queue(d);pn+=q.nw.length;pl+=q.lrn.length;pr+=q.due.length;pt+=d.cards.length;ps+=d.cards.filter(c=>st(c.id)).length;}
+        if(openParts[p.id]===undefined)openParts[p.id]=p.decks.some(d=>d.id===S.opts.deck);
+        const po=openParts[p.id];
+        return `<div class="part${po?" open":""}"><div class="part-h" data-p="${p.id}"><div class="sub-t" style="display:flex;justify-content:space-between;gap:8px"><span>${p.name}</span><span class="chev">${po?"▾":"▸"}</span></div>
+          <div class="counts" style="margin:4px 0 0">${countsHtml(pn,pl,pr)}<span class="muted">${p.decks.length} ${p.decks.length===1?"capítulo":"capítulos"} · ${ps}/${pt}</span></div></div>
+          ${po?`<div class="part-subs">${p.decks.map(subRow).join("")}</div>`:""}</div>`;}).join("");
+    } else subs=g.decks.map(subRow).join("");
     return `<div class="panel deck grp${open?" open":""}">
       <div data-g="${g.groupId}"><h3 style="margin:0;display:flex;justify-content:space-between;gap:8px"><span>${g.group}</span><span class="chev">${open?"▾":"▸"}</span></h3>
-      <div class="muted">${g.groupSub?g.groupSub+" · ":""}${g.decks.length} ${g.decks.length===1?"submazo":"submazos"} · ${tot} tarjetas</div>
+      <div class="muted">${g.groupSub?g.groupSub+" · ":""}${(()=>{const np=new Set(g.decks.filter(d=>d.part).map(d=>d.partId||d.part)).size;return np?`${np} secciones · ${g.decks.length} capítulos`:`${g.decks.length} ${g.decks.length===1?"submazo":"submazos"}`;})()} · ${tot} tarjetas</div>
       <div class="counts" style="margin:10px 0 8px">${countsHtml(n,l,r)}</div>
       <div style="display:flex;align-items:center;gap:10px"><span class="meter" style="max-width:none"><i style="width:${tot?seen/tot*100:0}%"></i></span><span class="muted">${seen}/${tot}</span></div></div>
       ${open?`<div class="subs">${subs}</div>`:""}
     </div>`;};
   V.innerHTML=`<p class="muted" style="margin:0 0 10px">Elegí qué estudiar.</p>`+items.map(it=>it.deck?card(it.deck):group(it)).join("");
   V.querySelectorAll("[data-g]").forEach(el=>el.onclick=()=>{openGroups[el.dataset.g]=!openGroups[el.dataset.g];render();});
+  V.querySelectorAll("[data-p]").forEach(el=>el.onclick=e=>{e.stopPropagation();openParts[el.dataset.p]=!openParts[el.dataset.p];render();});
   V.querySelectorAll("[data-d]").forEach(el=>el.onclick=e=>{e.stopPropagation();S.opts.deck=el.dataset.d;cur=null;shown=false;browseArt=0;save();view="study";render();});
 }
 
@@ -545,6 +565,9 @@ function settings(d){
     <div class="btns"><a class="ghost" style="text-decoration:none" href="anki/${d.id}.apkg" download="${d.id}.apkg">Descargar para Anki (.apkg)</a></div>
     <p class="muted" style="margin:12px 0 4px">En AnkiMobile o AnkiDroid también podés usar <b>Enlace de descarga</b> y pegar este enlace:</p>
     <div class="acct-row"><input id="ankiurl" readonly value="${ankiUrl(d)}" aria-label="Enlace de descarga para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl">Copiar</button></div>
+    ${d.partId?`<p class="muted" style="margin:14px 0 4px">O toda la <b>${d.part}</b>, con sus capítulos anidados:</p>
+    <div class="btns" style="margin-top:0"><a class="ghost" style="text-decoration:none" href="anki/${d.partId}.apkg" download="${d.partId}.apkg">Descargar sección (.apkg)</a></div>
+    <div class="acct-row"><input id="ankiurl3" readonly value="${ankiUrl({id:d.partId})}" aria-label="Enlace de la sección para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl3">Copiar</button></div>`:""}
     ${d.groupId?`<p class="muted" style="margin:14px 0 4px">O todo <b>${d.group}</b> de una vez, con los submazos anidados:</p>
     <div class="btns" style="margin-top:0"><a class="ghost" style="text-decoration:none" href="anki/${d.groupId}.apkg" download="${d.groupId}.apkg">Descargar completo (.apkg)</a></div>
     <div class="acct-row"><input id="ankiurl2" readonly value="${ankiUrl({id:d.groupId})}" aria-label="Enlace del mazo completo para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl2">Copiar</button></div>`:""}

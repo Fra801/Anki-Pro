@@ -51,6 +51,7 @@ Un libro se arma como **un mazo principal con submazos**: un archivo por capítu
 
 - Cada capítulo es un mazo `kind: "temas"`; los **temas son los objetivos de aprendizaje** del capítulo («1 · Qué es la contabilidad», …), más un tema con la sección comparativa si el libro la tiene (en el libro IFRS: «IFRS vs. US GAAP»).
 - `title`: «01 · Nombre del capítulo» (con dos dígitos para que se ordenen); `idp` distinto por capítulo (`"f1:"`, `"f2:"`, …); `head`: «IFRS · Cap. 1 · Nombre».
+- **Secciones (nivel intermedio)**: si el libro está dividido en partes o secciones, cada capítulo lleva además `part` (nombre visible, por ejemplo «Sección I · Balística interior») y `partId` (por ejemplo `"ctdI"`). La pantalla Mazos muestra libro › sección › capítulo, en Anki quedan anidados (Anki Pro › libro › sección › capítulo) y se genera también `anki/<partId>.apkg` con la sección completa.
 - **Idioma**: tarjetas en **español** (decisión del usuario para el libro IFRS), con la terminología NIIF en castellano: estado de situación financiera, estado de resultados, ganancias retenidas, capital social — acciones ordinarias, otro resultado integral, valor razonable, etc.
 - La explicación termina con la página del libro: `pg(17)` o `pg("16–17")`.
 - Se toma la teoría del capítulo, los ejemplos resueltos, el resumen de objetivos y la sección comparativa; no se copian los ejercicios del final, pero sí se usan sus ideas para casos.

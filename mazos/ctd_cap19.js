@@ -6,6 +6,7 @@ const T1 = "19 · Efectos de explosivos", T2 = "19.1 · Método de Gurney", T3 =
 (window.DECKS = window.DECKS || []).push({
 id: "ctd19", idp: "c19:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
+part: "Sección III · Balística terminal", partId: "ctdIII",
 title: "19 · Introducción a los efectos de explosivos",
 sub: "Capítulo 19 · Libro, pp. 561–575",
 head: "Balística terminal · Cap. 19 · Introducción a los efectos de explosivos",
