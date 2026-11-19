@@ -5,7 +5,7 @@ const T1 = "1.1 · Introducción y desarrollo histórico", T2 = "1.2 · Relació
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd01", idp: "c1:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "01 · Conceptos introductorios",
 sub: "Capítulo 1 · Libro, pp. 3–5",
 head: "Balística interior · Cap. 1 · Conceptos introductorios",

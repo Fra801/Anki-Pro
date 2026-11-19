@@ -5,7 +5,7 @@ const T1 = "5.1 · Fatiga y resistencia", T2 = "5.2 · Diseño del tubo", T3 = "
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd05", idp: "c5:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "05 · Práctica de diseño de armas",
 sub: "Capítulo 5 · Libro, pp. 161–187",
 head: "Balística interior · Cap. 5 · Práctica de diseño de armas",

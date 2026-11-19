@@ -5,7 +5,7 @@ const T1 = "6.1 · Arresto del retroceso", T2 = "6.2 · Frenos de boca", T3 = "6
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd06", idp: "c6:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "06 · Frenado del retroceso y cañones sin retroceso",
 sub: "Capítulo 6 · Libro, pp. 195–202",
 head: "Balística interior · Cap. 6 · Frenado del retroceso y cañones sin retroceso",

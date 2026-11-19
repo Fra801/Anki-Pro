@@ -5,7 +5,7 @@ const T1 = "8.1 · Vectores", T2 = "8.2 · Cinemática de una partícula", T3 = 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd08", idp: "c8:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "08 · Repaso de dinámica",
 sub: "Capítulo 8 · Libro, pp. 221–236",
 head: "Balística exterior · Cap. 8 · Repaso de dinámica",

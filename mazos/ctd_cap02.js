@@ -5,7 +5,7 @@ const T1 = "2.1 · Ecuaciones de estado de gases", T2 = "2.2 · Termofísica y t
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd02", idp: "c2:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "02 · Fundamentos físicos de la balística interior",
 sub: "Capítulo 2 · Libro, pp. 7–60",
 head: "Balística interior · Cap. 2 · Fundamentos físicos de la balística interior",

@@ -5,7 +5,7 @@ const T1 = "3.1 · Meta computacional", T2 = "3.2 · Gradiente de Lagrange", T3 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd03", idp: "c3:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
 title: "03 · Balística analítica y computacional",
 sub: "Capítulo 3 · Libro, pp. 67–120",
 head: "Balística interior · Cap. 3 · Balística analítica y computacional",
