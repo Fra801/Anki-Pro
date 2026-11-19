@@ -6,7 +6,7 @@ const T1 = "10.1 · Teoría linealizada", T2 = "10.2 · Movimiento epicíclico: 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd10", idp: "c10:", kind: "temas", theme: "admin",
-group: "Ballistics: Theory and Design of Guns and Ammunition (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
 title: "10 · Aerobalística linealizada",
 sub: "Capítulo 10 · Libro, pp. 317–340",
 head: "Balística exterior · Cap. 10 · Aerobalística linealizada",

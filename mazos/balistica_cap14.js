@@ -6,7 +6,7 @@ const T1 = "14.1 · El blanco F-class", T2 = "14.2 · Generalización del análi
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab14", idp: "b14:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "14 · Análisis generalizado del tiro por puntaje",
 sub: "Capítulo 14 · Libro, pp. 225–240",
 head: "Balística · Cap. 14 · Tiro por puntaje",

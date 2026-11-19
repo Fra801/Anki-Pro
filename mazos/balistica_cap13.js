@@ -6,7 +6,7 @@ const T1 = "13.1 · Diseño de las balas y componentes del arrastre", T2 = "13.2
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab13", idp: "b13:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "13 · Ejemplo de análisis de rendimiento",
 sub: "Capítulo 13 · Libro, pp. 211–224",
 head: "Balística · Cap. 13 · Análisis de rendimiento",

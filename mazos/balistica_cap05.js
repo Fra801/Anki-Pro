@@ -6,7 +6,7 @@ const T1 = "5.1 · Cómo pensar el viento", T2 = "5.2 · Viento cruzado y tiempo
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab05", idp: "b5:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "05 · Deriva por viento",
 sub: "Capítulo 5 · Libro, pp. 59–94",
 head: "Balística · Cap. 5 · Deriva por viento",

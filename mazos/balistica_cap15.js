@@ -6,7 +6,7 @@ const T1 = "15.1 · Alcance efectivo y factores de letalidad", T2 = "15.2 · Fó
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab15", idp: "b15:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "15 · Letalidad de las balas de caza",
 sub: "Capítulo 15 · Libro, pp. 241–270",
 head: "Balística · Cap. 15 · Letalidad en la caza",

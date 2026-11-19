@@ -6,7 +6,7 @@ const T1 = "2.1 · Qué es el coeficiente balístico", T2 = "2.2 · Dependencia 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab02", idp: "b2:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "02 · El coeficiente balístico",
 sub: "Capítulo 2 · Libro, pp. 15–40",
 head: "Balística · Cap. 2 · Coeficiente balístico",

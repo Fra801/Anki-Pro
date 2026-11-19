@@ -5,7 +5,7 @@ const T1 = "18.1 · Qué son y qué ventajas tienen", T2 = "18.2 · Desventajas 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab18", idp: "b18:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "18 · Balas monolíticas",
 sub: "Capítulo 18 · Libro, pp. 349–356",
 head: "Balística · Cap. 18 · Balas monolíticas",

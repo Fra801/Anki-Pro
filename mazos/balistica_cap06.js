@@ -5,7 +5,7 @@ const T1 = "6.1 · Qué es la deriva giroscópica", T2 = "6.2 · Cómo estimarla
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab06", idp: "b6:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "06 · Deriva giroscópica",
 sub: "Capítulo 6 · Libro, pp. 95–112",
 head: "Balística · Cap. 6 · Deriva giroscópica",

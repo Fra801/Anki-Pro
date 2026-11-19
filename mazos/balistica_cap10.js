@@ -5,7 +5,7 @@ const T1 = "10.1 · Qué es la estabilidad", T2 = "10.2 · Estabilidad giroscóp
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab10", idp: "b10:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "10 · Estabilidad de la bala",
 sub: "Capítulo 10 · Libro, pp. 157–172",
 head: "Balística · Cap. 10 · Estabilidad",

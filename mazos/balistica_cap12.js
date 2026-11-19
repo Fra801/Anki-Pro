@@ -6,7 +6,7 @@ const T1 = "12.1 · Efectos de escala entre calibres", T2 = "12.2 · Escala y es
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab12", idp: "b12:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "12 · Datos y tendencias interesantes",
 sub: "Capítulo 12 · Libro, pp. 197–210",
 head: "Balística · Cap. 12 · Datos y tendencias",

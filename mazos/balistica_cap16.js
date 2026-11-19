@@ -6,7 +6,7 @@ const T1 = "16.1 · Qué es el análisis WEZ", T2 = "16.2 · Ejemplo .308: altit
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab16", idp: "b16:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "16 · Análisis de zona de empleo (WEZ)",
 sub: "Capítulo 16 · Libro, pp. 271–334",
 head: "Balística · Cap. 16 · Análisis WEZ",

@@ -5,7 +5,7 @@ const T1 = "19.1 · La biblioteca de datos de balas", T2 = "19.2 · Cómo leer l
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab19", idp: "b19:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "19 · Rendimiento balístico de las balas de rifle",
 sub: "Capítulo 19 · Libro, pp. 357–372",
 head: "Balística · Cap. 19 · Datos de balas",

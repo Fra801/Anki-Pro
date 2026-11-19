@@ -5,7 +5,7 @@ const T1 = "1.1 · Variables deterministas y no deterministas", T2 = "1.2 · Exa
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab01", idp: "b1:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "01 · Fundamentos",
 sub: "Capítulo 1 · Libro, pp. 9–14",
 head: "Balística · Cap. 1 · Fundamentos",

@@ -5,7 +5,7 @@ const T1 = "8.1 · Para qué sirve un programa balístico", T2 = "8.2 · Prueba 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab08", idp: "b8:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "08 · Uso de programas balísticos",
 sub: "Capítulo 8 · Libro, pp. 119–142",
 head: "Balística · Cap. 8 · Programas balísticos",

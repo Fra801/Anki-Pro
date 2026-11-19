@@ -5,7 +5,7 @@ const T1 = "3.1 · Alcance de punto en blanco", T2 = "3.2 · Trayectoria plana y
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab03", idp: "b3:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "03 · Caída por gravedad",
 sub: "Capítulo 3 · Libro, pp. 41–52",
 head: "Balística · Cap. 3 · Caída por gravedad",

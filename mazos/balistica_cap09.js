@@ -5,7 +5,7 @@ const T1 = "9.1 · Por qué calibrar las miras", T2 = "9.2 · Prueba del blanco 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab09", idp: "b9:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "09 · Controlar las miras",
 sub: "Capítulo 9 · Libro, pp. 143–156",
 head: "Balística · Cap. 9 · Miras",

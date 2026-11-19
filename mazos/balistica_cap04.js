@@ -5,7 +5,7 @@ const T1 = "4.1 · Efecto principal del ángulo de tiro", T2 = "4.2 · Reglas de
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab04", idp: "b4:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "04 · Tiro cuesta arriba y cuesta abajo",
 sub: "Capítulo 4 · Libro, pp. 53–58",
 head: "Balística · Cap. 4 · Tiro en pendiente",

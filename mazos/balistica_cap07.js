@@ -5,7 +5,7 @@ const T1 = "7.1 · Qué es el efecto Coriolis", T2 = "7.2 · Componente horizont
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab07", idp: "b7:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "07 · El efecto Coriolis",
 sub: "Capítulo 7 · Libro, pp. 113–118",
 head: "Balística · Cap. 7 · Efecto Coriolis",

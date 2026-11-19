@@ -5,7 +5,7 @@ const T1 = "12.1 · Desvío lateral: el fenómeno", T2 = "12.2 · Desequilibrio 
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd12", idp: "c12:", kind: "temas", theme: "admin",
-group: "Ballistics: Theory and Design of Guns and Ammunition (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
 title: "12 · Desvío lateral",
 sub: "Capítulo 12 · Libro, pp. 345–354",
 head: "Balística exterior · Cap. 12 · Desvío lateral",

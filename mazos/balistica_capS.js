@@ -5,7 +5,7 @@ const T1 = "R · Prioridad de los elementos de la balística externa";
 
 (window.DECKS = window.DECKS || []).push({
 id: "abS", idp: "bS:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "11b · Resumen de los elementos",
 sub: "Parte 1 · Libro, pp. 191–194",
 head: "Balística · Resumen de los elementos",

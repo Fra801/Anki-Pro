@@ -5,7 +5,7 @@ const T1 = "13.1 · Swerve y salto aerodinámico", T2 = "13.2 · Swerve epicícl
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd13", idp: "c13:", kind: "temas", theme: "admin",
-group: "Ballistics: Theory and Design of Guns and Ammunition (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
 title: "13 · Movimiento de swerve",
 sub: "Capítulo 13 · Libro, pp. 355–362",
 head: "Balística exterior · Cap. 13 · Movimiento de swerve",

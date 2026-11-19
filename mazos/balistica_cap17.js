@@ -5,7 +5,7 @@ const T1 = "17.1 · El culote cónico (boat-tail)", T2 = "17.2 · La ojiva: tang
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab17", idp: "b17:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "17 · Anatomía de una bala",
 sub: "Capítulo 17 · Libro, pp. 337–348",
 head: "Balística · Cap. 17 · Anatomía de una bala",

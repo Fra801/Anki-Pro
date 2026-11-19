@@ -5,7 +5,7 @@ const T1 = "11.1 · Qué es el tiro ELR y el régimen transónico", T2 = "11.2 �
 
 (window.DECKS = window.DECKS || []).push({
 id: "ab11", idp: "b11:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "11 · Tiro a distancia extendida",
 sub: "Capítulo 11 · Libro, pp. 173–190",
 head: "Balística · Cap. 11 · Distancia extendida",

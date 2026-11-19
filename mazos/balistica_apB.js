@@ -6,7 +6,7 @@ const T1 = "B1 · BC, factor de forma y velocidad", T2 = "B2 · Viento, salto ae
 
 (window.DECKS = window.DECKS || []).push({
 id: "abB", idp: "bB:", kind: "temas", theme: "admin",
-group: "Applied Ballistics for Long Range Shooting (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
+group: "Balística aplicada al tiro de largo alcance (Bryan Litz)", groupId: "ab", groupSub: "Bryan Litz · 3ª ed., Applied Ballistics 2015",
 title: "19b · Apéndice B: ecuaciones",
 sub: "Apéndice B · Libro, pp. 416–432",
 head: "Balística · Apéndice B · Ecuaciones",
