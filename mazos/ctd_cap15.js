@@ -1,4 +1,4 @@
-/* Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson) — Capítulo 15: Introducción a la balística terminal. Generado con tools/tabla_a_mazo.py. */
+/* Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson) — Capítulo 15: Conceptos introductorios. Generado con tools/tabla_a_mazo.py. */
 (function () {
 const { fm, pg, flujo, grupos, tabla } = window.ADM;
 const T1 = "15.1 · Objetivos y misiones", T2 = "15.2 · Penetración y perforación", T3 = "15.3 · Velocidades estadísticas", T4 = "15.4 · Velocidad límite y factores";
@@ -6,9 +6,9 @@ const T1 = "15.1 · Objetivos y misiones", T2 = "15.2 · Penetración y perforac
 (window.DECKS = window.DECKS || []).push({
 id: "ctd15", idp: "c15:", kind: "temas", theme: "admin",
 group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 a 3: balística interior, exterior y terminal",
-title: "15 · Introducción a la balística terminal",
+title: "15 · Conceptos introductorios",
 sub: "Capítulo 15 · Libro, pp. 373–375",
-head: "Balística terminal · Cap. 15 · Introducción a la balística terminal",
+head: "Balística terminal · Cap. 15 · Conceptos introductorios",
 build(add){
 add(T1,"Definición","¿Cómo se define el concepto de balística terminal en el estudio del tiro?","Régimen balístico que comienza cuando el proyectil <strong>alcanza el blanco</strong> para destruirlo o inutilizarlo.","Es la tercera disciplina balística tras la balística interior y la exterior. Su propósito fundamental es evaluar y maximizar los efectos finales del proyectil sobre el objetivo asignado."+pg(373));
 add(T1,"Dato","¿Cuáles son las cuatro misiones primarias que puede cumplir un proyectil al llegar a su blanco?","<ul><li><strong>Fragmentación del cuerpo</strong> por alto explosivo</li><li><strong>Penetración o perforación</strong> mediante energía cinética o química</li><li><strong>Efecto de onda de choque o explosión</strong> (blast)</li><li><strong>Dispersión de carga</strong> útil</li></ul>","Cada misión responde a un diseño específico de munición. La dispersión de carga útil incluye la emisión de humo, iluminación o material de propaganda."+pg(373));
