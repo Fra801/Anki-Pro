@@ -1,0 +1,21 @@
+/* Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson) — Capítulo 4: Práctica de diseño de municiones. Generado con tools/tabla_a_mazo.py. */
+(function () {
+const { fm, pg, flujo, grupos, tabla } = window.ADM;
+const T1 = "4.3 · Tipos de munición", T2 = "4.5 · Geometría de la recámara", T3 = "4.8 · Diseño de la vaina metálica", T4 = "4.8 · Vainas combustibles", T5 = "4.12 · Diseño de sabots", T6 = "4.12 · Evolución de sabots";
+
+(window.DECKS = window.DECKS || []).push({
+id: "ctd04", idp: "c4:", kind: "temas", theme: "admin",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+title: "04 · Práctica de diseño de municiones",
+sub: "Capítulo 4 · Libro, pp. 116–154",
+head: "Balística interior · Cap. 4 · Práctica de diseño de municiones",
+build(add){
+add(T1,"Distinción","Munición fija y munición de carga separada: ¿qué diferencia hay?","La <strong>fija</strong> une la vaina y el proyectil en una estructura rígida inalterable<br>La <strong>de carga separada</strong> introduce el proyectil y los saquetes de propulsor de forma independiente.","La munición fija se utiliza predominantemente en tanques, aviación y fusiles debido a su alta cadencia de recarga. La carga separada se usa en artillería pesada para ajustar la cantidad de sacos de pólvora según la distancia al objetivo."+pg("116–117"));
+add(T2,"Definición","Geometría de la recámara: ¿cuál es la función del cono de forzamiento (<em>forcing cone</em>) de la recámara?","Formar el <strong>sello contra escape de gases</strong> mediante la extrusión y grabado de la banda de rotación del proyectil.","Al iniciar el movimiento tras la encendida del cebo, el cono de forzamiento guía mecánicamente la banda de cobre o plástico hacia el estriado del cañón. Este proceso de deformación hermetiza la recámara para evitar fugas de gas a alta presión."+pg("117–118"));
+add(T3,"Condición","Diseño de la vaina metálica: ¿en qué condición la vaina se atasca (<em>sticking</em>) dentro de la recámara tras el disparo?","Cuando la <strong>deformación radial permanente</strong> (residual) de la vaina más su radio inicial <strong>supera o iguala</strong> el radio de la recámara.","Durante la combustión, la presión expande elásticamente el cañón y plastifica la vaina metálica. Al descender la presión, si la recuperación elástica de la vaina es inferior a la del tubo del cañón, la vaina queda apretada contra la pared impidiendo su extracción."+pg("120–122"));
+add(T4,"Excepción","Vainas combustibles: ¿qué ventaja operativa y qué peligro de seguridad presentan las vainas de nitrocelulosa?","Eliminan el casquillo gastado y reducen peso<br>Pueden dejar <strong>residuos incandescentes</strong> que provoquen la autoignición (<em>cook-off</em>) del siguiente disparo.","Compuestas de fieltro nitrado, estas vainas se consumen casi por completo durante la deflagración, ahorrando espacio en torretas blindadas. No obstante, demandan sistemas de purga por aire a presión para prevenir deflagraciones al abrir el cierre."+pg("122–123"));
+add(T5,"Definición","Diseño de sabots: ¿qué es un sabot y cuál es su objetivo en disparos de hipervelocidad?","Un <strong>armazón descartable</strong> que permite disparar un subproyectil calibrado más fino a velocidades superiores.","El sabot (término francés para zueco) llena la holgura entre las paredes del tubo y el penetrador denso. Al salir de la boca del arma, las fuerzas aerodinámicas separan el sabot en pétalos, liberando al subproyectil libre de masa parásita."+pg("152–154"));
+add(T6,"Distinción","Sabots de copa (APDS) y sabots de rampa o selleta (APFSDS): ¿qué diferencia hay?","Los <strong>de copa</strong> sirven para proyectiles cinéticos cortos giratorios<br>Los <strong>de rampa</strong> reducen masa parásita en penetradores flecha largos estabilizados por aletas.","El cambio hacia proyectiles flecha de elevada relación longitud-diámetro obligó a reemplazar el estriado por ánima lisa y sabots de rampa. Estos distribuyen los esfuerzos de cizallamiento uniformemente sobre el núcleo de tungsteno o uranio."+pg("152–154"));
+}
+});
+})();

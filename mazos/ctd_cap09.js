@@ -6,7 +6,7 @@ const T1 = "9.1 · Trayectoria en el vacío", T2 = "9.2 · Trayectoria simple en
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd09", idp: "c9:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
 title: "09 · Trayectorias",
 sub: "Capítulo 9 · Libro, pp. 237–316",
 head: "Balística exterior · Cap. 9 · Trayectorias",

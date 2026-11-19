@@ -1,0 +1,21 @@
+/* Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson) — Capítulo 3: Balística analítica y computacional. Generado con tools/tabla_a_mazo.py. */
+(function () {
+const { fm, pg, flujo, grupos, tabla } = window.ADM;
+const T1 = "3.1 · Objetivo computacional", T2 = "3.2 · Gradiente de Lagrange", T3 = "3.2 · Parámetro balístico central", T4 = "3.4 · Gradiente de chambrage", T5 = "3.6 · Eficiencia balística";
+
+(window.DECKS = window.DECKS || []).push({
+id: "ctd03", idp: "c3:", kind: "temas", theme: "admin",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
+title: "03 · Balística analítica y computacional",
+sub: "Capítulo 3 · Libro, pp. 67–107",
+head: "Balística interior · Cap. 3 · Balística analítica y computacional",
+build(add){
+add(T1,"Regla","Objetivo computacional: ¿cuál es la responsabilidad primordial del balístico de interiores al diseñar una carga de proyección?","Entregar el proyectil en la boca del cañón <strong>intacto</strong>, a la <strong>velocidad deseada</strong> y <strong>sin sobrepasar la presión máxima</strong> admisible.","El diseño balístico requiere predecir teóricamente el perfil de presión y aceleración del proyectil a lo largo del ánima. Esto asegura la repetibilidad disparo a disparo y resguarda la integridad física de la pieza de artillería."+pg("67–68"));
+add(T2,"Dato","Gradiente de Lagrange: ¿qué hipótesis establece el gradiente de Lagrange sobre la velocidad de los gases de propulsión en el tubo?","Varía de forma <strong>lineal</strong> desde <strong>cero en el cierre</strong> (<em>breech</em>) hasta la <strong>velocidad del proyectil en la base</strong>.","La aproximación de Lagrange simplifica el perfil de velocidad del gas a lo largo de la columna en expansión. Esta variación lineal permite determinar analíticamente la energía cinética total del gas sumando a la masa del proyectil un tercio de la masa del propulsor."+pg("68–70"));
+add(T2,"Caso","Gradiente de Lagrange: si la masa del proyectil es wp y la masa de la carga propulsora es c, ¿cuál es la masa equivalente total para calcular la energía cinética del sistema según Lagrange?","wp + <strong>c / 3</strong>.","Al integrar la distribución lineal de velocidades de la masa de gas c entre el cierre y la base del proyectil, se demuestra que la energía cinética del flujo gaseoso equivale a acelerar una masa c/3 a la velocidad del proyectil wp."+pg("70–71"));
+add(T3,"Definición","Parámetro balístico central: ¿qué representa el parámetro balístico central M y cuál es su dimensión física?","Es una constante <strong>adimensional</strong> que vincula las características mecánicas del arma, la carga propulsora y el proyectil.","El parámetro M condensa las variables del cañón y de la pólvora para simplificar la integración de las ecuaciones de movimiento. Al ser adimensional, posibilita comparar y escalar el comportamiento balístico entre distintos calibres."+pg("81–82"));
+add(T4,"Excepción","Gradiente de chambrage: ¿cuándo deja de ser preciso el gradiente de Lagrange y requiere emplear el gradiente de chambrage?","Cuando el diámetro de la recámara es <strong>mayor al diámetro del ánima</strong> (<em>chambrage</em> > 1) creando turbulencias.","El gradiente de Lagrange supone que la recámara tiene exactamente la misma sección transversal que el cañón. Cuando existe una ampliación o chambrage, el modelo de Robbins aplica correcciones numéricas paso a paso para reflejar la restricción de flujo."+pg("100–101"));
+add(T5,"Definición","Eficiencia balística: ¿cómo se define la eficiencia balística eb de un cañón y cuál es su valor representativo?","La relación entre la <strong>energía cinética del proyectil</strong> en la boca y la <strong>energía potencial total del propulsor</strong>, con un valor típico de <strong>0.33</strong>.","La eficiencia balística mide qué porcentaje de la energía química de la carga se convierte en trabajo útil para acelerar el proyectil. En armas reales, aproximadamente un tercio de la energía se convierte en velocidad inicial y el resto se disipa en calor, fricción y gases de escape."+pg("106–107"));
+}
+});
+})();

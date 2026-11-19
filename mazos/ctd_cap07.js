@@ -5,7 +5,7 @@ const T1 = "7.1 · Elementos de la trayectoria", T2 = "7.2 · Fuerzas aerodinám
 
 (window.DECKS = window.DECKS || []).push({
 id: "ctd07", idp: "c7:", kind: "temas", theme: "admin",
-group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Parte 2: balística exterior",
+group: "Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson)", groupId: "ctd", groupSub: "Donald E. Carlucci y Sidney S. Jacobson · 3ª ed., CRC Press 2018 · Partes 1 y 2: balística interior y exterior",
 title: "07 · Conceptos introductorios",
 sub: "Capítulo 7 · Libro, pp. 207–220",
 head: "Balística exterior · Cap. 7 · Conceptos introductorios",

@@ -14,7 +14,7 @@ Mazos incluidos:
 | Contabilidad Financiera IFRS (Weygandt, Kimmel, Kieso, 3ª ed.) — con submazos por capítulo | Cap. 1 a 14 y apéndices E a I | 850 |
 | Administración (Robbins y Coulter, 13ª ed.) — con submazos por capítulo | Libro completo: cap. 1 a 18 y los tres módulos | 584 |
 | Balística aplicada al tiro de largo alcance (Bryan Litz, 3ª ed.; original: *Applied Ballistics for Long Range Shooting*) — con submazos por capítulo | Libro completo: cap. 1 a 19, resumen y apéndice B | 344 |
-| Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson, 3ª ed.; original: *Ballistics: Theory and Design of Guns and Ammunition*) — sólo la Parte 2, balística exterior | Cap. 7 a 14 (Parte 2 completa) | 108 |
+| Balística: teoría y diseño de armas y municiones (Carlucci y Jacobson, 3ª ed.; original: *Ballistics: Theory and Design of Guns and Ammunition*) — Partes 1 y 2 | Cap. 1 a 6 (balística interior, tabla de NotebookLM) y cap. 7 a 14 (balística exterior) | 139 |
 
 Las tarjetas salen en orden aleatorio (el mismo en todos tus dispositivos). Tocás **Mostrar respuesta**, y después elegís **Otra vez**, **Difícil**, **Bien** o **Fácil**. Cada botón muestra cuándo vuelve la tarjeta. Debajo de cada respuesta podés desplegar el texto completo del artículo.
 
