@@ -77,6 +77,18 @@ Los mazos de administración (Robbins y Coulter) llevan `theme: "admin"`: la app
 
 `tools/tabla_a_mazo.py tabla.(txt|csv|xlsx) config.json` convierte una tabla con columnas «Capítulo | Tema | Tipo | Pregunta | Respuesta | Explicación | Página» en submazos `mazos/<archivo>_capNN.js`: pasa `**texto**` a `<strong>`, las respuestas separadas con « | » a listas (o a `<br>` en distinciones) y quita el prefijo numerado del tema en la pregunta. Después se revisan las tarjetas con las reglas de arriba y se siguen los pasos de «Agregar el mazo a la app».
 
+## Diccionario visual de Blender (mazos de vocabulario)
+
+Mazos `kind: "vocab"` con `theme: "blender"` (`estilos/blender.css`, fuentes propias en `estilos/fuentes/`): un módulo por archivo (`mazos/blender_mNN.js`, `idp` `"blN:"`, `mod: "NN"`, `modName`), todos con `group: "Blender 5.3 · Arquitectura"` y `groupId: "blender"`. El usuario los pidió para aprender Blender 5.3.0 desde cero con enfoque en arquitectura.
+
+- Formato: `add(tema, {t, p, es, fn, loc, arq, key, tip, tipo, say})`. Frente: término en inglés (`t`), pronunciación (`p`, en cursiva) y botón para escucharla (se reproduce sola al aparecer). Dorso: traducción (`es`), ubicación (`loc`), atajo (`key`, solo si existe), Función (`fn`) y Uso arquitectónico (`arq`) en desplegables, y Consejo (`tip`, opcional). `say` corrige lo que lee la voz (siglas: “F B X”).
+- **Precisión**: nombres, rutas y atajos exactos de Blender 5.3.0. Verificarlos contra el código fuente (`https://raw.githubusercontent.com/blender/blender/v5.3.0/…`: `scripts/startup/bl_ui/*.py` para menús, `scripts/presets/keyconfig/keymap_data/blender_default.py` para atajos, los `ot->name` de los `.cc` para operadores). Si una opción cambia según el contexto, explicarlo. No inventar.
+- Ubicación: tramos con « › », rutas alternativas con « | », aclaraciones entre paréntesis. Atajos: `Shift+Ctrl+S`, alternativas con « / ». Texto de la interfaz con «...» tal como lo dibuja Blender.
+- Pronunciación (convención fija, explicada en la app): tilde en la sílaba fuerte; monosílabos sin tilde; sh, th inglesa, j = h aspirada, y = dʒ (“óbyekt”), u = w.
+- **Sin duplicados**: cada término una sola vez en todo el diccionario; `check_mazos.js` marca rutas repetidas. Un formato que se importa y exporta lleva una sola ficha con las dos rutas.
+- Orden de módulos pedido: interfaz general, File (hechos), luego Edit, Render, Window, Help, Workspaces, 3D Viewport, Toolbar, Outliner, Properties Editor, Timeline, Object Mode, Edit Mode, transformación, modelado, modificadores, materiales, iluminación, cámaras, renderizado, exportación. No avanzar hasta completar el módulo actual. Ya tienen ficha (no repetir): Adjust Last Operation (está en el módulo 01), Toolbar y Sidebar como regiones.
+- La exportación a Anki usa un tipo de nota propio (`VOCAB_ID`, no cambiarlo) con el frente y el dorso armados por `vocabCard` y la voz con `{{tts en_US:Decir}}`.
+
 ## Agregar el mazo a la app
 
 1. Crear `mazos/<nombre>.js` copiando la estructura de uno existente: `id` y `idp` (prefijo corto y único, por ejemplo `"lt:"`), `title`, `sub`, `head`, `arts`, `build`.
