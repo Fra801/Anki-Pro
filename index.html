@@ -12,7 +12,6 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="estilos/contable.css">
 <link rel="stylesheet" href="estilos/admin.css">
-<link rel="stylesheet" href="estilos/blender.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -210,30 +209,24 @@ input[type=number],select{width:90px;padding:7px;border-radius:10px;border:1px s
 <script src="mazos/ctd_cap19.js"></script>
 <script src="mazos/ctd_cap20.js"></script>
 <script src="mazos/ctd_cap21.js"></script>
-<script src="mazos/blender_m01.js"></script>
-<script src="mazos/blender_m02.js"></script>
 <script>
 /* ===================== MAZOS =====================
    Cada mazo vive en mazos/<nombre>.js y se agrega a window.DECKS. */
-const APP_VERSION="98 · 24/11/2026";
+const APP_VERSION="99 · 25/11/2026";
 const DECKS=window.DECKS||[];
 const ALL=[];
 DECKS.forEach(d=>{
   d.cards=[];const n={};
   // Mazos de normas: add(artículo, tipo, pregunta, respuesta, inciso).
   // Mazos por temas (kind:"temas"): add(tema, tipo, pregunta, respuesta, explicación).
-  // Mazos de vocabulario (kind:"vocab"): add(tema, {t, p, es, fn, loc, arq, key, tip, tipo, say}).
-  const temas=isT(d);
-  if(d.kind==="vocab")d.build((a,v)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k:v.tipo||"Término",q:v.t,ans:v.es,v,d:d.id,inc:"",expl:"",no:d.cards.length+1};d.cards.push(c);ALL.push(c);});
-  else d.build((a,k,q,ans,x)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id,inc:temas?"":(x||""),expl:temas?(x||""):""};d.cards.push(c);ALL.push(c);});
-  d.cards.forEach(c=>c.total=d.cards.length);
+  const temas=d.kind==="temas";
+  d.build((a,k,q,ans,x)=>{n[a]=(n[a]||0)+1;const c={id:d.idp+a+"-"+n[a],a,k,q,ans,d:d.id,inc:temas?"":(x||""),expl:temas?(x||""):""};d.cards.push(c);ALL.push(c);});
   d.nums=temas?[...new Set(d.cards.map(c=>c.a))]:Object.keys(d.arts).map(Number).sort((x,y)=>x-y);
 });
-function isT(d){return d.kind==="temas"||d.kind==="vocab";}
 const deckById=id=>DECKS.find(d=>d.id===id);
 // Enlace público del .apkg (sirve para la opción «Enlace de descarga» de Anki)
 const ankiUrl=d=>"https://raw.githubusercontent.com/Fra801/Anki-Pro/main/anki/"+d.id+".apkg";
-const grpLabel=(d,a)=>isT(d)?a:"Art. "+a;
+const grpLabel=(d,a)=>d.kind==="temas"?a:"Art. "+a;
 // Texto que se despliega: el artículo entero o, si la tarjeta apunta a uno o más incisos, sólo esos incisos.
 const INC_START=/^\s*([a-z]\)|\d+\s*[-)])/;
 function incisoText(text,key){
@@ -259,44 +252,6 @@ function artDetail(d,c){
   const intro=first>0?lines.slice(0,first).join("\n"):"";
   const body=(intro?intro+"\n":"")+parts.join("\n");
   return `<b>Artículo ${c.a}º, ${name}:</b> ${body}`;
-}
-
-/* ---------- Tarjetas de vocabulario (kind:"vocab", tema «blender») ----------
-   add(tema, {t, p, es, fn, loc, arq, key, tip, tipo, say}). La misma función arma la tarjeta en la app y en Anki. */
-// Ubicación: "File › Save As…"; varias rutas separadas con " | "; un tramo entre paréntesis es una aclaración.
-function locHtml(loc){
-  if(!loc)return "";
-  return loc.split(" | ").map(p=>'<div class="bx-path">'+p.split(" › ").map(s=>{const m=s.match(/^\((.*)\)$/);return m?'<span class="x">'+m[1]+'</span>':'<span class="c">'+s+'</span>';}).join('<span class="s">›</span>')+'</div>').join('<div class="bx-or">o bien</div>');
-}
-// Atajo: "Shift+Ctrl+S"; alternativas separadas con " / ".
-function keyHtml(k){
-  return '<div class="bx-keys">'+k.split(" / ").map(a=>a.split("+").map(x=>'<kbd>'+x.trim()+'</kbd>').join("")).join('<span class="alt">o</span>')+'</div>';
-}
-var BX_IC={
-  spk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18.2 6.5a7.5 7.5 0 0 1 0 11"/></svg>',
-  fn:'<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="1.5"/><path d="M3.5 8.5h17M7 12.5h6M7 15.5h9"/></svg>',
-  arq:'<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5h18M5 20.5V9l7-4.5L19 9v11.5"/><path d="M9.5 20.5v-5h5v5M8 11h2M14 11h2"/></svg>',
-  ch:'<svg class="ch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
-  axes:'<svg class="bx-axes" width="30" height="30" viewBox="0 0 30 30" fill="none" stroke-width="1.4" stroke-linecap="round"><path d="M8 22h16" stroke="#c4473a"/><path d="M8 22l9-7" stroke="#6b9a3c"/><path d="M8 22V6" stroke="#3f6fb0"/><circle cx="8" cy="22" r="1.6" fill="currentColor" stroke="none"/></svg>'
-};
-var bxPad=n=>String(n).padStart(3,"0");
-// o = {back, anki, open:{fn,arq}, slow}
-function vocabCard(d,c,o){
-  o=o||{};const v=c.v,mod=d.mod||"",no=bxPad(c.no||0);
-  const marks='<i class="bx-mk tl"></i><i class="bx-mk tr"></i><i class="bx-mk bl"></i><i class="bx-mk br"></i>';
-  let h=`<div class="bx-in">${marks}<header class="bx-top"><span class="bx-no">${mod}·${no}</span><span class="bx-topic">${c.a}</span><span class="bx-kind">${v.tipo||"Término"}</span></header>
-  <section class="bx-hero"><h2 class="bx-en" lang="en">${v.t}</h2><p class="bx-pr">${v.p}</p>`;
-  if(!o.anki)h+=`<div class="bx-audio"><button class="bx-say" data-say type="button" aria-label="Escuchar la pronunciación">${BX_IC.spk}<span class="bx-wave"><i></i><i></i><i></i><i></i></span><span>Escuchar</span></button><button class="bx-slow${o.slow?" on":""}" data-slow type="button" aria-label="Escuchar más lento">0.6×</button>${o.back?"":'<span class="bx-hint">Tocá para girar</span>'}</div>`;
-  h+=`${BX_IC.axes}</section>`;
-  if(o.back){
-    h+=`<section class="bx-back"><div class="bx-es"><span class="bx-lbl">Español</span><p lang="es">${v.es}</p></div>
-    <dl class="bx-spec"><div><dt class="bx-lbl">Ubicación</dt><dd>${locHtml(v.loc)}</dd></div>${v.key?`<div><dt class="bx-lbl">Atajo</dt><dd>${keyHtml(v.key)}</dd></div>`:""}</dl>
-    <details class="bx-d" data-det="fn"${o.open&&o.open.fn?" open":""}><summary>${BX_IC.fn}Función${BX_IC.ch}</summary><div class="bx-txt">${v.fn}</div></details>
-    <details class="bx-d" data-det="arq"${o.open&&o.open.arq?" open":""}><summary>${BX_IC.arq}Uso arquitectónico${BX_IC.ch}</summary><div class="bx-txt">${v.arq}</div></details>
-    ${v.tip?`<aside class="bx-tip"><span class="bx-lbl">Consejo</span><p>${v.tip}</p></aside>`:""}</section>`;
-  }
-  h+=`<footer class="bx-foot"><span>Blender 5.3.0</span><span>Mód. ${mod} · ${d.modName||""}</span><span>${no}/${bxPad(c.total||0)}</span></footer></div>`;
-  return h;
 }
 
 /* ===================== ESTADO / SRS (SM-2 tipo Anki) ===================== */
@@ -500,7 +455,6 @@ function study(){
     if(soon)setTimeout(()=>{if(view==="study"&&!cur)render();},Math.max(1000,soon-Date.now()+500));
     return;
   }
-  if(D().kind==="vocab"){studyVocab(counts);return;}
   V.innerHTML=counts+`<div class="card">
     <p class="q">${cur.q}</p>
     ${shown?`<div class="a">${cur.ans}</div>${(D().kind!=="temas"||cur.expl)?`<details><summary>${D().kind==="temas"?"Explicación":"Ver texto del artículo"}</summary><div class="det">${artDetail(D(),cur)}</div></details>`:""}`:""}
@@ -514,56 +468,7 @@ function study(){
     B.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
   }
 }
-/* ---------- Estudio de tarjetas de vocabulario: giro, desplegables y pronunciación ---------- */
-const VK="anki-pro:vocab";
-let vOpen={fn:false,arq:false},vSlow=false,lastSaid="",lastFlip="";
-try{const o=JSON.parse(localStorage.getItem(VK)||"{}");Object.assign(vOpen,o.open||{});vSlow=!!o.slow;}catch(e){}
-function vSave(){try{localStorage.setItem(VK,JSON.stringify({open:vOpen,slow:vSlow}));}catch(e){}}
-function bar(){
-  if(!shown){
-    B.innerHTML=`<div class="in show"><button class="btn show-b" id="sh">Mostrar respuesta</button></div>`;
-    document.getElementById("sh").onclick=()=>{shown=true;render();};
-  }else{
-    const L=["Otra vez","Difícil","Bien","Fácil"];
-    B.innerHTML=`<div class="in grades">${[1,2,3,4].map(g=>`<button class="btn g${g}" data-g="${g}">${L[g-1]}<small>${fmt(schedule(cur.id,g,true))}</small></button>`).join("")}</div>`;
-    B.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
-  }
-}
-function studyVocab(counts){
-  const d=D(),flip=shown&&lastFlip!==cur.id;
-  if(shown)lastFlip=cur.id;
-  V.innerHTML=counts+`<article class="card bx${shown?"":" tap"}${flip?" flip":""}" id="bxc">${vocabCard(d,cur,{back:shown,open:vOpen,slow:vSlow})}</article>`;
-  const card=document.getElementById("bxc");
-  if(!shown)card.onclick=e=>{if(e.target.closest("button"))return;shown=true;render();};
-  card.querySelector("[data-say]").onclick=e=>{e.stopPropagation();speak(cur,vSlow);};
-  card.querySelector("[data-slow]").onclick=e=>{e.stopPropagation();vSlow=!vSlow;vSave();e.currentTarget.classList.toggle("on",vSlow);speak(cur,vSlow);};
-  card.querySelectorAll("details[data-det]").forEach(el=>el.ontoggle=()=>{vOpen[el.dataset.det]=el.open;vSave();});
-  if(!TTS)card.querySelector("[data-say]").disabled=true;
-  bar();
-  // Al aparecer una tarjeta nueva se escucha sola (se puede desactivar en Progreso → Ajustes).
-  if(!shown&&S.opts.autoSay!==false&&lastSaid!==cur.id){lastSaid=cur.id;speak(cur,vSlow);}
-}
-// Pronunciación con la voz en inglés (EE. UU.) del dispositivo.
-const TTS=window.speechSynthesis||null;let ttsVoice=null;
-function pickVoice(){
-  if(!TTS)return;const vs=TTS.getVoices(),us=v=>/^en[-_]US/i.test(v.lang);
-  ttsVoice=null;
-  for(const p of ["Samantha","Ava","Allison","Google US English","Microsoft Aria","Microsoft Jenny","Microsoft Zira","Alex"]){const v=vs.find(v=>v.name.indexOf(p)>=0&&us(v));if(v){ttsVoice=v;break;}}
-  if(!ttsVoice)ttsVoice=vs.find(us)||vs.find(v=>/^en/i.test(v.lang))||null;
-}
-if(TTS){pickVoice();if(TTS.addEventListener)TTS.addEventListener("voiceschanged",pickVoice);}
-function speak(c,slow){
-  if(!TTS||!c||!c.v)return;
-  const busy=TTS.speaking||TTS.pending;TTS.cancel();
-  const u=new SpeechSynthesisUtterance(c.v.say||c.v.t.replace(/…|\.\.\./g,""));
-  u.lang="en-US";if(ttsVoice)u.voice=ttsVoice;u.rate=slow?.6:.92;
-  const btn=()=>document.querySelector("[data-say]");
-  u.onstart=()=>{const b=btn();if(b)b.classList.add("on");};
-  u.onend=u.onerror=()=>{const b=btn();if(b)b.classList.remove("on");};
-  busy?setTimeout(()=>TTS.speak(u),80):TTS.speak(u);
-}
 function grade(g){
-  if(TTS)TTS.cancel();
   if(!st(cur.id))S.day.newDone[cur.d]=(S.day.newDone[cur.d]||0)+1;
   S.cards[cur.id]=schedule(cur.id,g,false);
   save();cur=null;shown=false;render();
@@ -628,26 +533,20 @@ function stats(){
     const cs=d.cards.filter(c=>c.a===a);let sn=0,m=0;
     cs.forEach(c=>{const s=st(c.id);if(s){sn++;if(s.q==="rev"&&s.ivl>=21)m++;if(s.due<=now+DAY)dueT++;}});
     tot+=cs.length;seen+=sn;mature+=m;
-    rows.push(`<div class="row"><span style="${isT(d)?"flex:1;min-width:0":"width:64px"}">${grpLabel(d,a)}</span><span class="muted" style="width:70px">${sn}/${cs.length}</span><span class="meter"><i style="width:${cs.length?sn/cs.length*100:0}%"></i></span></div>`);
+    rows.push(`<div class="row"><span style="${d.kind==="temas"?"flex:1;min-width:0":"width:64px"}">${grpLabel(d,a)}</span><span class="muted" style="width:70px">${sn}/${cs.length}</span><span class="meter"><i style="width:${cs.length?sn/cs.length*100:0}%"></i></span></div>`);
   }
   V.innerHTML=`<div class="panel"><h3>Resumen · ${d.title}</h3>
    <div class="row"><span>Tarjetas totales</span><b>${tot}</b></div>
    <div class="row"><span>Vistas al menos una vez</span><b>${seen}</b></div>
    <div class="row"><span>Maduras (intervalo ≥ 21 d)</span><b>${mature}</b></div>
    <div class="row" style="border:0"><span>Vencen en las próximas 24 h</span><b>${dueT}</b></div></div>
-   <div class="panel"><h3>${isT(d)?"Por tema":"Por artículo"}</h3>${rows.join("")}</div>`+settings(d);
+   <div class="panel"><h3>${d.kind==="temas"?"Por tema":"Por artículo"}</h3>${rows.join("")}</div>`+settings(d);
   bindAccount();bindSettings(d);
 }
 
 function browse(){
   const d=D();
   const chips=`<div class="chips">${[0,...d.nums].map((a,i)=>`<button class="chip ${browseArt===a?"on":""}" data-a="${i}">${a?grpLabel(d,a):"Todos"}</button>`).join("")}</div>`;
-  if(d.kind==="vocab"){
-    const rows=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>`<div class="bx-row"><b lang="en">${c.v.t}</b><span class="bx-lbl">${c.v.tipo||""}</span><i>${c.v.p}</i><span class="es">${c.v.es}</span><div class="lc">${locHtml(c.v.loc)}</div></div>`).join("");
-    V.innerHTML=`<div class="panel">${chips}</div><div class="panel">${rows}</div>`;
-    V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{const i=+b.dataset.a;browseArt=i?d.nums[i-1]:0;render();});
-    return;
-  }
   const list=d.cards.filter(c=>!browseArt||c.a===browseArt).map(c=>{const s=st(c.id);return `<div class="brw"><div class="tag">${grpLabel(d,c.a)}<span class="kind">${c.k}</span>${s?`<span class="kind">${s.q==="rev"?"próx. "+fmt(Math.max(0,s.due-Date.now())):"aprendiendo"}</span>`:""}</div><div class="q">${c.q}</div><div class="ans">${c.ans}</div></div>`;}).join("");
   V.innerHTML=`<div class="panel">${chips}${browseArt&&d.arts&&d.arts[browseArt]?`<details open><summary>Texto del artículo ${browseArt}</summary><p><b>Artículo ${browseArt}º:</b> ${d.arts[browseArt]}</p></details>`:""}</div><div class="panel">${list}</div>`;
   V.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>{const i=+b.dataset.a;browseArt=i?d.nums[i-1]:0;render();});
@@ -657,8 +556,7 @@ function settings(d){
   const f=filt(d);
   return `<div class="panel"><h3>Ajustes</h3>
     <label>Tarjetas nuevas por día (por mazo) <input type="number" id="npd" min="1" max="200" value="${S.opts.newPerDay}"></label>
-    ${d.kind==="vocab"?`<label>Escuchar la pronunciación al aparecer cada tarjeta <input type="checkbox" id="autosay"${S.opts.autoSay!==false?" checked":""}></label>`:""}
-    <div class="muted" style="margin-top:6px">Estudiar sólo estos ${isT(d)?"temas":"artículos"} de este mazo (ninguno = todos):</div>
+    <div class="muted" style="margin-top:6px">Estudiar sólo estos ${d.kind==="temas"?"temas":"artículos"} de este mazo (ninguno = todos):</div>
     <div class="chips">${d.nums.map((a,i)=>`<button class="chip ${f.includes(a)?"on":""}" data-f="${i}">${grpLabel(d,a)}</button>`).join("")}</div>
     <div class="btns"><button class="ghost danger" id="rstd">Reiniciar este mazo</button></div>
   </div>
@@ -675,7 +573,6 @@ function settings(d){
     <div class="acct-row"><input id="ankiurl2" readonly value="${ankiUrl({id:d.groupId})}" aria-label="Enlace del mazo completo para Anki" onclick="this.select()"><button class="ghost" data-copy="ankiurl2">Copiar</button></div>`:""}
     <p class="sync" style="margin-top:8px">Si lo importás otra vez cuando haya tarjetas nuevas o corregidas, Anki las actualiza y conserva lo que estudiaste allá.</p>
   </div>`+accountPanel()+`
-  ${d.kind==="vocab"?`<div class="panel"><h3>Cómo leer la pronunciación</h3><p class="muted" style="margin:0">Se lee como en castellano, con estas convenciones: la <b>tilde</b> marca la sílaba fuerte (<i>rivért</i>); <b>sh</b> suena como en “show”; <b>th</b> es la th inglesa, con la lengua entre los dientes; <b>j</b> es una h aspirada suave (<i>jelp</i>); <b>y</b> suena como la “ll” rioplatense (<i>óbyekt</i>); <b>v</b> se dice apoyando los dientes en el labio; las palabras de una sílaba no llevan tilde. El botón <b>Escuchar</b> usa la voz en inglés de tu dispositivo (tecla <b>P</b> en la compu) y <b>0.6×</b> la repite más lento.</p></div>`:""}
   <div class="panel"><h3>Cómo funciona</h3><p class="muted" style="margin:0">Cada tarjeta apunta a un núcleo funcional (regla, dato, condición, excepción, facultad, prohibición, definición, distinción o caso práctico). Calificá con honestidad: <b>Otra vez</b> la repite en minutos; <b>Bien</b> y <b>Fácil</b> la espacian cada vez más (algoritmo tipo Anki SM-2). Tu progreso se guarda en este dispositivo y, si iniciás sesión, en tu cuenta de GitHub.</p><p class="sync" style="margin:10px 0 0">Versión de la app: ${APP_VERSION}</p></div>`;
 }
 function bindSettings(d){
@@ -685,7 +582,6 @@ function bindSettings(d){
     setTimeout(()=>{cp.textContent="Copiar";},2000);});
   const f=filt(d);
   document.getElementById("npd").onchange=e=>{S.opts.newPerDay=Math.max(1,Math.min(200,+e.target.value||20));save();};
-  const as=document.getElementById("autosay");if(as)as.onchange=e=>{S.opts.autoSay=e.target.checked;save();};
   V.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{const a=d.nums[+b.dataset.f];const i=f.indexOf(a);i<0?f.push(a):f.splice(i,1);cur=null;shown=false;save();render();});
   document.getElementById("rstd").onclick=()=>confirmBox(`¿Borrar el progreso de “${d.title}”? No se puede deshacer.`,()=>{d.cards.forEach(c=>delete S.cards[c.id]);if(S.day.newDone)delete S.day.newDone[d.id];cur=null;shown=false;save();render();});
 }
@@ -694,7 +590,6 @@ function confirmBox(t,ok){const m=document.getElementById("modal");document.getE
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{view=b.dataset.v;render();});
 document.addEventListener("keydown",e=>{
   if(view!=="study"||!cur)return;
-  if(cur.v&&(e.key==="p"||e.key==="P")){speak(cur,vSlow);return;}
   if(!shown&&(e.code==="Space"||e.key==="Enter")){e.preventDefault();shown=true;render();}
   else if(shown&&["1","2","3","4"].includes(e.key))grade(+e.key);
 });

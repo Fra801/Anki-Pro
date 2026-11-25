@@ -15,25 +15,10 @@ for (const s of scripts) require(path.join(root, s));
 const main = html.match(/<script>([\s\S]*?)<\/script>/)[1];
 const start = main.indexOf("const INC_START"), end = main.indexOf("/* =====", start);
 const fnSrc = main.slice(start, end).replace(/\bconst\b/g, "var");
-const lib = new Function(fnSrc + "; return { artDetail, vocabCard };")();
+const lib = new Function(fnSrc + "; return { artDetail };")();
 
 const out = [];
 for (const d of window.DECKS) {
-  if (d.kind === "vocab") {
-    // Tarjetas de vocabulario: el frente y el dorso se arman con la misma función de la app (vocabCard).
-    const per = {}, raw = [], cards = [];
-    d.build((a, v) => { per[a] = (per[a] || 0) + 1; raw.push({ id: d.idp + a + "-" + per[a], a, v }); });
-    raw.forEach((c, i) => {
-      c.no = i + 1; c.total = raw.length;
-      cards.push({
-        id: c.id, grupo: String(c.a), tipo: c.v.tipo || "Término", termino: c.v.t, traduccion: c.v.es,
-        decir: c.v.say || c.v.t.replace(/…|\.\.\./g, ""),
-        frente: lib.vocabCard(d, c, { anki: true }), dorso: lib.vocabCard(d, c, { anki: true, back: true }),
-      });
-    });
-    out.push({ id: d.id, title: d.title, head: d.head || d.title, kind: "vocab", group: d.group || "", groupId: d.groupId || "", part: d.part || "", partId: d.partId || "", theme: d.theme || "", cards });
-    continue;
-  }
   const temas = d.kind === "temas", per = {}, cards = [];
   d.build((a, k, q, ans, x) => {
     per[a] = (per[a] || 0) + 1;

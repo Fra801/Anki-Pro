@@ -96,52 +96,6 @@ class Nota(genanki.Note):
         return genanki.guid_for(self.fields[7])  # el ID de la tarjeta en Anki Pro
 
 
-# Mazos de vocabulario (kind "vocab", tema «blender»): el frente y el dorso llegan ya armados desde la app
-# (vocabCard en index.html) y la pronunciación usa la voz en inglés del dispositivo con la etiqueta {{tts}},
-# que Anki reproduce sola al mostrar la tarjeta. Identificador fijo: no cambiarlo.
-VOCAB_ID = 1731940103
-VOCAB_FIELDS = [{"name": n} for n in ["Termino", "Traduccion", "Frente", "Dorso", "Decir", "Encabezado", "Tema", "Tipo", "ID"]]
-VOCAB_FRONT = """<div class="ap th-{theme}"><div class="ap-head">{{{{Encabezado}}}}</div>
-<article class="bx">{{{{Frente}}}}</article>
-<div class="bx-anki">{{{{tts en_US voices=Apple_Samantha,Apple_Ava,Microsoft_Aria,Microsoft_Zira:Decir}}}}</div></div>"""
-VOCAB_BACK = """<div class="ap th-{theme}"><div class="ap-head">{{{{Encabezado}}}}</div>
-<article class="bx">{{{{Dorso}}}}</article></div>"""
-VOCAB_CSS = """
-.card{--bg:#e9e7e2}
-.card.nightMode,.nightMode .card,.card.night_mode,.night_mode .card{--bg:#121211}
-.bx-anki{display:flex;justify-content:center;margin-top:16px}
-.bx-anki .replay-button svg{width:44px;height:44px}
-.bx-anki .replay-button svg circle{fill:var(--ink)}
-.bx-anki .replay-button svg path{fill:var(--card);stroke:none}
-"""
-
-
-def theme_fonts(theme):
-    """Fuentes propias de un tema (estilos/fuentes): se copian como medios con prefijo «_bx-» y el CSS apunta a ellas."""
-    with open(os.path.join(ROOT, "estilos", theme + ".css"), encoding="utf-8") as f:
-        css = f.read()
-    names = sorted(set(re.findall(r'url\("fuentes/([^"]+)"\)', css)))
-    css = re.sub(r'url\("fuentes/([^"]+)"\)', r'url("_bx-\1")', css)
-    return css, names
-
-
-@functools.lru_cache(maxsize=None)
-def vocab_model(theme):
-    css, _ = theme_fonts(theme)
-    return genanki.Model(
-        VOCAB_ID, f"Anki Pro · Vocabulario ({theme.capitalize()})",
-        fields=VOCAB_FIELDS,
-        templates=[{"name": "Tarjeta", "qfmt": VOCAB_FRONT.format(theme=theme), "afmt": VOCAB_BACK.format(theme=theme)}],
-        css=CSS + "\n" + css + VOCAB_CSS, sort_field_index=0,
-    )
-
-
-class NotaVocab(genanki.Note):
-    @property
-    def guid(self):
-        return genanki.guid_for(self.fields[8])
-
-
 def tag(s):
     return re.sub(r"[^\w-]+", "_", s, flags=re.UNICODE).strip("_")
 
@@ -156,31 +110,17 @@ def main():
             fo.write(fi.read())
         media.append(p)
     groups = {}
-    media_extra = set()
     for d in data:
         name = "Anki Pro::" + (d["group"] + "::" if d["group"] else "") + (d.get("part", "") + "::" if d.get("part") else "") + d["title"]
         deck = genanki.Deck(zlib.crc32(("anki-pro:" + d["id"]).encode()) & 0x7FFFFFFF, name)
-        extra = []
-        if d["kind"] == "vocab":
-            _, names = theme_fonts(d["theme"])
-            for n in names:
-                p = os.path.join(OUT, "_bx-" + n)
-                with open(os.path.join(ROOT, "estilos", "fuentes", n), "rb") as fi, open(p, "wb") as fo:
-                    fo.write(fi.read())
-                extra.append(p)
-            for c in d["cards"]:
-                deck.add_note(NotaVocab(model=vocab_model(d["theme"]), fields=[
-                    c["termino"], c["traduccion"], c["frente"], c["dorso"], c["decir"], d["head"], c["grupo"], c["tipo"], c["id"],
-                ], tags=[tag(c["grupo"]), tag(c["tipo"])]))
-        for c in ([] if d["kind"] == "vocab" else d["cards"]):
+        for c in d["cards"]:
             deck.add_note(Nota(model=theme_model(d["theme"]) if d["theme"] else MODEL, fields=[
                 c["pregunta"], c["respuesta"], c["detalle"], c["rotulo"], d["head"], c["grupo"], c["tipo"], c["id"],
             ], tags=[tag(c["grupo"]), tag(c["tipo"])]))
         pkg = genanki.Package(deck)
-        pkg.media_files = media + extra
+        pkg.media_files = media
         dest = os.path.join(OUT, d["id"] + ".apkg")
         pkg.write_to_file(dest)
-        media_extra.update(extra)
         print(f"{dest}: {len(d['cards'])} tarjetas")
         if d["groupId"]:
             groups.setdefault(d["groupId"], []).append(deck)
@@ -189,11 +129,11 @@ def main():
     # Un archivo por mazo con submazos (por ejemplo, el libro completo), con los submazos anidados
     for gid, decks in groups.items():
         pkg = genanki.Package(decks)
-        pkg.media_files = media + sorted(media_extra)
+        pkg.media_files = media
         dest = os.path.join(OUT, gid + ".apkg")
         pkg.write_to_file(dest)
         print(f"{dest}: {sum(len(x.notes) for x in decks)} tarjetas en {len(decks)} submazos")
-    for p in media + sorted(media_extra):
+    for p in media:
         os.remove(p)
 
 
